@@ -147,6 +147,31 @@ const seedMentors = () => [
 ];
 
 // =====================================================================
+// KARYAWAN — Master data karyawan BI (referensi untuk peserta & mentor)
+// Diupload via Excel; jadi pool dari mana peserta coaching & mentor dipilih
+// =====================================================================
+const seedKaryawan = () => [
+  { id: 'K001', nip: '199203142018031001', nama: 'Arif Budiman Pratama',     satker: 'DKEM', tipeSatker: 'KP',  jabatan: 'Manajer',           jobFamily: 'Ekonom',              statusPegawai: 'KPP',     statusNK: 'Upper', smdTahun: 8,  email: 'arif.budiman@bi.go.id' },
+  { id: 'K002', nip: '198807252015022003', nama: 'Siti Rahmawati Dewi',       satker: 'DKMP', tipeSatker: 'KP',  jabatan: 'Manajer',           jobFamily: 'Pengawas Bank',       statusPegawai: 'KPP',     statusNK: 'Upper', smdTahun: 12, email: 'siti.rahmawati@bi.go.id' },
+  { id: 'K003', nip: '199105102017031005', nama: 'Bagus Kurniawan Saputra',   satker: 'KPwBI Lampung', tipeSatker: 'KPW', jabatan: 'Asisten Manajer', jobFamily: 'Sistem Pembayaran', statusPegawai: 'KPP',     statusNK: 'Lower', smdTahun: 7,  email: 'bagus.kurniawan@bi.go.id' },
+  { id: 'K004', nip: '199012082016032002', nama: 'Dewi Kusuma Ningrum',       satker: 'DKOM', tipeSatker: 'KP',  jabatan: 'Manajer',           jobFamily: 'Komunikasi',          statusPegawai: 'KPP',     statusNK: 'Upper', smdTahun: 9,  email: 'dewi.kusuma@bi.go.id' },
+  { id: 'K005', nip: '199309162020032004', nama: 'Fajar Maulana Rizki',       satker: 'DKMP', tipeSatker: 'KP',  jabatan: 'Asisten Manajer',   jobFamily: 'Manajemen Strategis', statusPegawai: 'KPP',     statusNK: 'Lower', smdTahun: 6,  email: 'fajar.maulana@bi.go.id' },
+  { id: 'K006', nip: '199407182019032008', nama: 'Nadia Alya Salsabila',      satker: 'DHK',  tipeSatker: 'KP',  jabatan: 'Asisten Manajer',   jobFamily: 'Hukum',               statusPegawai: 'KPP',     statusNK: 'Upper', smdTahun: 5,  email: 'nadia.alya@bi.go.id' },
+  { id: 'K007', nip: '198209152010031002', nama: 'Yanuar Pradipta, M.Psi',    satker: 'DKEM', tipeSatker: 'KP',  jabatan: 'Deputi Direktur',   jobFamily: 'Ekonom',              statusPegawai: 'Non-KPP', statusNK: 'Upper', smdTahun: 14, email: 'yanuar.pradipta@bi.go.id' },
+  { id: 'K008', nip: '196812041995031001', nama: 'Dr. Hendra Wijaya',         satker: 'DKMP', tipeSatker: 'KP',  jabatan: 'Direktur',          jobFamily: 'Pengawas Bank',       statusPegawai: 'Non-KPP', statusNK: 'Upper', smdTahun: 18, email: 'hendra.wijaya@bi.go.id' },
+  { id: 'K009', nip: '197306182001031003', nama: 'Bambang Suryanto, MBA',     satker: 'DSPR', tipeSatker: 'KP',  jabatan: 'Deputi Direktur',   jobFamily: 'Sistem Pembayaran',   statusPegawai: 'Non-KPP', statusNK: 'Upper', smdTahun: 15, email: 'bambang.suryanto@bi.go.id' },
+  { id: 'K010', nip: '198104232006031001', nama: 'Lisa Anindita, MM',         satker: 'DKOM', tipeSatker: 'KP',  jabatan: 'Asisten Direktur',  jobFamily: 'Komunikasi',          statusPegawai: 'Non-KPP', statusNK: 'Upper', smdTahun: 13, email: 'lisa.anindita@bi.go.id' },
+  { id: 'K011', nip: '197505102000031001', nama: 'Ir. Rudi Hermawan, M.Sc',   satker: 'DSTA', tipeSatker: 'KP',  jabatan: 'Deputi Direktur',   jobFamily: 'Statistik',           statusPegawai: 'Non-KPP', statusNK: 'Upper', smdTahun: 16, email: 'rudi.hermawan@bi.go.id' },
+  { id: 'K012', nip: '199506182022032006', nama: 'Lestari Permatasari Wijaya',satker: 'DSTA', tipeSatker: 'KP',  jabatan: 'Asisten Manajer',   jobFamily: 'Statistik',           statusPegawai: 'KPP',     statusNK: 'Lower', smdTahun: 4,  email: 'lestari.permatasari@bi.go.id' },
+  { id: 'K013', nip: '199211052019031007', nama: 'Ahmad Sulaiman Gunawan',    satker: 'DHK',  tipeSatker: 'KP',  jabatan: 'Manajer',           jobFamily: 'Hukum',               statusPegawai: 'KPP',     statusNK: 'Upper', smdTahun: 6,  email: 'ahmad.sulaiman@bi.go.id' },
+  { id: 'K014', nip: '199812302023032008', nama: 'Karina Wulandari Putri',    satker: 'KPwBI Yogyakarta', tipeSatker: 'KPW', jabatan: 'Analis', jobFamily: 'Komunikasi',          statusPegawai: 'KPP',     statusNK: 'Lower', smdTahun: 3,  email: 'karina.wulandari@bi.go.id' },
+  { id: 'K015', nip: '199407182020032010', nama: 'Putri Maharani Sukma',      satker: 'DKEM', tipeSatker: 'KP',  jabatan: 'Asisten Manajer',   jobFamily: 'Ekonom',              statusPegawai: 'KPP',     statusNK: 'Upper', smdTahun: 5,  email: 'putri.maharani@bi.go.id' },
+  { id: 'K016', nip: '198506122012031004', nama: 'Reza Pahlevi Hidayat',      satker: 'DSPR', tipeSatker: 'KP',  jabatan: 'Manajer',           jobFamily: 'Sistem Pembayaran',   statusPegawai: 'KPP',     statusNK: 'Upper', smdTahun: 11, email: 'reza.pahlevi@bi.go.id' },
+  { id: 'K017', nip: '199108192018032012', nama: 'Maya Sari Anggraini',       satker: 'KPwBI Surabaya', tipeSatker: 'KPW', jabatan: 'Manajer', jobFamily: 'Ekonom',             statusPegawai: 'KPP',     statusNK: 'Upper', smdTahun: 7,  email: 'maya.sari@bi.go.id' },
+  { id: 'K018', nip: '199604232021031006', nama: 'Dimas Aditya Wibowo',       satker: 'DSDM', tipeSatker: 'KP',  jabatan: 'Asisten Manajer',   jobFamily: 'Manajemen Strategis', statusPegawai: 'KPP',     statusNK: 'Lower', smdTahun: 4,  email: 'dimas.aditya@bi.go.id' },
+];
+
+// =====================================================================
 // CRITERIA — Untuk seleksi peserta DIKSI (ref: dokumen DSDM)
 // =====================================================================
 const CRITERIA_OPTIONS = {
@@ -175,10 +200,46 @@ const seedParticipants = () => [
     stageData: {
       registrasi:  { status: 'completed', registeredAt: '2026-01-15', checkInAt: '2026-01-18 09:05' },
       sosialisasi: { status: 'completed', pretestScore: 78, posttestScore: 92, completedAt: '2026-01-22', pretestVisible: true, posttestVisible: true },
-      coaching:    { status: 'in_progress', sesi: 1, mentorEvaluation: null, pesertaSurvey: null,
-        sessions: [
-          { id: 'CS001', tanggal: '2026-05-15', waktu: '14:00', durasi: 60, lokasi: 'Online · Microsoft Teams', topik: 'Strategic thinking & decision-making leadership', status: 'proposed', proposedBy: 'mentor', proposedAt: '2026-04-26', notes: 'Mohon konfirmasi ketersediaan. Bisa adjust kalau jadwal bentrok.' },
-        ] },
+      coaching:    {
+        status: 'in_progress',
+        planStatus: 'submitted',
+        plan: {
+          items: [
+            {
+              id: 'PI001-1', area: 'pelatihan_iht', areaLainnya: '',
+              halDilakukan: 'Mengikuti Strategic Decision-Making Workshop yang diadakan DSDM pada Q2 2026 (3 hari penuh) dilanjutkan Advanced Risk Analytics di Q3.',
+              indikatorKeberhasilan: 'Skor pretest-posttest workshop ≥ 85, mampu mengaplikasikan framework yang dipelajari dalam minimal 2 keputusan strategis lintas departemen dalam 3 bulan setelah workshop.',
+              dukunganDibutuhkan: 'Approval atasan untuk mengalokasikan waktu workshop, akses ke material follow-up, mentor untuk sparring penerapan framework di pekerjaan riil.',
+            },
+            {
+              id: 'PI001-2', area: 'sertifikasi', areaLainnya: '',
+              halDilakukan: 'Mengambil sertifikasi CFA Level 3, target ujian Juni 2026. Persiapan via official curriculum dan study group internal BI.',
+              indikatorKeberhasilan: 'Lulus CFA Level 3 di percobaan pertama dan kontribusi minimal 2 insight investment di forum DKEM yang mencerminkan kompetensi tersebut.',
+              dukunganDibutuhkan: 'Pendampingan study group internal BI, akses material CFA Institute, time-blocking weekend untuk study.',
+            },
+            {
+              id: 'PI001-3', area: 'kepanitiaan', areaLainnya: '',
+              halDilakukan: 'Berperan sebagai anggota Tim Penyusun Kebijakan Makroprudensial-Moneter lintas departemen DKEM-DKMP untuk policy brief 2026.',
+              indikatorKeberhasilan: 'Policy brief diadopsi DKEM-DKMP, mendapat positive feedback dari 3 Direktur pada forum lintas-departemen, presentation rate minimal 2x.',
+              dukunganDibutuhkan: 'Buy-in atasan untuk allocate 20% waktu, mentoring dari Pak Yanuar, akses ke forum strategic planning DKEM.',
+            },
+            {
+              id: 'PI001-4', area: 'lainnya', areaLainnya: 'Forum Sharing Internal DKEM',
+              halDilakukan: 'Memimpin forum sharing biweekly di DKEM untuk knowledge transfer ke ekonom junior — fokus topik strategic thinking & analisis ekonomi.',
+              indikatorKeberhasilan: 'Forum berjalan minimal 12 sesi dalam 6 bulan, attendance rate ≥ 75%, feedback rata-rata dari peserta ≥ 8/10.',
+              dukunganDibutuhkan: 'Slot regular di kalender tim, infrastruktur sharing (Teams / ruang meeting), endorsement atasan untuk konsistensi.',
+            },
+          ],
+          submittedAt: '2026-04-28',
+          revision: 0,
+        },
+        planFeedback: null,
+        planReviewedAt: null,
+        planApprovedAt: null,
+        sessions: [],
+        mentorEvaluation: null,
+        pesertaSurvey: null,
+      },
       monitoring1: { status: 'pending' },
       monitoring2: { status: 'pending' },
       monitoring3: { status: 'pending' },
@@ -194,46 +255,99 @@ const seedParticipants = () => [
     stageData: {
       registrasi:  { status: 'completed', registeredAt: '2026-01-15', checkInAt: '2026-01-18 08:55' },
       sosialisasi: { status: 'completed', pretestScore: 85, posttestScore: 95, completedAt: '2026-01-20', pretestVisible: true, posttestVisible: true },
-      coaching:    { status: 'completed', sesi: 1,
+      coaching:    {
+        status: 'completed',
+        planStatus: 'approved',
+        plan: {
+          items: [
+            {
+              id: 'PI002-1', area: 'pelatihan_iht', areaLainnya: '',
+              halDilakukan: 'Strategic Decision-Making Workshop (April 2026) dilanjutkan Advanced Risk Analytics di Q3 2026.',
+              indikatorKeberhasilan: 'Skor pretest-posttest ≥ 85, aplikasi framework di 3 use case dashboard makroprudensial.',
+              dukunganDibutuhkan: 'Approval slot pelatihan, mentoring lanjutan dari Pak Hendra terkait prioritization framework.',
+            },
+            {
+              id: 'PI002-2', area: 'sertifikasi', areaLainnya: '',
+              halDilakukan: 'Mengambil sertifikasi CFA Level 3 sebagai pelengkap kapasitas analitis macroprudensial. Target ujian Juni 2026.',
+              indikatorKeberhasilan: 'Lulus CFA Level 3 dan diaplikasikan di analisis risk macroprudensial.',
+              dukunganDibutuhkan: 'Akses study group internal BI & material CFA Institute.',
+            },
+            {
+              id: 'PI002-3', area: 'kepanitiaan', areaLainnya: '',
+              halDilakukan: 'Lead Tim Working Group Macroprudential Analytics Dashboard — identifikasi use case prioritas & roadmap implementasi.',
+              indikatorKeberhasilan: 'Dashboard go-live Q2 2026, 3 use case prioritas teridentifikasi & ditindaklanjuti.',
+              dukunganDibutuhkan: 'Buy-in Direktur untuk dedicate 20% waktu, akses data tools advanced.',
+            },
+            {
+              id: 'PI002-4', area: 'lainnya', areaLainnya: 'Forum Sharing Biweekly DKMP',
+              halDilakukan: 'Memimpin forum sharing biweekly DKMP untuk knowledge transfer praktek delegasi strategis & risk-taking.',
+              indikatorKeberhasilan: 'Minimal 12 sesi dalam 6 bulan, attendance ≥ 75%, tim mengadopsi style delegasi baru.',
+              dukunganDibutuhkan: 'Slot rutin di kalender tim, dukungan moral atasan.',
+            },
+          ],
+          submittedAt: '2026-02-10',
+          revision: 0,
+        },
+        planFeedback: null,
+        planReviewedAt: '2026-02-15',
+        planApprovedAt: '2026-02-15',
+        sessions: [
+          { id: 'CS002', tanggal: '2026-02-14', waktu: '10:00', durasi: 60, lokasi: 'Offline', topik: 'Refleksi & finalisasi coaching plan', catatan: 'Diskusi sebelum mentor approve plan', status: 'completed', proposedBy: 'peserta', proposedAt: '2026-02-05', acceptedAt: '2026-02-06', completedAt: '2026-02-14 11:05', teamsLink: 'https://teams.microsoft.com/l/meetup-join/meet-CS002-mock' },
+        ],
         mentorEvaluation: { strengths: 'Analitis tajam, kepemimpinan kuat.', development: 'Strategic delegation perlu diperdalam.', recommendation: 'Lanjut ke tahap monitoring.', evaluatedAt: '2026-02-15' },
         pesertaSurvey: { mentorEffectiveness: 9, sessionQuality: 9, comment: 'Sesi sangat membantu dalam memetakan peluang growth.', submittedAt: '2026-02-16' },
-        sessions: [
-          { id: 'CS002', tanggal: '2026-02-14', waktu: '10:00', durasi: 60, lokasi: 'Offline · R. Coaching DSDM Lt.5', topik: 'Macroprudential leadership & risk-taking', status: 'completed', proposedBy: 'mentor', proposedAt: '2026-02-05', acceptedAt: '2026-02-06', completedAt: '2026-02-14 11:05', teamsLink: 'https://teams.microsoft.com/l/meetup-join/meet-CS002-mock' },
-        ] },
+      },
       monitoring1: { status: 'completed', submittedAt: '2026-03-15',
-        tindakLanjut: 'Telah memulai inisiatif "macroprudential analytics dashboard" bersama tim DKMP. Sudah identifikasi 3 use case prioritas dan menyusun timeline 3-bulan. Selain itu, mulai praktik delegasi yang lebih strategis kepada tim — fokus pada outcome bukan task.',
-        kendala: 'Beban operasional harian masih cukup tinggi sehingga sulit alokasi waktu khusus untuk strategic initiative. Tim juga masih perlu adaptasi dengan style delegasi baru.',
-        dukungan: 'Mentoring lanjutan dari Pak Hendra terkait prioritization framework. Akses ke data tools yang lebih advanced untuk mendukung dashboard project. Buy-in dari Direktur untuk dedicate 20% waktu ke initiative ini.',
-        pelatihan: 'Strategic Decision-Making Workshop (April 2026) · Advanced Risk Analytics (planned Q3)',
-        sertifikasi: 'CFA Level 3 (sedang persiapan, target Juni 2026)',
-        kepanitiaan: 'Anggota Tim Penyusun Kebijakan Makroprudensial 2026',
-        lainnya: 'Aktif sharing insight di forum internal DKMP setiap 2 minggu sekali, sebagai bagian dari knowledge transfer ke tim.'
+        items: [
+          {
+            id: 'M1I001', coachingPlanItemId: 'PI002-3', areaLabel: '',
+            tindakLanjut: 'Telah memulai inisiatif "macroprudential analytics dashboard" bersama tim DKMP. Sudah identifikasi 3 use case prioritas dan menyusun timeline 3-bulan. Pertemuan rutin working group sudah berjalan mingguan.',
+            kendala: 'Beban operasional harian cukup tinggi sehingga sulit alokasi waktu khusus untuk strategic initiative. Tim juga masih perlu adaptasi dengan style delegasi baru.',
+            dukungan: 'Mentoring lanjutan dari Pak Hendra terkait prioritization framework. Akses ke data tools yang lebih advanced untuk mendukung dashboard project. Buy-in dari Direktur untuk dedicate 20% waktu.',
+          },
+          {
+            id: 'M1I002', coachingPlanItemId: 'PI002-4', areaLabel: '',
+            tindakLanjut: 'Forum sharing biweekly DKMP sudah berjalan 4 sesi pertama. Mulai praktik delegasi yang lebih strategis kepada tim — fokus pada outcome bukan task. Knowledge transfer ke 2 ekonom junior dimulai.',
+            kendala: 'Attendance forum masih fluktuatif (rata-rata 60%). Sebagian tim masih perlu adaptasi dengan style sharing yang baru.',
+            dukungan: 'Endorsement atasan untuk konsistensi forum sebagai mandatory event. Template materi sharing yang lebih terstruktur.',
+          },
+        ],
       },
       monitoring2: { status: 'completed', submittedAt: '2026-04-20',
+        items: [
+          {
+            id: 'M2I001', coachingPlanItemId: 'PI002-1', areaLabel: '',
+            tindakLanjut: 'Sudah mengikuti Strategic Decision-Making Workshop (April 2026, 3 hari penuh). Skor pretest 78 → posttest 92. Sudah mengaplikasikan framework SOAR di 2 keputusan strategis terkait dashboard project.',
+            kendala: 'Workshop hanya 3 hari — perlu reinforcement untuk internalisasi framework yang lebih mendalam. Belum ada slot Advanced Risk Analytics yang dijadwalkan ulang.',
+            dukungan: 'Akses material follow-up dan study group internal untuk practice framework. Konfirmasi jadwal Advanced Risk Analytics Q3.',
+          },
+          {
+            id: 'M2I002', coachingPlanItemId: 'PI002-2', areaLabel: '',
+            tindakLanjut: 'Persiapan CFA Level 3 sedang berjalan — sudah complete 60% material curriculum, ikut mock exam 2 kali dengan skor passing. Study group internal BI berjalan setiap Sabtu.',
+            kendala: 'Materi alternative investments dan portfolio management memerlukan study time yang lebih intensif. Beban pekerjaan dashboard project membatasi weekly study hours.',
+            dukungan: 'Approval cuti 3 hari sebelum exam date (Juni 2026). Akses ke CFA Institute practice tests bank.',
+          },
+        ],
+      },
+      monitoring3: { status: 'completed', submittedAt: '2026-05-25',
         manfaat: 9,
         bertumbuh: 9,
         rekomendasi: 10,
         saran: 'Proses follow-up sudah cukup baik. Mungkin bisa ditambah peer-learning session antar peserta DIKSI untuk saling sharing best practice tindak lanjut. Format quarterly check-in dengan grup kecil akan sangat membantu.',
         bersedia_fasilitator: 'Ya',
-        bersedia_pembekalan: 'Ya'
-      },
-      monitoring3: { status: 'completed', submittedAt: '2026-05-25',
-        kategori_perubahan: 'transformatif',
-        elaborasi_perubahan: 'Setelah 6 bulan mengikuti DIKSI, perubahan terbesar adalah dalam cara saya melihat decision-making. Dulu sangat operational dan reaktif, sekarang lebih banyak menggunakan strategic frame: tanya "kenapa" sebelum "apa". Confidence dalam taking calculated risks juga meningkat signifikan.',
-        kategori_pencapaian: 'melampaui',
-        elaborasi_pencapaian: 'Berhasil men-deliver macroprudential analytics dashboard fase 1 yang sekarang dipakai di 3 satker. Promosi internal sebagai Lead Working Group Krisis Manajemen. Mentoring 2 junior staff dengan structured approach yang dipelajari dari sesi coaching.',
-        kategori_pembelajaran: 'sangat_mendalam',
-        elaborasi_pembelajaran: 'Pembelajaran utama: leadership bukan tentang punya semua jawaban, tapi tentang ask better questions. Style delegasi yang strategic ternyata membuat tim lebih mature dan ownership-driven. Vulnerability sebagai leader (mengakui tidak tahu) justru meningkatkan trust.',
-        kategori_kedepan: 'sangat_jelas',
-        elaborasi_kedepan: 'Ke depan ingin lebih dalam di area systemic risk modeling dan cross-border policy coordination. Ambisi 3-5 tahun: berkontribusi di level kebijakan ASEAN melalui forum regional banking supervisors.'
+        bersedia_pembekalan: 'Ya',
       },
       evaluasi:    { status: 'completed', submittedAt: '2026-06-10',
-        skor_program: 9,
-        skor_mentor: 10,
-        kebermanfaatan: 9,
-        feedback_program: 'DIKSI adalah salah satu program pengembangan paling impactful yang pernah saya ikuti di BI. Struktur 7-tahap yang gradual membantu sustained behavior change, bukan hanya knowledge transfer. Kombinasi 1-on-1 coaching + monitoring berkala memastikan akuntabilitas tindak lanjut. Material wiki dan QNA inbox juga sangat helpful sebagai pendamping di luar sesi.',
-        feedback_mentor: 'Pak Hendra adalah mentor exceptional. Beliau sangat skilled dalam asking powerful questions yang membuat saya self-discover insights, bukan hanya menerima nasihat. Pengalaman beliau di macroprudential dan risk management sangat relevan dengan growth area saya. Sangat patient dan structured dalam approach-nya.',
-        rekomendasi_perbaikan: 'Saran: tambahkan optional peer-coaching session antar peserta yang seangkatan untuk lateral learning. Plus, sediakan toolkit/template untuk facilitate self-application di tempat kerja antar sesi.'
+        komitmen: 10, keaktifan: 9, penguasaanMateri: 10, kemampuanCoaching: 10,
+        aksesibilitas: 9, kontribusiInsight: 10, empatiTrust: 9,
+        kelebihanMentor: 'Pak Hendra exceptional dalam asking powerful questions yang membuat saya self-discover insights. Pengalaman beliau di macroprudential dan risk management sangat relevan dengan growth area saya. Sangat patient & structured dalam approach.',
+        saranMentor: 'Mungkin bisa lebih banyak share case-study real dari pengalaman Direksi untuk konteks praktis. Plus, sediakan reading list / framework recommendations sebagai pre-work untuk sesi-sesi berikutnya.',
+      },
+      evaluasiMentor: { status: 'completed', submittedAt: '2026-06-12', evaluatedBy: 'Dr. Hendra Wijaya',
+        komitmen: 10, keaktifan: 10, inisiatif: 9, kualitasPlan: 9,
+        konsistensiTindakLanjut: 10, receptifFeedback: 10, pertumbuhan: 10,
+        kekuatanMentee: 'Siti memiliki kapasitas analitis yang tajam dan kepemimpinan tim yang sangat kuat. Disiplin tinggi dalam follow-up monitoring dengan dokumentasi terstruktur. Mampu menerjemahkan insight coaching ke action concrete (dashboard initiative go-live dalam 4 bulan).',
+        areaPengembangan: 'Strategic delegation di level eksekutif perlu terus diperdalam — perpindahan dari high-quality individual contributor ke high-leverage leader. Executive presence ke external stakeholder (Direksi, regulator regional) bisa menjadi development priority berikutnya.',
       },
     }
   },
@@ -264,7 +378,7 @@ const seedParticipants = () => [
       sosialisasi: { status: 'completed', pretestScore: 88, posttestScore: 96, completedAt: '2026-01-18', pretestVisible: true, posttestVisible: true },
       coaching:    { status: 'in_progress', sesi: 1, mentorEvaluation: null, pesertaSurvey: null,
         sessions: [
-          { id: 'CS004', tanggal: '2026-05-08', waktu: '09:30', durasi: 60, lokasi: 'Online · Microsoft Teams', topik: 'Payment system innovation roadmap', status: 'accepted', proposedBy: 'mentor', proposedAt: '2026-04-22', acceptedAt: '2026-04-23', teamsLink: 'https://teams.microsoft.com/l/meetup-join/meet-CS004-mock' },
+          { id: 'CS004', tanggal: '2026-05-08', waktu: '09:30', durasi: 60, lokasi: 'Online', topik: 'Payment system innovation roadmap', status: 'accepted', proposedBy: 'mentor', proposedAt: '2026-04-22', acceptedAt: '2026-04-23', teamsLink: 'https://teams.microsoft.com/l/meetup-join/meet-CS004-mock' },
         ] },
       monitoring1: { status: 'pending' },
       monitoring2: { status: 'pending' },
@@ -306,49 +420,10 @@ const seedParticipants = () => [
   },
 ];
 
-// =====================================================================
-// QNA THREADS — Pertanyaan personal dari peserta ke admin (1-on-1)
-// Setiap thread terdiri dari beberapa messages bolak-balik
-// =====================================================================
-const seedQnaThreads = () => [
-  {
-    id: 'QT001', pesertaId: 'P001', subject: 'Jadwal sesi coaching',
-    createdAt: '2026-01-25', updatedAt: '2026-01-26', status: 'answered', adminUnread: false,
-    messages: [
-      { id: 'm1', from: 'peserta', author: 'Arif Budiman Pratama', body: 'Selamat siang, ingin menanyakan apakah jadwal sesi 1-on-1 coaching saya bisa dimajukan dari rencana awal? Karena ada agenda penting di pekan ke-3 Februari.', at: '2026-01-25 13:24' },
-      { id: 'm2', from: 'admin',   author: 'Dr. Ratna Kusumaningrum', body: 'Halo Pak Arif. Untuk perubahan jadwal mohon koordinasi langsung dengan mentor (Pak Yanuar). Admin DSDM akan support approval-nya. Silakan WA Pak Yanuar.', at: '2026-01-26 09:15' },
-      { id: 'm3', from: 'peserta', author: 'Arif Budiman Pratama', body: 'Baik, sudah saya hubungi. Terima kasih.', at: '2026-01-26 10:32' },
-    ],
-  },
-  {
-    id: 'QT002', pesertaId: 'P003', subject: 'Akomodasi peserta KPwBI',
-    createdAt: '2026-01-20', updatedAt: '2026-01-21', status: 'answered', adminUnread: false,
-    messages: [
-      { id: 'm4', from: 'peserta', author: 'Bagus Kurniawan Saputra', body: 'Untuk peserta KPwBI Lampung seperti saya, apakah ada akomodasi tertentu selama kegiatan offline di Jakarta?', at: '2026-01-20 16:08' },
-      { id: 'm5', from: 'admin',   author: 'Dr. Ratna Kusumaningrum', body: 'Iya Pak Bagus, akomodasi disiapkan untuk peserta KPwBI selama kegiatan offline. Hotel & transport dicover. Silakan kontak panitia (Bu Sari, ext. 4521) untuk detail.', at: '2026-01-21 08:45' },
-    ],
-  },
-  {
-    id: 'QT003', pesertaId: 'P006', subject: 'Materi sosialisasi belum tersedia',
-    createdAt: '2026-01-28', updatedAt: '2026-01-28', status: 'pending', adminUnread: true,
-    messages: [
-      { id: 'm6', from: 'peserta', author: 'Nadia Alya Salsabila', body: 'Halo, saya cek di menu Wiki belum ada modul sosialisasi terbaru. Apakah akan diupload sebelum kegiatan tanggal 30 Januari?', at: '2026-01-28 14:50' },
-    ],
-  },
-  {
-    id: 'QT004', pesertaId: 'P004', subject: 'Persiapan sebelum sesi 1-on-1',
-    createdAt: '2026-02-01', updatedAt: '2026-02-01', status: 'pending', adminUnread: true,
-    messages: [
-      { id: 'm7', from: 'peserta', author: 'Dewi Kusuma Ningrum', body: 'Sebelum sesi 1-on-1 coaching minggu depan, apakah ada template self-assessment yang perlu saya isi terlebih dahulu? Mohon panduannya.', at: '2026-02-01 11:22' },
-    ],
-  },
-];
-
 const seedNotifications = () => ({
   admin: [
     { id: 'n1', type: 'info', title: '4 peserta DIKSI siap untuk coaching 1-on-1', desc: 'Tahap 3 aktif · pengaturan jadwal mentor', time: '2 menit lalu', read: false },
     { id: 'n2', type: 'success', title: 'Pretest Sosialisasi 5 peserta selesai', desc: 'Rata-rata skor: 83', time: '1 jam lalu', read: false },
-    { id: 'n3', type: 'info', title: 'QNA baru dari Arif Budiman', desc: 'Pertanyaan tentang jadwal sesi coaching', time: '3 jam lalu', read: false },
   ],
   mentor: [
     { id: 'n4', type: 'info', title: 'Anda mendampingi 3 mentee di DIKSI Batch 1 · 2026', desc: 'Arif Budiman, Bagus Kurniawan, Nadia Alya', time: '5 jam lalu', read: false },
@@ -383,9 +458,8 @@ function AppProvider({ children }) {
   const [activeBatchId, setActiveBatchId] = useState('B2026S1');
   // Mentors state — pool mentor yang dikelola admin
   const [mentors, setMentors] = useState(seedMentors);
-  // QNA threads — pertanyaan personal peserta ke admin
-  const [qnaThreads, setQnaThreads] = useState(seedQnaThreads);
-  const [selectedQnaThreadId, setSelectedQnaThreadId] = useState(null);
+  // Karyawan state — master data karyawan BI (referensi untuk peserta & mentor)
+  const [karyawan, setKaryawan] = useState(seedKaryawan);
   // Workspace state — untuk Mentor participant management
   const [workspaceParticipantId, setWorkspaceParticipantId] = useState(null);
   const [workspaceTab, setWorkspaceTab] = useState('overview');
@@ -435,7 +509,7 @@ function AppProvider({ children }) {
     participants, setParticipants, updateParticipant,
     batches, setBatches, activeBatchId, setActiveBatchId,
     mentors, setMentors,
-    qnaThreads, setQnaThreads, selectedQnaThreadId, setSelectedQnaThreadId,
+    karyawan, setKaryawan,
     selectedParticipant, setSelectedParticipantId,
     workspaceParticipantId, setWorkspaceParticipantId,
     workspaceTab, setWorkspaceTab,
@@ -769,14 +843,14 @@ const LANDING_MENUS = {
     { id: 'tahapan',  icon: Activity,       color: '#153858', bg: 'rgba(21,56,88,0.06)',   title: 'Monitoring Tahapan',  desc: 'Pantau progress 7 tahapan seluruh peserta.', menu: 'tahapan' },
   ],
   mentor: [
-    { id: 'mentees',  icon: Users,          color: '#B8935A', bg: 'rgba(184,147,90,0.08)', title: 'Mentee Saya',          desc: 'Daftar peserta yang Anda dampingi sebagai mentor.', menu: 'mentees' },
-    { id: 'coaching', icon: Sparkles,       color: '#0A2540', bg: 'rgba(10,37,64,0.06)',   title: '1-on-1 Coaching',      desc: 'Input hasil evaluasi sesi coaching 1-on-1.', menu: 'mentees' },
+    { id: 'mentees',  icon: Users,          color: '#B8935A', bg: 'rgba(184,147,90,0.08)', title: 'Mentee Saya',          desc: 'Daftar peserta yang Anda dampingi & review coaching plan.', menu: 'mentees' },
+    { id: 'oneOnOne', icon: Sparkles,       color: '#0A2540', bg: 'rgba(10,37,64,0.06)',   title: 'Sesi 1-on-1',          desc: 'Konfirmasi pengajuan dari mentee atau ajukan sesi 1-on-1.',  menu: 'oneOnOne' },
   ],
   peserta: [
     { id: 'dashboard',   icon: LayoutDashboard, color: '#0F766E', bg: 'rgba(15,118,110,0.08)', title: 'Journey Saya',        desc: 'Pantau progress perjalanan coaching Anda secara keseluruhan.', menu: 'dashboard' },
-    { id: 'coaching',    icon: Sparkles,        color: '#0A2540', bg: 'rgba(10,37,64,0.06)',   title: 'Sesi Coaching',        desc: 'Jadwal & hasil evaluasi sesi 1-on-1 bersama mentor.', menu: 'coaching' },
+    { id: 'coachingPlan', icon: ClipboardCheck,  color: '#0A2540', bg: 'rgba(10,37,64,0.06)',   title: 'Coaching Plan',        desc: 'Susun rencana pengembangan diri Anda untuk direview mentor.',         menu: 'coachingPlan' },
+    { id: 'oneOnOne',     icon: Sparkles,        color: '#B8935A', bg: 'rgba(184,147,90,0.08)', title: 'Pengajuan 1-on-1',     desc: 'Ajukan sesi konsultasi 1-on-1 dengan mentor saat membutuhkan.',       menu: 'oneOnOne' },
     { id: 'sosialisasi', icon: Target,          color: '#B8935A', bg: 'rgba(184,147,90,0.08)', title: 'Pretest & Posttest',   desc: 'Kerjakan asesmen sosialisasi program DIKSI.', menu: 'sosialisasi' },
-    { id: 'wiki',        icon: BookOpen,        color: '#153858', bg: 'rgba(21,56,88,0.06)',   title: 'Wiki / Modul',         desc: 'Akses materi & modul pembelajaran program.', menu: 'wiki' },
   ],
   board: [
     { id: 'dashboard',   icon: BarChart3,       color: '#B45309', bg: 'rgba(180,83,9,0.08)',   title: 'Dashboard Insight',    desc: 'Ringkasan eksekutif progres & outcome program coaching DIKSI.', menu: 'dashboard' },
@@ -1426,27 +1500,25 @@ function Header() {
 const MENUS = {
   admin: [
     { id: 'dashboard',   label: 'Dashboard',           icon: LayoutDashboard },
+    { id: 'karyawan',    label: 'Data Karyawan',        icon: Briefcase },
+    { id: 'mentorList',  label: 'List Mentor',          icon: Sparkles },
     { id: 'batches',     label: 'Kelola Batch',         icon: Calendar },
     { id: 'peserta',     label: 'Management Kegiatan',  icon: Users },
-    { id: 'mentorList',  label: 'List Mentor',          icon: Sparkles },
     { id: 'tahapan',     label: 'Monitoring Tahapan',   icon: Activity },
-    { id: 'wiki',        label: 'Wiki / Modul',         icon: BookOpen },
-    { id: 'qna',         label: 'QNA Inbox',            icon: MessageSquare },
   ],
   mentor: [
     { id: 'dashboard',  label: 'Beranda',          icon: LayoutDashboard },
     { id: 'mentees',    label: 'Mentee Saya',      icon: Users },
-    { id: 'wiki',       label: 'Wiki / Modul',     icon: BookOpen },
+    { id: 'oneOnOne',   label: 'Sesi 1-on-1',      icon: Sparkles },
   ],
   peserta: [
     { id: 'dashboard',   label: 'Journey Saya',           icon: LayoutDashboard },
     { id: 'registrasi',  label: 'Check-in',                icon: Upload },
     { id: 'sosialisasi', label: 'Pretest & Posttest',     icon: Target },
-    { id: 'coaching',    label: 'Sesi Coaching',          icon: Sparkles },
+    { id: 'coachingPlan', label: 'Coaching Plan',         icon: ClipboardCheck },
+    { id: 'oneOnOne',     label: 'Pengajuan 1-on-1',      icon: Sparkles },
     { id: 'monitoring',  label: 'Monitoring',             icon: Activity },
     { id: 'evaluasi',    label: 'Evaluasi',               icon: ClipboardCheck },
-    { id: 'wiki',        label: 'Wiki / Modul',           icon: BookOpen },
-    { id: 'qna',         label: 'QNA',                    icon: MessageSquare },
   ],
   board: [
     { id: 'dashboard',  label: 'Dashboard Insight',  icon: BarChart3 },
@@ -1465,7 +1537,7 @@ function Sidebar() {
           <div style={{ width: 3, background: theme.gold }}/>
           <div>
             <div style={{ fontSize: 12, fontWeight: 600, color: theme.text }}>Program DIKSI</div>
-            <div style={{ fontSize: 10, color: theme.textMuted, fontFamily: fonts.mono, marginTop: 2 }}>Batch 1 · 2026</div>
+            {/* <div style={{ fontSize: 10, color: theme.textMuted, fontFamily: fonts.mono, marginTop: 2 }}>Batch 1 · 2026</div> */}
           </div>
         </div>
       </div>
@@ -1610,28 +1682,372 @@ function AdminDashboard() {
 }
 
 // =====================================================================
+// ADMIN: DATA KARYAWAN — master data karyawan BI (referensi peserta & mentor)
+// Upload Excel & lihat seluruh database karyawan.
+// =====================================================================
+function AdminKaryawan() {
+  const { karyawan, setKaryawan, participants, mentors, toast, addAudit, currentUser } = useApp();
+  const [search, setSearch] = useState('');
+  const [filterSatker, setFilterSatker] = useState('all');
+  const [filterTipe, setFilterTipe] = useState('all');
+  const [filterStatus, setFilterStatus] = useState('all'); // all | KPP | Non-KPP
+  const [showImport, setShowImport] = useState(false);
+
+  const userShortName = currentUser.user.split(',')[0];
+
+  // Derived: status setiap karyawan apakah peserta / mentor (lookup by NIP)
+  const pesertaNips = useMemo(() => new Set(participants.map(p => p.nip)), [participants]);
+  const mentorNips  = useMemo(() => new Set(mentors.map(m => m.nip)), [mentors]);
+
+  // Unique satker list dari karyawan untuk filter dropdown
+  const satkerList = useMemo(() => {
+    const s = new Set(karyawan.map(k => k.satker));
+    return Array.from(s).sort();
+  }, [karyawan]);
+
+  const filtered = useMemo(() => karyawan.filter(k => {
+    if (filterSatker !== 'all' && k.satker !== filterSatker) return false;
+    if (filterTipe !== 'all' && k.tipeSatker !== filterTipe) return false;
+    if (filterStatus !== 'all' && k.statusPegawai !== filterStatus) return false;
+    if (search) {
+      const q = search.toLowerCase();
+      if (!k.nama.toLowerCase().includes(q) && !k.nip.includes(q) && !k.satker.toLowerCase().includes(q)) return false;
+    }
+    return true;
+  }), [karyawan, filterSatker, filterTipe, filterStatus, search]);
+
+  const stats = {
+    total:    karyawan.length,
+    peserta:  karyawan.filter(k => pesertaNips.has(k.nip)).length,
+    mentor:   karyawan.filter(k => mentorNips.has(k.nip)).length,
+    pool:     karyawan.filter(k => !pesertaNips.has(k.nip) && !mentorNips.has(k.nip)).length,
+  };
+
+  const resetFilters = () => { setSearch(''); setFilterSatker('all'); setFilterTipe('all'); setFilterStatus('all'); };
+
+  const handleImported = (newRows) => {
+    setKaryawan(prev => [...prev, ...newRows]);
+    addAudit(userShortName, `Import ${newRows.length} karyawan baru via Excel`, null);
+    toast(`${newRows.length} karyawan berhasil ditambahkan ke database.`, 'success');
+  };
+
+  return (
+    <div>
+      <SectionHeader
+        eyebrow="Admin DSDM · Data Karyawan"
+        title="Database Karyawan BI"
+        desc={`${stats.total} karyawan terdaftar · referensi untuk pemilihan peserta coaching & mentor`}
+        right={
+          <div style={{ display: 'flex', gap: 8 }}>
+            <Button variant="ghost" icon={Download} onClick={() => toast('Template Excel akan diunduh.', 'info')}>Template</Button>
+            <Button variant="primary" icon={Upload} onClick={() => setShowImport(true)}>Upload Excel</Button>
+          </div>
+        }
+      />
+
+      {/* Stat cards */}
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12, marginBottom: 18 }}>
+        <StatCard label="Total Karyawan" value={stats.total} sub="dalam database" accent={theme.navy}/>
+        <StatCard label="Jadi Peserta"   value={stats.peserta} sub="aktif di program DIKSI" accent={theme.gold}/>
+        <StatCard label="Jadi Mentor"    value={stats.mentor}  sub="pool mentor program" accent={theme.success}/>
+        <StatCard label="Pool Tersedia"  value={stats.pool}    sub="belum jadi peserta/mentor" accent={theme.textMuted}/>
+      </div>
+
+      {/* Filter bar */}
+      <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderRadius: 2, padding: 12, marginBottom: 12, display: 'flex', gap: 10, alignItems: 'center', flexWrap: 'wrap' }}>
+        <div style={{ position: 'relative', flex: '1 1 240px', minWidth: 200 }}>
+          <Search size={14} style={{ position: 'absolute', left: 10, top: '50%', transform: 'translateY(-50%)', color: theme.textMuted }}/>
+          <input type="text" value={search} onChange={e => setSearch(e.target.value)} placeholder="Cari nama, NIP, atau satker..."
+            style={{ width: '100%', fontSize: 12, padding: '9px 10px 9px 30px', border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', fontFamily: fonts.body, boxSizing: 'border-box' }}/>
+        </div>
+        <select value={filterSatker} onChange={e => setFilterSatker(e.target.value)}
+          style={{ fontSize: 11.5, padding: '9px 10px', border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', background: '#fff', fontFamily: fonts.body, minWidth: 140 }}>
+          <option value="all">Semua Satker</option>
+          {satkerList.map(s => <option key={s} value={s}>{s}</option>)}
+        </select>
+        <select value={filterTipe} onChange={e => setFilterTipe(e.target.value)}
+          style={{ fontSize: 11.5, padding: '9px 10px', border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', background: '#fff', fontFamily: fonts.body, minWidth: 130 }}>
+          <option value="all">Semua Tipe</option>
+          <option value="KP">KP (Kantor Pusat)</option>
+          <option value="KPW">KPW (Perwakilan)</option>
+        </select>
+        <select value={filterStatus} onChange={e => setFilterStatus(e.target.value)}
+          style={{ fontSize: 11.5, padding: '9px 10px', border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', background: '#fff', fontFamily: fonts.body, minWidth: 120 }}>
+          <option value="all">Semua Status</option>
+          <option value="KPP">KPP</option>
+          <option value="Non-KPP">Non-KPP</option>
+        </select>
+        {(search || filterSatker !== 'all' || filterTipe !== 'all' || filterStatus !== 'all') && (
+          <Button variant="ghost" size="sm" onClick={resetFilters}>Reset</Button>
+        )}
+        <div style={{ fontSize: 10.5, color: theme.textMuted, fontFamily: fonts.mono, marginLeft: 'auto' }}>
+          {filtered.length} dari {karyawan.length} karyawan
+        </div>
+      </div>
+
+      {/* Table */}
+      <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderRadius: 2, overflow: 'hidden' }}>
+        <div style={{ overflowX: 'auto' }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse', fontFamily: fonts.body }}>
+            <thead>
+              <tr style={{ background: theme.bg, fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.12em', color: theme.textMuted }}>
+                <th style={{ textAlign: 'left', padding: '10px 14px', fontWeight: 600 }}>NIP</th>
+                <th style={{ textAlign: 'left', padding: '10px 14px', fontWeight: 600 }}>Nama</th>
+                <th style={{ textAlign: 'left', padding: '10px 14px', fontWeight: 600 }}>Satker</th>
+                <th style={{ textAlign: 'left', padding: '10px 14px', fontWeight: 600 }}>Jabatan</th>
+                <th style={{ textAlign: 'left', padding: '10px 14px', fontWeight: 600 }}>Job Family</th>
+                <th style={{ textAlign: 'center', padding: '10px 14px', fontWeight: 600 }}>Status</th>
+                <th style={{ textAlign: 'center', padding: '10px 14px', fontWeight: 600 }}>SMD</th>
+                <th style={{ textAlign: 'left', padding: '10px 14px', fontWeight: 600 }}>Peran</th>
+              </tr>
+            </thead>
+            <tbody>
+              {filtered.map(k => {
+                const isPeserta = pesertaNips.has(k.nip);
+                const isMentor  = mentorNips.has(k.nip);
+                return (
+                  <tr key={k.id} style={{ borderTop: `1px solid ${theme.border}`, fontSize: 11.5 }}>
+                    <td style={{ padding: '11px 14px', fontFamily: fonts.mono, fontSize: 10.5, color: theme.textMuted }}>{k.nip}</td>
+                    <td style={{ padding: '11px 14px', color: theme.text, fontWeight: 500 }}>
+                      <div>{k.nama}</div>
+                      <div style={{ fontSize: 10, color: theme.textMuted, marginTop: 2 }}>{k.email}</div>
+                    </td>
+                    <td style={{ padding: '11px 14px', color: theme.text }}>
+                      <div>{k.satker}</div>
+                      <div style={{ fontSize: 9.5, color: theme.textMuted, marginTop: 2, fontFamily: fonts.mono }}>{k.tipeSatker}</div>
+                    </td>
+                    <td style={{ padding: '11px 14px', color: theme.text }}>{k.jabatan}</td>
+                    <td style={{ padding: '11px 14px', color: theme.textMuted, fontSize: 10.5 }}>{k.jobFamily}</td>
+                    <td style={{ padding: '11px 14px', textAlign: 'center' }}>
+                      <Pill variant={k.statusPegawai === 'KPP' ? 'success' : 'default'}>{k.statusPegawai}</Pill>
+                    </td>
+                    <td style={{ padding: '11px 14px', textAlign: 'center', fontFamily: fonts.mono, fontSize: 10.5, color: theme.text }}>{k.smdTahun} thn</td>
+                    <td style={{ padding: '11px 14px' }}>
+                      <div style={{ display: 'flex', gap: 4, flexWrap: 'wrap' }}>
+                        {isPeserta && <Pill variant="warning">Peserta</Pill>}
+                        {isMentor  && <Pill variant="info">Mentor</Pill>}
+                        {!isPeserta && !isMentor && <span style={{ fontSize: 10.5, color: theme.textSubtle, fontStyle: 'italic' }}>Pool</span>}
+                      </div>
+                    </td>
+                  </tr>
+                );
+              })}
+              {filtered.length === 0 && (
+                <tr><td colSpan={8} style={{ padding: 40, textAlign: 'center', color: theme.textMuted, fontSize: 12 }}>
+                  Tidak ada karyawan yang cocok dengan filter. <button onClick={resetFilters} style={{ background: 'transparent', border: 'none', color: theme.info, cursor: 'pointer', fontWeight: 600, fontSize: 12 }}>Reset filter</button>
+                </td></tr>
+              )}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      {showImport && <KaryawanImportModal onClose={() => setShowImport(false)} onImported={handleImported}/>}
+    </div>
+  );
+}
+
+// Modal upload Excel karyawan — 3 step: pilih file → preview validasi → success
+function KaryawanImportModal({ onClose, onImported }) {
+  const { karyawan } = useApp();
+  const [step, setStep] = useState(1);
+
+  // Mock preview data — beberapa valid, satu duplikat NIP
+  const previewRows = [
+    { nip: '199702142021032005', nama: 'Anindita Cahaya Pertiwi', satker: 'DKMK', tipeSatker: 'KP',  jabatan: 'Asisten Manajer', jobFamily: 'Manajemen Strategis', statusPegawai: 'KPP',     statusNK: 'Upper', smdTahun: 5, email: 'anindita.cahaya@bi.go.id' },
+    { nip: '199004052015031003', nama: 'Galih Pratama Nugroho',    satker: 'KPwBI Bandung', tipeSatker: 'KPW', jabatan: 'Manajer', jobFamily: 'Ekonom',            statusPegawai: 'KPP',     statusNK: 'Upper', smdTahun: 9, email: 'galih.pratama@bi.go.id' },
+    { nip: '199203142018031001', nama: 'Arif Budiman Pratama (duplikat)', satker: 'DKEM', tipeSatker: 'KP', jabatan: 'Manajer', jobFamily: 'Ekonom',     statusPegawai: 'KPP',     statusNK: 'Upper', smdTahun: 8, email: 'arif.budiman@bi.go.id' },
+    { nip: '199805122023031010', nama: 'Bayu Setiawan Wijaya',     satker: 'DSPR', tipeSatker: 'KP',  jabatan: 'Analis',          jobFamily: 'Sistem Pembayaran', statusPegawai: 'KPP',     statusNK: 'Lower', smdTahun: 3, email: 'bayu.setiawan@bi.go.id' },
+    { nip: '198403122008032001', nama: 'Indah Permata Sari, M.Si', satker: 'DSDM', tipeSatker: 'KP',  jabatan: 'Manajer',         jobFamily: 'Manajemen Strategis', statusPegawai: 'Non-KPP', statusNK: 'Upper', smdTahun: 12, email: 'indah.permata@bi.go.id' },
+  ];
+
+  const existingNips = new Set(karyawan.map(k => k.nip));
+  const validatedRows = previewRows.map(r => ({
+    ...r,
+    isDuplicate: existingNips.has(r.nip),
+    valid: !existingNips.has(r.nip),
+  }));
+
+  const validCount = validatedRows.filter(r => r.valid).length;
+  const dupCount   = validatedRows.filter(r => r.isDuplicate).length;
+
+  const handleConfirm = () => {
+    const toAdd = validatedRows.filter(r => r.valid).map((r, i) => ({
+      id: 'K' + (Date.now() + i),
+      nip: r.nip, nama: r.nama, satker: r.satker, tipeSatker: r.tipeSatker,
+      jabatan: r.jabatan, jobFamily: r.jobFamily,
+      statusPegawai: r.statusPegawai, statusNK: r.statusNK, smdTahun: r.smdTahun,
+      email: r.email,
+    }));
+    onImported(toAdd);
+    setStep(3);
+  };
+
+  return (
+    <div style={{ position: 'fixed', inset: 0, background: 'rgba(10,37,64,0.72)', zIndex: 60, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 20, fontFamily: fonts.body }} onClick={onClose}>
+      <div style={{ background: '#fff', borderRadius: 4, width: '100%', maxWidth: 760, maxHeight: '90vh', overflow: 'hidden', display: 'flex', flexDirection: 'column' }} onClick={e => e.stopPropagation()}>
+        <div style={{ padding: '18px 22px', borderBottom: `1px solid ${theme.border}`, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <div>
+            <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.18em', color: theme.gold, fontWeight: 700 }}>Bulk Upload</div>
+            <div style={{ fontFamily: fonts.display, fontSize: 17, fontWeight: 600, color: theme.text, marginTop: 2 }}>Upload Data Karyawan dari Excel</div>
+          </div>
+          <button onClick={onClose} style={{ background: 'transparent', border: 'none', cursor: 'pointer', padding: 6, color: theme.textMuted }}><X size={16}/></button>
+        </div>
+
+        {/* Step indicator */}
+        <div style={{ padding: '10px 22px', background: theme.bg, borderBottom: `1px solid ${theme.border}`, display: 'flex', alignItems: 'center', gap: 8, fontSize: 10.5, fontFamily: fonts.mono }}>
+          {[1,2,3].map(s => (
+            <div key={s} style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+              <div style={{ width: 18, height: 18, borderRadius: 9, background: step >= s ? theme.gold : theme.border, color: step >= s ? theme.navy : theme.textSubtle, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 9, fontWeight: 700 }}>{s}</div>
+              <span style={{ color: step === s ? theme.text : theme.textMuted, fontWeight: step === s ? 600 : 400 }}>
+                {s === 1 ? 'Pilih File' : s === 2 ? 'Validasi Data' : 'Selesai'}
+              </span>
+              {s < 3 && <ChevronRight size={11} style={{ color: theme.textSubtle, marginLeft: 6 }}/>}
+            </div>
+          ))}
+        </div>
+
+        <div style={{ padding: 22, overflowY: 'auto', flex: 1 }}>
+          {step === 1 && (
+            <div>
+              <div style={{ background: theme.bg, border: `2px dashed ${theme.borderStrong}`, borderRadius: 3, padding: 40, textAlign: 'center', marginBottom: 14 }}>
+                <FileSpreadsheet size={36} style={{ color: theme.textMuted, margin: '0 auto 10px' }}/>
+                <div style={{ fontSize: 13, fontWeight: 600, color: theme.text, marginBottom: 4 }}>Drop file Excel karyawan di sini</div>
+                <div style={{ fontSize: 11, color: theme.textMuted, marginBottom: 14 }}>Format yang didukung: .xlsx, .xls, .csv (max 5MB)</div>
+                <Button variant="secondary" icon={Upload} onClick={() => setStep(2)}>Pilih File</Button>
+              </div>
+              <div style={{ background: theme.infoBg, border: '1px solid #BFDBFE', padding: 12, borderRadius: 2, fontSize: 11, color: theme.info, display: 'flex', gap: 8 }}>
+                <Info size={14} style={{ flexShrink: 0, marginTop: 1 }}/>
+                <div>
+                  <div style={{ fontWeight: 600, marginBottom: 3 }}>Kolom yang dibutuhkan di template:</div>
+                  <div style={{ color: theme.text, fontFamily: fonts.mono, fontSize: 10.5 }}>
+                    NIP · Nama · Satker · Tipe Satker (KP/KPW) · Jabatan · Job Family · Status Pegawai (KPP/Non-KPP) · Status NK (Upper/Lower) · SMD (tahun) · Email
+                  </div>
+                  <div style={{ marginTop: 6 }}>Sistem akan mengecek duplikat NIP terhadap database karyawan. Template Excel bisa diunduh <a href="#" style={{ color: theme.info, fontWeight: 600 }}>di sini</a>.</div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {step === 2 && (
+            <div>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10, marginBottom: 14 }}>
+                <div style={{ background: theme.successBg, border: '1px solid #A7F3D0', padding: 12, borderRadius: 2, textAlign: 'center' }}>
+                  <div style={{ fontSize: 10, color: theme.success, textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 700 }}>Valid</div>
+                  <div style={{ fontFamily: fonts.display, fontSize: 24, fontWeight: 300, color: theme.success, marginTop: 4 }}>{validCount}</div>
+                </div>
+                <div style={{ background: '#FEE2E2', border: '1px solid #FECACA', padding: 12, borderRadius: 2, textAlign: 'center' }}>
+                  <div style={{ fontSize: 10, color: theme.danger, textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 700 }}>Duplikat NIP</div>
+                  <div style={{ fontFamily: fonts.display, fontSize: 24, fontWeight: 300, color: theme.danger, marginTop: 4 }}>{dupCount}</div>
+                </div>
+                <div style={{ background: theme.bg, border: `1px solid ${theme.border}`, padding: 12, borderRadius: 2, textAlign: 'center' }}>
+                  <div style={{ fontSize: 10, color: theme.textMuted, textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 700 }}>Total Baris</div>
+                  <div style={{ fontFamily: fonts.display, fontSize: 24, fontWeight: 300, color: theme.text, marginTop: 4 }}>{validatedRows.length}</div>
+                </div>
+              </div>
+
+              <div style={{ border: `1px solid ${theme.border}`, borderRadius: 2, overflow: 'hidden' }}>
+                <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+                  <thead>
+                    <tr style={{ background: theme.bg, fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.1em', color: theme.textMuted }}>
+                      <th style={{ textAlign: 'left', padding: '8px 12px', fontWeight: 600 }}>Status</th>
+                      <th style={{ textAlign: 'left', padding: '8px 12px', fontWeight: 600 }}>NIP</th>
+                      <th style={{ textAlign: 'left', padding: '8px 12px', fontWeight: 600 }}>Nama</th>
+                      <th style={{ textAlign: 'left', padding: '8px 12px', fontWeight: 600 }}>Satker</th>
+                      <th style={{ textAlign: 'left', padding: '8px 12px', fontWeight: 600 }}>Jabatan</th>
+                      <th style={{ textAlign: 'left', padding: '8px 12px', fontWeight: 600 }}>Catatan</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {validatedRows.map((r, i) => (
+                      <tr key={i} style={{ borderTop: `1px solid ${theme.border}`, background: r.isDuplicate ? '#FFFAFA' : '#fff', fontSize: 11 }}>
+                        <td style={{ padding: '8px 12px' }}>
+                          {r.valid ? <Pill variant="success">Valid</Pill> : <Pill variant="danger">Duplikat</Pill>}
+                        </td>
+                        <td style={{ padding: '8px 12px', fontFamily: fonts.mono, fontSize: 10.5, color: theme.textMuted }}>{r.nip}</td>
+                        <td style={{ padding: '8px 12px', color: theme.text, fontWeight: 500 }}>{r.nama}</td>
+                        <td style={{ padding: '8px 12px', color: theme.text }}>{r.satker}</td>
+                        <td style={{ padding: '8px 12px', color: theme.text }}>{r.jabatan}</td>
+                        <td style={{ padding: '8px 12px', color: r.isDuplicate ? theme.danger : theme.textMuted, fontSize: 10.5 }}>
+                          {r.isDuplicate ? 'NIP sudah ada di database' : 'Akan ditambahkan'}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+
+          {step === 3 && (
+            <div style={{ textAlign: 'center', padding: 24 }}>
+              <div style={{ width: 60, height: 60, background: theme.successBg, margin: '0 auto 14px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: 30 }}>
+                <CheckCircle2 size={28} style={{ color: theme.success }}/>
+              </div>
+              <div style={{ fontFamily: fonts.display, fontSize: 18, fontWeight: 600, color: theme.text, marginBottom: 6 }}>Upload Berhasil</div>
+              <div style={{ fontSize: 12, color: theme.textMuted, lineHeight: 1.55, marginBottom: 4 }}><strong>{validCount}</strong> karyawan baru berhasil ditambahkan ke database.</div>
+              {dupCount > 0 && <div style={{ fontSize: 11, color: theme.danger }}>{dupCount} baris dilewati karena NIP duplikat.</div>}
+            </div>
+          )}
+        </div>
+
+        <div style={{ padding: '12px 22px', borderTop: `1px solid ${theme.border}`, background: theme.bg, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          {step === 1 && <><Button variant="ghost" onClick={onClose}>Batal</Button><div/></>}
+          {step === 2 && (
+            <>
+              <Button variant="ghost" onClick={() => setStep(1)}>← Kembali</Button>
+              <Button variant="primary" icon={CheckCircle2} onClick={handleConfirm} disabled={validCount === 0}>Upload {validCount} Karyawan</Button>
+            </>
+          )}
+          {step === 3 && <><div/><Button variant="primary" onClick={onClose}>Selesai</Button></>}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// =====================================================================
 // ADMIN: KELOLA BATCH — pilih batch aktif & buat batch baru
 // =====================================================================
 function AdminBatches() {
-  const { batches, setBatches, activeBatchId, setActiveBatchId, participants, toast, addAudit, currentUser, setActiveMenu } = useApp();
+  const { batches, setBatches, setActiveBatchId, participants, toast, addAudit, currentUser, setActiveMenu } = useApp();
   const [showCreate, setShowCreate] = useState(false);
+  const [editingBatch, setEditingBatch] = useState(null); // batch object yang sedang diedit periodenya
   const [draft, setDraft] = useState({ tahun: new Date().getFullYear() + 1, batchKe: '', tanggalMulai: '', tanggalSelesai: '' });
+  const [editDraft, setEditDraft] = useState({ tanggalMulai: '', tanggalSelesai: '' });
 
   const userShortName = currentUser.user.split(',')[0];
 
   const sortedBatches = [...batches].sort((a, b) => b.tanggalMulai.localeCompare(a.tanggalMulai));
-  const activeBatch = batches.find(b => b.id === activeBatchId);
 
   const fmtDate = (s) => new Date(s).toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' });
-  const monthsBetween = (a, b) => Math.round((new Date(b) - new Date(a)) / (1000 * 60 * 60 * 24 * 30));
 
   const pesertaCountByBatch = (batchId) => participants.filter(p => p.batchId === batchId).length;
 
-  const selectBatch = (batchId) => {
+  const openEdit = (b) => {
+    setEditingBatch(b);
+    setEditDraft({ tanggalMulai: b.tanggalMulai, tanggalSelesai: b.tanggalSelesai });
+  };
+
+  const saveEdit = () => {
+    if (!editDraft.tanggalMulai || !editDraft.tanggalSelesai) {
+      toast('Mohon lengkapi tanggal mulai & selesai', 'warning'); return;
+    }
+    if (new Date(editDraft.tanggalMulai) >= new Date(editDraft.tanggalSelesai)) {
+      toast('Tanggal selesai harus setelah tanggal mulai', 'warning'); return;
+    }
+    setBatches(prev => prev.map(b => b.id === editingBatch.id
+      ? { ...b, tanggalMulai: editDraft.tanggalMulai, tanggalSelesai: editDraft.tanggalSelesai }
+      : b
+    ));
+    addAudit(userShortName, `Mengubah periode ${editingBatch.nama}`, null);
+    toast(`Periode ${editingBatch.nama} berhasil diperbarui.`, 'success');
+    setEditingBatch(null);
+  };
+
+  const goToKelolaPeserta = (batchId) => {
     setActiveBatchId(batchId);
-    const b = batches.find(x => x.id === batchId);
-    addAudit(userShortName, `Memilih batch aktif: ${b?.nama}`, null);
-    toast(`Batch aktif diubah ke ${b?.nama}.`, 'success');
+    setActiveMenu('peserta');
   };
 
   const createBatch = () => {
@@ -1671,44 +2087,9 @@ function AdminBatches() {
       <SectionHeader
         eyebrow="Admin DSDM · Kelola Batch"
         title="Kelola Batch DIKSI"
-        desc={`${batches.length} batch terdaftar · pilih batch yang ingin dikelola atau buat batch baru`}
+        desc={`${batches.length} batch terdaftar · beberapa batch dapat berjalan bersamaan`}
         right={<Button variant="primary" icon={Plus} onClick={() => setShowCreate(true)}>Buat Batch Baru</Button>}
       />
-
-      {/* Active batch highlight card */}
-      {activeBatch && (
-        <div style={{
-          background: `linear-gradient(135deg, ${theme.navy} 0%, ${theme.navyDark} 100%)`,
-          color: '#fff', padding: 22, borderRadius: 3, marginBottom: 18, position: 'relative', overflow: 'hidden',
-        }}>
-          <div style={{ position: 'absolute', inset: 0, backgroundImage: `radial-gradient(circle at 90% 30%, rgba(184,147,90,0.15) 0%, transparent 50%)` }}/>
-          <div style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-            <div>
-              <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.2em', color: theme.goldLight, fontWeight: 600, marginBottom: 4 }}>
-                Batch Sedang Dikelola
-              </div>
-              <div style={{ fontFamily: fonts.display, fontSize: 22, fontWeight: 500, letterSpacing: '-0.01em' }}>{activeBatch.nama}</div>
-              <div style={{ fontSize: 11, color: theme.goldLight, marginTop: 6, fontFamily: fonts.mono }}>
-                {activeBatch.kode} · {fmtDate(activeBatch.tanggalMulai)} – {fmtDate(activeBatch.tanggalSelesai)}
-              </div>
-            </div>
-            <div style={{ display: 'flex', gap: 22, alignItems: 'center' }}>
-              <div style={{ textAlign: 'center' }}>
-                <div style={{ fontFamily: fonts.display, fontSize: 26, fontWeight: 300, color: theme.gold, lineHeight: 1 }}>{pesertaCountByBatch(activeBatch.id)}</div>
-                <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.15em', color: theme.goldLight, marginTop: 4 }}>Peserta</div>
-              </div>
-              <div style={{ width: 1, height: 36, background: 'rgba(184,147,90,0.3)' }}/>
-              <div style={{ textAlign: 'center' }}>
-                <div style={{ fontFamily: fonts.display, fontSize: 26, fontWeight: 300, color: theme.gold, lineHeight: 1 }}>{monthsBetween(activeBatch.tanggalMulai, activeBatch.tanggalSelesai)}</div>
-                <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.15em', color: theme.goldLight, marginTop: 4 }}>Bulan</div>
-              </div>
-              <Button variant="gold" icon={ArrowRight} onClick={() => setActiveMenu('peserta')}>
-                Kelola Peserta
-              </Button>
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* Batches list */}
       <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderRadius: 2 }}>
@@ -1720,7 +2101,6 @@ function AdminBatches() {
           <thead>
             <tr style={{ background: theme.bg, fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.12em', color: theme.textMuted }}>
               <th style={{ textAlign: 'left', padding: '10px 18px', fontWeight: 600 }}>Batch</th>
-              <th style={{ textAlign: 'left', padding: '10px 14px', fontWeight: 600 }}>Kode</th>
               <th style={{ textAlign: 'left', padding: '10px 14px', fontWeight: 600 }}>Periode</th>
               <th style={{ textAlign: 'center', padding: '10px 14px', fontWeight: 600 }}>Peserta</th>
               <th style={{ textAlign: 'center', padding: '10px 14px', fontWeight: 600 }}>Status</th>
@@ -1728,40 +2108,32 @@ function AdminBatches() {
             </tr>
           </thead>
           <tbody>
-            {sortedBatches.map(b => {
-              const isActive = b.id === activeBatchId;
-              return (
-                <tr key={b.id} style={{
-                  borderTop: `1px solid ${theme.border}`,
-                  background: isActive ? theme.goldLight + '15' : '#fff',
-                  fontSize: 11.5,
-                }}>
-                  <td style={{ padding: '12px 18px', color: theme.text }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                      {isActive && <div style={{ width: 4, height: 4, borderRadius: 2, background: theme.gold }}/>}
-                      <span style={{ fontWeight: isActive ? 600 : 500 }}>{b.nama}</span>
-                    </div>
-                  </td>
-                  <td style={{ padding: '12px 14px', color: theme.textMuted, fontFamily: fonts.mono, fontSize: 10.5 }}>{b.kode}</td>
-                  <td style={{ padding: '12px 14px', color: theme.textMuted, fontSize: 10.5 }}>{fmtDate(b.tanggalMulai)} – {fmtDate(b.tanggalSelesai)}</td>
-                  <td style={{ padding: '12px 14px', textAlign: 'center' }}>
-                    <span style={{ fontFamily: fonts.mono, color: theme.text }}>{pesertaCountByBatch(b.id)}</span>
-                  </td>
-                  <td style={{ padding: '12px 14px', textAlign: 'center' }}>
-                    <Pill variant={statusVariant(b.status)}>{statusLabel(b.status)}</Pill>
-                  </td>
-                  <td style={{ padding: '12px 18px', textAlign: 'right' }}>
-                    {isActive ? (
-                      <span style={{ fontSize: 10, color: theme.gold, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em' }}>Aktif</span>
-                    ) : b.status === 'completed' ? (
-                      <Button variant="ghost" size="sm" onClick={() => setActiveMenu('history')}>Lihat History →</Button>
-                    ) : (
-                      <Button variant="secondary" size="sm" onClick={() => selectBatch(b.id)}>Pilih</Button>
+            {sortedBatches.map(b => (
+              <tr key={b.id} style={{
+                borderTop: `1px solid ${theme.border}`,
+                background: '#fff',
+                fontSize: 11.5,
+              }}>
+                <td style={{ padding: '12px 18px', color: theme.text }}>
+                  <span style={{ fontWeight: 500 }}>{b.nama}</span>
+                </td>
+                <td style={{ padding: '12px 14px', color: theme.textMuted, fontSize: 10.5 }}>{fmtDate(b.tanggalMulai)} – {fmtDate(b.tanggalSelesai)}</td>
+                <td style={{ padding: '12px 14px', textAlign: 'center' }}>
+                  <span style={{ fontFamily: fonts.mono, color: theme.text }}>{pesertaCountByBatch(b.id)}</span>
+                </td>
+                <td style={{ padding: '12px 14px', textAlign: 'center' }}>
+                  <Pill variant={statusVariant(b.status)}>{statusLabel(b.status)}</Pill>
+                </td>
+                <td style={{ padding: '12px 18px', textAlign: 'right' }}>
+                  <div style={{ display: 'inline-flex', gap: 6, alignItems: 'center', justifyContent: 'flex-end' }}>
+                    <Button variant="ghost" size="sm" icon={Edit3} onClick={() => openEdit(b)}>Edit Periode</Button>
+                    {b.status !== 'completed' && (
+                      <Button variant="secondary" size="sm" onClick={() => goToKelolaPeserta(b.id)}>Kelola Peserta →</Button>
                     )}
-                  </td>
-                </tr>
-              );
-            })}
+                  </div>
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
@@ -1830,6 +2202,56 @@ function AdminBatches() {
             <div style={{ padding: '14px 24px', borderTop: `1px solid ${theme.border}`, background: theme.bg, display: 'flex', justifyContent: 'flex-end', gap: 8 }}>
               <Button variant="ghost" onClick={() => setShowCreate(false)}>Batal</Button>
               <Button variant="primary" icon={Plus} onClick={createBatch}>Buat Batch</Button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Edit periode modal */}
+      {editingBatch && (
+        <div style={{
+          position: 'fixed', inset: 0, background: 'rgba(10,37,64,0.72)',
+          zIndex: 50, display: 'flex', alignItems: 'center', justifyContent: 'center',
+          padding: 20, fontFamily: fonts.body,
+        }}
+        onClick={() => setEditingBatch(null)}>
+          <div style={{ background: '#fff', borderRadius: 4, width: '100%', maxWidth: 520, overflow: 'hidden' }}
+            onClick={e => e.stopPropagation()}>
+            <div style={{ padding: '18px 24px', borderBottom: `1px solid ${theme.border}`, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <div>
+                <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.18em', color: theme.gold, fontWeight: 700 }}>Edit Periode Batch</div>
+                <div style={{ fontFamily: fonts.display, fontSize: 17, fontWeight: 600, color: theme.text, marginTop: 2 }}>{editingBatch.nama}</div>
+              </div>
+              <button onClick={() => setEditingBatch(null)} style={{ background: 'transparent', border: 'none', cursor: 'pointer', padding: 6, color: theme.textMuted }}>
+                <X size={16}/>
+              </button>
+            </div>
+
+            <div style={{ padding: 24 }}>
+              <div style={{ background: theme.bg, padding: '8px 12px', borderRadius: 2, marginBottom: 14, fontSize: 10.5, color: theme.textMuted, display: 'flex', alignItems: 'center', gap: 6 }}>
+                <Info size={12}/>
+                Hanya periode (tanggal mulai & selesai) yang dapat diubah. Kode batch <strong style={{ color: theme.text, marginLeft: 4 }}>{editingBatch.kode}</strong> tidak berubah.
+              </div>
+
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+                <div>
+                  <label style={{ display: 'block', fontSize: 11, fontWeight: 600, color: theme.text, marginBottom: 4 }}>Tanggal Mulai <span style={{ color: theme.danger }}>*</span></label>
+                  <input type="date" value={editDraft.tanggalMulai}
+                    onChange={e => setEditDraft({ ...editDraft, tanggalMulai: e.target.value })}
+                    style={{ width: '100%', fontSize: 12, fontFamily: fonts.mono, padding: 10, border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', boxSizing: 'border-box' }}/>
+                </div>
+                <div>
+                  <label style={{ display: 'block', fontSize: 11, fontWeight: 600, color: theme.text, marginBottom: 4 }}>Tanggal Selesai <span style={{ color: theme.danger }}>*</span></label>
+                  <input type="date" value={editDraft.tanggalSelesai}
+                    onChange={e => setEditDraft({ ...editDraft, tanggalSelesai: e.target.value })}
+                    style={{ width: '100%', fontSize: 12, fontFamily: fonts.mono, padding: 10, border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', boxSizing: 'border-box' }}/>
+                </div>
+              </div>
+            </div>
+
+            <div style={{ padding: '14px 24px', borderTop: `1px solid ${theme.border}`, background: theme.bg, display: 'flex', justifyContent: 'flex-end', gap: 8 }}>
+              <Button variant="ghost" onClick={() => setEditingBatch(null)}>Batal</Button>
+              <Button variant="primary" icon={Check} onClick={saveEdit}>Simpan Perubahan</Button>
             </div>
           </div>
         </div>
@@ -2090,383 +2512,6 @@ function AdminMentorList() {
           </div>
         </div>
       )}
-    </div>
-  );
-}
-
-// =====================================================================
-// ADMIN: WIKI / MODUL — manajemen materi konseling untuk peserta
-// =====================================================================
-function AdminWiki() {
-  const { toast, addAudit, currentUser } = useApp();
-  const [search, setSearch] = useState('');
-  const [filterKategori, setFilterKategori] = useState('all');
-  const [showEditor, setShowEditor] = useState(false);
-  const [editingId, setEditingId] = useState(null);
-  const [draft, setDraft] = useState({ judul: '', kategori: 'Pengantar', tahap: 1, ringkasan: '', isi: '', visibility: 'all' });
-
-  const userShortName = currentUser.user.split(',')[0];
-
-  const [modul, setModul] = useState([
-    { id: 'W001', judul: 'Pengantar Program DIKSI Coaching',     kategori: 'Pengantar',   tahap: 1, ringkasan: 'Overview lengkap program, tujuan, dan timeline 7 tahap.', isi: 'Materi lengkap...', visibility: 'all',     updatedAt: '2026-01-10', author: 'Dr. Ratna Kusumaningrum', readCount: 6, status: 'published' },
-    { id: 'W002', judul: 'Panduan Check-in dan Registrasi',       kategori: 'Panduan',    tahap: 1, ringkasan: 'Cara melakukan check-in saat kegiatan dimulai.',           isi: 'Materi lengkap...', visibility: 'all',     updatedAt: '2026-01-12', author: 'Dr. Ratna Kusumaningrum', readCount: 5, status: 'published' },
-    { id: 'W003', judul: 'Materi Sosialisasi DIKSI 2026',          kategori: 'Materi',     tahap: 2, ringkasan: 'Slide deck sosialisasi yang dipresentasikan saat kickoff.', isi: 'Materi lengkap...', visibility: 'peserta', updatedAt: '2026-01-15', author: 'Dr. Ratna Kusumaningrum', readCount: 5, status: 'published' },
-    { id: 'W004', judul: 'Soal Pretest & Bank Soal',                kategori: 'Asesmen',    tahap: 2, ringkasan: 'Bank soal pretest dengan 5 pertanyaan baseline.',          isi: 'Materi lengkap...', visibility: 'admin',   updatedAt: '2026-01-14', author: 'Dr. Ratna Kusumaningrum', readCount: 1, status: 'published' },
-    { id: 'W005', judul: 'Persiapan Sesi 1-on-1 Coaching',          kategori: 'Panduan',    tahap: 3, ringkasan: 'Tips & template persiapan sesi coaching antara mentor dan mentee.', isi: 'Materi lengkap...', visibility: 'all', updatedAt: '2026-02-01', author: 'Dr. Ratna Kusumaningrum', readCount: 4, status: 'published' },
-    { id: 'W006', judul: 'Template Evaluasi Mentor',                kategori: 'Template',   tahap: 3, ringkasan: 'Format strengths, area pengembangan, rekomendasi.',         isi: 'Materi lengkap...', visibility: 'mentor',  updatedAt: '2026-02-03', author: 'Dr. Ratna Kusumaningrum', readCount: 2, status: 'published' },
-    { id: 'W007', judul: 'Coaching Skills untuk Mentor',            kategori: 'Materi',     tahap: 3, ringkasan: 'Modul mentor: GROW model, active listening, powerful questions.', isi: 'Materi lengkap...', visibility: 'mentor', updatedAt: '2026-02-05', author: 'Dr. Ratna Kusumaningrum', readCount: 2, status: 'draft' },
-  ]);
-
-  const kategoriList = [...new Set(modul.map(m => m.kategori))];
-  const filtered = modul.filter(m => {
-    if (filterKategori !== 'all' && m.kategori !== filterKategori) return false;
-    if (search && !m.judul.toLowerCase().includes(search.toLowerCase()) && !m.ringkasan.toLowerCase().includes(search.toLowerCase())) return false;
-    return true;
-  });
-
-  const totalPublished = modul.filter(m => m.status === 'published').length;
-
-  const resetDraft = () => setDraft({ judul: '', kategori: 'Pengantar', tahap: 1, ringkasan: '', isi: '', visibility: 'all' });
-
-  const openEdit = (m) => {
-    setEditingId(m.id);
-    setDraft({ judul: m.judul, kategori: m.kategori, tahap: m.tahap, ringkasan: m.ringkasan, isi: m.isi, visibility: m.visibility });
-    setShowEditor(true);
-  };
-
-  const submit = () => {
-    if (!draft.judul.trim() || !draft.ringkasan.trim()) {
-      toast('Judul dan ringkasan wajib diisi', 'warning'); return;
-    }
-    if (editingId) {
-      setModul(prev => prev.map(m => m.id === editingId ? { ...m, ...draft, tahap: parseInt(draft.tahap, 10), updatedAt: new Date().toISOString().slice(0,10) } : m));
-      addAudit(userShortName, `Mengubah modul: ${draft.judul}`, null);
-      toast(`Modul "${draft.judul}" diperbarui.`, 'success');
-    } else {
-      const newId = `W${String(modul.length + 1).padStart(3, '0')}`;
-      const newModul = { id: newId, ...draft, tahap: parseInt(draft.tahap, 10), updatedAt: new Date().toISOString().slice(0,10), author: currentUser.user, readCount: 0, status: 'draft' };
-      setModul([newModul, ...modul]);
-      addAudit(userShortName, `Membuat modul baru: ${draft.judul}`, null);
-      toast(`Modul "${draft.judul}" dibuat sebagai draft.`, 'success');
-    }
-    setShowEditor(false); setEditingId(null); resetDraft();
-  };
-
-  const togglePublish = (m) => {
-    setModul(prev => prev.map(x => x.id === m.id ? { ...x, status: x.status === 'published' ? 'draft' : 'published', updatedAt: new Date().toISOString().slice(0,10) } : x));
-    addAudit(userShortName, `${m.status === 'published' ? 'Menarik publish' : 'Mempublish'} modul: ${m.judul}`, null);
-    toast(`Modul "${m.judul}" ${m.status === 'published' ? 'di-unpublish' : 'dipublish'}.`, 'info');
-  };
-
-  const removeModul = (m) => {
-    if (!confirm(`Hapus modul "${m.judul}"?`)) return;
-    setModul(prev => prev.filter(x => x.id !== m.id));
-    addAudit(userShortName, `Menghapus modul: ${m.judul}`, null);
-    toast(`Modul "${m.judul}" dihapus.`, 'success');
-  };
-
-  const visibilityIcon = (v) => v === 'all' ? Users : v === 'peserta' ? GraduationCap : v === 'mentor' ? Sparkles : Shield;
-  const visibilityLabel = (v) => v === 'all' ? 'Semua role' : v === 'peserta' ? 'Peserta saja' : v === 'mentor' ? 'Mentor saja' : 'Admin saja';
-
-  return (
-    <div>
-      <SectionHeader
-        eyebrow="Admin DSDM · Wiki / Modul"
-        title="Wiki / Modul Konseling"
-        desc={`${modul.length} modul terdaftar · ${totalPublished} published · materi referensi untuk peserta dan mentor`}
-        right={<Button variant="primary" icon={Plus} onClick={() => { resetDraft(); setEditingId(null); setShowEditor(true); }}>Tambah Modul</Button>}
-      />
-
-      {/* Stats summary */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 14, marginBottom: 18 }}>
-        <StatCard label="Total Modul" value={modul.length} sub="dalam knowledge base" accent={theme.navy}/>
-        <StatCard label="Published" value={totalPublished} sub={`${modul.length - totalPublished} draft`} accent={theme.success}/>
-        <StatCard label="Total Reads" value={modul.reduce((a,m) => a + m.readCount, 0)} sub="kumulatif" accent={theme.gold}/>
-        <StatCard label="Kategori" value={kategoriList.length} sub="topik aktif" accent="#7C3AED"/>
-      </div>
-
-      {/* Filter bar */}
-      <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderRadius: 2, padding: '10px 14px', marginBottom: 12, display: 'flex', gap: 12, alignItems: 'center', flexWrap: 'wrap' }}>
-        <div style={{ flex: 1, minWidth: 200, display: 'flex', alignItems: 'center', gap: 8, padding: '6px 10px', background: theme.bg, borderRadius: 2 }}>
-          <Search size={13} style={{ color: theme.textSubtle }}/>
-          <input value={search} onChange={e => setSearch(e.target.value)} placeholder="Cari judul atau topik..."
-            style={{ flex: 1, border: 'none', outline: 'none', background: 'transparent', fontSize: 12, fontFamily: fonts.body, color: theme.text }}/>
-        </div>
-        <select value={filterKategori} onChange={e => setFilterKategori(e.target.value)}
-          style={{ fontSize: 11, fontFamily: fonts.body, padding: '6px 10px', border: `1px solid ${theme.border}`, borderRadius: 2, background: '#fff', color: theme.text, cursor: 'pointer', outline: 'none' }}>
-          <option value="all">Semua kategori</option>
-          {kategoriList.map(k => <option key={k} value={k}>{k}</option>)}
-        </select>
-      </div>
-
-      {/* Modul cards grid */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: 12 }}>
-        {filtered.length === 0 && (
-          <div style={{ gridColumn: '1 / -1', background: '#fff', border: `1px dashed ${theme.borderStrong}`, padding: 32, textAlign: 'center', borderRadius: 2, fontSize: 11, color: theme.textMuted }}>
-            Tidak ada modul sesuai filter.
-          </div>
-        )}
-        {filtered.map(m => {
-          const VicIc = visibilityIcon(m.visibility);
-          return (
-            <div key={m.id} style={{ background: '#fff', border: `1px solid ${theme.border}`, borderRadius: 2, padding: 16, position: 'relative' }}>
-              {/* Header: kategori + status */}
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 10 }}>
-                <div style={{ display: 'flex', gap: 6, alignItems: 'center', flexWrap: 'wrap' }}>
-                  <Pill variant="info" size="xs">{m.kategori}</Pill>
-                  <span style={{ fontSize: 9, color: theme.textMuted, fontFamily: fonts.mono, textTransform: 'uppercase', letterSpacing: '0.1em' }}>Tahap 0{m.tahap}</span>
-                </div>
-                <Pill variant={m.status === 'published' ? 'success' : 'warning'}>{m.status === 'published' ? 'Published' : 'Draft'}</Pill>
-              </div>
-
-              {/* Title + ringkasan */}
-              <div style={{ fontSize: 13, fontWeight: 600, color: theme.text, fontFamily: fonts.display, marginBottom: 6, lineHeight: 1.35 }}>{m.judul}</div>
-              <div style={{ fontSize: 11, color: theme.textMuted, lineHeight: 1.5, marginBottom: 12, minHeight: 33 }}>{m.ringkasan}</div>
-
-              {/* Meta */}
-              <div style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 10, color: theme.textMuted, paddingTop: 10, borderTop: `1px solid ${theme.border}`, marginBottom: 10 }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 4 }} title={visibilityLabel(m.visibility)}>
-                  <VicIc size={11}/> {visibilityLabel(m.visibility)}
-                </div>
-                <span>·</span>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
-                  <Eye size={11}/> {m.readCount} reads
-                </div>
-                <span style={{ marginLeft: 'auto', fontFamily: fonts.mono, fontSize: 9.5 }}>{m.updatedAt}</span>
-              </div>
-
-              {/* Actions */}
-              <div style={{ display: 'flex', gap: 6 }}>
-                <Button variant="ghost" size="sm" onClick={() => openEdit(m)} icon={Edit3}>Edit</Button>
-                <Button variant="ghost" size="sm" onClick={() => togglePublish(m)}>
-                  {m.status === 'published' ? 'Unpublish' : 'Publish'}
-                </Button>
-                <button onClick={() => removeModul(m)} title="Hapus"
-                  style={{ background: 'transparent', border: `1px solid ${theme.border}`, padding: '5px 8px', cursor: 'pointer', borderRadius: 2, color: theme.danger, marginLeft: 'auto' }}>
-                  <X size={11}/>
-                </button>
-              </div>
-            </div>
-          );
-        })}
-      </div>
-
-      {/* Editor modal */}
-      {showEditor && (
-        <div style={{ position: 'fixed', inset: 0, background: 'rgba(10,37,64,0.72)', zIndex: 50, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 20, fontFamily: fonts.body }}
-          onClick={() => { setShowEditor(false); setEditingId(null); }}>
-          <div style={{ background: '#fff', borderRadius: 4, width: '100%', maxWidth: 640, maxHeight: '90vh', display: 'flex', flexDirection: 'column' }} onClick={e => e.stopPropagation()}>
-            <div style={{ padding: '18px 24px', borderBottom: `1px solid ${theme.border}`, display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexShrink: 0 }}>
-              <div>
-                <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.18em', color: theme.gold, fontWeight: 700 }}>{editingId ? 'Edit' : 'Form Modul Baru'}</div>
-                <div style={{ fontFamily: fonts.display, fontSize: 17, fontWeight: 600, color: theme.text, marginTop: 2 }}>{editingId ? 'Edit Modul' : 'Tambah Modul Baru'}</div>
-              </div>
-              <button onClick={() => { setShowEditor(false); setEditingId(null); }} style={{ background: 'transparent', border: 'none', cursor: 'pointer', padding: 6, color: theme.textMuted }}>
-                <X size={16}/>
-              </button>
-            </div>
-
-            <div style={{ padding: 24, overflowY: 'auto', flex: 1 }}>
-              <div style={{ marginBottom: 12 }}>
-                <label style={{ display: 'block', fontSize: 11, fontWeight: 600, marginBottom: 4 }}>Judul Modul <span style={{ color: theme.danger }}>*</span></label>
-                <input value={draft.judul} onChange={e => setDraft({ ...draft, judul: e.target.value })}
-                  placeholder="Contoh: Persiapan Sesi 1-on-1 Coaching"
-                  style={{ width: '100%', fontSize: 13, fontFamily: fonts.body, padding: 10, border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', boxSizing: 'border-box' }}/>
-              </div>
-
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 10, marginBottom: 12 }}>
-                <div>
-                  <label style={{ display: 'block', fontSize: 11, fontWeight: 600, marginBottom: 4 }}>Kategori</label>
-                  <select value={draft.kategori} onChange={e => setDraft({ ...draft, kategori: e.target.value })}
-                    style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 10, border: `1px solid ${theme.border}`, borderRadius: 2, background: '#fff', outline: 'none', boxSizing: 'border-box' }}>
-                    {['Pengantar', 'Panduan', 'Materi', 'Asesmen', 'Template', 'Referensi'].map(k => <option key={k}>{k}</option>)}
-                  </select>
-                </div>
-                <div>
-                  <label style={{ display: 'block', fontSize: 11, fontWeight: 600, marginBottom: 4 }}>Tahap Terkait</label>
-                  <select value={draft.tahap} onChange={e => setDraft({ ...draft, tahap: e.target.value })}
-                    style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 10, border: `1px solid ${theme.border}`, borderRadius: 2, background: '#fff', outline: 'none', boxSizing: 'border-box' }}>
-                    {STAGES.map(s => <option key={s.id} value={s.id}>0{s.id} · {s.nama}</option>)}
-                  </select>
-                </div>
-                <div>
-                  <label style={{ display: 'block', fontSize: 11, fontWeight: 600, marginBottom: 4 }}>Visibility</label>
-                  <select value={draft.visibility} onChange={e => setDraft({ ...draft, visibility: e.target.value })}
-                    style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 10, border: `1px solid ${theme.border}`, borderRadius: 2, background: '#fff', outline: 'none', boxSizing: 'border-box' }}>
-                    <option value="all">Semua role</option>
-                    <option value="peserta">Peserta saja</option>
-                    <option value="mentor">Mentor saja</option>
-                    <option value="admin">Admin saja</option>
-                  </select>
-                </div>
-              </div>
-
-              <div style={{ marginBottom: 12 }}>
-                <label style={{ display: 'block', fontSize: 11, fontWeight: 600, marginBottom: 4 }}>Ringkasan <span style={{ color: theme.danger }}>*</span></label>
-                <textarea value={draft.ringkasan} onChange={e => setDraft({ ...draft, ringkasan: e.target.value })} rows={2}
-                  placeholder="Deskripsi singkat 1-2 kalimat untuk preview di card"
-                  style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 10, border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', resize: 'none', boxSizing: 'border-box' }}/>
-              </div>
-
-              <div>
-                <label style={{ display: 'block', fontSize: 11, fontWeight: 600, marginBottom: 4 }}>Isi Materi</label>
-                <textarea value={draft.isi} onChange={e => setDraft({ ...draft, isi: e.target.value })} rows={8}
-                  placeholder="Konten lengkap modul (mendukung markdown)..."
-                  style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 10, border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', resize: 'vertical', boxSizing: 'border-box', lineHeight: 1.55 }}/>
-              </div>
-            </div>
-
-            <div style={{ padding: '14px 24px', borderTop: `1px solid ${theme.border}`, background: theme.bg, display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexShrink: 0 }}>
-              <div style={{ fontSize: 10.5, color: theme.textMuted, fontStyle: 'italic' }}>Modul akan dibuat sebagai draft — publish saat siap</div>
-              <div style={{ display: 'flex', gap: 8 }}>
-                <Button variant="ghost" onClick={() => { setShowEditor(false); setEditingId(null); }}>Batal</Button>
-                <Button variant="primary" icon={editingId ? Check : Plus} onClick={submit}>{editingId ? 'Simpan Perubahan' : 'Buat Modul'}</Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-    </div>
-  );
-}
-
-// =====================================================================
-// ADMIN: QNA INBOX — list pertanyaan + reply inline (minimalis)
-// =====================================================================
-function AdminQNA() {
-  const { qnaThreads, setQnaThreads, participants, toast, addAudit, pushNotif, currentUser } = useApp();
-  const [replies, setReplies] = useState({}); // { threadId: 'draft text' }
-  const userShortName = currentUser.user.split(',')[0];
-  const adminFullName = currentUser.user;
-
-  // Sort: pending dulu, lalu by updatedAt desc
-  const sorted = [...qnaThreads].sort((a, b) => {
-    if (a.status !== b.status) return a.status === 'pending' ? -1 : 1;
-    return b.updatedAt.localeCompare(a.updatedAt);
-  });
-
-  const sendReply = (thread) => {
-    const text = (replies[thread.id] || '').trim();
-    if (!text) { toast('Tulis balasan terlebih dahulu', 'warning'); return; }
-    const peserta = participants.find(p => p.id === thread.pesertaId);
-    const now = new Date();
-    const at = `${now.toISOString().slice(0,10)} ${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`;
-    const newMsg = { id: 'm' + Date.now(), from: 'admin', author: adminFullName, body: text, at };
-    setQnaThreads(prev => prev.map(t => t.id !== thread.id ? t : ({
-      ...t,
-      messages: [...t.messages, newMsg],
-      status: 'answered',
-      updatedAt: at.slice(0,10),
-      adminUnread: false,
-    })));
-    addAudit(userShortName, `Membalas QNA: ${thread.subject}`, peserta?.nama);
-    pushNotif('peserta', { type: 'success', title: `Admin membalas: ${thread.subject}`, desc: text.slice(0, 80) + (text.length > 80 ? '...' : '') });
-    toast(`Balasan terkirim ke ${peserta?.nama.split(' ').slice(0,2).join(' ') || 'peserta'}.`, 'success');
-    setReplies(prev => ({ ...prev, [thread.id]: '' }));
-  };
-
-  return (
-    <div>
-      <SectionHeader
-        eyebrow="Admin DSDM · QNA Inbox"
-        title="QNA Peserta"
-        desc={`${qnaThreads.length} pertanyaan · ${qnaThreads.filter(t => t.status === 'pending').length} menunggu balasan`}
-      />
-
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-        {sorted.length === 0 && (
-          <div style={{ background: '#fff', border: `1px dashed ${theme.borderStrong}`, padding: 32, textAlign: 'center', borderRadius: 2, fontSize: 11.5, color: theme.textMuted }}>
-            Belum ada pertanyaan dari peserta.
-          </div>
-        )}
-        {sorted.map(thread => {
-          const peserta = participants.find(p => p.id === thread.pesertaId);
-          const lastMsg = thread.messages[thread.messages.length - 1];
-          const initialMsg = thread.messages.find(m => m.from === 'peserta') || lastMsg;
-
-          return (
-            <div key={thread.id} style={{
-              background: '#fff',
-              border: `1px solid ${theme.border}`,
-              borderLeft: thread.status === 'pending' ? `3px solid ${theme.warning}` : `3px solid ${theme.success}`,
-              borderRadius: 2, overflow: 'hidden',
-            }}>
-              {/* Header: peserta info + status + tanggal */}
-              <div style={{ padding: '12px 16px', borderBottom: `1px solid ${theme.border}`, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                  <div style={{ width: 32, height: 32, background: theme.navy, color: theme.gold, borderRadius: 2, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 10, fontWeight: 600, flexShrink: 0 }}>
-                    {peserta?.nama.split(' ').slice(0,2).map(n => n[0]).join('') || '??'}
-                  </div>
-                  <div>
-                    <div style={{ fontSize: 12, fontWeight: 600, color: theme.text }}>{peserta?.nama || 'Unknown'}</div>
-                    <div style={{ fontSize: 10, color: theme.textMuted }}>{peserta?.satker} · {peserta?.pangkat}</div>
-                  </div>
-                </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                  <span style={{ fontSize: 10, color: theme.textSubtle, fontFamily: fonts.mono }}>{thread.updatedAt}</span>
-                  <Pill variant={thread.status === 'pending' ? 'warning' : 'success'}>
-                    {thread.status === 'pending' ? 'Menunggu' : 'Dijawab'}
-                  </Pill>
-                </div>
-              </div>
-
-              {/* Body — split: pertanyaan kiri | reply kanan */}
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
-                {/* LEFT: pertanyaan + history singkat */}
-                <div style={{ padding: 16, borderRight: `1px solid ${theme.border}` }}>
-                  <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.12em', color: theme.textMuted, fontWeight: 600, marginBottom: 6 }}>
-                    Subject
-                  </div>
-                  <div style={{ fontSize: 13, fontWeight: 600, color: theme.text, marginBottom: 12 }}>{thread.subject}</div>
-
-                  <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.12em', color: theme.textMuted, fontWeight: 600, marginBottom: 6 }}>
-                    Pertanyaan
-                  </div>
-                  <div style={{ fontSize: 12, color: theme.text, lineHeight: 1.55, whiteSpace: 'pre-wrap' }}>{initialMsg?.body || ''}</div>
-
-                  {/* History balasan sebelumnya, kalau ada */}
-                  {thread.messages.length > 1 && (
-                    <details style={{ marginTop: 12, fontSize: 11 }}>
-                      <summary style={{ cursor: 'pointer', color: theme.textMuted, fontSize: 10, textTransform: 'uppercase', letterSpacing: '0.12em', fontWeight: 600 }}>
-                        Riwayat percakapan ({thread.messages.length} pesan)
-                      </summary>
-                      <div style={{ marginTop: 8, paddingLeft: 8, borderLeft: `2px solid ${theme.border}`, display: 'flex', flexDirection: 'column', gap: 8 }}>
-                        {thread.messages.slice(1).map(m => (
-                          <div key={m.id}>
-                            <div style={{ fontSize: 9.5, fontWeight: 600, color: m.from === 'admin' ? theme.navy : theme.text, marginBottom: 2 }}>
-                              {m.from === 'admin' ? `Admin · ${m.author.split(',')[0]}` : 'Peserta'} · <span style={{ fontFamily: fonts.mono, color: theme.textSubtle, fontWeight: 400 }}>{m.at}</span>
-                            </div>
-                            <div style={{ fontSize: 11, color: theme.text, lineHeight: 1.5, whiteSpace: 'pre-wrap' }}>{m.body}</div>
-                          </div>
-                        ))}
-                      </div>
-                    </details>
-                  )}
-                </div>
-
-                {/* RIGHT: reply box */}
-                <div style={{ padding: 16, background: theme.bg }}>
-                  <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.12em', color: theme.textMuted, fontWeight: 600, marginBottom: 6 }}>
-                    Balasan Admin
-                  </div>
-                  <textarea
-                    value={replies[thread.id] || ''}
-                    onChange={e => setReplies({ ...replies, [thread.id]: e.target.value })}
-                    rows={5}
-                    placeholder={`Tulis balasan ke ${peserta?.nama.split(' ')[0] || 'peserta'}...`}
-                    style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 10, border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', resize: 'none', boxSizing: 'border-box', lineHeight: 1.5, background: '#fff' }}
-                  />
-                  <div style={{ marginTop: 8, display: 'flex', justifyContent: 'flex-end' }}>
-                    <Button variant="primary" icon={Send} onClick={() => sendReply(thread)} disabled={!(replies[thread.id] || '').trim()}>
-                      Kirim Balasan
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          );
-        })}
-      </div>
     </div>
   );
 }
@@ -3052,6 +3097,7 @@ function ImportModal({ onClose }) {
 function AdminTahapan() {
   const { participants, batches, activeBatchId, setActiveBatchId, setSelectedParticipantId, setActiveMenu } = useApp();
   const [batchFilter, setBatchFilter] = useState(activeBatchId);
+  const [showUploadSkor, setShowUploadSkor] = useState(false);
 
   // Filter peserta by batch
   const filtered = participants.filter(p => batchFilter === 'all' ? true : p.batchId === batchFilter);
@@ -3063,7 +3109,12 @@ function AdminTahapan() {
         eyebrow="Admin DSDM · Monitoring Tahapan"
         title="Heatmap Progress per Tahapan"
         desc="Visualisasi status seluruh peserta pada 7 tahapan alur program · klik sel untuk detail"
-        right={<Button icon={Download} variant="secondary" size="sm">Export Heatmap</Button>}
+        right={
+          <div style={{ display: 'flex', gap: 8 }}>
+            <Button icon={Upload} variant="primary" size="sm" onClick={() => setShowUploadSkor(true)}>Upload Skor Sosialisasi</Button>
+            <Button icon={Download} variant="secondary" size="sm">Export Heatmap</Button>
+          </div>
+        }
       />
 
       {/* Filter bar — pilih batch */}
@@ -3194,15 +3245,270 @@ function AdminTahapan() {
         </table>
         <div style={{ padding: '10px 14px', borderTop: `1px solid ${theme.border}`, display: 'flex', gap: 14, fontSize: 10, color: theme.textMuted, flexWrap: 'wrap' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}><div style={{ width: 10, height: 10, background: theme.success, borderRadius: 2 }}/> Selesai</div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}><div style={{ width: 10, height: 10, background: theme.gold, borderRadius: 2 }}/> Sedang berjalan</div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}><div style={{ width: 10, height: 10, background: theme.info, borderRadius: 2 }}/> Menunggu review</div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}><div style={{ width: 10, height: 10, background: theme.gold, borderRadius: 2 }}/> Sedang berlangsung</div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}><div style={{ width: 10, height: 10, background: theme.info, borderRadius: 2 }}/> Menunggu konfirmasi</div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}><div style={{ width: 10, height: 10, border: `2px dashed ${theme.borderStrong}`, borderRadius: 2 }}/> Belum dimulai</div>
-          <div style={{ marginLeft: 'auto', display: 'flex', gap: 8, alignItems: 'center' }}>
-            <span style={{ textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 600 }}>Skor:</span>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}><div style={{ width: 10, height: 10, background: theme.success, borderRadius: 2 }}/> ≥80</div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}><div style={{ width: 10, height: 10, background: theme.warning, borderRadius: 2 }}/> 60-79</div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}><div style={{ width: 10, height: 10, background: theme.danger, borderRadius: 2 }}/> &lt;60</div>
+
+        </div>
+      </div>
+
+      {showUploadSkor && <SkorSosialisasiUploadModal batchFilter={batchFilter} onClose={() => setShowUploadSkor(false)}/>}
+    </div>
+  );
+}
+
+// Modal upload skor pretest/posttest peserta — 3 step Excel upload
+function SkorSosialisasiUploadModal({ onClose, batchFilter }) {
+  const { participants, setParticipants, batches, toast, addAudit, currentUser, pushNotif } = useApp();
+  const [step, setStep] = useState(1);
+  const userShortName = currentUser.user.split(',')[0];
+
+  // Scope: peserta yang masuk batchFilter (atau semua kalau 'all')
+  const scopedParticipants = batchFilter === 'all'
+    ? participants
+    : participants.filter(p => p.batchId === batchFilter);
+  const scopedNipMap = new Map(scopedParticipants.map(p => [p.nip, p]));
+  const scopeBatch = batches.find(b => b.id === batchFilter);
+  const scopeLabel = batchFilter === 'all'
+    ? 'semua batch'
+    : (scopeBatch?.nama || batchFilter);
+
+  // Mock preview rows — hasil "parsing" Excel
+  // Sengaja kombinasi: peserta baru, peserta dengan skor lama (overwrite), NIP tidak ditemukan, skor invalid
+  const previewRows = [
+    { nip: '199105102019031005', nama: 'Bagus Kurniawan Saputra',  pretest: 72, posttest: 88 },
+    { nip: '198512082014031002', nama: 'Dewi Kusuma Ningrum',       pretest: 80, posttest: 94 },
+    { nip: '199309162020032004', nama: 'Fajar Maulana Rizki',       pretest: 65, posttest: 82 },
+    { nip: '199407232021032005', nama: 'Nadia Alya Salsabila',      pretest: 88, posttest: 96 },
+    { nip: '199203142018031001', nama: 'Arif Budiman Pratama',      pretest: 78, posttest: 92 }, // sudah ada skor → overwrite
+    { nip: '199901012024031099', nama: 'NIP tidak terdaftar',        pretest: 70, posttest: 85 }, // NIP unknown
+  ];
+
+  const isValidScore = (s) => Number.isInteger(s) && s >= 0 && s <= 100;
+
+  const validatedRows = previewRows.map(r => {
+    const peserta = scopedNipMap.get(r.nip);
+    const scoresValid = isValidScore(r.pretest) && isValidScore(r.posttest);
+    return {
+      ...r,
+      matched: !!peserta,
+      pesertaId: peserta?.id,
+      currentPretest:  peserta?.stageData?.sosialisasi?.pretestScore,
+      currentPosttest: peserta?.stageData?.sosialisasi?.posttestScore,
+      willOverwrite: !!peserta && (peserta.stageData?.sosialisasi?.pretestScore != null || peserta.stageData?.sosialisasi?.posttestScore != null),
+      scoresValid,
+      valid: !!peserta && scoresValid,
+    };
+  });
+
+  const validCount    = validatedRows.filter(r => r.valid).length;
+  const overwriteCount = validatedRows.filter(r => r.valid && r.willOverwrite).length;
+  const notFoundCount = validatedRows.filter(r => !r.matched).length;
+  const invalidCount  = validatedRows.filter(r => r.matched && !r.scoresValid).length;
+
+  const handleConfirm = () => {
+    const validRows = validatedRows.filter(r => r.valid);
+    const scoreByPesertaId = new Map(validRows.map(r => [r.pesertaId, r]));
+    const today = new Date().toISOString().slice(0, 10);
+
+    setParticipants(prev => prev.map(p => {
+      const row = scoreByPesertaId.get(p.id);
+      if (!row) return p;
+      const sos = p.stageData.sosialisasi || {};
+      const bothScored = row.pretest != null && row.posttest != null;
+      const wasNotCompleted = sos.status !== 'completed';
+      return {
+        ...p,
+        stage: bothScored && p.stage < 3 ? 3 : p.stage,
+        stageData: {
+          ...p.stageData,
+          sosialisasi: {
+            ...sos,
+            pretestScore:  row.pretest,
+            posttestScore: row.posttest,
+            status: bothScored ? 'completed' : 'in_progress',
+            completedAt: bothScored ? (sos.completedAt || today) : sos.completedAt,
+          },
+          // Inisialisasi coaching kalau peserta baru menyelesaikan sosialisasi
+          coaching: bothScored && wasNotCompleted && (!p.stageData.coaching || p.stageData.coaching.status === 'pending')
+            ? { status: 'in_progress', sesi: 1, mentorEvaluation: null, pesertaSurvey: null, sessions: [] }
+            : p.stageData.coaching,
+        }
+      };
+    }));
+
+    addAudit(userShortName, `Upload skor pretest/posttest untuk ${validRows.length} peserta`, scopeBatch?.nama || null);
+    pushNotif('admin', { type: 'success', title: 'Skor sosialisasi terupdate', desc: `${validRows.length} peserta · ${scopeLabel}` });
+    toast(`Skor berhasil diupload untuk ${validRows.length} peserta.`, 'success');
+    setStep(3);
+  };
+
+  return (
+    <div style={{ position: 'fixed', inset: 0, background: 'rgba(10,37,64,0.72)', zIndex: 60, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 20, fontFamily: fonts.body }} onClick={onClose}>
+      <div style={{ background: '#fff', borderRadius: 4, width: '100%', maxWidth: 760, maxHeight: '90vh', overflow: 'hidden', display: 'flex', flexDirection: 'column' }} onClick={e => e.stopPropagation()}>
+        <div style={{ padding: '18px 22px', borderBottom: `1px solid ${theme.border}`, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <div>
+            <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.18em', color: theme.gold, fontWeight: 700 }}>Bulk Upload</div>
+            <div style={{ fontFamily: fonts.display, fontSize: 17, fontWeight: 600, color: theme.text, marginTop: 2 }}>Upload Skor Pretest & Posttest</div>
+            <div style={{ fontSize: 10.5, color: theme.textMuted, marginTop: 3 }}>Scope: {scopeLabel} · {scopedParticipants.length} peserta dalam scope</div>
           </div>
+          <button onClick={onClose} style={{ background: 'transparent', border: 'none', cursor: 'pointer', padding: 6, color: theme.textMuted }}><X size={16}/></button>
+        </div>
+
+        <div style={{ padding: '10px 22px', background: theme.bg, borderBottom: `1px solid ${theme.border}`, display: 'flex', alignItems: 'center', gap: 8, fontSize: 10.5, fontFamily: fonts.mono }}>
+          {[1,2,3].map(s => (
+            <div key={s} style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+              <div style={{ width: 18, height: 18, borderRadius: 9, background: step >= s ? theme.gold : theme.border, color: step >= s ? theme.navy : theme.textSubtle, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 9, fontWeight: 700 }}>{s}</div>
+              <span style={{ color: step === s ? theme.text : theme.textMuted, fontWeight: step === s ? 600 : 400 }}>
+                {s === 1 ? 'Pilih File' : s === 2 ? 'Validasi Data' : 'Selesai'}
+              </span>
+              {s < 3 && <ChevronRight size={11} style={{ color: theme.textSubtle, marginLeft: 6 }}/>}
+            </div>
+          ))}
+        </div>
+
+        <div style={{ padding: 22, overflowY: 'auto', flex: 1 }}>
+          {step === 1 && (
+            <div>
+              <div style={{ background: theme.bg, border: `2px dashed ${theme.borderStrong}`, borderRadius: 3, padding: 40, textAlign: 'center', marginBottom: 14 }}>
+                <FileSpreadsheet size={36} style={{ color: theme.textMuted, margin: '0 auto 10px' }}/>
+                <div style={{ fontSize: 13, fontWeight: 600, color: theme.text, marginBottom: 4 }}>Drop file Excel skor di sini</div>
+                <div style={{ fontSize: 11, color: theme.textMuted, marginBottom: 14 }}>Format yang didukung: .xlsx, .xls, .csv (max 5MB)</div>
+                <Button variant="secondary" icon={Upload} onClick={() => setStep(2)}>Pilih File</Button>
+              </div>
+              <div style={{ background: theme.infoBg, border: '1px solid #BFDBFE', padding: 12, borderRadius: 2, fontSize: 11, color: theme.info, display: 'flex', gap: 8 }}>
+                <Info size={14} style={{ flexShrink: 0, marginTop: 1 }}/>
+                <div>
+                  <div style={{ fontWeight: 600, marginBottom: 3 }}>Kolom yang dibutuhkan di template:</div>
+                  <div style={{ color: theme.text, fontFamily: fonts.mono, fontSize: 10.5 }}>
+                    NIP · Nama (opsional) · Pretest (0–100) · Posttest (0–100)
+                  </div>
+                  <div style={{ marginTop: 6 }}>Sistem akan match peserta by NIP dalam scope <strong>{scopeLabel}</strong>. NIP di luar scope akan ditandai sebagai tidak ditemukan. Skor yang sudah ada akan ditimpa. Template Excel bisa diunduh <a href="#" style={{ color: theme.info, fontWeight: 600 }}>di sini</a>.</div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {step === 2 && (
+            <div>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 10, marginBottom: 14 }}>
+                <div style={{ background: theme.successBg, border: '1px solid #A7F3D0', padding: 12, borderRadius: 2, textAlign: 'center' }}>
+                  <div style={{ fontSize: 10, color: theme.success, textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 700 }}>Valid</div>
+                  <div style={{ fontFamily: fonts.display, fontSize: 24, fontWeight: 300, color: theme.success, marginTop: 4 }}>{validCount}</div>
+                </div>
+                <div style={{ background: theme.warningBg, border: '1px solid #FCD34D', padding: 12, borderRadius: 2, textAlign: 'center' }}>
+                  <div style={{ fontSize: 10, color: theme.warning, textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 700 }}>Akan Ditimpa</div>
+                  <div style={{ fontFamily: fonts.display, fontSize: 24, fontWeight: 300, color: theme.warning, marginTop: 4 }}>{overwriteCount}</div>
+                </div>
+                <div style={{ background: '#FEE2E2', border: '1px solid #FECACA', padding: 12, borderRadius: 2, textAlign: 'center' }}>
+                  <div style={{ fontSize: 10, color: theme.danger, textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 700 }}>Tidak Ditemukan</div>
+                  <div style={{ fontFamily: fonts.display, fontSize: 24, fontWeight: 300, color: theme.danger, marginTop: 4 }}>{notFoundCount}</div>
+                </div>
+                <div style={{ background: theme.bg, border: `1px solid ${theme.border}`, padding: 12, borderRadius: 2, textAlign: 'center' }}>
+                  <div style={{ fontSize: 10, color: theme.textMuted, textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 700 }}>Total Baris</div>
+                  <div style={{ fontFamily: fonts.display, fontSize: 24, fontWeight: 300, color: theme.text, marginTop: 4 }}>{validatedRows.length}</div>
+                </div>
+              </div>
+
+              {overwriteCount > 0 && (
+                <div style={{ background: theme.warningBg, border: '1px solid #FCD34D', padding: 12, borderRadius: 2, marginBottom: 12, fontSize: 11, color: theme.warning, display: 'flex', gap: 8 }}>
+                  <AlertCircle size={14} style={{ flexShrink: 0, marginTop: 1 }}/>
+                  <div><strong>{overwriteCount} peserta</strong> sudah memiliki skor yang akan ditimpa. Periksa kembali nilai lama vs nilai baru di tabel.</div>
+                </div>
+              )}
+
+              <div style={{ border: `1px solid ${theme.border}`, borderRadius: 2, overflow: 'hidden' }}>
+                <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+                  <thead>
+                    <tr style={{ background: theme.bg, fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.1em', color: theme.textMuted }}>
+                      <th style={{ textAlign: 'left', padding: '8px 12px', fontWeight: 600 }}>Status</th>
+                      <th style={{ textAlign: 'left', padding: '8px 12px', fontWeight: 600 }}>NIP / Nama</th>
+                      <th style={{ textAlign: 'center', padding: '8px 12px', fontWeight: 600 }}>Pretest</th>
+                      <th style={{ textAlign: 'center', padding: '8px 12px', fontWeight: 600 }}>Posttest</th>
+                      <th style={{ textAlign: 'left', padding: '8px 12px', fontWeight: 600 }}>Catatan</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {validatedRows.map((r, i) => (
+                      <tr key={i} style={{
+                        borderTop: `1px solid ${theme.border}`,
+                        background: !r.matched ? '#FFFAFA' : r.willOverwrite ? '#FFFBEB' : '#fff',
+                        fontSize: 11,
+                      }}>
+                        <td style={{ padding: '8px 12px' }}>
+                          {!r.matched
+                            ? <Pill variant="danger">Tidak ada</Pill>
+                            : !r.scoresValid
+                              ? <Pill variant="danger">Skor invalid</Pill>
+                              : r.willOverwrite
+                                ? <Pill variant="warning">Timpa</Pill>
+                                : <Pill variant="success">Valid</Pill>}
+                        </td>
+                        <td style={{ padding: '8px 12px' }}>
+                          <div style={{ color: theme.text, fontWeight: 500 }}>{r.nama}</div>
+                          <div style={{ fontSize: 10, fontFamily: fonts.mono, color: theme.textMuted, marginTop: 2 }}>{r.nip}</div>
+                        </td>
+                        <td style={{ padding: '8px 12px', textAlign: 'center', fontFamily: fonts.mono }}>
+                          {r.willOverwrite && r.currentPretest != null ? (
+                            <div style={{ fontSize: 11 }}>
+                              <span style={{ color: theme.textMuted, textDecoration: 'line-through' }}>{r.currentPretest}</span>
+                              <span style={{ color: theme.warning, marginLeft: 4, fontWeight: 700 }}>→ {r.pretest}</span>
+                            </div>
+                          ) : (
+                            <span style={{ color: r.matched ? theme.text : theme.textMuted, fontWeight: 600 }}>{r.pretest}</span>
+                          )}
+                        </td>
+                        <td style={{ padding: '8px 12px', textAlign: 'center', fontFamily: fonts.mono }}>
+                          {r.willOverwrite && r.currentPosttest != null ? (
+                            <div style={{ fontSize: 11 }}>
+                              <span style={{ color: theme.textMuted, textDecoration: 'line-through' }}>{r.currentPosttest}</span>
+                              <span style={{ color: theme.warning, marginLeft: 4, fontWeight: 700 }}>→ {r.posttest}</span>
+                            </div>
+                          ) : (
+                            <span style={{ color: r.matched ? theme.text : theme.textMuted, fontWeight: 600 }}>{r.posttest}</span>
+                          )}
+                        </td>
+                        <td style={{ padding: '8px 12px', fontSize: 10.5, color: !r.matched || !r.scoresValid ? theme.danger : r.willOverwrite ? theme.warning : theme.textMuted }}>
+                          {!r.matched
+                            ? `NIP tidak ada di ${scopeLabel}`
+                            : !r.scoresValid
+                              ? 'Skor harus angka 0–100'
+                              : r.willOverwrite
+                                ? 'Skor existing akan ditimpa'
+                                : 'Akan diinput sebagai skor baru'}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+
+          {step === 3 && (
+            <div style={{ textAlign: 'center', padding: 24 }}>
+              <div style={{ width: 60, height: 60, background: theme.successBg, margin: '0 auto 14px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: 30 }}>
+                <CheckCircle2 size={28} style={{ color: theme.success }}/>
+              </div>
+              <div style={{ fontFamily: fonts.display, fontSize: 18, fontWeight: 600, color: theme.text, marginBottom: 6 }}>Skor Berhasil Diupload</div>
+              <div style={{ fontSize: 12, color: theme.textMuted, lineHeight: 1.55, marginBottom: 4 }}>
+                <strong>{validCount}</strong> peserta diperbarui skornya{overwriteCount > 0 ? ` (${overwriteCount} di antaranya menimpa skor lama)` : ''}.
+              </div>
+              {notFoundCount > 0 && <div style={{ fontSize: 11, color: theme.danger }}>{notFoundCount} baris dilewati karena NIP tidak ditemukan.</div>}
+              {invalidCount > 0 && <div style={{ fontSize: 11, color: theme.danger }}>{invalidCount} baris dilewati karena skor invalid.</div>}
+            </div>
+          )}
+        </div>
+
+        <div style={{ padding: '12px 22px', borderTop: `1px solid ${theme.border}`, background: theme.bg, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          {step === 1 && <><Button variant="ghost" onClick={onClose}>Batal</Button><div/></>}
+          {step === 2 && (
+            <>
+              <Button variant="ghost" onClick={() => setStep(1)}>← Kembali</Button>
+              <Button variant="primary" icon={CheckCircle2} onClick={handleConfirm} disabled={validCount === 0}>Upload Skor untuk {validCount} Peserta</Button>
+            </>
+          )}
+          {step === 3 && <><div/><Button variant="primary" onClick={onClose}>Selesai</Button></>}
         </div>
       </div>
     </div>
@@ -3273,7 +3579,14 @@ function AdminApproval() {
 function getPendingActions(p, role) {
   const actions = [];
   if (role === 'mentor') {
-    if (p.stageData.coaching?.status === 'in_progress') actions.push({ key: 'coaching', label: 'Input Evaluasi Coaching 1-on-1', stage: 3, urgent: true });
+    const c = p.stageData.coaching;
+    if (c?.planStatus === 'submitted') actions.push({ key: 'coaching', label: 'Review Coaching Plan', stage: 3, urgent: true });
+    const lastSess = c?.sessions?.[c.sessions.length - 1];
+    if (lastSess?.status === 'proposed' && lastSess.proposedBy === 'peserta') actions.push({ key: 'coaching', label: 'Konfirmasi Jadwal 1-on-1', stage: 3, urgent: true });
+    // Evaluasi mentee — saat peserta sudah Mon3 / submit evaluasi, tapi mentor belum submit eval mentee
+    if (p.stageData.monitoring3?.status === 'completed' && p.stageData.evaluasiMentor?.status !== 'completed') {
+      actions.push({ key: 'evaluasi', label: 'Evaluasi Mentee', stage: 7, urgent: false });
+    }
   }
   return actions;
 }
@@ -3565,326 +3878,373 @@ function WorkspaceOverview({ participant: p, onNavigate }) {
   );
 }
 
-// ----- TAB: COACHING (1-on-1 mentor: schedule + evaluation) -----
+// ----- TAB: COACHING (review coaching plan + handle 1-on-1 request) -----
 function WorkspaceCoaching({ participant: target }) {
   const { updateParticipant, toast, addAudit, pushNotif, currentUser } = useApp();
   const coaching = target.stageData.coaching;
-  const existing = coaching?.mentorEvaluation;
-  const [strengths, setStrengths]           = useState(existing?.strengths || '');
-  const [development, setDevelopment]       = useState(existing?.development || '');
-  const [recommendation, setRecommendation] = useState(existing?.recommendation || '');
+  const userShortName = currentUser.user.split(',')[0];
 
-  // Schedule proposal form
-  const [showProposeForm, setShowProposeForm] = useState(false);
-  const [proposal, setProposal] = useState({ tanggal: '', waktu: '14:00', durasi: 60, lokasi: 'Online · Microsoft Teams', topik: '', notes: '' });
+  const [reviewFeedback, setReviewFeedback] = useState('');
+  const [showRescheduleForm, setShowRescheduleForm] = useState(false);
+  const [rescheduleDraft, setRescheduleDraft] = useState({ tanggal: '', waktu: '14:00', durasi: 60, lokasi: 'Online', reason: '' });
 
   useEffect(() => {
-    const ev = target.stageData.coaching?.mentorEvaluation;
-    setStrengths(ev?.strengths || ''); setDevelopment(ev?.development || ''); setRecommendation(ev?.recommendation || '');
-    setShowProposeForm(false);
-    setProposal({ tanggal: '', waktu: '14:00', durasi: 60, lokasi: 'Online · Microsoft Teams', topik: '', notes: '' });
+    setReviewFeedback('');
+    setShowRescheduleForm(false);
+    setRescheduleDraft({ tanggal: '', waktu: '14:00', durasi: 60, lokasi: 'Online', reason: '' });
   }, [target.id]);
 
   const isInactive = !coaching || coaching.status === 'pending';
-  const userShortName = currentUser.user.split(',')[0];
-
   if (isInactive) {
     return (
       <div style={{ background: theme.bg, border: `1px dashed ${theme.borderStrong}`, padding: 32, textAlign: 'center', borderRadius: 2 }}>
         <Clock size={26} style={{ color: theme.textMuted, margin: '0 auto 10px' }}/>
-        <div style={{ fontSize: 13, fontWeight: 500 }}>Sesi Coaching Belum Aktif</div>
-        <div style={{ fontSize: 11, color: theme.textMuted, marginTop: 4 }}>Tahap 3 akan aktif setelah peserta menyelesaikan Tahap 2 Sosialisasi (pretest & posttest)</div>
+        <div style={{ fontSize: 13, fontWeight: 500 }}>Coaching Plan Belum Aktif</div>
+        <div style={{ fontSize: 11, color: theme.textMuted, marginTop: 4 }}>Tahap Coaching aktif setelah peserta menyelesaikan Sosialisasi (skor pretest/posttest diinput admin)</div>
       </div>
     );
   }
 
+  const planStatus = coaching.planStatus || 'draft';
+  const isApproved  = planStatus === 'approved';
+  const isSubmitted = planStatus === 'submitted';
+  const isReturned  = planStatus === 'returned';
+  const isDraft     = planStatus === 'draft';
+  const canReview   = isSubmitted; // mentor cuma bisa review saat status submitted
+
   const sessions = coaching.sessions || [];
-  const activeSession = sessions[sessions.length - 1];
+  const activeSession = sessions.length > 0 ? sessions[sessions.length - 1] : null;
   const today = new Date().toISOString().slice(0, 10);
-  const sessionDatePassed = activeSession && activeSession.tanggal <= today;
-
-  const isProposed = activeSession?.status === 'proposed';
-  const isAccepted = activeSession?.status === 'accepted';
-  const isRejected = activeSession?.status === 'rejected';
-  const isSessionCompleted = activeSession?.status === 'completed';
-  const evaluasiUnlocked = (isAccepted && sessionDatePassed) || isSessionCompleted;
-  const surveyDone = !!coaching.pesertaSurvey;
-
-  const fmtTanggal = (s) => s ? new Date(s).toLocaleDateString('id-ID', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }) : '-';
   const fmtTanggalShort = (s) => s ? new Date(s).toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' }) : '-';
+  const fmtTanggal      = (s) => s ? new Date(s).toLocaleDateString('id-ID', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }) : '-';
 
-  const proposeSchedule = () => {
-    if (!proposal.tanggal || !proposal.waktu || !proposal.topik.trim()) {
-      toast('Tanggal, waktu, dan topik wajib diisi', 'warning'); return;
-    }
-    if (proposal.tanggal < today) {
-      toast('Tanggal tidak bisa di masa lalu', 'warning'); return;
-    }
-    const newSession = {
-      id: `CS${Date.now().toString(36).toUpperCase()}`,
-      tanggal: proposal.tanggal,
-      waktu: proposal.waktu,
-      durasi: parseInt(proposal.durasi, 10),
-      lokasi: proposal.lokasi,
-      topik: proposal.topik,
-      status: 'proposed',
-      proposedBy: 'mentor',
-      proposedAt: today,
-      notes: proposal.notes,
-    };
+  const sessionFromPeserta   = activeSession?.status === 'proposed' && activeSession.proposedBy === 'peserta';
+  const sessionRescheduled   = activeSession?.status === 'rescheduled_by_mentor';
+  const sessionAccepted      = activeSession?.status === 'accepted';
+  const sessionCompleted     = activeSession?.status === 'completed';
+
+  const planItems = coaching.plan?.items || [];
+
+  const approvePlan = () => {
+    if (!reviewFeedback.trim()) { toast('Mohon isi catatan review terlebih dahulu', 'warning'); return; }
+    const feedback = reviewFeedback.trim();
+    updateParticipant(target.id, old => {
+      const wasInProgress = (old.stageData.coaching?.status !== 'completed');
+      return {
+        ...old,
+        stage: wasInProgress && old.stage < 4 ? 4 : old.stage,
+        stageData: {
+          ...old.stageData,
+          coaching: {
+            ...old.stageData.coaching,
+            planStatus: 'approved',
+            planFeedback: feedback,
+            planReviewedAt: today,
+            planApprovedAt: today,
+            status: 'completed',
+          },
+          monitoring1: old.stageData.monitoring1?.status === 'pending'
+            ? { ...old.stageData.monitoring1, status: 'in_progress' }
+            : old.stageData.monitoring1,
+        },
+      };
+    });
+    addAudit(userShortName, 'Mengkonfirm coaching plan sesuai', target.nama);
+    pushNotif('peserta', { type: 'success', title: 'Coaching plan dikonfirmasi mentor', desc: feedback.slice(0, 80) });
+    pushNotif('admin', { type: 'success', title: `Coaching ${target.nama} selesai`, desc: `Plan dikonfirmasi oleh ${userShortName}` });
+    toast(`Coaching plan ${target.nama.split(' ').slice(0,2).join(' ')} dikonfirmasi sesuai.`, 'success');
+    setReviewFeedback('');
+  };
+
+  const returnPlan = () => {
+    if (!reviewFeedback.trim()) { toast('Mohon isi feedback perbaikan untuk peserta', 'warning'); return; }
+    const feedback = reviewFeedback.trim();
     updateParticipant(target.id, old => ({
       ...old,
       stageData: {
         ...old.stageData,
         coaching: {
           ...old.stageData.coaching,
-          sessions: [...(old.stageData.coaching.sessions || []), newSession],
+          planStatus: 'returned',
+          planFeedback: feedback,
+          planReviewedAt: today,
+          status: 'in_progress',
         },
       },
     }));
-    addAudit(userShortName, `Mengajukan jadwal sesi coaching · ${fmtTanggalShort(proposal.tanggal)}`, target.nama);
-    pushNotif('peserta', { type: 'info', title: `Mentor mengajukan jadwal coaching`, desc: `${fmtTanggalShort(proposal.tanggal)} ${proposal.waktu} · mohon konfirmasi ketersediaan` });
-    toast(`Jadwal diajukan ke ${target.nama}.`, 'success');
-    setShowProposeForm(false);
-    setProposal({ tanggal: '', waktu: '14:00', durasi: 60, lokasi: 'Online · Microsoft Teams', topik: '', notes: '' });
+    addAudit(userShortName, 'Mengembalikan coaching plan untuk perbaikan', target.nama);
+    pushNotif('peserta', { type: 'warning', title: 'Coaching plan perlu perbaikan', desc: feedback.slice(0, 80) });
+    toast(`Coaching plan dikembalikan ke ${target.nama.split(' ').slice(0,2).join(' ')} untuk perbaikan.`, 'info');
+    setReviewFeedback('');
   };
 
-  const submitEvaluasi = () => {
-    if (!strengths.trim() || !development.trim() || !recommendation.trim()) {
-      toast('Mohon lengkapi semua field evaluasi', 'warning'); return;
-    }
+  const acceptSessionProposal = () => {
+    const teamsLink = `https://teams.microsoft.com/l/meetup-join/meet-${activeSession.id}-${Date.now().toString(36)}`;
     updateParticipant(target.id, old => ({
       ...old,
       stageData: {
         ...old.stageData,
         coaching: {
           ...old.stageData.coaching,
-          mentorEvaluation: { strengths, development, recommendation, evaluatedAt: new Date().toISOString().slice(0,10), evaluatedBy: userShortName },
-          status: old.stageData.coaching.pesertaSurvey ? 'completed' : 'in_progress',
           sessions: old.stageData.coaching.sessions.map(s =>
-            s.id === activeSession.id && s.status !== 'completed' ? { ...s, status: 'completed', completedAt: new Date().toISOString().slice(0, 10) + ' ' + new Date().toTimeString().slice(0, 5) } : s
+            s.id === activeSession.id ? { ...s, status: 'accepted', acceptedAt: today, teamsLink } : s
           ),
         },
       },
     }));
-    addAudit(userShortName, 'Submit evaluasi 1-on-1 coaching', target.nama);
-    pushNotif('peserta', { type: 'info', title: 'Evaluasi mentor tersedia', desc: `${userShortName} telah submit evaluasi sesi coaching Anda` });
-    toast(`Evaluasi coaching ${target.nama} tersimpan.`, 'success');
+    addAudit(userShortName, `Menyetujui jadwal 1-on-1 dengan ${target.nama}`, target.nama);
+    pushNotif('peserta', { type: 'success', title: 'Jadwal 1-on-1 dikonfirmasi mentor', desc: `${fmtTanggalShort(activeSession.tanggal)} ${activeSession.waktu} · Teams meeting otomatis dibuat` });
+    toast('Jadwal disetujui. Teams meeting otomatis dibuat.', 'success');
   };
+
+  const proposeReschedule = () => {
+    if (!rescheduleDraft.tanggal || !rescheduleDraft.waktu || !rescheduleDraft.reason.trim()) {
+      toast('Tanggal, waktu, dan alasan reschedule wajib diisi', 'warning'); return;
+    }
+    if (rescheduleDraft.tanggal < today) { toast('Tanggal tidak bisa di masa lalu', 'warning'); return; }
+    updateParticipant(target.id, old => ({
+      ...old,
+      stageData: {
+        ...old.stageData,
+        coaching: {
+          ...old.stageData.coaching,
+          sessions: old.stageData.coaching.sessions.map(s =>
+            s.id === activeSession.id ? {
+              ...s,
+              status: 'rescheduled_by_mentor',
+              tanggal: rescheduleDraft.tanggal,
+              waktu: rescheduleDraft.waktu,
+              durasi: parseInt(rescheduleDraft.durasi, 10),
+              lokasi: rescheduleDraft.lokasi,
+              rescheduledAt: today,
+              rescheduleReason: rescheduleDraft.reason.trim(),
+            } : s
+          ),
+        },
+      },
+    }));
+    addAudit(userShortName, `Mengusulkan jadwal alternatif 1-on-1 dengan ${target.nama}`, target.nama);
+    pushNotif('peserta', { type: 'warning', title: 'Mentor mengusulkan jadwal alternatif', desc: `${fmtTanggalShort(rescheduleDraft.tanggal)} ${rescheduleDraft.waktu} · ${rescheduleDraft.reason.trim().slice(0, 60)}` });
+    toast('Jadwal alternatif dikirim ke peserta.', 'info');
+    setShowRescheduleForm(false);
+    setRescheduleDraft({ tanggal: '', waktu: '14:00', durasi: 60, lokasi: 'Online', reason: '' });
+  };
+
+  const statusVariant = isApproved ? 'success' : isSubmitted ? 'info' : isReturned ? 'warning' : 'default';
+  const statusLabel   = isApproved ? 'Sudah Dikonfirmasi' : isSubmitted ? 'Menunggu Review' : isReturned ? 'Dikembalikan ke Peserta' : 'Peserta Sedang Mengisi';
 
   return (
     <div>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
         <div>
-          <div style={{ fontSize: 14, fontWeight: 600, color: theme.text, fontFamily: fonts.display }}>Sesi 1-on-1 Coaching</div>
-          <div style={{ fontSize: 11, color: theme.textMuted, marginTop: 2 }}>Penjadwalan + evaluasi sesi coaching dengan {target.nama.split(' ').slice(0, 2).join(' ')}</div>
+          <div style={{ fontSize: 14, fontWeight: 600, color: theme.text, fontFamily: fonts.display }}>Review Coaching Plan</div>
+          <div style={{ fontSize: 11, color: theme.textMuted, marginTop: 2 }}>Plan yang disusun oleh {target.nama.split(' ').slice(0, 2).join(' ')}</div>
         </div>
-        <Pill variant={isSessionCompleted || existing ? 'success' : isAccepted ? 'info' : isProposed ? 'warning' : 'default'}>
-          {isSessionCompleted ? 'Sesi Selesai' : isAccepted ? sessionDatePassed ? 'Siap Evaluasi' : 'Terjadwal' : isProposed ? 'Menunggu Peserta' : isRejected ? 'Ditolak' : 'Belum Dijadwalkan'}
-        </Pill>
+        <Pill variant={statusVariant}>{statusLabel}</Pill>
       </div>
 
-      {/* === A. NO SESSION YET → propose form === */}
-      {!activeSession && !showProposeForm && (
-        <div style={{ background: '#fff', border: `1px dashed ${theme.borderStrong}`, padding: 32, textAlign: 'center', borderRadius: 2 }}>
-          <Calendar size={28} style={{ color: theme.textMuted, margin: '0 auto 10px' }}/>
-          <div style={{ fontSize: 13, fontWeight: 600, color: theme.text }}>Belum ada jadwal sesi</div>
-          <div style={{ fontSize: 11, color: theme.textMuted, marginTop: 6, lineHeight: 1.5, marginBottom: 16 }}>
-            Ajukan jadwal coaching ke {target.nama.split(' ').slice(0, 2).join(' ')}. Setelah disetujui, sistem otomatis membuat Microsoft Teams meeting.
+      {/* Status banners */}
+      {isApproved && (
+        <div style={{ background: '#fff', border: `1px solid ${theme.success}`, borderLeft: `4px solid ${theme.success}`, borderRadius: 2, padding: 16, marginBottom: 14, display: 'flex', alignItems: 'center', gap: 12 }}>
+          <CheckCircle2 size={20} style={{ color: theme.success, flexShrink: 0 }}/>
+          <div>
+            <div style={{ fontSize: 12, fontWeight: 600, color: theme.text }}>Coaching plan telah dikonfirmasi sesuai</div>
+            <div style={{ fontSize: 11, color: theme.textMuted, marginTop: 3 }}>Disetujui pada {coaching.planApprovedAt}. Tahap coaching {target.nama.split(' ')[0]} dinyatakan selesai.</div>
           </div>
-          <Button variant="primary" icon={Plus} onClick={() => setShowProposeForm(true)}>Ajukan Jadwal</Button>
         </div>
       )}
 
-      {/* === B. REJECTED → propose ulang === */}
-      {isRejected && !showProposeForm && (
-        <div style={{ background: '#fff', border: `1px solid ${theme.warning}`, borderLeft: `4px solid ${theme.warning}`, borderRadius: 2, padding: 18, marginBottom: 14 }}>
-          <div style={{ display: 'flex', alignItems: 'flex-start', gap: 10, marginBottom: 12 }}>
-            <X size={16} style={{ color: theme.warning, marginTop: 2 }}/>
+      {isReturned && (
+        <div style={{ background: '#fff', border: `1px solid ${theme.warning}`, borderLeft: `4px solid ${theme.warning}`, borderRadius: 2, padding: 16, marginBottom: 14 }}>
+          <div style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
+            <AlertCircle size={20} style={{ color: theme.warning, flexShrink: 0, marginTop: 1 }}/>
             <div style={{ flex: 1 }}>
-              <div style={{ fontSize: 12, fontWeight: 600, color: theme.text }}>Peserta menolak jadwal sebelumnya</div>
-              <div style={{ fontSize: 10.5, color: theme.textMuted, marginTop: 2 }}>{fmtTanggalShort(activeSession.tanggal)} {activeSession.waktu} — ditolak {activeSession.rejectedAt}</div>
-              {activeSession.rejectReason && (
-                <div style={{ fontSize: 11, color: theme.text, lineHeight: 1.5, marginTop: 8, padding: 10, background: theme.bg, borderRadius: 2, fontStyle: 'italic' }}>
-                  "{activeSession.rejectReason}"
+              <div style={{ fontSize: 12, fontWeight: 600, color: theme.text }}>Plan dikembalikan ke peserta</div>
+              <div style={{ fontSize: 11, color: theme.textMuted, marginTop: 3 }}>Direview pada {coaching.planReviewedAt}. Menunggu peserta submit revisi.</div>
+            </div>
+          </div>
+          {coaching.planFeedback && (
+            <div style={{ marginTop: 10, padding: 10, background: theme.warningBg, borderRadius: 2, fontSize: 11, color: theme.text, lineHeight: 1.5, fontStyle: 'italic' }}>
+              Catatan Anda: "{coaching.planFeedback}"
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Tampilkan catatan apresiasi mentor kalau plan sudah approved */}
+      {isApproved && coaching.planFeedback && (
+        <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderLeft: `4px solid ${theme.success}`, borderRadius: 2, padding: 14, marginBottom: 14, fontSize: 11.5, color: theme.text, lineHeight: 1.55 }}>
+          <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.12em', color: theme.success, fontWeight: 700, marginBottom: 4 }}>Catatan Approval Anda</div>
+          <div style={{ fontStyle: 'italic' }}>"{coaching.planFeedback}"</div>
+        </div>
+      )}
+
+      {isDraft && (
+        <div style={{ background: '#fff', border: `1px dashed ${theme.borderStrong}`, padding: 24, textAlign: 'center', borderRadius: 2, marginBottom: 14 }}>
+          <Clock size={22} style={{ color: theme.textMuted, margin: '0 auto 8px' }}/>
+          <div style={{ fontSize: 12, fontWeight: 600, color: theme.text }}>Peserta belum submit coaching plan</div>
+          <div style={{ fontSize: 11, color: theme.textMuted, marginTop: 4 }}>{target.nama.split(' ').slice(0, 2).join(' ')} sedang menyusun plan. Anda akan menerima notifikasi setelah plan di-submit.</div>
+        </div>
+      )}
+
+      {/* Plan content (kalau ada plan, tampilkan untuk semua status kecuali draft kosong) */}
+      {coaching.plan && (
+        <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderRadius: 2, padding: 18, marginBottom: 14 }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 14, paddingBottom: 12, borderBottom: `1px solid ${theme.border}` }}>
+            <div>
+              <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.18em', color: theme.gold, fontWeight: 700, marginBottom: 3 }}>Coaching Plan Submission</div>
+              <div style={{ fontSize: 14, fontWeight: 600, color: theme.text, fontFamily: fonts.display }}>Detail Plan dari Peserta</div>
+            </div>
+            <div style={{ textAlign: 'right' }}>
+              <div style={{ fontSize: 10, color: theme.textMuted, fontFamily: fonts.mono }}>Submitted {coaching.plan.submittedAt}</div>
+              {coaching.plan.revision > 0 && <div style={{ fontSize: 10, color: theme.warning, fontFamily: fonts.mono, marginTop: 2 }}>Revisi ke-{coaching.plan.revision}</div>}
+            </div>
+          </div>
+
+          <div style={{ fontSize: 11, color: theme.textMuted, marginBottom: 10 }}>
+            {planItems.length} item rencana pengembangan
+          </div>
+
+          {planItems.map((it, idx) => (
+            <div key={it.id} style={{ background: theme.bg, border: `1px solid ${theme.border}`, borderRadius: 2, padding: 14, marginBottom: 12 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10, paddingBottom: 8, borderBottom: `1px solid ${theme.border}` }}>
+                <div style={{ fontSize: 10, color: theme.textMuted, fontFamily: fonts.mono }}>Item #{idx + 1}</div>
+                <Pill variant="default">{areaLabel(it.area)}{it.area === 'lainnya' && it.areaLainnya ? ` · ${it.areaLainnya}` : ''}</Pill>
+              </div>
+              {[
+                { label: 'Hal yang Akan Dilakukan',  v: it.halDilakukan },
+                { label: 'Indikator Keberhasilan',    v: it.indikatorKeberhasilan },
+                { label: 'Dukungan yang Dibutuhkan',  v: it.dukunganDibutuhkan },
+              ].map(row => (
+                <div key={row.label} style={{ marginBottom: 8 }}>
+                  <div style={{ fontSize: 9.5, textTransform: 'uppercase', letterSpacing: '0.1em', color: theme.textSubtle, fontWeight: 700, marginBottom: 3 }}>{row.label}</div>
+                  <div style={{ fontSize: 12, color: theme.text, lineHeight: 1.55, whiteSpace: 'pre-wrap' }}>{row.v || <span style={{ color: theme.textSubtle, fontStyle: 'italic' }}>—</span>}</div>
                 </div>
-              )}
+              ))}
             </div>
-          </div>
-          <Button variant="primary" icon={Plus} onClick={() => setShowProposeForm(true)}>Ajukan Jadwal Ulang</Button>
+          ))}
+
+          {/* Review actions — hanya muncul saat submitted; feedback wajib untuk kedua aksi */}
+          {canReview && (
+            <div style={{ marginTop: 16, paddingTop: 14, borderTop: `1px solid ${theme.border}` }}>
+              <label style={{ display: 'block', fontSize: 11, fontWeight: 600, color: theme.text, marginBottom: 4 }}>
+                Catatan Review Mentor <span style={{ color: theme.danger }}>*</span>
+              </label>
+              <div style={{ fontSize: 10.5, color: theme.textMuted, marginBottom: 6, lineHeight: 1.5 }}>
+                Wajib diisi sebelum konfirmasi. Jika <strong>sesuai</strong>: berikan apresiasi & catatan reinforcement. Jika <strong>perlu perbaikan</strong>: jelaskan bagian mana yang harus diperbaiki & saran konkret.
+              </div>
+              <textarea value={reviewFeedback} onChange={e => setReviewFeedback(e.target.value)} rows={4}
+                placeholder="Mis. Plan sudah solid dan target kompetensi sudah relevan. Untuk diperhatikan, pastikan rencana aksi #2 punya milestone konkret per bulan..."
+                style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 10, border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', resize: 'vertical', boxSizing: 'border-box' }}/>
+              <div style={{ marginTop: 10, display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 8 }}>
+                <div style={{ fontSize: 10.5, color: theme.textMuted, fontFamily: fonts.mono }}>
+                  {reviewFeedback.trim().length} karakter
+                </div>
+                <div style={{ display: 'flex', gap: 8 }}>
+                  <Button variant="ghost" icon={X} onClick={returnPlan} disabled={!reviewFeedback.trim()}>Kembalikan untuk Perbaikan</Button>
+                  <Button variant="primary" icon={CheckCircle2} onClick={approvePlan} disabled={!reviewFeedback.trim()}>Konfirm Sesuai</Button>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       )}
 
-      {/* === C. PROPOSE FORM === */}
-      {showProposeForm && (
-        <div style={{ background: '#fff', border: `1px solid ${theme.gold}`, borderRadius: 3, padding: 22, marginBottom: 14 }}>
-          <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.18em', color: theme.gold, fontWeight: 700, marginBottom: 4 }}>Form Penjadwalan</div>
-          <div style={{ fontSize: 14, fontWeight: 600, color: theme.text, fontFamily: fonts.display, marginBottom: 14 }}>Ajukan Jadwal Sesi Coaching</div>
-
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 10, marginBottom: 12 }}>
+      {/* === 1-on-1 SESSION (peserta-initiated) === */}
+      {activeSession && (
+        <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderRadius: 2, padding: 18, marginBottom: 14 }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12, paddingBottom: 10, borderBottom: `1px solid ${theme.border}` }}>
             <div>
-              <label style={{ display: 'block', fontSize: 11, fontWeight: 600, marginBottom: 4 }}>Tanggal <span style={{ color: theme.danger }}>*</span></label>
-              <input type="date" value={proposal.tanggal} min={today}
-                onChange={e => setProposal({ ...proposal, tanggal: e.target.value })}
-                style={{ width: '100%', fontSize: 12, fontFamily: fonts.mono, padding: 10, border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', boxSizing: 'border-box' }}/>
+              <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.18em', color: theme.gold, fontWeight: 700, marginBottom: 3 }}>Sesi 1-on-1 Coaching</div>
+              <div style={{ fontSize: 13, fontWeight: 600, color: theme.text, fontFamily: fonts.display }}>
+                {sessionFromPeserta ? 'Peserta mengajukan sesi 1-on-1' : sessionRescheduled ? 'Menunggu konfirmasi peserta atas jadwal Anda' : sessionAccepted ? 'Jadwal Dikonfirmasi' : sessionCompleted ? 'Sesi Selesai' : 'Status sesi'}
+              </div>
             </div>
-            <div>
-              <label style={{ display: 'block', fontSize: 11, fontWeight: 600, marginBottom: 4 }}>Waktu <span style={{ color: theme.danger }}>*</span></label>
-              <input type="time" value={proposal.waktu}
-                onChange={e => setProposal({ ...proposal, waktu: e.target.value })}
-                style={{ width: '100%', fontSize: 12, fontFamily: fonts.mono, padding: 10, border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', boxSizing: 'border-box' }}/>
+            <Pill variant={sessionFromPeserta ? 'warning' : sessionRescheduled ? 'info' : sessionAccepted ? 'success' : 'default'}>
+              {sessionFromPeserta ? 'Perlu Konfirmasi' : sessionRescheduled ? 'Menunggu Peserta' : sessionAccepted ? 'Terjadwal' : sessionCompleted ? 'Selesai' : activeSession.status}
+            </Pill>
+          </div>
+
+          {/* Detail jadwal */}
+          {!showRescheduleForm && (
+            <div style={{ marginBottom: 12 }}>
+              <div style={{ fontSize: 11.5, color: theme.text, lineHeight: 1.5 }}>
+                <div><strong>{fmtTanggal(activeSession.tanggal)}</strong> · {activeSession.waktu} WIB · {activeSession.durasi} menit</div>
+                <div style={{ color: theme.textMuted, marginTop: 3 }}>{activeSession.lokasi}</div>
+                <div style={{ color: theme.textMuted, marginTop: 3 }}>Topik: {activeSession.topik}</div>
+                {activeSession.catatan && <div style={{ marginTop: 6, fontSize: 11, color: theme.textMuted, fontStyle: 'italic' }}>Catatan peserta: "{activeSession.catatan}"</div>}
+                {sessionRescheduled && activeSession.rescheduleReason && (
+                  <div style={{ marginTop: 6, fontSize: 11, color: theme.textMuted, fontStyle: 'italic' }}>Alasan reschedule Anda: "{activeSession.rescheduleReason}"</div>
+                )}
+                {sessionAccepted && activeSession.teamsLink && (
+                  <a href={activeSession.teamsLink} target="_blank" rel="noopener noreferrer"
+                    style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginTop: 10, padding: '7px 12px', background: '#5059C9', color: '#fff', borderRadius: 2, textDecoration: 'none', fontSize: 11, fontWeight: 600, fontFamily: fonts.body }}>
+                    <PlayCircle size={12}/> Buka Teams Meeting
+                  </a>
+                )}
+              </div>
             </div>
-            <div>
-              <label style={{ display: 'block', fontSize: 11, fontWeight: 600, marginBottom: 4 }}>Durasi (menit)</label>
-              <select value={proposal.durasi} onChange={e => setProposal({ ...proposal, durasi: e.target.value })}
-                style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 10, border: `1px solid ${theme.border}`, borderRadius: 2, background: '#fff', outline: 'none', boxSizing: 'border-box' }}>
-                {[30, 45, 60, 90, 120].map(d => <option key={d} value={d}>{d} menit</option>)}
-              </select>
+          )}
+
+          {/* Reschedule form */}
+          {showRescheduleForm && (
+            <div style={{ background: theme.bg, borderRadius: 2, padding: 14, marginBottom: 8 }}>
+              <div style={{ fontSize: 12, fontWeight: 600, color: theme.text, marginBottom: 10 }}>Usulkan jadwal alternatif</div>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 10, marginBottom: 10 }}>
+                <div>
+                  <label style={{ display: 'block', fontSize: 10.5, fontWeight: 600, marginBottom: 3 }}>Tanggal Baru <span style={{ color: theme.danger }}>*</span></label>
+                  <input type="date" value={rescheduleDraft.tanggal} min={today}
+                    onChange={e => setRescheduleDraft({ ...rescheduleDraft, tanggal: e.target.value })}
+                    style={{ width: '100%', fontSize: 12, fontFamily: fonts.mono, padding: 9, border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', boxSizing: 'border-box' }}/>
+                </div>
+                <div>
+                  <label style={{ display: 'block', fontSize: 10.5, fontWeight: 600, marginBottom: 3 }}>Waktu Baru <span style={{ color: theme.danger }}>*</span></label>
+                  <input type="time" value={rescheduleDraft.waktu}
+                    onChange={e => setRescheduleDraft({ ...rescheduleDraft, waktu: e.target.value })}
+                    style={{ width: '100%', fontSize: 12, fontFamily: fonts.mono, padding: 9, border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', boxSizing: 'border-box' }}/>
+                </div>
+                <div>
+                  <label style={{ display: 'block', fontSize: 10.5, fontWeight: 600, marginBottom: 3 }}>Durasi</label>
+                  <select value={rescheduleDraft.durasi} onChange={e => setRescheduleDraft({ ...rescheduleDraft, durasi: e.target.value })}
+                    style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 9, border: `1px solid ${theme.border}`, borderRadius: 2, background: '#fff', outline: 'none', boxSizing: 'border-box' }}>
+                    {[30, 45, 60, 90].map(d => <option key={d} value={d}>{d} menit</option>)}
+                  </select>
+                </div>
+              </div>
+              <div style={{ marginBottom: 10 }}>
+                <label style={{ display: 'block', fontSize: 10.5, fontWeight: 600, marginBottom: 3 }}>Mode</label>
+                <select value={rescheduleDraft.lokasi} onChange={e => setRescheduleDraft({ ...rescheduleDraft, lokasi: e.target.value })}
+                  style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 9, border: `1px solid ${theme.border}`, borderRadius: 2, background: '#fff', outline: 'none', boxSizing: 'border-box' }}>
+                  <option>Online</option>
+                  <option>Offline</option>
+                </select>
+              </div>
+              <div style={{ marginBottom: 10 }}>
+                <label style={{ display: 'block', fontSize: 10.5, fontWeight: 600, marginBottom: 3 }}>Alasan Reschedule <span style={{ color: theme.danger }}>*</span></label>
+                <textarea value={rescheduleDraft.reason} onChange={e => setRescheduleDraft({ ...rescheduleDraft, reason: e.target.value })} rows={2}
+                  placeholder="Mis. Bentrok dengan rapat board. Bisa di-reschedule ke tanggal yang diusulkan?"
+                  style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 9, border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', resize: 'none', boxSizing: 'border-box' }}/>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 8 }}>
+                <Button variant="ghost" onClick={() => setShowRescheduleForm(false)}>Batal</Button>
+                <Button variant="primary" icon={Send} onClick={proposeReschedule}>Kirim Jadwal Alternatif</Button>
+              </div>
             </div>
-          </div>
+          )}
 
-          <div style={{ marginBottom: 12 }}>
-            <label style={{ display: 'block', fontSize: 11, fontWeight: 600, marginBottom: 4 }}>Lokasi / Mode</label>
-            <select value={proposal.lokasi} onChange={e => setProposal({ ...proposal, lokasi: e.target.value })}
-              style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 10, border: `1px solid ${theme.border}`, borderRadius: 2, background: '#fff', outline: 'none', boxSizing: 'border-box' }}>
-              <option>Online · Microsoft Teams</option>
-              <option>Offline · R. Coaching DSDM Lt.5</option>
-              <option>Offline · R. Meeting Mentor</option>
-              <option>Hybrid · Teams + R. Coaching</option>
-            </select>
-          </div>
-
-          <div style={{ marginBottom: 12 }}>
-            <label style={{ display: 'block', fontSize: 11, fontWeight: 600, marginBottom: 4 }}>Topik Pembahasan <span style={{ color: theme.danger }}>*</span></label>
-            <input value={proposal.topik} onChange={e => setProposal({ ...proposal, topik: e.target.value })}
-              placeholder="Mis. Strategic thinking, Decision-making leadership"
-              style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 10, border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', boxSizing: 'border-box' }}/>
-          </div>
-
-          <div style={{ marginBottom: 14 }}>
-            <label style={{ display: 'block', fontSize: 11, fontWeight: 600, marginBottom: 4 }}>Catatan untuk Peserta (opsional)</label>
-            <textarea value={proposal.notes} onChange={e => setProposal({ ...proposal, notes: e.target.value })} rows={2}
-              placeholder="Mis. Mohon siapkan refleksi 2 minggu terakhir sebelum sesi"
-              style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 10, border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', resize: 'none', boxSizing: 'border-box' }}/>
-          </div>
-
-          <div style={{ background: theme.infoBg, border: '1px solid #BFDBFE', padding: 10, borderRadius: 2, fontSize: 11, color: theme.info, display: 'flex', gap: 8, marginBottom: 14 }}>
-            <Info size={13} style={{ flexShrink: 0, marginTop: 1 }}/>
-            <div>Peserta akan menerima notifikasi untuk konfirmasi. Setelah disetujui, Microsoft Teams meeting otomatis dibuat dan ditambahkan ke kedua calendar.</div>
-          </div>
-
-          <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 8 }}>
-            <Button variant="ghost" onClick={() => setShowProposeForm(false)}>Batal</Button>
-            <Button variant="primary" icon={Send} onClick={proposeSchedule}>Kirim Proposal</Button>
-          </div>
+          {/* Action buttons untuk peserta proposal */}
+          {sessionFromPeserta && !showRescheduleForm && (
+            <div style={{ paddingTop: 10, borderTop: `1px solid ${theme.border}`, display: 'flex', justifyContent: 'flex-end', gap: 8 }}>
+              <Button variant="ghost" onClick={() => { setRescheduleDraft({ tanggal: activeSession.tanggal, waktu: activeSession.waktu, durasi: activeSession.durasi, lokasi: activeSession.lokasi, reason: '' }); setShowRescheduleForm(true); }}>Ajukan Jadwal Lain</Button>
+              <Button variant="primary" icon={CheckCircle2} onClick={acceptSessionProposal}>Setujui Jadwal</Button>
+            </div>
+          )}
         </div>
-      )}
-
-      {/* === D. PROPOSED → waiting peserta === */}
-      {isProposed && !showProposeForm && (
-        <div style={{ background: '#fff', border: `1px solid ${theme.warning}`, borderLeft: `4px solid ${theme.warning}`, borderRadius: 2, padding: 18, marginBottom: 14 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10 }}>
-            <Clock size={16} style={{ color: theme.warning }}/>
-            <div style={{ flex: 1 }}>
-              <div style={{ fontSize: 12, fontWeight: 600, color: theme.text }}>Menunggu konfirmasi peserta</div>
-              <div style={{ fontSize: 10.5, color: theme.textMuted, marginTop: 2 }}>Diajukan {activeSession.proposedAt}</div>
-            </div>
-          </div>
-          <div style={{ padding: 12, background: theme.bg, borderRadius: 2, fontSize: 11.5, color: theme.text, lineHeight: 1.5 }}>
-            <div style={{ fontWeight: 600, marginBottom: 4 }}>{fmtTanggal(activeSession.tanggal)} · {activeSession.waktu} WIB ({activeSession.durasi} menit)</div>
-            <div style={{ color: theme.textMuted, marginBottom: 4 }}>{activeSession.lokasi}</div>
-            <div style={{ color: theme.textMuted, fontSize: 10.5 }}>Topik: {activeSession.topik}</div>
-          </div>
-        </div>
-      )}
-
-      {/* === E. ACCEPTED → calendar entry === */}
-      {isAccepted && (
-        <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderRadius: 2, marginBottom: 14, overflow: 'hidden' }}>
-          <div style={{ background: theme.success, color: '#fff', padding: '10px 18px', display: 'flex', alignItems: 'center', gap: 10 }}>
-            <CheckCircle2 size={15}/>
-            <div style={{ fontSize: 11, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.15em' }}>Jadwal Dikonfirmasi · Calendar Tersinkronisasi</div>
-            {sessionDatePassed && (
-              <div style={{ marginLeft: 'auto', fontSize: 11, fontFamily: fonts.mono }}>Sesi sudah berlangsung</div>
-            )}
-          </div>
-          <div style={{ padding: 18 }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 12 }}>
-              <div>
-                <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.12em', color: theme.textMuted, fontWeight: 600 }}>Tanggal</div>
-                <div style={{ fontSize: 13, fontWeight: 600, color: theme.text, marginTop: 3 }}>{fmtTanggalShort(activeSession.tanggal)} {activeSession.waktu}</div>
-              </div>
-              <div>
-                <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.12em', color: theme.textMuted, fontWeight: 600 }}>Lokasi</div>
-                <div style={{ fontSize: 11.5, color: theme.text, marginTop: 3 }}>{activeSession.lokasi}</div>
-              </div>
-            </div>
-            {activeSession.teamsLink && (
-              <a href={activeSession.teamsLink} target="_blank" rel="noopener noreferrer"
-                style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '8px 14px', background: '#5059C9', color: '#fff', borderRadius: 2, textDecoration: 'none', fontSize: 11, fontWeight: 600, fontFamily: fonts.body }}>
-                <PlayCircle size={13}/> Buka Teams Meeting
-              </a>
-            )}
-            {!sessionDatePassed && (
-              <div style={{ marginTop: 12, fontSize: 11, color: theme.textMuted, fontStyle: 'italic' }}>
-                Form evaluasi akan otomatis terbuka setelah sesi berlangsung.
-              </div>
-            )}
-          </div>
-        </div>
-      )}
-
-      {/* === F. EVALUASI FORM (after session passed) === */}
-      {evaluasiUnlocked && (
-        <>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 14 }}>
-            <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderLeft: `3px solid ${existing ? theme.success : theme.warning}`, padding: 12, borderRadius: 2 }}>
-              <div style={{ fontSize: 10, textTransform: 'uppercase', letterSpacing: '0.1em', color: theme.textMuted, fontWeight: 600, marginBottom: 4 }}>Evaluasi Mentor</div>
-              <div style={{ fontSize: 11, color: theme.text }}>{existing ? `Tersimpan ${existing.evaluatedAt}` : 'Belum diinput'}</div>
-            </div>
-            <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderLeft: `3px solid ${surveyDone ? theme.success : theme.warning}`, padding: 12, borderRadius: 2 }}>
-              <div style={{ fontSize: 10, textTransform: 'uppercase', letterSpacing: '0.1em', color: theme.textMuted, fontWeight: 600, marginBottom: 4 }}>Survey Peserta</div>
-              <div style={{ fontSize: 11, color: theme.text }}>
-                {surveyDone
-                  ? `Skor mentor ${coaching.pesertaSurvey.mentorEffectiveness}/10 · sesi ${coaching.pesertaSurvey.sessionQuality}/10`
-                  : 'Peserta belum submit survey'}
-              </div>
-            </div>
-          </div>
-
-          <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderRadius: 2, padding: 18 }}>
-            <div style={{ fontSize: 13, fontWeight: 600, color: theme.text, fontFamily: fonts.display, marginBottom: 4 }}>Form Evaluasi Mentor</div>
-            <div style={{ fontSize: 11, color: theme.textMuted, marginBottom: 14 }}>Berikan strengths, area pengembangan, dan rekomendasi tindak lanjut</div>
-
-            <div style={{ marginBottom: 14 }}>
-              <label style={{ display: 'block', fontSize: 11, fontWeight: 600, color: theme.text, marginBottom: 3 }}>Kekuatan (Strengths) <span style={{ color: theme.danger }}>*</span></label>
-              <textarea value={strengths} onChange={e => setStrengths(e.target.value)} rows={3} disabled={!!existing}
-                placeholder="Contoh: Peserta menunjukkan kapasitas analitis yang kuat..."
-                style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 10, border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', resize: 'none', boxSizing: 'border-box', background: existing ? theme.bg : '#fff' }}/>
-            </div>
-            <div style={{ marginBottom: 14 }}>
-              <label style={{ display: 'block', fontSize: 11, fontWeight: 600, color: theme.text, marginBottom: 3 }}>Area Pengembangan <span style={{ color: theme.danger }}>*</span></label>
-              <textarea value={development} onChange={e => setDevelopment(e.target.value)} rows={3} disabled={!!existing}
-                placeholder="Area-area yang masih dapat dikembangkan..."
-                style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 10, border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', resize: 'none', boxSizing: 'border-box', background: existing ? theme.bg : '#fff' }}/>
-            </div>
-            <div style={{ marginBottom: 14 }}>
-              <label style={{ display: 'block', fontSize: 11, fontWeight: 600, color: theme.text, marginBottom: 3 }}>Rekomendasi <span style={{ color: theme.danger }}>*</span></label>
-              <textarea value={recommendation} onChange={e => setRecommendation(e.target.value)} rows={3} disabled={!!existing}
-                placeholder="Rekomendasi tindak lanjut atau development plan..."
-                style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 10, border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', resize: 'none', boxSizing: 'border-box', background: existing ? theme.bg : '#fff' }}/>
-            </div>
-            {!existing && (
-              <div style={{ paddingTop: 12, borderTop: `1px solid ${theme.border}`, display: 'flex', justifyContent: 'flex-end', gap: 8 }}>
-                <Button variant="primary" icon={Send} onClick={submitEvaluasi}>Submit Evaluasi</Button>
-              </div>
-            )}
-          </div>
-        </>
       )}
     </div>
   );
 }
+
 
 // =====================================================================
 // MENTOR VIEW: shared helpers untuk preview form mentee
@@ -4006,46 +4366,61 @@ function PreviewHeader({ tahap, label, desc, status, submittedAt }) {
   );
 }
 
+
+// ----- Helper: render daftar items tindak lanjut (Mon1 & Mon2) -----
+function MonItemsPreview({ items, planItems, label }) {
+  if (!items || items.length === 0) {
+    return <div style={{ fontSize: 11.5, color: theme.textMuted, fontStyle: 'italic', padding: 16, textAlign: 'center', background: theme.bg, borderRadius: 2 }}>Belum ada tindak lanjut yang disubmit</div>;
+  }
+  return (
+    <>
+      <div style={{ fontSize: 11, color: theme.textMuted, marginBottom: 10 }}>{items.length} tindak lanjut · {label}</div>
+      {items.map((it, idx) => {
+        const linkedPlan = planItems.find(p => p.id === it.coachingPlanItemId);
+        return (
+          <div key={it.id} style={{ background: theme.bg, border: `1px solid ${theme.border}`, borderRadius: 2, padding: 14, marginBottom: 12 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10, paddingBottom: 8, borderBottom: `1px solid ${theme.border}` }}>
+              <div style={{ fontSize: 10, color: theme.textMuted, fontFamily: fonts.mono }}>Tindak Lanjut #{idx + 1}</div>
+              {linkedPlan ? (
+                <Pill variant="default">{areaLabel(linkedPlan.area)}{linkedPlan.area === 'lainnya' && linkedPlan.areaLainnya ? ` · ${linkedPlan.areaLainnya}` : ''}</Pill>
+              ) : (
+                <Pill variant="default">Lainnya{it.areaLabel ? ` · ${it.areaLabel}` : ''}</Pill>
+              )}
+            </div>
+            {linkedPlan && (
+              <div style={{ fontSize: 10.5, color: theme.textMuted, marginBottom: 8, fontStyle: 'italic', lineHeight: 1.5 }}>
+                Plan: "{(linkedPlan.halDilakukan || '').slice(0, 120)}{(linkedPlan.halDilakukan || '').length > 120 ? '…' : ''}"
+              </div>
+            )}
+            {[
+              { label: 'Tindak Lanjut yang Sudah Dilakukan', v: it.tindakLanjut },
+              { label: 'Kendala yang Dihadapi',              v: it.kendala },
+              { label: 'Dukungan yang Dibutuhkan',           v: it.dukungan },
+            ].map(row => (
+              <div key={row.label} style={{ marginBottom: 8 }}>
+                <div style={{ fontSize: 9.5, textTransform: 'uppercase', letterSpacing: '0.1em', color: theme.textSubtle, fontWeight: 700, marginBottom: 3 }}>{row.label}</div>
+                <div style={{ fontSize: 12, color: theme.text, lineHeight: 1.55, whiteSpace: 'pre-wrap' }}>{row.v || <span style={{ color: theme.textSubtle, fontStyle: 'italic' }}>—</span>}</div>
+              </div>
+            ))}
+          </div>
+        );
+      })}
+    </>
+  );
+}
+
 // ----- TAB: MONITORING 1 (mentor preview view) -----
 function WorkspaceMon1View({ participant: p }) {
   const m1 = p.stageData.monitoring1;
   const filled = m1?.status === 'completed';
+  const planItems = p.stageData.coaching?.plan?.items || [];
 
   return (
     <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderLeft: `4px solid ${filled ? theme.success : theme.borderStrong}`, borderRadius: 2, padding: 24 }}>
       <PreviewHeader tahap="04" label="Monitoring 1 · Tindak Lanjut Awal"
-        desc={filled ? `Update progress development plan dari ${p.nama.split(' ')[0]} setelah sesi coaching` : `Form yang akan diisi oleh ${p.nama.split(' ')[0]} pada Tahap 04`}
+        desc={filled ? `Tindak lanjut atas coaching plan dari ${p.nama.split(' ')[0]}` : `Form yang akan diisi oleh ${p.nama.split(' ')[0]} pada Tahap 04`}
         status={m1?.status} submittedAt={m1?.submittedAt}/>
-
-      {/* 3 essay utama */}
-      {[
-        { key: 'tindakLanjut', label: 'Tindak Lanjut yang Sudah Dilakukan', desc: 'Terkait tindak lanjut rencana pengembangan individu setelah sesi DIKSI, hal apa yang sudah dilakukan?', required: true },
-        { key: 'kendala', label: 'Kendala yang Dihadapi', desc: 'Apa kendala yang dihadapi terkait tindak lanjut rencana pengembangan?', required: true },
-        { key: 'dukungan', label: 'Dukungan yang Dibutuhkan', desc: 'Dukungan dan support seperti apa yang dibutuhkan terkait tindak lanjut rencana pengembangan?', required: true },
-      ].map(f => (
-        <div key={f.key} style={{ marginBottom: 18 }}>
-          <PreviewLabel label={f.label} desc={f.desc} required={f.required} status={m1?.[f.key] ? 'filled' : null}/>
-          <PreviewTextValue value={m1?.[f.key]}/>
-        </div>
-      ))}
-
-      {/* Detail tindak lanjut */}
-      <div style={{ paddingTop: 14, borderTop: `1px solid ${theme.border}` }}>
-        <div style={{ fontSize: 10, textTransform: 'uppercase', letterSpacing: '0.15em', color: theme.textMuted, fontWeight: 600, marginBottom: 12 }}>Detail Tindak Lanjut Spesifik</div>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14 }}>
-          {[
-            { key: 'pelatihan', label: 'Pelatihan / IHT' },
-            { key: 'sertifikasi', label: 'Sertifikasi' },
-            { key: 'kepanitiaan', label: 'Kepanitiaan' },
-            { key: 'lainnya', label: 'Lainnya' },
-          ].map(f => (
-            <div key={f.key}>
-              <PreviewLabel label={f.label} status={m1?.[f.key] ? 'filled' : null}/>
-              <PreviewTextValue value={m1?.[f.key]} placeholder="—"/>
-            </div>
-          ))}
-        </div>
-      </div>
+      <MonItemsPreview items={m1?.items} planItems={planItems} label="merujuk ke coaching plan"/>
     </div>
   );
 }
@@ -4054,196 +4429,251 @@ function WorkspaceMon1View({ participant: p }) {
 function WorkspaceMon2View({ participant: p }) {
   const m2 = p.stageData.monitoring2;
   const filled = m2?.status === 'completed';
+  const planItems = p.stageData.coaching?.plan?.items || [];
 
   return (
     <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderLeft: `4px solid ${filled ? theme.success : theme.borderStrong}`, borderRadius: 2, padding: 24 }}>
-      <PreviewHeader tahap="05" label="Monitoring 2 · Penilaian Pertengahan"
-        desc={filled ? `Penilaian manfaat program & kesediaan kontribusi balik dari ${p.nama.split(' ')[0]}` : `Form yang akan diisi oleh ${p.nama.split(' ')[0]} pada Tahap 05`}
+      <PreviewHeader tahap="05" label="Monitoring 2 · Tindak Lanjut Terusan"
+        desc={filled ? `Tindak lanjut terusan untuk item plan yang belum dicover di Mon1 dari ${p.nama.split(' ')[0]}` : `Form yang akan diisi oleh ${p.nama.split(' ')[0]} pada Tahap 05`}
         status={m2?.status} submittedAt={m2?.submittedAt}/>
-
-      {/* 3 Likert questions */}
-      {[
-        { key: 'manfaat', label: 'Manfaat DIKSI bagi Peserta', desc: 'Sejauh mana DIKSI memberikan manfaat bagi peserta?' },
-        { key: 'bertumbuh', label: 'Bertumbuh Menjadi Versi Terbaik', desc: 'Sejauh mana DIKSI membantu peserta bertumbuh menjadi versi terbaik?' },
-        { key: 'rekomendasi', label: 'Rekomendasi DIKSI', desc: 'Sejauh mana peserta merekomendasikan DIKSI untuk diikuti pegawai lain?' },
-      ].map(f => (
-        <div key={f.key} style={{ marginBottom: 22 }}>
-          <PreviewLabel label={f.label} desc={f.desc} status={m2?.[f.key] != null ? 'filled' : null}/>
-          <PreviewLikert value={m2?.[f.key]} color={theme.navy}/>
-        </div>
-      ))}
-
-      {/* Saran textarea */}
-      <div style={{ marginBottom: 18, paddingTop: 6 }}>
-        <PreviewLabel label="Saran Proses Follow-up" desc="Saran terhadap proses follow-up atas tindak lanjut pengisian coaching plan yang telah diterima selama ini" required status={m2?.saran ? 'filled' : null}/>
-        <PreviewTextValue value={m2?.saran}/>
-      </div>
-
-      {/* 2 Yes/No */}
-      <div style={{ paddingTop: 12, borderTop: `1px solid ${theme.border}`, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 18 }}>
-        <div>
-          <PreviewLabel label="Bersedia Menjadi Fasilitator" desc="Apabila DIKSI dilaksanakan di masing-masing satuan kerja, bersedia menjadi Fasilitator (pemandu kegiatan Group Coaching)?" required status={m2?.bersedia_fasilitator ? 'filled' : null}/>
-          <PreviewYesNo value={m2?.bersedia_fasilitator}/>
-        </div>
-        <div>
-          <PreviewLabel label="Bersedia Pembekalan Fasilitator" desc="Bersedia mengikuti kegiatan Pembekalan Fasilitator DIKSI?" required status={m2?.bersedia_pembekalan ? 'filled' : null}/>
-          <PreviewYesNo value={m2?.bersedia_pembekalan}/>
-        </div>
-      </div>
+      <MonItemsPreview items={m2?.items} planItems={planItems} label="lanjutan dari Mon1"/>
     </div>
   );
 }
 
-// ----- TAB: MONITORING 3 (mentor preview view dengan kategorisasi kualitatif) -----
+// ----- TAB: MONITORING 3 (mentor preview view — likert + yesno penilaian manfaat) -----
 function WorkspaceMon3View({ participant: p }) {
   const m3 = p.stageData.monitoring3;
   const filled = m3?.status === 'completed';
 
-  const sections = [
-    {
-      katKey: 'kategori_perubahan', elabKey: 'elaborasi_perubahan', fallback: 'refleksi_perubahan',
-      label: 'Tingkat Perubahan dalam Diri',
-      desc: 'Setelah mengikuti DIKSI, sejauh mana peserta merasakan perubahan dalam cara berpikir, sikap, atau kapasitas diri?',
-      kategori: [
-        { value: 'transformatif', label: 'Transformatif',  hint: 'Perubahan mendasar dalam cara pikir & paradigma',  color: theme.success },
-        { value: 'signifikan',    label: 'Signifikan',     hint: 'Banyak aspek diri yang berkembang nyata',          color: theme.success },
-        { value: 'sedang',        label: 'Sedang',         hint: 'Beberapa aspek mengalami perubahan',                color: theme.gold },
-        { value: 'sedikit',       label: 'Sedikit',        hint: 'Perubahan minor pada aspek tertentu',               color: theme.warning },
-        { value: 'belum_terasa',  label: 'Belum Terasa',   hint: 'Belum merasakan perubahan signifikan',              color: theme.danger },
-      ],
-    },
-    {
-      katKey: 'kategori_pencapaian', elabKey: 'elaborasi_pencapaian', fallback: 'refleksi_pencapaian',
-      label: 'Tingkat Pencapaian Tujuan Pengembangan',
-      desc: 'Sejauh mana tujuan/target development plan yang disusun saat coaching tercapai?',
-      kategori: [
-        { value: 'melampaui',     label: 'Melampaui Ekspektasi', hint: 'Pencapaian melebihi target awal',          color: theme.success },
-        { value: 'sesuai_target', label: 'Sesuai Target',         hint: 'Pencapaian sesuai dengan rencana',         color: theme.success },
-        { value: 'sebagian',      label: 'Sebagian Tercapai',     hint: 'Beberapa target tercapai, lainnya masih', color: theme.gold },
-        { value: 'berproses',     label: 'Masih Berproses',       hint: 'Target dalam tahap pengerjaan aktif',     color: theme.warning },
-        { value: 'belum_tercapai',label: 'Belum Tercapai',        hint: 'Target belum dapat direalisasikan',       color: theme.danger },
-      ],
-    },
-    {
-      katKey: 'kategori_pembelajaran', elabKey: 'elaborasi_pembelajaran', fallback: 'refleksi_pembelajaran',
-      label: 'Kualitas Pembelajaran yang Diperoleh',
-      desc: 'Bagaimana kualitas pembelajaran (insight, skill, mindset) yang diperoleh dari proses coaching dan monitoring?',
-      kategori: [
-        { value: 'sangat_mendalam', label: 'Sangat Mendalam',    hint: 'Insight transformatif & shift mindset besar', color: theme.success },
-        { value: 'mendalam',        label: 'Mendalam',            hint: 'Pembelajaran kaya dan berkesan',              color: theme.success },
-        { value: 'standar',         label: 'Standar',             hint: 'Pembelajaran cukup, sesuai ekspektasi',       color: theme.gold },
-        { value: 'kurang_optimal',  label: 'Kurang Optimal',      hint: 'Pembelajaran terbatas atau tidak menempel',   color: theme.warning },
-      ],
-    },
-    {
-      katKey: 'kategori_kedepan', elabKey: 'elaborasi_kedepan', fallback: 'refleksi_kedepan',
-      label: 'Kejelasan Visi & Aspirasi ke Depan',
-      desc: 'Setelah program ini, seberapa jelas visi karir dan aspirasi peserta di Bank Indonesia?',
-      kategori: [
-        { value: 'sangat_jelas',  label: 'Sangat Jelas dengan Roadmap', hint: 'Visi jelas dengan langkah konkret 3-5 tahun', color: theme.success },
-        { value: 'cukup_jelas',   label: 'Cukup Jelas',                  hint: 'Arah sudah jelas, detail eksekusi berkembang', color: theme.success },
-        { value: 'eksploratif',   label: 'Masih Eksploratif',            hint: 'Sedang menjelajahi berbagai kemungkinan',      color: theme.gold },
-        { value: 'belum_terbentuk', label: 'Belum Terbentuk',            hint: 'Belum ada gambaran konkret',                   color: theme.warning },
-      ],
-    },
-  ];
-
   return (
     <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderLeft: `4px solid ${filled ? theme.success : theme.borderStrong}`, borderRadius: 2, padding: 24 }}>
-      <PreviewHeader tahap="06" label="Monitoring 3 · Self Reflection"
-        desc={filled ? `Refleksi mendalam dengan kategorisasi kualitatif dari ${p.nama.split(' ')[0]}` : `Form self-reflection yang akan diisi oleh ${p.nama.split(' ')[0]} pada Tahap 06`}
+      <PreviewHeader tahap="06" label="Monitoring 3 · Penilaian Manfaat DIKSI"
+        desc={filled ? `Penilaian manfaat program & kesediaan kontribusi balik dari ${p.nama.split(' ')[0]}` : `Form yang akan diisi oleh ${p.nama.split(' ')[0]} pada Tahap 06`}
         status={m3?.status} submittedAt={m3?.submittedAt}/>
 
-      {sections.map((section, idx) => {
-        const selectedValue = m3?.[section.katKey];
-        const elaborasi = m3?.[section.elabKey] || m3?.[section.fallback];
-        return (
-          <div key={section.katKey} style={{ marginBottom: 22, paddingBottom: 22, borderBottom: idx < sections.length - 1 ? `1px solid ${theme.border}` : 'none' }}>
-            <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, marginBottom: 4 }}>
-              <span style={{ fontFamily: fonts.mono, fontSize: 10, color: theme.textSubtle }}>0{idx + 1}</span>
-              <div style={{ fontSize: 12.5, fontWeight: 600, color: theme.text, fontFamily: fonts.display }}>{section.label}</div>
-              {selectedValue && <CheckCircle2 size={11} style={{ color: theme.success }}/>}
-            </div>
-            <div style={{ fontSize: 10.5, color: theme.textMuted, lineHeight: 1.5, marginBottom: 6, paddingLeft: 22 }}>{section.desc}</div>
+      {/* 3 Likert */}
+      {[
+        { key: 'manfaat',     label: 'Manfaat DIKSI bagi Peserta',         desc: 'Sejauh mana DIKSI memberikan manfaat?' },
+        { key: 'bertumbuh',   label: 'Bertumbuh Menjadi Versi Terbaik',     desc: 'Sejauh mana DIKSI membantu peserta bertumbuh menjadi versi terbaik?' },
+        { key: 'rekomendasi', label: 'Rekomendasi DIKSI',                    desc: 'Sejauh mana peserta merekomendasikan DIKSI untuk diikuti pegawai lain?' },
+      ].map(f => (
+        <div key={f.key} style={{ marginBottom: 22 }}>
+          <PreviewLabel label={f.label} desc={f.desc} status={m3?.[f.key] != null ? 'filled' : null}/>
+          <PreviewLikert value={m3?.[f.key]} color={theme.navy}/>
+        </div>
+      ))}
 
-            <div style={{ paddingLeft: 22 }}>
-              <PreviewKategori selectedValue={selectedValue} kategori={section.kategori}/>
-              <div style={{ marginTop: 12 }}>
-                <div style={{ fontSize: 10, fontWeight: 600, color: theme.textMuted, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 4 }}>Elaborasi</div>
-                <PreviewTextValue value={elaborasi}/>
-              </div>
-            </div>
-          </div>
-        );
-      })}
+      <div style={{ marginBottom: 18, paddingTop: 6 }}>
+        <PreviewLabel label="Saran Proses Follow-up" desc="Saran terhadap proses follow-up atas tindak lanjut pengisian coaching plan yang telah diterima selama ini" required status={m3?.saran ? 'filled' : null}/>
+        <PreviewTextValue value={m3?.saran}/>
+      </div>
+
+      <div style={{ paddingTop: 12, borderTop: `1px solid ${theme.border}`, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 18 }}>
+        <div>
+          <PreviewLabel label="Bersedia Menjadi Fasilitator" desc="Apabila DIKSI dilaksanakan di masing-masing satuan kerja, bersedia menjadi Fasilitator?" required status={m3?.bersedia_fasilitator ? 'filled' : null}/>
+          <PreviewYesNo value={m3?.bersedia_fasilitator}/>
+        </div>
+        <div>
+          <PreviewLabel label="Bersedia Pembekalan Fasilitator" desc="Bersedia mengikuti kegiatan Pembekalan Fasilitator DIKSI?" required status={m3?.bersedia_pembekalan ? 'filled' : null}/>
+          <PreviewYesNo value={m3?.bersedia_pembekalan}/>
+        </div>
+      </div>
     </div>
   );
 }
 
-// ----- TAB: EVALUASI AKHIR (mentor preview view) -----
+
+// ----- TAB: EVALUASI (bidirectional — peserta → mentor + mentor → mentee) -----
+
+// Dimensi penilaian mentor → mentee (likert 1-10)
+const EVAL_MENTEE_DIMENSIONS = [
+  { key: 'komitmen',                label: 'Komitmen',                       desc: 'Kehadiran sesi, ketepatan deadline, follow-through commitment yang sudah disepakati' },
+  { key: 'keaktifan',               label: 'Keaktifan',                       desc: 'Engagement dalam sesi: bertanya, sharing, kontribusi diskusi' },
+  { key: 'inisiatif',               label: 'Inisiatif & Proaktivitas',        desc: 'Mengambil inisiatif tanpa harus diminta, proaktif mencari resource & feedback' },
+  { key: 'kualitasPlan',            label: 'Kualitas Coaching Plan',          desc: 'Kualitas penyusunan coaching plan: spesifik, terukur, realistis, relevan' },
+  { key: 'konsistensiTindakLanjut', label: 'Konsistensi Tindak Lanjut',       desc: 'Konsistensi eksekusi rencana pengembangan dari Mon1 sampai Mon3' },
+  { key: 'receptifFeedback',        label: 'Receptif terhadap Feedback',      desc: 'Keterbukaan menerima feedback & mengaplikasikannya dalam praktik' },
+  { key: 'pertumbuhan',             label: 'Tingkat Pertumbuhan',             desc: 'Growth & development yang terlihat selama program — shift mindset, skill, behavior' },
+];
+
 function WorkspaceEvalView({ participant: p }) {
-  const ev = p.stageData.evaluasi;
-  const filled = ev?.status === 'completed';
+  const { updateParticipant, toast, addAudit, pushNotif, currentUser } = useApp();
+  const ev = p.stageData.evaluasi;                  // peserta → mentor
+  const evMentor = p.stageData.evaluasiMentor;      // mentor → peserta
+  const filledPeserta = ev?.status === 'completed';
+  const filledMentor  = evMentor?.status === 'completed';
   const mentor = USERS[p.mentorUserId];
+  const userShortName = currentUser.user.split(',')[0];
+
+  const monitoringDone = p.stageData.monitoring3?.status === 'completed';
+
+  const emptyForm = () => ({
+    ...Object.fromEntries(EVAL_MENTEE_DIMENSIONS.map(d => [d.key, 8])),
+    kekuatanMentee: '', areaPengembangan: '',
+  });
+  const fromExisting = (e) => ({
+    ...Object.fromEntries(EVAL_MENTEE_DIMENSIONS.map(d => [d.key, e?.[d.key] || 8])),
+    kekuatanMentee: e?.kekuatanMentee || '',
+    areaPengembangan: e?.areaPengembangan || '',
+  });
+
+  const [form, setForm] = useState(filledMentor ? fromExisting(evMentor) : emptyForm());
+
+  useEffect(() => {
+    setForm(p.stageData.evaluasiMentor?.status === 'completed' ? fromExisting(p.stageData.evaluasiMentor) : emptyForm());
+  }, [p.id]);
+
+  const isMentorReadOnly = filledMentor;
+  const avgFromForm = (EVAL_MENTEE_DIMENSIONS.reduce((s, d) => s + (form[d.key] || 0), 0) / EVAL_MENTEE_DIMENSIONS.length);
+  const avgPesertaToMentor = filledPeserta
+    ? (EVAL_MENTOR_DIMENSIONS.reduce((s, d) => s + (ev[d.key] || 0), 0) / EVAL_MENTOR_DIMENSIONS.length)
+    : null;
+
+  const submitMentorEval = () => {
+    if (!form.kekuatanMentee.trim() || !form.areaPengembangan.trim()) {
+      toast('Mohon isi kekuatan & area pengembangan mentee', 'warning'); return;
+    }
+    updateParticipant(p.id, old => ({
+      ...old,
+      stageData: {
+        ...old.stageData,
+        evaluasiMentor: { status: 'completed', submittedAt: new Date().toISOString().slice(0,10), evaluatedBy: userShortName, ...form },
+      },
+    }));
+    addAudit(userShortName, `Submit Evaluasi Mentee (${p.nama.split(' ').slice(0,2).join(' ')})`, p.nama);
+    pushNotif('peserta', { type: 'success', title: `Mentor memberikan evaluasi`, desc: `${userShortName} telah submit evaluasi untuk Anda · skor rata-rata ${avgFromForm.toFixed(1)}/10` });
+    pushNotif('admin', { type: 'info', title: `${userShortName} submit evaluasi mentee`, desc: `${p.nama} · skor rata-rata ${avgFromForm.toFixed(1)}/10` });
+    toast(`Evaluasi untuk ${p.nama.split(' ').slice(0,2).join(' ')} tersimpan.`, 'success');
+  };
+
+  const likertField = (key, label, desc) => (
+    <div style={{ marginBottom: 18 }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 3 }}>
+        <label style={{ fontSize: 11.5, fontWeight: 600, color: theme.text }}>{label}</label>
+        <span style={{ fontFamily: fonts.display, fontSize: 20, fontWeight: 300, color: theme.navy }}>{form[key]}<span style={{ fontSize: 10, color: theme.textSubtle }}>/10</span></span>
+      </div>
+      <p style={{ fontSize: 10.5, color: theme.textMuted, margin: '0 0 7px', lineHeight: 1.5 }}>{desc}</p>
+      <div style={{ display: 'flex', gap: 4 }}>
+        {[1,2,3,4,5,6,7,8,9,10].map(n => (
+          <button key={n} onClick={() => !isMentorReadOnly && setForm({ ...form, [key]: n })} disabled={isMentorReadOnly}
+            style={{
+              flex: 1, height: 28, fontSize: 11, fontFamily: fonts.mono, fontWeight: 600,
+              background: n <= form[key] ? (n >= 8 ? theme.success : n >= 5 ? theme.gold : theme.warning) : '#F1F3F6',
+              color: n <= form[key] ? '#fff' : theme.textSubtle,
+              border: 'none', borderRadius: 2, cursor: isMentorReadOnly ? 'default' : 'pointer',
+            }}>{n}</button>
+        ))}
+      </div>
+    </div>
+  );
 
   return (
-    <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderLeft: `4px solid ${filled ? theme.success : theme.borderStrong}`, borderRadius: 2, padding: 24 }}>
-      <PreviewHeader tahap="07" label="Evaluasi Akhir Program"
-        desc={filled ? `Penilaian komprehensif program DIKSI dan mentor dari ${p.nama.split(' ')[0]}` : `Form evaluasi akhir yang akan diisi oleh ${p.nama.split(' ')[0]} pada Tahap 07`}
-        status={ev?.status} submittedAt={ev?.submittedAt}/>
-
-      {filled && (
-        <div style={{ background: theme.successBg, border: `1px solid ${theme.success}`, padding: 12, borderRadius: 2, marginBottom: 18, display: 'flex', alignItems: 'center', gap: 10 }}>
-          <CheckCircle2 size={16} style={{ color: theme.success }}/>
-          <div>
-            <div style={{ fontSize: 12, fontWeight: 600, color: theme.text }}>Peserta menyelesaikan program</div>
-            <div style={{ fontSize: 10.5, color: theme.textMuted, marginTop: 2 }}>Evaluasi akhir disubmit {ev.submittedAt}</div>
-          </div>
-        </div>
-      )}
-
-      {/* Skor section */}
-      <div style={{ fontSize: 10, textTransform: 'uppercase', letterSpacing: '0.15em', color: theme.textMuted, fontWeight: 600, marginBottom: 14 }}>Penilaian (Skala 1-10)</div>
-
-      {/* Skor program */}
-      <div style={{ marginBottom: 22 }}>
-        <PreviewLabel label="Penilaian Keseluruhan Program DIKSI" desc="Penilaian peserta terhadap program DIKSI secara keseluruhan (kualitas, struktur, eksekusi)" status={ev?.skor_program ? 'filled' : null}/>
-        <PreviewLikert value={ev?.skor_program} color={theme.navy}/>
-      </div>
-
-      {/* Skor mentor — highlighted */}
-      <div style={{ marginBottom: 22, padding: 14, background: theme.goldLight + '20', border: `1px solid ${theme.gold}`, borderLeft: `4px solid ${theme.gold}`, borderRadius: 2 }}>
-        <div style={{ fontSize: 9.5, textTransform: 'uppercase', letterSpacing: '0.15em', color: theme.goldDark, fontWeight: 700, marginBottom: 4 }}>Penilaian Untuk Anda Sebagai Mentor</div>
-        <PreviewLabel label={`Skor untuk ${mentor?.user.split(',')[0] || 'Mentor'}`} desc={`Penilaian peserta terhadap performa Anda sebagai coach selama program`} status={ev?.skor_mentor ? 'filled' : null}/>
-        <PreviewLikert value={ev?.skor_mentor} color={theme.gold}/>
-      </div>
-
-      {/* Skor kebermanfaatan */}
-      <div style={{ marginBottom: 22 }}>
-        <PreviewLabel label="Kebermanfaatan Program" desc="Sejauh mana program DIKSI memberikan dampak nyata pada karir dan pengembangan peserta" status={ev?.kebermanfaatan ? 'filled' : null}/>
-        <PreviewLikert value={ev?.kebermanfaatan} color={theme.success}/>
-      </div>
-
-      {/* Feedback section */}
-      <div style={{ paddingTop: 12, borderTop: `1px solid ${theme.border}` }}>
-        <div style={{ fontSize: 10, textTransform: 'uppercase', letterSpacing: '0.15em', color: theme.textMuted, fontWeight: 600, marginBottom: 14 }}>Feedback Tertulis</div>
-
-        <div style={{ marginBottom: 18 }}>
-          <PreviewLabel label="Feedback untuk Program DIKSI" desc="Apa yang paling diapresiasi dari program ini? Apa yang berkesan?" required status={ev?.feedback_program ? 'filled' : null}/>
-          <PreviewTextValue value={ev?.feedback_program}/>
-        </div>
-
-        {/* Feedback mentor — highlighted gold */}
-        <div style={{ marginBottom: 18, padding: 14, background: theme.goldLight + '20', border: `1px solid ${theme.gold}40`, borderLeft: `4px solid ${theme.gold}`, borderRadius: 2 }}>
-          <div style={{ fontSize: 9.5, textTransform: 'uppercase', letterSpacing: '0.15em', color: theme.goldDark, fontWeight: 700, marginBottom: 6 }}>Feedback Untuk Anda Sebagai Mentor</div>
-          <PreviewLabel label={`Feedback untuk ${mentor?.user.split(',')[0] || 'Mentor'}`} desc="Pengalaman peserta dengan Anda sebagai mentor + saran" required status={ev?.feedback_mentor ? 'filled' : null}/>
-          <PreviewTextValue value={ev?.feedback_mentor}/>
-        </div>
-
+    <div>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 }}>
         <div>
-          <PreviewLabel label="Rekomendasi Perbaikan Program" desc="Saran konkret untuk peningkatan kualitas DIKSI di masa depan (opsional)" status={ev?.rekomendasi_perbaikan ? 'filled' : null}/>
-          <PreviewTextValue value={ev?.rekomendasi_perbaikan}/>
+          <div style={{ fontSize: 14, fontWeight: 600, color: theme.text, fontFamily: fonts.display }}>Evaluasi Akhir Program</div>
+          <div style={{ fontSize: 11, color: theme.textMuted, marginTop: 2 }}>Evaluasi dua arah · {p.nama.split(' ').slice(0, 2).join(' ')}</div>
         </div>
+      </div>
+
+      {/* ============ SECTION A: Peserta → Mentor (read-only preview) ============ */}
+      <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderLeft: `4px solid ${filledPeserta ? theme.success : theme.borderStrong}`, borderRadius: 2, padding: 20, marginBottom: 16 }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 14, paddingBottom: 10, borderBottom: `1px solid ${theme.border}` }}>
+          <div>
+            <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.18em', color: theme.gold, fontWeight: 700 }}>Evaluasi Anda dari Peserta</div>
+            <div style={{ fontSize: 14, fontWeight: 600, color: theme.text, fontFamily: fonts.display, marginTop: 2 }}>{p.nama.split(' ').slice(0, 2).join(' ')} → {userShortName}</div>
+          </div>
+          {filledPeserta && (
+            <div style={{ textAlign: 'right' }}>
+              <div style={{ fontSize: 9, color: theme.textMuted, fontFamily: fonts.mono }}>Submitted {ev.submittedAt}</div>
+              <div style={{ fontFamily: fonts.display, fontSize: 24, fontWeight: 300, color: avgPesertaToMentor >= 8 ? theme.success : avgPesertaToMentor >= 5 ? theme.gold : theme.warning, lineHeight: 1.1, marginTop: 2 }}>
+                {avgPesertaToMentor.toFixed(1)}<span style={{ fontSize: 11, color: theme.textSubtle }}>/10</span>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {!filledPeserta ? (
+          <div style={{ fontSize: 11.5, color: theme.textMuted, fontStyle: 'italic', padding: 16, textAlign: 'center', background: theme.bg, borderRadius: 2 }}>
+            {p.nama.split(' ')[0]} belum submit evaluasi mentor.
+          </div>
+        ) : (
+          <>
+            {/* Likert scores compact */}
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 10, marginBottom: 14 }}>
+              {EVAL_MENTOR_DIMENSIONS.map(d => {
+                const v = ev[d.key];
+                const col = v >= 8 ? theme.success : v >= 5 ? theme.gold : theme.warning;
+                return (
+                  <div key={d.key} style={{ background: theme.bg, padding: '8px 10px', borderRadius: 2, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <div style={{ fontSize: 11, color: theme.text }}>{d.label}</div>
+                    <div style={{ fontFamily: fonts.mono, fontSize: 12, fontWeight: 700, color: col }}>{v ?? '-'}/10</div>
+                  </div>
+                );
+              })}
+            </div>
+
+            <div style={{ marginBottom: 10 }}>
+              <div style={{ fontSize: 9.5, textTransform: 'uppercase', letterSpacing: '0.1em', color: theme.textSubtle, fontWeight: 700, marginBottom: 3 }}>Kelebihan Anda sebagai Coach</div>
+              <div style={{ fontSize: 12, color: theme.text, lineHeight: 1.55, padding: '8px 12px', background: theme.bg, borderRadius: 2, whiteSpace: 'pre-wrap' }}>{ev.kelebihanMentor || <span style={{ color: theme.textSubtle, fontStyle: 'italic' }}>—</span>}</div>
+            </div>
+            <div>
+              <div style={{ fontSize: 9.5, textTransform: 'uppercase', letterSpacing: '0.1em', color: theme.textSubtle, fontWeight: 700, marginBottom: 3 }}>Saran untuk Anda</div>
+              <div style={{ fontSize: 12, color: theme.text, lineHeight: 1.55, padding: '8px 12px', background: theme.bg, borderRadius: 2, whiteSpace: 'pre-wrap' }}>{ev.saranMentor || <span style={{ color: theme.textSubtle, fontStyle: 'italic' }}>—</span>}</div>
+            </div>
+          </>
+        )}
+      </div>
+
+      {/* ============ SECTION B: Mentor → Peserta (input form) ============ */}
+      <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderLeft: `4px solid ${filledMentor ? theme.success : theme.gold}`, borderRadius: 2, padding: 20 }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 14, paddingBottom: 10, borderBottom: `1px solid ${theme.border}` }}>
+          <div>
+            <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.18em', color: theme.gold, fontWeight: 700 }}>Evaluasi Mentee oleh Anda</div>
+            <div style={{ fontSize: 14, fontWeight: 600, color: theme.text, fontFamily: fonts.display, marginTop: 2 }}>{userShortName} → {p.nama.split(' ').slice(0, 2).join(' ')}</div>
+          </div>
+          {filledMentor && (
+            <div style={{ textAlign: 'right' }}>
+              <Pill variant="success">Selesai · {evMentor.submittedAt}</Pill>
+              <div style={{ fontFamily: fonts.display, fontSize: 24, fontWeight: 300, color: avgFromForm >= 8 ? theme.success : avgFromForm >= 5 ? theme.gold : theme.warning, lineHeight: 1.1, marginTop: 4 }}>
+                {avgFromForm.toFixed(1)}<span style={{ fontSize: 11, color: theme.textSubtle }}>/10</span>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {!monitoringDone && !filledMentor && (
+          <div style={{ background: theme.warningBg, border: '1px solid #FCD34D', padding: 12, borderRadius: 2, fontSize: 11, color: theme.warning, display: 'flex', gap: 8, marginBottom: 14 }}>
+            <AlertCircle size={14} style={{ flexShrink: 0, marginTop: 1 }}/>
+            <div>Disarankan menunggu peserta menyelesaikan Monitoring 3 sebelum submit evaluasi — agar penilaian Anda mencakup growth peserta selama seluruh program.</div>
+          </div>
+        )}
+
+        <div style={{ fontSize: 10, textTransform: 'uppercase', letterSpacing: '0.15em', color: theme.textMuted, fontWeight: 600, marginBottom: 12 }}>Dimensi Penilaian (Skala 1-10)</div>
+        {EVAL_MENTEE_DIMENSIONS.map(d => likertField(d.key, d.label, d.desc))}
+
+        <div style={{ paddingTop: 12, marginTop: 6, borderTop: `1px solid ${theme.border}` }}>
+          <div style={{ fontSize: 10, textTransform: 'uppercase', letterSpacing: '0.15em', color: theme.textMuted, fontWeight: 600, marginBottom: 12 }}>Feedback Tertulis</div>
+
+          {[
+            { key: 'kekuatanMentee',    label: `Kekuatan ${p.nama.split(' ')[0]}`,            desc: 'Kekuatan dan kualitas yang paling menonjol selama program — apa yang membuat peserta ini stand out?', rows: 4 },
+            { key: 'areaPengembangan',  label: 'Area Pengembangan ke Depan',                    desc: 'Area / aspek yang masih dapat dikembangkan lebih lanjut beyond program DIKSI',                   rows: 4 },
+          ].map(f => (
+            <div key={f.key} style={{ marginBottom: 16 }}>
+              <label style={{ display: 'block', fontSize: 11.5, fontWeight: 600, color: theme.text, marginBottom: 3 }}>{f.label} <span style={{ color: theme.danger }}>*</span></label>
+              <div style={{ fontSize: 10.5, color: theme.textMuted, lineHeight: 1.5, marginBottom: 7 }}>{f.desc}</div>
+              <textarea value={form[f.key]} onChange={e => setForm({ ...form, [f.key]: e.target.value })} rows={f.rows} disabled={isMentorReadOnly}
+                style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 10, border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', resize: 'vertical', boxSizing: 'border-box', background: isMentorReadOnly ? theme.bg : '#fff', lineHeight: 1.6 }}/>
+            </div>
+          ))}
+        </div>
+
+        {!isMentorReadOnly && (
+          <div style={{ paddingTop: 12, borderTop: `1px solid ${theme.border}`, display: 'flex', justifyContent: 'flex-end' }}>
+            <Button variant="primary" icon={Send} onClick={submitMentorEval}>Submit Evaluasi Mentee</Button>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -4443,72 +4873,21 @@ function PesertaJourney() {
 
 
 function PesertaSosialisasi() {
-  const { participants, setParticipants, toast, addAudit, pushNotif, pesertaPersonaId } = useApp();
+  const { participants, pesertaPersonaId } = useApp();
   const me = participants.find(p => p.id === pesertaPersonaId) || participants[0];
   const sos = me.stageData.sosialisasi;
+  const reg = me.stageData.registrasi;
 
-  const pretestVisible = !!sos?.pretestVisible;
-  const posttestVisible = !!sos?.posttestVisible;
-  const pretestDone = sos?.pretestScore != null;
-  const posttestDone = sos?.posttestScore != null;
+  const pretestScore  = sos?.pretestScore;
+  const posttestScore = sos?.posttestScore;
+  const pretestDone   = pretestScore != null;
+  const posttestDone  = posttestScore != null;
+  const isCheckedIn   = reg?.status === 'completed';
 
-  const [pretestAnswers, setPretestAnswers] = useState({});
-  const [posttestAnswers, setPosttestAnswers] = useState({});
-
-  const questionsPretest = [
-    { id: 'q1', q: 'Apa tujuan utama program DIKSI Coaching?', options: ['Promosi jabatan', 'Pengembangan kapasitas leadership untuk talenta KPP', 'Evaluasi kinerja', 'Training kompetensi dasar'], answer: 1 },
-    { id: 'q2', q: 'Berapa jumlah tahapan dalam alur program DIKSI?', options: ['5', '6', '7', '8'], answer: 2 },
-    { id: 'q3', q: 'Siapa yang menjadi mentor peserta DIKSI?', options: ['Admin DSDM', 'Eksternal coach profesional', 'Atasan peserta yang qualify', 'Tim HR'], answer: 2 },
-    { id: 'q4', q: 'Sesi 1-on-1 coaching ada di tahap ke berapa?', options: ['Tahap 1', 'Tahap 2', 'Tahap 3', 'Tahap 4'], answer: 2 },
-    { id: 'q5', q: 'Apa salah satu kriteria peserta DIKSI?', options: ['SMD min 5 tahun', 'SMD min 2 tahun', 'Status pegawai bebas', 'Tidak ada kriteria'], answer: 1 },
-  ];
-
-  const questionsPosttest = [
-    { id: 'q1', q: 'Setelah sosialisasi, apa output utama dari sesi 1-on-1 coaching?', options: ['Promosi jabatan', 'Evaluasi mentor + survey peserta untuk pengembangan', 'Sertifikat training', 'Bonus tahunan'], answer: 1 },
-    { id: 'q2', q: 'Jika konfirmasi kesediaan ditolak, apa yang harus dilakukan?', options: ['Tetap dipaksa ikut', 'Hubungi Admin DSDM', 'Diabaikan', 'Mengundurkan diri'], answer: 1 },
-    { id: 'q3', q: 'Apa peran mentor dalam DIKSI?', options: ['Mengevaluasi performa kerja harian', 'Mendampingi peserta dengan strengths/development/recommendation', 'Memberikan promosi', 'Mengisi pretest'], answer: 1 },
-    { id: 'q4', q: 'Setelah Tahap 03 Coaching, peserta masuk ke tahap apa?', options: ['Evaluasi langsung', 'Monitoring 1', 'Sertifikasi', 'Selesai'], answer: 1 },
-    { id: 'q5', q: 'Komitmen waktu rata-rata peserta DIKSI per bulan?', options: ['1-2 jam', '4-5 jam', '10 jam', '20 jam'], answer: 1 },
-  ];
-
-  const submitPretest = () => {
-    const correct = questionsPretest.filter(q => pretestAnswers[q.id] === q.answer).length;
-    const score = Math.round((correct / questionsPretest.length) * 100);
-    setParticipants(prev => prev.map(p => p.id !== me.id ? p : ({
-      ...p,
-      stageData: {
-        ...p.stageData,
-        sosialisasi: { ...p.stageData.sosialisasi, status: 'in_progress', pretestScore: score },
-      }
-    })));
-    addAudit(me.nama, `Menyelesaikan pretest Sosialisasi (skor ${score})`, null);
-    pushNotif('admin', { type: 'info', title: `${me.nama} selesai pretest`, desc: `Skor: ${score}/100` });
-    pushNotif('mentor', { type: 'info', title: `${me.nama} selesai pretest`, desc: `Skor ${score}/100 · siap untuk dibukakan posttest setelah sesi sosialisasi` });
-    toast(`Pretest selesai! Skor: ${score}/100. Posttest akan dibuka oleh mentor.`, 'success');
-    setPretestAnswers({});
-  };
-
-  const submitPosttest = () => {
-    const correct = questionsPosttest.filter(q => posttestAnswers[q.id] === q.answer).length;
-    const score = Math.round((correct / questionsPosttest.length) * 100);
-    setParticipants(prev => prev.map(p => p.id !== me.id ? p : ({
-      ...p, stage: 3,
-      stageData: {
-        ...p.stageData,
-        sosialisasi: { ...p.stageData.sosialisasi, status: 'completed', posttestScore: score, completedAt: new Date().toISOString().slice(0,10) },
-        coaching: { status: 'in_progress', sesi: 1, mentorEvaluation: null, pesertaSurvey: null },
-      }
-    })));
-    const mentor = USERS[me.mentorUserId];
-    addAudit(me.nama, `Menyelesaikan posttest Sosialisasi (skor ${score})`, null);
-    if (mentor) pushNotif('mentor', { type: 'info', title: `${me.nama} siap untuk coaching 1-on-1`, desc: `Pretest ${me.stageData.sosialisasi.pretestScore} → Posttest ${score}` });
-    pushNotif('admin', { type: 'success', title: `${me.nama} masuk Tahap 3 Coaching`, desc: `Sosialisasi selesai · skor naik ${score - me.stageData.sosialisasi.pretestScore} poin` });
-    toast(`Posttest selesai! Skor: ${score}/100. Lanjut ke Tahap 3 Coaching 1-on-1.`, 'success');
-    setPosttestAnswers({});
-  };
+  const scoreColor = (s) => s >= 80 ? theme.success : s >= 60 ? theme.warning : theme.danger;
 
   // Belum check-in
-  if (!sos || sos.status === 'pending') {
+  if (!isCheckedIn) {
     return (
       <div>
         <SectionHeader eyebrow="Peserta · Tahap 02 · Sosialisasi" title="Belum Tersedia" desc="Lengkapi check-in pada Tahap 01 terlebih dahulu"/>
@@ -4520,127 +4899,70 @@ function PesertaSosialisasi() {
     );
   }
 
-  // Helper: render quiz section
-  const renderQuiz = (label, questions, answers, setAnswers, onSubmit, scoreColor, currentScore) => {
-    const answered = Object.keys(answers).length;
-    return (
-      <>
-        {questions.map((q, idx) => (
-          <div key={q.id} style={{ marginBottom: 22 }}>
-            <div style={{ display: 'flex', alignItems: 'flex-start', gap: 10, marginBottom: 10 }}>
-              <span style={{ fontFamily: fonts.mono, fontSize: 10, color: theme.textSubtle, marginTop: 3 }}>Q.0{idx+1}</span>
-              <div style={{ fontSize: 13, fontWeight: 600, color: theme.text, lineHeight: 1.5 }}>{q.q}</div>
-            </div>
-            <div style={{ paddingLeft: 30 }}>
-              {q.options.map((opt, oi) => (
-                <label key={oi} style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '8px 12px', background: answers[q.id] === oi ? theme.goldLight + '30' : theme.bg, border: `1px solid ${answers[q.id] === oi ? theme.gold : theme.border}`, borderRadius: 2, marginBottom: 6, cursor: 'pointer', fontSize: 12, fontFamily: fonts.body }}>
-                  <input type="radio" name={`${label}-${q.id}`} checked={answers[q.id] === oi}
-                    onChange={() => setAnswers({ ...answers, [q.id]: oi })}
-                    style={{ accentColor: theme.gold }}/>
-                  <span style={{ color: theme.text }}>{opt}</span>
-                </label>
-              ))}
-            </div>
-          </div>
-        ))}
-        <div style={{ paddingTop: 16, borderTop: `1px solid ${theme.border}`, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <div style={{ fontSize: 11, color: theme.textMuted }}>{answered} dari {questions.length} pertanyaan dijawab</div>
-          <Button variant="primary" icon={Send} onClick={onSubmit} disabled={answered < questions.length}>Submit {label}</Button>
+  const renderScoreCard = (label, bagian, score, done, desc) => (
+    <div style={{
+      background: '#fff',
+      border: `1px solid ${theme.border}`,
+      borderLeft: `4px solid ${done ? scoreColor(score) : theme.borderStrong}`,
+      borderRadius: 2, padding: 24, marginBottom: 14,
+    }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <div>
+          <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.18em', color: theme.gold, fontWeight: 700, marginBottom: 4 }}>{bagian}</div>
+          <div style={{ fontSize: 17, fontWeight: 600, color: theme.text, fontFamily: fonts.display }}>{label}</div>
+          <div style={{ fontSize: 11, color: theme.textMuted, marginTop: 2 }}>{desc}</div>
         </div>
-      </>
-    );
-  };
+        <div style={{ textAlign: 'right' }}>
+          {done ? (
+            <>
+              <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.12em', color: theme.textMuted, fontWeight: 600 }}>Skor Anda</div>
+              <div style={{ fontFamily: fonts.display, fontSize: 36, fontWeight: 300, color: scoreColor(score), lineHeight: 1.1 }}>
+                {score}<span style={{ fontSize: 14, color: theme.textSubtle }}>/100</span>
+              </div>
+            </>
+          ) : (
+            <Pill variant="default">Menunggu input admin</Pill>
+          )}
+        </div>
+      </div>
+
+      {!done && (
+        <div style={{ marginTop: 16, paddingTop: 14, borderTop: `1px solid ${theme.border}`, display: 'flex', alignItems: 'center', gap: 10, fontSize: 11.5, color: theme.textMuted, lineHeight: 1.55 }}>
+          <Clock size={14} style={{ color: theme.textMuted, flexShrink: 0 }}/>
+          <div>Skor {label.toLowerCase()} akan ditampilkan di sini setelah diinput oleh Admin DSDM. Proses {label.toLowerCase()} dilakukan langsung saat sesi sosialisasi (di luar sistem).</div>
+        </div>
+      )}
+    </div>
+  );
 
   return (
     <div>
       <SectionHeader
         eyebrow="Peserta · Tahap 02 · Sosialisasi"
-        title="Pretest & Posttest"
-        desc="Asesmen pemahaman sebelum dan sesudah sesi sosialisasi materi DIKSI"
+        title="Hasil Pretest & Posttest"
+        desc="Skor diinput oleh Admin DSDM setelah pelaksanaan kegiatan sosialisasi"
       />
 
-      {/* === SECTION PRETEST === */}
-      <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderLeft: `4px solid ${pretestDone ? theme.success : pretestVisible ? theme.gold : theme.borderStrong}`, borderRadius: 2, padding: 24, marginBottom: 14 }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14, paddingBottom: 14, borderBottom: `1px solid ${theme.border}` }}>
+      {renderScoreCard('Pretest',  'Bagian 1', pretestScore,  pretestDone,  'Asesmen pemahaman awal sebelum sesi sosialisasi')}
+      {renderScoreCard('Posttest', 'Bagian 2', posttestScore, posttestDone, 'Asesmen setelah mengikuti sesi sosialisasi')}
+
+      {/* Peningkatan summary kalau kedua sudah ada */}
+      {pretestDone && posttestDone && (
+        <div style={{ background: theme.successBg, border: '1px solid #A7F3D0', borderRadius: 2, padding: 14, marginBottom: 14, display: 'flex', alignItems: 'center', gap: 10, fontSize: 12, color: theme.text }}>
+          <CheckCircle2 size={16} style={{ color: theme.success, flexShrink: 0 }}/>
           <div>
-            <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.18em', color: theme.gold, fontWeight: 700, marginBottom: 4 }}>Bagian 1</div>
-            <div style={{ fontSize: 17, fontWeight: 600, color: theme.text, fontFamily: fonts.display }}>Pretest</div>
-            <div style={{ fontSize: 11, color: theme.textMuted, marginTop: 2 }}>Asesmen pemahaman awal sebelum sesi sosialisasi</div>
-          </div>
-          <div style={{ textAlign: 'right' }}>
-            {pretestDone ? (
-              <>
-                <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.12em', color: theme.textMuted, fontWeight: 600 }}>Skor Anda</div>
-                <div style={{ fontFamily: fonts.display, fontSize: 32, fontWeight: 300, color: sos.pretestScore >= 80 ? theme.success : sos.pretestScore >= 60 ? theme.warning : theme.danger }}>
-                  {sos.pretestScore}<span style={{ fontSize: 14, color: theme.textSubtle }}>/100</span>
-                </div>
-              </>
-            ) : (
-              <Pill variant={pretestVisible ? 'gold' : 'default'}>
-                {pretestVisible ? 'Siap diisi' : 'Belum dibuka mentor'}
-              </Pill>
-            )}
+            <strong>Tahap Sosialisasi complete.</strong> Peningkatan skor: <strong style={{ color: theme.success }}>{posttestScore - pretestScore >= 0 ? '+' : ''}{posttestScore - pretestScore} poin</strong> (dari {pretestScore} ke {posttestScore}).
           </div>
         </div>
+      )}
 
-        {pretestDone ? (
-          <div style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 11.5, color: theme.text, padding: '8px 12px', background: theme.successBg, borderRadius: 2 }}>
-            <CheckCircle2 size={14} style={{ color: theme.success }}/>
-            Pretest sudah selesai. Lanjutkan ke posttest setelah dibuka oleh mentor.
-          </div>
-        ) : !pretestVisible ? (
-          <div style={{ padding: 24, textAlign: 'center', background: theme.bg, borderRadius: 2 }}>
-            <Lock size={22} style={{ color: theme.textMuted, margin: '0 auto 8px' }}/>
-            <div style={{ fontSize: 12, fontWeight: 600, color: theme.text }}>Pretest belum dibuka</div>
-            <div style={{ fontSize: 11, color: theme.textMuted, marginTop: 4, lineHeight: 1.5 }}>
-              Mentor akan membuka akses pretest sebelum sesi sosialisasi dimulai.
-            </div>
-          </div>
-        ) : (
-          renderQuiz('Pretest', questionsPretest, pretestAnswers, setPretestAnswers, submitPretest, theme.gold, sos?.pretestScore)
-        )}
-      </div>
-
-      {/* === SECTION POSTTEST === */}
-      <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderLeft: `4px solid ${posttestDone ? theme.success : posttestVisible ? theme.gold : theme.borderStrong}`, borderRadius: 2, padding: 24 }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14, paddingBottom: 14, borderBottom: `1px solid ${theme.border}` }}>
-          <div>
-            <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.18em', color: theme.gold, fontWeight: 700, marginBottom: 4 }}>Bagian 2</div>
-            <div style={{ fontSize: 17, fontWeight: 600, color: theme.text, fontFamily: fonts.display }}>Posttest</div>
-            <div style={{ fontSize: 11, color: theme.textMuted, marginTop: 2 }}>Asesmen setelah mengikuti sesi sosialisasi langsung</div>
-          </div>
-          <div style={{ textAlign: 'right' }}>
-            {posttestDone ? (
-              <>
-                <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.12em', color: theme.textMuted, fontWeight: 600 }}>Skor Anda</div>
-                <div style={{ fontFamily: fonts.display, fontSize: 32, fontWeight: 300, color: sos.posttestScore >= 80 ? theme.success : sos.posttestScore >= 60 ? theme.warning : theme.danger }}>
-                  {sos.posttestScore}<span style={{ fontSize: 14, color: theme.textSubtle }}>/100</span>
-                </div>
-              </>
-            ) : (
-              <Pill variant={posttestVisible ? 'gold' : 'default'}>
-                {posttestVisible ? 'Siap diisi' : 'Belum dibuka mentor'}
-              </Pill>
-            )}
-          </div>
+      {/* Info banner */}
+      <div style={{ background: theme.infoBg, border: '1px solid #BFDBFE', borderRadius: 2, padding: 12, fontSize: 11, color: theme.info, display: 'flex', gap: 8, lineHeight: 1.55 }}>
+        <Info size={14} style={{ flexShrink: 0, marginTop: 1 }}/>
+        <div>
+          <strong>Pretest & posttest dilakukan di luar sistem.</strong>
+          <div style={{ color: theme.text, marginTop: 3 }}>Pengisian asesmen dilakukan langsung saat sesi sosialisasi. Admin DSDM akan menginput hasil skor Anda ke sistem setelah kegiatan selesai. Halaman ini hanya menampilkan skor.</div>
         </div>
-
-        {posttestDone ? (
-          <div style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 11.5, color: theme.text, padding: '8px 12px', background: theme.successBg, borderRadius: 2 }}>
-            <CheckCircle2 size={14} style={{ color: theme.success }}/>
-            Posttest selesai. Tahap Sosialisasi complete — peningkatan skor: <strong style={{ color: theme.success }}>{sos.posttestScore - sos.pretestScore >= 0 ? '+' : ''}{sos.posttestScore - sos.pretestScore} poin</strong>
-          </div>
-        ) : !posttestVisible ? (
-          <div style={{ padding: 24, textAlign: 'center', background: theme.bg, borderRadius: 2 }}>
-            <Lock size={22} style={{ color: theme.textMuted, margin: '0 auto 8px' }}/>
-            <div style={{ fontSize: 12, fontWeight: 600, color: theme.text }}>Posttest belum dibuka</div>
-            <div style={{ fontSize: 11, color: theme.textMuted, marginTop: 4, lineHeight: 1.5, maxWidth: 380, marginLeft: 'auto', marginRight: 'auto' }}>
-              Posttest akan dibuka oleh <strong style={{ color: theme.text }}>mentor</strong> setelah Anda menyelesaikan pretest dan mengikuti sesi sosialisasi langsung.
-            </div>
-          </div>
-        ) : (
-          renderQuiz('Posttest', questionsPosttest, posttestAnswers, setPosttestAnswers, submitPosttest, theme.gold, sos?.posttestScore)
-        )}
       </div>
     </div>
   );
@@ -4665,24 +4987,33 @@ function MentorDashboard() {
   // Returns null kalau gak butuh, atau { label, type, onClick }
   const getActionStatus = (p) => {
     const c = p.stageData.coaching;
-    const sessions = c?.sessions || [];
+    if (!c || c.status === 'pending') return null;
+    const sessions = c.sessions || [];
     const lastSession = sessions[sessions.length - 1];
 
-    // 1. Submit evaluasi (sesi sudah lewat)
-    if (c && !c.mentorEvaluation && lastSession?.status === 'accepted' && lastSession.tanggal <= today) {
-      return { label: 'Input Evaluasi', type: 'gold', tab: 'coaching' };
+    // 1. Review coaching plan (peserta sudah submit)
+    if (c.planStatus === 'submitted') {
+      return { label: 'Review Plan', type: 'gold', tab: 'coaching' };
     }
-    // 2. Ajukan jadwal (no session atau last rejected)
-    if (c?.status === 'in_progress' && (!lastSession || lastSession.status === 'rejected')) {
-      return { label: 'Ajukan Jadwal', type: 'gold', tab: 'coaching' };
+    // 2. Konfirmasi jadwal 1-on-1 dari peserta
+    if (lastSession?.status === 'proposed' && lastSession.proposedBy === 'peserta') {
+      return { label: 'Konfirmasi Jadwal', type: 'gold', tab: 'coaching' };
     }
-    // 3. Sesi terjadwal future — info only, no action
+    // 3. Sesi terjadwal future — info only
     if (lastSession?.status === 'accepted' && lastSession.tanggal > today) {
       return { label: 'Sesi Terjadwal', type: 'info', tab: 'coaching' };
     }
-    // 4. Menunggu konfirmasi peserta (proposed)
-    if (lastSession?.status === 'proposed') {
+    // 4. Mentor sudah usulkan jadwal alternatif, menunggu peserta
+    if (lastSession?.status === 'rescheduled_by_mentor') {
       return { label: 'Menunggu Peserta', type: 'warning', tab: 'coaching' };
+    }
+    // 5. Plan returned, menunggu revisi peserta
+    if (c.planStatus === 'returned') {
+      return { label: 'Menunggu Revisi', type: 'warning', tab: 'coaching' };
+    }
+    // 6. Evaluasi mentee — peserta sudah Mon3, mentor belum submit eval
+    if (p.stageData.monitoring3?.status === 'completed' && p.stageData.evaluasiMentor?.status !== 'completed') {
+      return { label: 'Evaluasi Mentee', type: 'gold', tab: 'evaluasi' };
     }
     return null;
   };
@@ -4818,45 +5149,469 @@ function MentorDashboard() {
 }
 
 // =====================================================================
-// PESERTA VIEWS — additional (Check-in, Coaching survey, QNA)
+// MENTOR: SESI 1-ON-1 — agregat semua sesi 1-on-1 mentor dengan mentee-nya
+// Mentor bisa: konfirmasi/reschedule sesi dari peserta, atau ajukan sesi baru ke mentee.
+// =====================================================================
+function MentorOneOnOne() {
+  const { participants, setParticipants, currentUser, toast, addAudit, pushNotif } = useApp();
+  const userShortName = currentUser.user.split(',')[0];
+  const today = new Date().toISOString().slice(0, 10);
+
+  // Mentees milik mentor ini
+  const myMentees = participants.filter(p => p.mentorUserId === currentUser.id);
+
+  const [filterStatus, setFilterStatus] = useState('all'); // all | needs_action | scheduled | waiting_peserta | history
+  const [filterMentee, setFilterMentee] = useState('all'); // all | <pesertaId>
+  const [showProposeModal, setShowProposeModal] = useState(false);
+  const [rescheduleFor, setRescheduleFor] = useState(null); // { peserta, session } object
+
+  const fmtTanggal      = (s) => s ? new Date(s).toLocaleDateString('id-ID', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }) : '-';
+  const fmtTanggalShort = (s) => s ? new Date(s).toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' }) : '-';
+
+  // Flatten: [{ peserta, session }]
+  const allRows = useMemo(() => {
+    const rows = [];
+    for (const p of myMentees) {
+      const sessions = p.stageData.coaching?.sessions || [];
+      for (const s of sessions) {
+        rows.push({ peserta: p, session: s });
+      }
+    }
+    return rows.sort((a, b) => (b.session.tanggal || '').localeCompare(a.session.tanggal || ''));
+  }, [myMentees]);
+
+  const needsAction = allRows.filter(r =>
+    r.session.status === 'proposed' && r.session.proposedBy === 'peserta'
+  );
+  const scheduled = allRows.filter(r =>
+    r.session.status === 'accepted' && (r.session.tanggal || '') >= today
+  );
+  const waitingPeserta = allRows.filter(r =>
+    (r.session.status === 'proposed' && r.session.proposedBy === 'mentor') ||
+    r.session.status === 'rescheduled_by_mentor'
+  );
+  const history = allRows.filter(r =>
+    r.session.status === 'completed' || (r.session.status === 'accepted' && (r.session.tanggal || '') < today)
+  );
+
+  const matchesStatus = (r) => {
+    if (filterStatus === 'all') return true;
+    if (filterStatus === 'needs_action')    return r.session.status === 'proposed' && r.session.proposedBy === 'peserta';
+    if (filterStatus === 'scheduled')       return r.session.status === 'accepted' && (r.session.tanggal || '') >= today;
+    if (filterStatus === 'waiting_peserta') return (r.session.status === 'proposed' && r.session.proposedBy === 'mentor') || r.session.status === 'rescheduled_by_mentor';
+    if (filterStatus === 'history')         return r.session.status === 'completed' || (r.session.status === 'accepted' && (r.session.tanggal || '') < today);
+    return true;
+  };
+  const filtered = allRows.filter(r => matchesStatus(r) && (filterMentee === 'all' || r.peserta.id === filterMentee));
+  const isFiltered = filterStatus !== 'all' || filterMentee !== 'all';
+
+  const acceptSession = (peserta, session) => {
+    const teamsLink = `https://teams.microsoft.com/l/meetup-join/meet-${session.id}-${Date.now().toString(36)}`;
+    setParticipants(prev => prev.map(p => p.id !== peserta.id ? p : ({
+      ...p,
+      stageData: {
+        ...p.stageData,
+        coaching: {
+          ...p.stageData.coaching,
+          sessions: p.stageData.coaching.sessions.map(s =>
+            s.id === session.id ? { ...s, status: 'accepted', acceptedAt: today, teamsLink } : s
+          ),
+        },
+      },
+    })));
+    addAudit(userShortName, `Menyetujui jadwal 1-on-1 · ${fmtTanggalShort(session.tanggal)}`, peserta.nama);
+    pushNotif('peserta', { type: 'success', title: 'Jadwal 1-on-1 dikonfirmasi mentor', desc: `${fmtTanggalShort(session.tanggal)} ${session.waktu} · Teams meeting otomatis dibuat` });
+    toast(`Jadwal 1-on-1 dengan ${peserta.nama.split(' ').slice(0,2).join(' ')} dikonfirmasi.`, 'success');
+  };
+
+  const openReschedule = (peserta, session) => {
+    setRescheduleFor({ peserta, session });
+  };
+
+  const submitReschedule = (peserta, session, newData) => {
+    setParticipants(prev => prev.map(p => p.id !== peserta.id ? p : ({
+      ...p,
+      stageData: {
+        ...p.stageData,
+        coaching: {
+          ...p.stageData.coaching,
+          sessions: p.stageData.coaching.sessions.map(s =>
+            s.id === session.id ? {
+              ...s,
+              status: 'rescheduled_by_mentor',
+              tanggal: newData.tanggal,
+              waktu: newData.waktu,
+              durasi: parseInt(newData.durasi, 10),
+              lokasi: newData.lokasi,
+              rescheduledAt: today,
+              rescheduleReason: newData.reason.trim(),
+            } : s
+          ),
+        },
+      },
+    })));
+    addAudit(userShortName, `Mengusulkan jadwal alternatif 1-on-1`, peserta.nama);
+    pushNotif('peserta', { type: 'warning', title: 'Mentor mengusulkan jadwal alternatif', desc: `${fmtTanggalShort(newData.tanggal)} ${newData.waktu} · ${newData.reason.trim().slice(0, 60)}` });
+    toast(`Jadwal alternatif dikirim ke ${peserta.nama.split(' ').slice(0,2).join(' ')}.`, 'info');
+    setRescheduleFor(null);
+  };
+
+  const submitMentorProposal = (peserta, draft) => {
+    const newSession = {
+      id: `CS${Date.now().toString(36).toUpperCase()}`,
+      tanggal: draft.tanggal,
+      waktu: draft.waktu,
+      durasi: parseInt(draft.durasi, 10),
+      lokasi: draft.lokasi,
+      topik: draft.topik,
+      catatan: draft.catatan,
+      status: 'proposed',
+      proposedBy: 'mentor',
+      proposedAt: today,
+    };
+    setParticipants(prev => prev.map(p => p.id !== peserta.id ? p : ({
+      ...p,
+      stageData: {
+        ...p.stageData,
+        coaching: {
+          ...(p.stageData.coaching || { status: 'in_progress', planStatus: 'draft', plan: { items: [], submittedAt: null, revision: 0 }, sessions: [] }),
+          sessions: [...(p.stageData.coaching?.sessions || []), newSession],
+        },
+      },
+    })));
+    addAudit(userShortName, `Mengajukan 1-on-1 ke mentee · ${fmtTanggalShort(draft.tanggal)}`, peserta.nama);
+    pushNotif('peserta', { type: 'warning', title: 'Mentor mengajukan sesi 1-on-1', desc: `${fmtTanggalShort(draft.tanggal)} ${draft.waktu} · mohon konfirmasi ketersediaan` });
+    toast(`Pengajuan 1-on-1 dikirim ke ${peserta.nama.split(' ').slice(0,2).join(' ')}.`, 'success');
+    setShowProposeModal(false);
+  };
+
+  const statusPill = (s) => {
+    if (s.status === 'proposed' && s.proposedBy === 'peserta')  return <Pill variant="warning">Perlu Konfirmasi</Pill>;
+    if (s.status === 'proposed' && s.proposedBy === 'mentor')   return <Pill variant="info">Menunggu Peserta</Pill>;
+    if (s.status === 'rescheduled_by_mentor')                    return <Pill variant="info">Menunggu Peserta</Pill>;
+    if (s.status === 'accepted')                                 return <Pill variant="success">Terjadwal</Pill>;
+    if (s.status === 'completed')                                return <Pill variant="default">Selesai</Pill>;
+    return <Pill variant="default">{s.status}</Pill>;
+  };
+
+  return (
+    <div>
+      <SectionHeader
+        eyebrow="Mentor · Sesi 1-on-1"
+        title="Sesi 1-on-1 Coaching"
+        desc={`${myMentees.length} mentee · ${needsAction.length} perlu konfirmasi · ${scheduled.length} terjadwal`}
+        right={<Button variant="primary" icon={Plus} onClick={() => setShowProposeModal(true)} disabled={myMentees.length === 0}>Ajukan 1-on-1 ke Mentee</Button>}
+      />
+
+      {/* Stat cards */}
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12, marginBottom: 16 }}>
+        <StatCard label="Perlu Konfirmasi" value={needsAction.length}    sub="dari pengajuan mentee"      accent={theme.warning}/>
+        <StatCard label="Terjadwal"        value={scheduled.length}      sub="sesi mendatang"             accent={theme.success}/>
+        <StatCard label="Menunggu Peserta" value={waitingPeserta.length} sub="Anda yang ajukan"           accent={theme.info}/>
+        <StatCard label="Total Selesai"    value={history.length}        sub="riwayat sesi"               accent={theme.textMuted}/>
+      </div>
+
+      {/* Filter bar — dropdown status & mentee */}
+      <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderRadius: 2, padding: 12, marginBottom: 12, display: 'flex', gap: 10, alignItems: 'center', flexWrap: 'wrap' }}>
+        <div style={{ fontSize: 10, textTransform: 'uppercase', letterSpacing: '0.15em', color: theme.textMuted, fontWeight: 600 }}>Filter</div>
+        <select value={filterStatus} onChange={e => setFilterStatus(e.target.value)}
+          style={{ fontSize: 11.5, fontFamily: fonts.body, padding: '8px 10px', border: `1px solid ${theme.border}`, borderRadius: 2, background: '#fff', color: theme.text, cursor: 'pointer', outline: 'none', minWidth: 200 }}>
+          <option value="all">Semua Status ({allRows.length})</option>
+          <option value="needs_action">Perlu Konfirmasi ({needsAction.length})</option>
+          <option value="scheduled">Terjadwal ({scheduled.length})</option>
+          <option value="waiting_peserta">Menunggu Peserta ({waitingPeserta.length})</option>
+          <option value="history">Riwayat / Selesai ({history.length})</option>
+        </select>
+        <select value={filterMentee} onChange={e => setFilterMentee(e.target.value)}
+          style={{ fontSize: 11.5, fontFamily: fonts.body, padding: '8px 10px', border: `1px solid ${theme.border}`, borderRadius: 2, background: '#fff', color: theme.text, cursor: 'pointer', outline: 'none', minWidth: 220 }}>
+          <option value="all">Semua Mentee ({myMentees.length})</option>
+          {myMentees.map(m => {
+            const cnt = allRows.filter(r => r.peserta.id === m.id).length;
+            return <option key={m.id} value={m.id}>{m.nama} ({cnt})</option>;
+          })}
+        </select>
+        {isFiltered && (
+          <Button variant="ghost" size="sm" onClick={() => { setFilterStatus('all'); setFilterMentee('all'); }}>Reset</Button>
+        )}
+        <div style={{ marginLeft: 'auto', fontSize: 10.5, color: theme.textMuted, fontFamily: fonts.mono }}>
+          {filtered.length} dari {allRows.length} sesi
+        </div>
+      </div>
+
+      {/* List */}
+      {filtered.length === 0 ? (
+        <div style={{ background: '#fff', border: `1px dashed ${theme.borderStrong}`, padding: 40, textAlign: 'center', borderRadius: 2 }}>
+          <Calendar size={28} style={{ color: theme.textMuted, margin: '0 auto 10px' }}/>
+          <div style={{ fontSize: 13, fontWeight: 600, color: theme.text }}>
+            {isFiltered ? 'Tidak ada sesi yang cocok dengan filter' : 'Belum ada sesi 1-on-1'}
+          </div>
+          <div style={{ fontSize: 11, color: theme.textMuted, marginTop: 6 }}>
+            {isFiltered
+              ? <>Coba ubah filter atau <button onClick={() => { setFilterStatus('all'); setFilterMentee('all'); }} style={{ background: 'transparent', border: 'none', color: theme.info, cursor: 'pointer', fontWeight: 600, fontSize: 11 }}>reset filter</button>.</>
+              : 'Klik tombol "Ajukan 1-on-1 ke Mentee" untuk memulai sesi.'}
+          </div>
+        </div>
+      ) : (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+          {filtered.map(({ peserta, session }) => {
+            const isNeedsAction = session.status === 'proposed' && session.proposedBy === 'peserta';
+            const isMentorAccepted = session.status === 'accepted';
+            const isMentorWaiting  = (session.status === 'proposed' && session.proposedBy === 'mentor') || session.status === 'rescheduled_by_mentor';
+            const isCompleted = session.status === 'completed';
+            const accentColor = isNeedsAction ? theme.warning
+                              : isMentorAccepted ? theme.success
+                              : isMentorWaiting ? theme.info
+                              : theme.border;
+            return (
+              <div key={`${peserta.id}-${session.id}`} style={{
+                background: '#fff', border: `1px solid ${theme.border}`, borderLeft: `4px solid ${accentColor}`,
+                borderRadius: 2, padding: 16,
+              }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12, marginBottom: 10 }}>
+                  <div style={{ flex: 1 }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 4 }}>
+                      <div style={{ fontSize: 13, fontWeight: 600, color: theme.text, fontFamily: fonts.display }}>{peserta.nama}</div>
+                      <div style={{ fontSize: 10.5, color: theme.textMuted }}>· {peserta.satker}</div>
+                    </div>
+                    <div style={{ fontSize: 11.5, color: theme.text, lineHeight: 1.5 }}>
+                      <strong>{fmtTanggal(session.tanggal)}</strong> · {session.waktu} WIB · {session.durasi} menit
+                    </div>
+                    <div style={{ fontSize: 11, color: theme.textMuted, marginTop: 3 }}>{session.lokasi}</div>
+                    <div style={{ fontSize: 11, color: theme.textMuted, marginTop: 3 }}>Topik: {session.topik}</div>
+                    {session.catatan && <div style={{ fontSize: 10.5, color: theme.textMuted, marginTop: 6, fontStyle: 'italic' }}>Catatan peserta: "{session.catatan}"</div>}
+                    {session.rescheduleReason && <div style={{ fontSize: 10.5, color: theme.textMuted, marginTop: 6, fontStyle: 'italic' }}>Alasan reschedule Anda: "{session.rescheduleReason}"</div>}
+                  </div>
+                  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 6 }}>
+                    {statusPill(session)}
+                    <div style={{ fontSize: 9.5, color: theme.textMuted, fontFamily: fonts.mono }}>
+                      {session.proposedBy === 'peserta' ? `Peserta ajukan · ${session.proposedAt}` : `Anda ajukan · ${session.proposedAt}`}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Actions */}
+                {isNeedsAction && (
+                  <div style={{ paddingTop: 10, borderTop: `1px solid ${theme.border}`, display: 'flex', justifyContent: 'flex-end', gap: 8 }}>
+                    <Button variant="ghost" size="sm" onClick={() => openReschedule(peserta, session)}>Ajukan Jadwal Lain</Button>
+                    <Button variant="primary" size="sm" icon={CheckCircle2} onClick={() => acceptSession(peserta, session)}>Setujui Jadwal</Button>
+                  </div>
+                )}
+                {isMentorAccepted && session.teamsLink && (
+                  <div style={{ paddingTop: 10, borderTop: `1px solid ${theme.border}` }}>
+                    <a href={session.teamsLink} target="_blank" rel="noopener noreferrer"
+                      style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '7px 12px', background: '#5059C9', color: '#fff', borderRadius: 2, textDecoration: 'none', fontSize: 11, fontWeight: 600, fontFamily: fonts.body }}>
+                      <PlayCircle size={13}/> Buka Teams Meeting
+                    </a>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      )}
+
+      {showProposeModal && (
+        <MentorProposeSessionModal
+          mentees={myMentees}
+          onClose={() => setShowProposeModal(false)}
+          onSubmit={submitMentorProposal}
+        />
+      )}
+
+      {rescheduleFor && (
+        <MentorRescheduleModal
+          peserta={rescheduleFor.peserta}
+          session={rescheduleFor.session}
+          onClose={() => setRescheduleFor(null)}
+          onSubmit={(newData) => submitReschedule(rescheduleFor.peserta, rescheduleFor.session, newData)}
+        />
+      )}
+    </div>
+  );
+}
+
+// Modal: mentor mengajukan sesi 1-on-1 ke salah satu mentee
+function MentorProposeSessionModal({ mentees, onClose, onSubmit }) {
+  const { toast } = useApp();
+  const [pesertaId, setPesertaId] = useState(mentees[0]?.id || '');
+  const [draft, setDraft] = useState({ tanggal: '', waktu: '14:00', durasi: 60, lokasi: 'Online', topik: '', catatan: '' });
+  const today = new Date().toISOString().slice(0, 10);
+
+  const handleSubmit = () => {
+    const peserta = mentees.find(m => m.id === pesertaId);
+    if (!peserta) { toast('Pilih mentee tujuan terlebih dahulu', 'warning'); return; }
+    if (!draft.tanggal || !draft.waktu || !draft.topik.trim()) { toast('Tanggal, waktu, dan topik wajib diisi', 'warning'); return; }
+    if (draft.tanggal < today) { toast('Tanggal tidak bisa di masa lalu', 'warning'); return; }
+    onSubmit(peserta, draft);
+  };
+
+  return (
+    <div style={{ position: 'fixed', inset: 0, background: 'rgba(10,37,64,0.72)', zIndex: 60, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 20, fontFamily: fonts.body }} onClick={onClose}>
+      <div style={{ background: '#fff', borderRadius: 4, width: '100%', maxWidth: 560, overflow: 'hidden' }} onClick={e => e.stopPropagation()}>
+        <div style={{ padding: '18px 22px', borderBottom: `1px solid ${theme.border}`, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <div>
+            <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.18em', color: theme.gold, fontWeight: 700 }}>Pengajuan Mentor</div>
+            <div style={{ fontFamily: fonts.display, fontSize: 17, fontWeight: 600, color: theme.text, marginTop: 2 }}>Ajukan Sesi 1-on-1 ke Mentee</div>
+          </div>
+          <button onClick={onClose} style={{ background: 'transparent', border: 'none', cursor: 'pointer', padding: 6, color: theme.textMuted }}><X size={16}/></button>
+        </div>
+
+        <div style={{ padding: 20 }}>
+          <div style={{ marginBottom: 12 }}>
+            <label style={{ display: 'block', fontSize: 11, fontWeight: 600, color: theme.text, marginBottom: 4 }}>Mentee Tujuan <span style={{ color: theme.danger }}>*</span></label>
+            <select value={pesertaId} onChange={e => setPesertaId(e.target.value)}
+              style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 10, border: `1px solid ${theme.border}`, borderRadius: 2, background: '#fff', outline: 'none', boxSizing: 'border-box' }}>
+              {mentees.map(m => <option key={m.id} value={m.id}>{m.nama} · {m.satker}</option>)}
+            </select>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 10, marginBottom: 12 }}>
+            <div>
+              <label style={{ display: 'block', fontSize: 11, fontWeight: 600, marginBottom: 3 }}>Tanggal <span style={{ color: theme.danger }}>*</span></label>
+              <input type="date" value={draft.tanggal} min={today}
+                onChange={e => setDraft({ ...draft, tanggal: e.target.value })}
+                style={{ width: '100%', fontSize: 12, fontFamily: fonts.mono, padding: 9, border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', boxSizing: 'border-box' }}/>
+            </div>
+            <div>
+              <label style={{ display: 'block', fontSize: 11, fontWeight: 600, marginBottom: 3 }}>Waktu <span style={{ color: theme.danger }}>*</span></label>
+              <input type="time" value={draft.waktu}
+                onChange={e => setDraft({ ...draft, waktu: e.target.value })}
+                style={{ width: '100%', fontSize: 12, fontFamily: fonts.mono, padding: 9, border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', boxSizing: 'border-box' }}/>
+            </div>
+            <div>
+              <label style={{ display: 'block', fontSize: 11, fontWeight: 600, marginBottom: 3 }}>Durasi</label>
+              <select value={draft.durasi} onChange={e => setDraft({ ...draft, durasi: e.target.value })}
+                style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 9, border: `1px solid ${theme.border}`, borderRadius: 2, background: '#fff', outline: 'none', boxSizing: 'border-box' }}>
+                {[30, 45, 60, 90].map(d => <option key={d} value={d}>{d} menit</option>)}
+              </select>
+            </div>
+          </div>
+
+          <div style={{ marginBottom: 12 }}>
+            <label style={{ display: 'block', fontSize: 11, fontWeight: 600, marginBottom: 3 }}>Mode</label>
+            <select value={draft.lokasi} onChange={e => setDraft({ ...draft, lokasi: e.target.value })}
+              style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 9, border: `1px solid ${theme.border}`, borderRadius: 2, background: '#fff', outline: 'none', boxSizing: 'border-box' }}>
+              <option>Online</option>
+              <option>Offline</option>
+            </select>
+          </div>
+
+          <div style={{ marginBottom: 12 }}>
+            <label style={{ display: 'block', fontSize: 11, fontWeight: 600, marginBottom: 3 }}>Topik Pembahasan <span style={{ color: theme.danger }}>*</span></label>
+            <input value={draft.topik} onChange={e => setDraft({ ...draft, topik: e.target.value })}
+              placeholder="Mis. Diskusi finalisasi coaching plan"
+              style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 9, border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', boxSizing: 'border-box' }}/>
+          </div>
+
+          <div>
+            <label style={{ display: 'block', fontSize: 11, fontWeight: 600, marginBottom: 3 }}>Catatan untuk Mentee (opsional)</label>
+            <textarea value={draft.catatan} onChange={e => setDraft({ ...draft, catatan: e.target.value })} rows={2}
+              placeholder="Mis. Mohon siapkan draft plan sebelum sesi"
+              style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 9, border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', resize: 'none', boxSizing: 'border-box' }}/>
+          </div>
+        </div>
+
+        <div style={{ padding: '14px 22px', borderTop: `1px solid ${theme.border}`, background: theme.bg, display: 'flex', justifyContent: 'flex-end', gap: 8 }}>
+          <Button variant="ghost" onClick={onClose}>Batal</Button>
+          <Button variant="primary" icon={Send} onClick={handleSubmit}>Kirim Pengajuan</Button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// Modal: mentor mengusulkan reschedule untuk sesi yang diajukan peserta
+function MentorRescheduleModal({ peserta, session, onClose, onSubmit }) {
+  const { toast } = useApp();
+  const [draft, setDraft] = useState({
+    tanggal: session.tanggal || '',
+    waktu: session.waktu || '14:00',
+    durasi: session.durasi || 60,
+    lokasi: session.lokasi || 'Online',
+    reason: '',
+  });
+  const today = new Date().toISOString().slice(0, 10);
+
+  const handleSubmit = () => {
+    if (!draft.tanggal || !draft.waktu || !draft.reason.trim()) { toast('Tanggal, waktu, dan alasan reschedule wajib diisi', 'warning'); return; }
+    if (draft.tanggal < today) { toast('Tanggal tidak bisa di masa lalu', 'warning'); return; }
+    onSubmit(draft);
+  };
+
+  return (
+    <div style={{ position: 'fixed', inset: 0, background: 'rgba(10,37,64,0.72)', zIndex: 60, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 20, fontFamily: fonts.body }} onClick={onClose}>
+      <div style={{ background: '#fff', borderRadius: 4, width: '100%', maxWidth: 560, overflow: 'hidden' }} onClick={e => e.stopPropagation()}>
+        <div style={{ padding: '18px 22px', borderBottom: `1px solid ${theme.border}`, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <div>
+            <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.18em', color: theme.gold, fontWeight: 700 }}>Reschedule</div>
+            <div style={{ fontFamily: fonts.display, fontSize: 17, fontWeight: 600, color: theme.text, marginTop: 2 }}>Usulkan Jadwal Alternatif</div>
+            <div style={{ fontSize: 10.5, color: theme.textMuted, marginTop: 3 }}>Mentee: {peserta.nama}</div>
+          </div>
+          <button onClick={onClose} style={{ background: 'transparent', border: 'none', cursor: 'pointer', padding: 6, color: theme.textMuted }}><X size={16}/></button>
+        </div>
+
+        <div style={{ padding: 20 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 10, marginBottom: 12 }}>
+            <div>
+              <label style={{ display: 'block', fontSize: 11, fontWeight: 600, marginBottom: 3 }}>Tanggal Baru <span style={{ color: theme.danger }}>*</span></label>
+              <input type="date" value={draft.tanggal} min={today}
+                onChange={e => setDraft({ ...draft, tanggal: e.target.value })}
+                style={{ width: '100%', fontSize: 12, fontFamily: fonts.mono, padding: 9, border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', boxSizing: 'border-box' }}/>
+            </div>
+            <div>
+              <label style={{ display: 'block', fontSize: 11, fontWeight: 600, marginBottom: 3 }}>Waktu Baru <span style={{ color: theme.danger }}>*</span></label>
+              <input type="time" value={draft.waktu}
+                onChange={e => setDraft({ ...draft, waktu: e.target.value })}
+                style={{ width: '100%', fontSize: 12, fontFamily: fonts.mono, padding: 9, border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', boxSizing: 'border-box' }}/>
+            </div>
+            <div>
+              <label style={{ display: 'block', fontSize: 11, fontWeight: 600, marginBottom: 3 }}>Durasi</label>
+              <select value={draft.durasi} onChange={e => setDraft({ ...draft, durasi: e.target.value })}
+                style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 9, border: `1px solid ${theme.border}`, borderRadius: 2, background: '#fff', outline: 'none', boxSizing: 'border-box' }}>
+                {[30, 45, 60, 90].map(d => <option key={d} value={d}>{d} menit</option>)}
+              </select>
+            </div>
+          </div>
+
+          <div style={{ marginBottom: 12 }}>
+            <label style={{ display: 'block', fontSize: 11, fontWeight: 600, marginBottom: 3 }}>Mode</label>
+            <select value={draft.lokasi} onChange={e => setDraft({ ...draft, lokasi: e.target.value })}
+              style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 9, border: `1px solid ${theme.border}`, borderRadius: 2, background: '#fff', outline: 'none', boxSizing: 'border-box' }}>
+              <option>Online</option>
+              <option>Offline</option>
+            </select>
+          </div>
+
+          <div>
+            <label style={{ display: 'block', fontSize: 11, fontWeight: 600, marginBottom: 3 }}>Alasan Reschedule <span style={{ color: theme.danger }}>*</span></label>
+            <textarea value={draft.reason} onChange={e => setDraft({ ...draft, reason: e.target.value })} rows={3}
+              placeholder="Mis. Bentrok dengan rapat ALCO. Bisa di-reschedule ke tanggal yang diusulkan?"
+              style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 9, border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', resize: 'none', boxSizing: 'border-box' }}/>
+          </div>
+        </div>
+
+        <div style={{ padding: '14px 22px', borderTop: `1px solid ${theme.border}`, background: theme.bg, display: 'flex', justifyContent: 'flex-end', gap: 8 }}>
+          <Button variant="ghost" onClick={onClose}>Batal</Button>
+          <Button variant="primary" icon={Send} onClick={handleSubmit}>Kirim Jadwal Alternatif</Button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
+// =====================================================================
+// PESERTA VIEWS — additional (Check-in, Coaching survey)
 // =====================================================================
 
 function PesertaRegistrasi() {
-  const { participants, setParticipants, toast, addAudit, pushNotif, pesertaPersonaId } = useApp();
+  const { participants, pesertaPersonaId } = useApp();
   const me = participants.find(p => p.id === pesertaPersonaId) || participants[0];
   const reg = me.stageData.registrasi;
   const isConfirmed = me.konfirmasiHadir === 'confirmed';
+  const isCheckedIn = reg?.status === 'completed';
 
-  const [nipInput, setNipInput] = useState('');
-  const [submitting, setSubmitting] = useState(false);
-
-  const checkIn = () => {
-    if (!nipInput.trim()) { toast('Masukkan NIP Anda', 'warning'); return; }
-    if (nipInput.replace(/\s/g, '') !== me.nip) {
-      toast('NIP tidak cocok dengan data peserta. Periksa kembali.', 'warning');
-      return;
-    }
-    setSubmitting(true);
-    setTimeout(() => {
-      const now = new Date();
-      const checkInAt = `${now.toISOString().slice(0,10)} ${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`;
-      setParticipants(prev => prev.map(p => p.id !== me.id ? p : ({
-        ...p, stage: 2,
-        stageData: {
-          ...p.stageData,
-          registrasi: { ...p.stageData.registrasi, status: 'completed', checkInAt },
-          sosialisasi: { status: 'in_progress', pretestVisible: true, posttestVisible: true },
-        }
-      })));
-      addAudit(me.nama, 'Check-in kegiatan DIKSI', null);
-      pushNotif('admin', { type: 'success', title: `${me.nama} check-in`, desc: `Check-in pada ${checkInAt}` });
-      toast('Check-in berhasil. Lanjut ke tahap Sosialisasi.', 'success');
-      setSubmitting(false);
-      setNipInput('');
-    }, 600);
-  };
-
-  // Belum konfirmasi
+  // Belum konfirmasi kesediaan
   if (!isConfirmed) {
     return (
       <div>
@@ -4872,75 +5627,65 @@ function PesertaRegistrasi() {
     );
   }
 
-  // Sudah check-in
-  if (reg?.status === 'completed') {
-    return (
-      <div>
-        <SectionHeader eyebrow="Peserta · Check-in" title="Check-in Selesai" desc={`Tercatat pada ${reg.checkInAt}`}/>
-        <div style={{ background: '#fff', border: `1px solid ${theme.success}`, borderLeft: `4px solid ${theme.success}`, borderRadius: 2, padding: 28 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 18 }}>
-            <div style={{ width: 48, height: 48, background: theme.successBg, display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: 24 }}>
-              <CheckCircle2 size={24} style={{ color: theme.success }}/>
-            </div>
-            <div>
-              <div style={{ fontSize: 14, fontWeight: 600, fontFamily: fonts.display, color: theme.text }}>Anda berhasil check-in</div>
-              <div style={{ fontSize: 11, color: theme.textMuted, marginTop: 3 }}>Tercatat pada {reg.checkInAt}</div>
-            </div>
-          </div>
-          <div style={{ paddingTop: 14, borderTop: `1px solid ${theme.border}`, fontSize: 11.5, color: theme.textMuted, lineHeight: 1.6 }}>
-            Selamat datang di program DIKSI. Anda sudah dapat melanjutkan ke <strong style={{ color: theme.text }}>Tahap 02 · Pretest & Posttest</strong> melalui menu sidebar.
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  // Form check-in
   return (
     <div>
       <SectionHeader
         eyebrow="Peserta · Check-in"
-        title="Check-in Kegiatan DIKSI"
-        desc="Konfirmasi kehadiran Anda dengan memasukkan NIP"
+        title="Status Check-in"
+        desc="Status disinkronkan dari SharePoint List · check-in dilakukan langsung di lokasi kegiatan"
       />
 
-      <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderRadius: 3, padding: 32, maxWidth: 480, margin: '0 auto' }}>
-        <div style={{ textAlign: 'center', marginBottom: 22 }}>
-          <div style={{ width: 56, height: 56, background: theme.goldLight + '40', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: 28, margin: '0 auto 12px' }}>
-            <Upload size={24} style={{ color: theme.goldDark }}/>
+      <div style={{
+        background: '#fff',
+        border: `1px solid ${isCheckedIn ? theme.success : theme.borderStrong}`,
+        borderLeft: `4px solid ${isCheckedIn ? theme.success : theme.warning}`,
+        borderRadius: 2, padding: 28, maxWidth: 560, margin: '0 auto 14px',
+      }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 18 }}>
+          <div style={{
+            width: 48, height: 48, borderRadius: 24,
+            background: isCheckedIn ? theme.successBg : theme.warningBg,
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+          }}>
+            {isCheckedIn
+              ? <CheckCircle2 size={24} style={{ color: theme.success }}/>
+              : <Clock size={24} style={{ color: theme.warning }}/>
+            }
           </div>
-          <div style={{ fontFamily: fonts.display, fontSize: 17, fontWeight: 600, color: theme.text, marginBottom: 4 }}>Konfirmasi Kehadiran</div>
-          <div style={{ fontSize: 11.5, color: theme.textMuted, lineHeight: 1.5 }}>Masukkan NIP Anda untuk memastikan kehadiran tercatat dengan benar</div>
+          <div style={{ flex: 1 }}>
+            <div style={{ fontSize: 14, fontWeight: 600, fontFamily: fonts.display, color: theme.text }}>
+              {isCheckedIn ? 'Sudah Check-in' : 'Belum Check-in'}
+            </div>
+            <div style={{ fontSize: 11, color: theme.textMuted, marginTop: 3 }}>
+              {isCheckedIn
+                ? `Tercatat pada ${reg.checkInAt}`
+                : 'Status akan otomatis diperbarui setelah Anda check-in di lokasi.'}
+            </div>
+          </div>
+          <Pill variant={isCheckedIn ? 'success' : 'warning'}>
+            {isCheckedIn ? 'Hadir' : 'Menunggu'}
+          </Pill>
         </div>
 
-        <div style={{ marginBottom: 16 }}>
-          <label style={{ display: 'block', fontSize: 11, fontWeight: 600, color: theme.text, marginBottom: 5 }}>NIP <span style={{ color: theme.danger }}>*</span></label>
-          <input
-            value={nipInput}
-            onChange={e => setNipInput(e.target.value.replace(/[^0-9]/g, ''))}
-            placeholder="18 digit NIP"
-            maxLength={18}
-            disabled={submitting}
-            style={{
-              width: '100%', fontSize: 14, fontFamily: fonts.mono, padding: '12px 14px',
-              border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none',
-              boxSizing: 'border-box', letterSpacing: '0.03em',
-              textAlign: 'center',
-            }}
-          />
-          <div style={{ marginTop: 6, fontSize: 10, color: theme.textSubtle, fontFamily: fonts.mono, textAlign: 'center' }}>
-            {nipInput.length}/18 digit
+        <div style={{ paddingTop: 14, borderTop: `1px solid ${theme.border}`, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, fontSize: 11 }}>
+          <div>
+            <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.12em', color: theme.textSubtle, fontWeight: 600, marginBottom: 4 }}>Sumber Data</div>
+            <div style={{ color: theme.text, fontWeight: 500 }}>SharePoint List</div>
+            <div style={{ fontSize: 10, color: theme.textMuted, marginTop: 2 }}>Sinkronisasi otomatis</div>
+          </div>
+          <div>
+            <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.12em', color: theme.textSubtle, fontWeight: 600, marginBottom: 4 }}>Lokasi Kegiatan</div>
+            <div style={{ color: theme.text, fontWeight: 500 }}>Auditorium A</div>
+            <div style={{ fontSize: 10, color: theme.textMuted, marginTop: 2 }}>Gedung BI Thamrin</div>
           </div>
         </div>
+      </div>
 
-        <Button variant="primary" icon={CheckCircle2} onClick={checkIn} disabled={submitting || nipInput.length < 10}
-          style={{ width: '100%', justifyContent: 'center', padding: '12px 20px', fontSize: 13 }}>
-          {submitting ? 'Memproses...' : 'Check-in Sekarang'}
-        </Button>
-
-        <div style={{ marginTop: 18, paddingTop: 14, borderTop: `1px solid ${theme.border}`, fontSize: 10.5, color: theme.textMuted, display: 'flex', gap: 8, lineHeight: 1.55 }}>
-          <Info size={12} style={{ flexShrink: 0, marginTop: 2 }}/>
-          <div>Pastikan Anda hadir di lokasi (Auditorium A · Gedung BI Thamrin) sebelum melakukan check-in.</div>
+      <div style={{ maxWidth: 560, margin: '0 auto', background: theme.infoBg, border: '1px solid #BFDBFE', borderRadius: 2, padding: 12, fontSize: 11, color: theme.info, display: 'flex', gap: 8, lineHeight: 1.55 }}>
+        <Info size={14} style={{ flexShrink: 0, marginTop: 1 }}/>
+        <div>
+          <strong>Proses check-in dilakukan di luar sistem.</strong>
+          <div style={{ color: theme.text, marginTop: 3 }}>Halaman ini hanya menampilkan status. Anda tidak perlu melakukan apa pun di aplikasi — silakan hadir ke lokasi kegiatan untuk melakukan check-in fisik. Status akan otomatis terbaca dari SharePoint List.</div>
         </div>
       </div>
     </div>
@@ -4948,34 +5693,44 @@ function PesertaRegistrasi() {
 }
 
 
-function PesertaCoaching() {
+// =====================================================================
+// PESERTA: COACHING PLAN — peserta mengisi item-item rencana pengembangan
+// =====================================================================
+const AREA_OPTIONS = [
+  { value: 'pelatihan_iht', label: 'Pelatihan / In-House Training (IHT)' },
+  { value: 'sertifikasi',   label: 'Sertifikasi Profesi' },
+  { value: 'kepanitiaan',   label: 'Kepanitiaan / Working Group / Project' },
+  { value: 'lainnya',       label: 'Lainnya' },
+];
+const areaLabel = (v) => AREA_OPTIONS.find(a => a.value === v)?.label || v;
+
+function PesertaCoachingPlan() {
   const { participants, setParticipants, toast, addAudit, pushNotif, pesertaPersonaId } = useApp();
   const me = participants.find(p => p.id === pesertaPersonaId) || participants[0];
   const coaching = me.stageData.coaching;
   const mentor = USERS[me.mentorUserId];
 
-  const [effectiveness, setEffectiveness] = useState(8);
-  const [quality, setQuality] = useState(8);
-  const [comment, setComment] = useState('');
-  const [showRejectForm, setShowRejectForm] = useState(false);
-  const [rejectReason, setRejectReason] = useState('');
+  const blankItem = () => ({
+    id: 'PI' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
+    area: 'pelatihan_iht', areaLainnya: '',
+    halDilakukan: '', indikatorKeberhasilan: '', dukunganDibutuhkan: '',
+  });
+
+  const [draftItems, setDraftItems] = useState([]);
 
   useEffect(() => {
-    const survey = me.stageData.coaching?.pesertaSurvey;
-    if (survey) {
-      setEffectiveness(survey.mentorEffectiveness);
-      setQuality(survey.sessionQuality);
-      setComment(survey.comment || '');
+    const items = me.stageData.coaching?.plan?.items;
+    if (items && items.length > 0) {
+      setDraftItems(items.map(it => ({ ...it })));
     } else {
-      setEffectiveness(8); setQuality(8); setComment('');
+      setDraftItems([blankItem()]);
     }
-    setShowRejectForm(false); setRejectReason('');
   }, [me.id]);
 
   if (!coaching || coaching.status === 'pending') {
     return (
       <div>
-        <SectionHeader eyebrow="Peserta · Tahap 03 · Coaching" title="Sesi Coaching Belum Aktif" desc="Sesi 1-on-1 coaching akan tersedia setelah Sosialisasi (pretest & posttest) selesai"/>
+        <SectionHeader eyebrow="Peserta · Tahap 03 · Coaching" title="Coaching Plan Belum Aktif" desc="Coaching plan tersedia setelah Sosialisasi (pretest & posttest) selesai diinput admin"/>
         <div style={{ background: '#fff', border: `1px dashed ${theme.borderStrong}`, padding: 32, textAlign: 'center', borderRadius: 2 }}>
           <Clock size={28} style={{ color: theme.textMuted, margin: '0 auto 10px' }}/>
           <div style={{ fontSize: 13, fontWeight: 500 }}>Menunggu Tahap Sosialisasi selesai</div>
@@ -4984,29 +5739,322 @@ function PesertaCoaching() {
     );
   }
 
-  const sessions = coaching.sessions || [];
-  const activeSession = sessions[sessions.length - 1]; // sesi terakhir
+  const planStatus = coaching.planStatus || 'draft';
+  const isApproved  = planStatus === 'approved';
+  const isSubmitted = planStatus === 'submitted';
+  const isReturned  = planStatus === 'returned';
+  const canEdit     = planStatus === 'draft' || isReturned;
   const today = new Date().toISOString().slice(0, 10);
 
-  // Cek status sesi
-  const isProposed   = activeSession?.status === 'proposed';
-  const isAccepted   = activeSession?.status === 'accepted';
-  const isRejected   = activeSession?.status === 'rejected';
-  const isCompleted  = activeSession?.status === 'completed';
-  const sessionDatePassed = activeSession && activeSession.tanggal <= today;
-  // Survey form unlocked: sesi accepted & tanggal sudah lewat (otomatis dianggap completed) ATAU status sudah completed
-  const surveyUnlocked = (isAccepted && sessionDatePassed) || isCompleted;
+  const statusVariant = isApproved ? 'success' : isSubmitted ? 'info' : isReturned ? 'warning' : 'default';
+  const statusLabel   = isApproved ? 'Sudah Sesuai' : isSubmitted ? 'Sedang Direview' : isReturned ? 'Perbaikan Diperlukan' : 'Draft';
 
-  const surveyDone = !!coaching.pesertaSurvey;
-  const mentorDone = !!coaching.mentorEvaluation;
+  const updateItem = (idx, field, value) => {
+    setDraftItems(items => items.map((it, i) => i === idx ? { ...it, [field]: value } : it));
+  };
 
-  const fmtTanggal = (s) => s ? new Date(s).toLocaleDateString('id-ID', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }) : '-';
+  const removeItem = (idx) => {
+    if (draftItems.length === 1) { toast('Minimal harus ada 1 item dalam plan.', 'warning'); return; }
+    setDraftItems(items => items.filter((_, i) => i !== idx));
+  };
+
+  const addItem = () => {
+    setDraftItems(items => [...items, blankItem()]);
+  };
+
+  const isItemComplete = (it) =>
+    !!it.halDilakukan?.trim() &&
+    !!it.indikatorKeberhasilan?.trim() &&
+    !!it.dukunganDibutuhkan?.trim() &&
+    (it.area !== 'lainnya' || !!it.areaLainnya?.trim());
+
+  const allItemsComplete = draftItems.length > 0 && draftItems.every(isItemComplete);
+
+  const submitPlan = () => {
+    if (!allItemsComplete) { toast('Mohon lengkapi semua field di setiap item plan.', 'warning'); return; }
+    const newRevision = (coaching.plan?.revision || 0) + (isReturned ? 1 : 0);
+    setParticipants(prev => prev.map(p => p.id !== me.id ? p : ({
+      ...p,
+      stageData: {
+        ...p.stageData,
+        coaching: {
+          ...p.stageData.coaching,
+          planStatus: 'submitted',
+          plan: { items: draftItems, submittedAt: today, revision: newRevision },
+          planFeedback: null,
+          planReviewedAt: null,
+        },
+      },
+    })));
+    const verb = isReturned ? 'Submit ulang' : 'Submit';
+    addAudit(me.nama, `${verb} coaching plan ke mentor${newRevision > 0 ? ` (revisi ${newRevision})` : ''}`, null);
+    pushNotif('mentor', { type: 'info', title: `${me.nama} ${isReturned ? 'submit revisi' : 'submit'} coaching plan`, desc: `${draftItems.length} item rencana pengembangan · mohon direview` });
+    toast('Coaching plan terkirim ke mentor untuk direview.', 'success');
+  };
+
+  return (
+    <div>
+      <SectionHeader
+        eyebrow="Peserta · Tahap 03 · Coaching"
+        title="Coaching Plan"
+        desc="Pilih area pengembangan & isi rencana untuk setiap item · akan direview mentor"
+      />
+
+      {/* Mentor card */}
+      {mentor && (
+        <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderLeft: `4px solid ${theme.gold}`, borderRadius: 2, padding: 18, marginBottom: 14, display: 'flex', alignItems: 'center', gap: 16 }}>
+          <div style={{ width: 52, height: 52, borderRadius: '50%', background: theme.navy, color: theme.gold, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 14, fontWeight: 700, fontFamily: fonts.display, flexShrink: 0 }}>
+            {mentor.user.split(' ').slice(0, 2).map(n => n[0]).join('').replace(/[^A-Z]/g, '').slice(0, 2)}
+          </div>
+          <div style={{ flex: 1 }}>
+            <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.15em', color: theme.gold, fontWeight: 700, marginBottom: 4 }}>Mentor Anda · Atasan Langsung</div>
+            <div style={{ fontSize: 14, fontWeight: 600, color: theme.text, fontFamily: fonts.display, marginBottom: 2 }}>{mentor.user}</div>
+            <div style={{ fontSize: 11, color: theme.textMuted }}>{mentor.jabatan} · {mentor.satker}</div>
+          </div>
+          <Pill variant={statusVariant}>{statusLabel}</Pill>
+        </div>
+      )}
+
+      {/* Status banners */}
+      {isApproved && (
+        <div style={{ background: '#fff', border: `1px solid ${theme.success}`, borderLeft: `4px solid ${theme.success}`, borderRadius: 2, padding: 18, marginBottom: 14 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+            <CheckCircle2 size={22} style={{ color: theme.success, flexShrink: 0 }}/>
+            <div style={{ flex: 1 }}>
+              <div style={{ fontSize: 13, fontWeight: 600, color: theme.text }}>Coaching plan dikonfirmasi mentor</div>
+              <div style={{ fontSize: 11, color: theme.textMuted, marginTop: 3 }}>Disetujui pada {coaching.planApprovedAt} oleh {mentor?.user.split(',')[0]}. Tahap Coaching selesai — Anda dapat lanjut ke Monitoring.</div>
+            </div>
+          </div>
+          {coaching.planFeedback && (
+            <div style={{ marginTop: 12, padding: 12, background: theme.successBg, borderRadius: 2, fontSize: 11.5, color: theme.text, lineHeight: 1.55 }}>
+              <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.12em', color: theme.success, fontWeight: 700, marginBottom: 4 }}>Catatan dari Mentor</div>
+              <div style={{ fontStyle: 'italic' }}>"{coaching.planFeedback}"</div>
+            </div>
+          )}
+        </div>
+      )}
+
+      {isSubmitted && (
+        <div style={{ background: '#fff', border: `1px solid ${theme.info}`, borderLeft: `4px solid ${theme.info}`, borderRadius: 2, padding: 18, marginBottom: 14, display: 'flex', alignItems: 'center', gap: 12 }}>
+          <Clock size={22} style={{ color: theme.info, flexShrink: 0 }}/>
+          <div style={{ flex: 1 }}>
+            <div style={{ fontSize: 13, fontWeight: 600, color: theme.text }}>Coaching plan sedang direview</div>
+            <div style={{ fontSize: 11, color: theme.textMuted, marginTop: 3 }}>Submitted {coaching.plan?.submittedAt}{coaching.plan?.revision > 0 ? ` · revisi ke-${coaching.plan.revision}` : ''} dengan {coaching.plan?.items?.length || 0} item. Anda akan mendapat notifikasi setelah {mentor?.user.split(',')[0]} selesai review.</div>
+          </div>
+        </div>
+      )}
+
+      {isReturned && (
+        <div style={{ background: '#fff', border: `1px solid ${theme.warning}`, borderLeft: `4px solid ${theme.warning}`, borderRadius: 2, padding: 18, marginBottom: 14 }}>
+          <div style={{ display: 'flex', alignItems: 'flex-start', gap: 12, marginBottom: 12 }}>
+            <AlertCircle size={22} style={{ color: theme.warning, flexShrink: 0, marginTop: 1 }}/>
+            <div style={{ flex: 1 }}>
+              <div style={{ fontSize: 13, fontWeight: 600, color: theme.text }}>Coaching plan dikembalikan untuk perbaikan</div>
+              <div style={{ fontSize: 11, color: theme.textMuted, marginTop: 3 }}>Direview {coaching.planReviewedAt}. Mohon revisi sesuai feedback mentor di bawah, lalu submit ulang.</div>
+            </div>
+          </div>
+          {coaching.planFeedback && (
+            <div style={{ padding: 12, background: theme.warningBg, borderRadius: 2, fontSize: 11.5, color: theme.text, lineHeight: 1.55 }}>
+              <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.12em', color: theme.warning, fontWeight: 700, marginBottom: 4 }}>Feedback dari Mentor</div>
+              <div style={{ fontStyle: 'italic' }}>"{coaching.planFeedback}"</div>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Plan items — editor or read-only */}
+      <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderRadius: 2, padding: 18, marginBottom: 14 }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 14, paddingBottom: 12, borderBottom: `1px solid ${theme.border}` }}>
+          <div>
+            <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.18em', color: theme.gold, fontWeight: 700, marginBottom: 4 }}>Daftar Rencana Pengembangan</div>
+            <div style={{ fontSize: 14, fontWeight: 600, color: theme.text, fontFamily: fonts.display }}>{canEdit ? (isReturned ? 'Perbaiki Plan Anda' : 'Isi Item Rencana') : 'Detail Plan'}</div>
+            <div style={{ fontSize: 11, color: theme.textMuted, marginTop: 3, maxWidth: 540 }}>
+              {canEdit ? 'Tambahkan minimal 1 item rencana pengembangan. Untuk setiap item, pilih area pengembangan & isi 3 detail di bawah.' : `Plan terdiri dari ${(canEdit ? draftItems : coaching.plan?.items || []).length} item rencana pengembangan.`}
+            </div>
+          </div>
+          {coaching.plan?.revision > 0 && (
+            <div style={{ fontSize: 10, color: theme.textMuted, fontFamily: fonts.mono }}>Revisi ke-{coaching.plan.revision}</div>
+          )}
+        </div>
+
+        {canEdit ? (
+          <>
+            {draftItems.map((it, idx) => (
+              <div key={it.id} style={{ background: theme.bg, border: `1px solid ${theme.border}`, borderRadius: 2, padding: 14, marginBottom: 12 }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 10, marginBottom: 10 }}>
+                  <div style={{ fontSize: 10, color: theme.textMuted, fontFamily: fonts.mono }}>Item #{idx + 1}</div>
+                  {draftItems.length > 1 && (
+                    <button onClick={() => removeItem(idx)}
+                      style={{ background: 'transparent', border: 'none', cursor: 'pointer', padding: 4, color: theme.danger, display: 'flex', alignItems: 'center', gap: 4, fontSize: 11 }}>
+                      <Trash2 size={12}/> Hapus item
+                    </button>
+                  )}
+                </div>
+
+                <div style={{ marginBottom: 10 }}>
+                  <label style={{ display: 'block', fontSize: 11, fontWeight: 600, color: theme.text, marginBottom: 4 }}>Area Pengembangan <span style={{ color: theme.danger }}>*</span></label>
+                  <select value={it.area} onChange={e => updateItem(idx, 'area', e.target.value)}
+                    style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 9, border: `1px solid ${theme.border}`, borderRadius: 2, background: '#fff', outline: 'none', boxSizing: 'border-box' }}>
+                    {AREA_OPTIONS.map(opt => <option key={opt.value} value={opt.value}>{opt.label}</option>)}
+                  </select>
+                </div>
+
+                {it.area === 'lainnya' && (
+                  <div style={{ marginBottom: 10 }}>
+                    <label style={{ display: 'block', fontSize: 11, fontWeight: 600, color: theme.text, marginBottom: 4 }}>Spesifikasi "Lainnya" <span style={{ color: theme.danger }}>*</span></label>
+                    <input value={it.areaLainnya} onChange={e => updateItem(idx, 'areaLainnya', e.target.value)}
+                      placeholder="Mis. Forum Sharing Internal, Mentoring Junior, dll"
+                      style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 9, border: `1px solid ${theme.border}`, borderRadius: 2, background: '#fff', outline: 'none', boxSizing: 'border-box' }}/>
+                  </div>
+                )}
+
+                <div style={{ marginBottom: 10 }}>
+                  <label style={{ display: 'block', fontSize: 11, fontWeight: 600, color: theme.text, marginBottom: 3 }}>Hal yang Akan Dilakukan <span style={{ color: theme.danger }}>*</span></label>
+                  <div style={{ fontSize: 10.5, color: theme.textMuted, marginBottom: 6 }}>Deskripsi konkret apa yang akan dilaksanakan</div>
+                  <textarea value={it.halDilakukan} onChange={e => updateItem(idx, 'halDilakukan', e.target.value)} rows={2}
+                    placeholder="Mis. Mengikuti Strategic Decision-Making Workshop di Q2 2026, 3 hari penuh"
+                    style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 9, border: `1px solid ${theme.border}`, borderRadius: 2, background: '#fff', outline: 'none', resize: 'vertical', boxSizing: 'border-box' }}/>
+                </div>
+
+                <div style={{ marginBottom: 10 }}>
+                  <label style={{ display: 'block', fontSize: 11, fontWeight: 600, color: theme.text, marginBottom: 3 }}>Indikator Keberhasilan <span style={{ color: theme.danger }}>*</span></label>
+                  <div style={{ fontSize: 10.5, color: theme.textMuted, marginBottom: 6 }}>Bagaimana Anda mengukur peningkatan di area pengembangan ini?</div>
+                  <textarea value={it.indikatorKeberhasilan} onChange={e => updateItem(idx, 'indikatorKeberhasilan', e.target.value)} rows={2}
+                    placeholder="Mis. Skor pretest-posttest workshop ≥ 85, aplikasi framework di 2 keputusan strategis"
+                    style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 9, border: `1px solid ${theme.border}`, borderRadius: 2, background: '#fff', outline: 'none', resize: 'vertical', boxSizing: 'border-box' }}/>
+                </div>
+
+                <div>
+                  <label style={{ display: 'block', fontSize: 11, fontWeight: 600, color: theme.text, marginBottom: 3 }}>Dukungan yang Dibutuhkan <span style={{ color: theme.danger }}>*</span></label>
+                  <div style={{ fontSize: 10.5, color: theme.textMuted, marginBottom: 6 }}>Dukungan dari mentor / atasan / organisasi yang dibutuhkan</div>
+                  <textarea value={it.dukunganDibutuhkan} onChange={e => updateItem(idx, 'dukunganDibutuhkan', e.target.value)} rows={2}
+                    placeholder="Mis. Approval atasan untuk slot pelatihan, mentor untuk sparring penerapan"
+                    style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 9, border: `1px solid ${theme.border}`, borderRadius: 2, background: '#fff', outline: 'none', resize: 'vertical', boxSizing: 'border-box' }}/>
+                </div>
+              </div>
+            ))}
+
+            <Button variant="ghost" icon={Plus} onClick={addItem} style={{ marginBottom: 14 }}>Tambah Item Plan</Button>
+
+            <div style={{ paddingTop: 14, borderTop: `1px solid ${theme.border}`, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <div style={{ fontSize: 11, color: theme.textMuted }}>
+                {allItemsComplete ? `${draftItems.length} item lengkap · siap submit` : `${draftItems.filter(isItemComplete).length} dari ${draftItems.length} item lengkap`}
+              </div>
+              <Button variant="primary" icon={Send} onClick={submitPlan} disabled={!allItemsComplete}>
+                {isReturned ? 'Submit Revisi' : 'Submit ke Mentor'}
+              </Button>
+            </div>
+          </>
+        ) : (
+          // Read-only display
+          <>
+            {(coaching.plan?.items || []).map((it, idx) => (
+              <div key={it.id} style={{ background: theme.bg, border: `1px solid ${theme.border}`, borderRadius: 2, padding: 14, marginBottom: 12 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10, paddingBottom: 8, borderBottom: `1px solid ${theme.border}` }}>
+                  <div style={{ fontSize: 10, color: theme.textMuted, fontFamily: fonts.mono }}>Item #{idx + 1}</div>
+                  <Pill variant="default">{areaLabel(it.area)}{it.area === 'lainnya' && it.areaLainnya ? ` · ${it.areaLainnya}` : ''}</Pill>
+                </div>
+                {[
+                  { label: 'Hal yang Akan Dilakukan',      v: it.halDilakukan },
+                  { label: 'Indikator Keberhasilan',        v: it.indikatorKeberhasilan },
+                  { label: 'Dukungan yang Dibutuhkan',      v: it.dukunganDibutuhkan },
+                ].map(row => (
+                  <div key={row.label} style={{ marginBottom: 8 }}>
+                    <div style={{ fontSize: 9.5, textTransform: 'uppercase', letterSpacing: '0.1em', color: theme.textSubtle, fontWeight: 700, marginBottom: 3 }}>{row.label}</div>
+                    <div style={{ fontSize: 12, color: theme.text, lineHeight: 1.55, whiteSpace: 'pre-wrap' }}>{row.v || <span style={{ color: theme.textSubtle, fontStyle: 'italic' }}>—</span>}</div>
+                  </div>
+                ))}
+              </div>
+            ))}
+          </>
+        )}
+      </div>
+    </div>
+  );
+}
+
+
+// =====================================================================
+// PESERTA: PENGAJUAN 1-ON-1 — peserta ajukan sesi konsultasi dengan mentor
+// =====================================================================
+function PesertaOneOnOne() {
+  const { participants, setParticipants, toast, addAudit, pushNotif, pesertaPersonaId, setActiveMenu } = useApp();
+  const me = participants.find(p => p.id === pesertaPersonaId) || participants[0];
+  const coaching = me.stageData.coaching;
+  const mentor = USERS[me.mentorUserId];
+
+  const [showForm, setShowForm] = useState(false);
+  const [draft, setDraft] = useState({ tanggal: '', waktu: '14:00', durasi: 60, lokasi: 'Online', topik: '', catatan: '' });
+
+  useEffect(() => {
+    setShowForm(false);
+    setDraft({ tanggal: '', waktu: '14:00', durasi: 60, lokasi: 'Online', topik: '', catatan: '' });
+  }, [me.id]);
+
+  if (!coaching || coaching.status === 'pending') {
+    return (
+      <div>
+        <SectionHeader eyebrow="Peserta · Tahap 03 · Coaching" title="Pengajuan 1-on-1 Belum Aktif" desc="Sesi 1-on-1 tersedia setelah Tahap Sosialisasi selesai"/>
+        <div style={{ background: '#fff', border: `1px dashed ${theme.borderStrong}`, padding: 32, textAlign: 'center', borderRadius: 2 }}>
+          <Clock size={28} style={{ color: theme.textMuted, margin: '0 auto 10px' }}/>
+          <div style={{ fontSize: 13, fontWeight: 500 }}>Menunggu Tahap Sosialisasi selesai</div>
+        </div>
+      </div>
+    );
+  }
+
+  const today = new Date().toISOString().slice(0, 10);
+  const sessions = coaching.sessions || [];
+  const activeSession = sessions.length > 0 ? sessions[sessions.length - 1] : null;
+
   const fmtTanggalShort = (s) => s ? new Date(s).toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' }) : '-';
+  const fmtTanggal      = (s) => s ? new Date(s).toLocaleDateString('id-ID', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }) : '-';
 
-  // Hitung hari lagi sampai sesi
-  const daysUntil = activeSession ? Math.ceil((new Date(activeSession.tanggal) - new Date()) / (1000 * 60 * 60 * 24)) : null;
+  const sessionByPeserta      = activeSession?.status === 'proposed' && activeSession.proposedBy === 'peserta';
+  // Sesi yang menunggu aksi peserta: bisa karena mentor mengajukan baru ATAU mentor reschedule
+  const sessionByMentor       = activeSession?.status === 'rescheduled_by_mentor' ||
+                                (activeSession?.status === 'proposed' && activeSession.proposedBy === 'mentor');
+  const sessionIsMentorReschedule = activeSession?.status === 'rescheduled_by_mentor';
+  const sessionScheduled      = activeSession?.status === 'accepted';
+  const sessionCompleted      = activeSession?.status === 'completed';
 
-  const acceptSession = () => {
+  const requestOneOnOne = () => {
+    if (!draft.tanggal || !draft.waktu || !draft.topik.trim()) {
+      toast('Tanggal, waktu, dan topik wajib diisi', 'warning'); return;
+    }
+    if (draft.tanggal < today) {
+      toast('Tanggal tidak bisa di masa lalu', 'warning'); return;
+    }
+    const newSession = {
+      id: `CS${Date.now().toString(36).toUpperCase()}`,
+      tanggal: draft.tanggal,
+      waktu: draft.waktu,
+      durasi: parseInt(draft.durasi, 10),
+      lokasi: draft.lokasi,
+      topik: draft.topik,
+      catatan: draft.catatan,
+      status: 'proposed',
+      proposedBy: 'peserta',
+      proposedAt: today,
+    };
+    setParticipants(prev => prev.map(p => p.id !== me.id ? p : ({
+      ...p,
+      stageData: {
+        ...p.stageData,
+        coaching: {
+          ...p.stageData.coaching,
+          sessions: [...(p.stageData.coaching.sessions || []), newSession],
+        },
+      },
+    })));
+    addAudit(me.nama, `Mengajukan 1-on-1 coaching · ${fmtTanggalShort(draft.tanggal)}`, null);
+    pushNotif('mentor', { type: 'warning', title: `${me.nama} mengajukan 1-on-1 coaching`, desc: `${fmtTanggalShort(draft.tanggal)} ${draft.waktu} · mohon konfirmasi ketersediaan` });
+    toast('Permintaan 1-on-1 coaching dikirim ke mentor.', 'success');
+    setShowForm(false);
+    setDraft({ tanggal: '', waktu: '14:00', durasi: 60, lokasi: 'Online', topik: '', catatan: '' });
+  };
+
+  const acceptMentorReschedule = () => {
     const teamsLink = `https://teams.microsoft.com/l/meetup-join/meet-${activeSession.id}-${Date.now().toString(36)}`;
     setParticipants(prev => prev.map(p => p.id !== me.id ? p : ({
       ...p,
@@ -5015,530 +6063,212 @@ function PesertaCoaching() {
         coaching: {
           ...p.stageData.coaching,
           sessions: p.stageData.coaching.sessions.map(s =>
-            s.id === activeSession.id ? { ...s, status: 'accepted', acceptedAt: new Date().toISOString().slice(0, 10), teamsLink } : s
+            s.id === activeSession.id ? { ...s, status: 'accepted', acceptedAt: today, teamsLink } : s
           ),
         },
-      }
+      },
     })));
-    addAudit(me.nama, `Menyetujui jadwal sesi coaching · ${fmtTanggalShort(activeSession.tanggal)}`, null);
-    pushNotif('mentor', { type: 'success', title: `${me.nama} menyetujui jadwal coaching`, desc: `${fmtTanggalShort(activeSession.tanggal)} ${activeSession.waktu} · Teams meeting otomatis dibuat` });
-    pushNotif('admin', { type: 'info', title: `Jadwal coaching dikonfirmasi`, desc: `${me.nama} & ${mentor?.user.split(',')[0]} · ${fmtTanggalShort(activeSession.tanggal)}` });
-    toast('Jadwal disetujui. Calendar Teams meeting otomatis dibuat.', 'success');
-  };
-
-  const rejectSession = () => {
-    if (!rejectReason.trim()) { toast('Mohon isi alasan/usulan jadwal alternatif', 'warning'); return; }
-    setParticipants(prev => prev.map(p => p.id !== me.id ? p : ({
-      ...p,
-      stageData: {
-        ...p.stageData,
-        coaching: {
-          ...p.stageData.coaching,
-          sessions: p.stageData.coaching.sessions.map(s =>
-            s.id === activeSession.id ? { ...s, status: 'rejected', rejectedAt: new Date().toISOString().slice(0, 10), rejectReason } : s
-          ),
-        },
-      }
-    })));
-    addAudit(me.nama, `Menolak jadwal sesi coaching`, null);
-    pushNotif('mentor', { type: 'warning', title: `${me.nama} menolak jadwal coaching`, desc: rejectReason.slice(0, 80) });
-    toast('Penolakan dikirim ke mentor untuk reschedule.', 'info');
-    setShowRejectForm(false); setRejectReason('');
-  };
-
-  const submitSurvey = () => {
-    if (!comment.trim()) { toast('Mohon isi komentar Anda', 'warning'); return; }
-    setParticipants(prev => prev.map(p => p.id !== me.id ? p : ({
-      ...p,
-      stageData: {
-        ...p.stageData,
-        coaching: {
-          ...p.stageData.coaching,
-          pesertaSurvey: { mentorEffectiveness: effectiveness, sessionQuality: quality, comment, submittedAt: new Date().toISOString().slice(0,10) },
-          status: p.stageData.coaching.mentorEvaluation ? 'completed' : 'in_progress',
-          // Mark active session as completed
-          sessions: p.stageData.coaching.sessions.map(s =>
-            s.id === activeSession.id && s.status !== 'completed' ? { ...s, status: 'completed', completedAt: new Date().toISOString().slice(0, 10) + ' ' + new Date().toTimeString().slice(0, 5) } : s
-          ),
-        },
-      }
-    })));
-    addAudit(me.nama, 'Submit survey peserta untuk sesi coaching', null);
-    pushNotif('mentor', { type: 'info', title: `${me.nama} submit survey coaching`, desc: `Skor mentor: ${effectiveness}/10 · Skor sesi: ${quality}/10` });
-    toast('Survey Anda tersimpan. Terima kasih atas feedback-nya!', 'success');
+    addAudit(me.nama, `Menyetujui jadwal alternatif 1-on-1 · ${fmtTanggalShort(activeSession.tanggal)}`, null);
+    pushNotif('mentor', { type: 'success', title: `${me.nama} menyetujui jadwal alternatif`, desc: `${fmtTanggalShort(activeSession.tanggal)} ${activeSession.waktu}` });
+    toast('Jadwal 1-on-1 dikonfirmasi. Teams meeting otomatis dibuat.', 'success');
   };
 
   return (
     <div>
       <SectionHeader
         eyebrow="Peserta · Tahap 03 · Coaching"
-        title="Sesi 1-on-1 Coaching"
-        desc="Sesi pendampingan personal antara Anda dan mentor (atasan langsung)"
+        title="Pengajuan 1-on-1 Coaching"
+        desc="Ajukan sesi konsultasi langsung dengan mentor untuk membantu menyusun atau menyempurnakan coaching plan"
       />
 
-      {/* Mentor Card prominent */}
+      {/* Mentor card mini */}
       {mentor && (
-        <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderLeft: `4px solid ${theme.gold}`, borderRadius: 2, padding: 18, marginBottom: 14, display: 'flex', alignItems: 'center', gap: 16 }}>
-          <div style={{
-            width: 52, height: 52, borderRadius: '50%',
-            background: theme.navy, color: theme.gold,
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-            fontSize: 14, fontWeight: 700, fontFamily: fonts.display, flexShrink: 0,
-          }}>
+        <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderLeft: `4px solid ${theme.gold}`, borderRadius: 2, padding: 14, marginBottom: 14, display: 'flex', alignItems: 'center', gap: 14 }}>
+          <div style={{ width: 44, height: 44, borderRadius: '50%', background: theme.navy, color: theme.gold, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 12, fontWeight: 700, fontFamily: fonts.display, flexShrink: 0 }}>
             {mentor.user.split(' ').slice(0, 2).map(n => n[0]).join('').replace(/[^A-Z]/g, '').slice(0, 2)}
           </div>
           <div style={{ flex: 1 }}>
-            <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.15em', color: theme.gold, fontWeight: 700, marginBottom: 4 }}>Mentor Anda · Atasan Langsung</div>
-            <div style={{ fontSize: 14, fontWeight: 600, color: theme.text, fontFamily: fonts.display, marginBottom: 2 }}>{mentor.user}</div>
-            <div style={{ fontSize: 11, color: theme.textMuted }}>{mentor.jabatan} · {mentor.satker}</div>
+            <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.15em', color: theme.gold, fontWeight: 700, marginBottom: 3 }}>Mentor Anda</div>
+            <div style={{ fontSize: 13, fontWeight: 600, color: theme.text }}>{mentor.user}</div>
+            <div style={{ fontSize: 10.5, color: theme.textMuted, marginTop: 1 }}>{mentor.jabatan} · {mentor.satker}</div>
           </div>
-          <div style={{ textAlign: 'right' }}>
-            <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.12em', color: theme.textMuted, fontWeight: 600, marginBottom: 4 }}>NIP</div>
-            <div style={{ fontFamily: fonts.mono, fontSize: 11, color: theme.text }}>{mentor.nip}</div>
-          </div>
+          <Button variant="ghost" size="sm" icon={ClipboardCheck} onClick={() => setActiveMenu('coachingPlan')}>Lihat Coaching Plan</Button>
         </div>
       )}
 
-      {/* === STEP 1: Penjadwalan === */}
-      {!activeSession && (
-        <div style={{ background: '#fff', border: `1px dashed ${theme.borderStrong}`, padding: 32, textAlign: 'center', borderRadius: 2 }}>
-          <Clock size={28} style={{ color: theme.textMuted, margin: '0 auto 10px' }}/>
-          <div style={{ fontSize: 13, fontWeight: 600, color: theme.text }}>Menunggu jadwal dari mentor</div>
-          <div style={{ fontSize: 11, color: theme.textMuted, marginTop: 6, lineHeight: 1.5 }}>
-            Mentor akan mengajukan jadwal sesi coaching dalam waktu dekat. Anda akan menerima notifikasi.
+      {/* Main content */}
+      <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderRadius: 2, padding: 22 }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 14, paddingBottom: 12, borderBottom: `1px solid ${theme.border}` }}>
+          <div>
+            <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.18em', color: theme.gold, fontWeight: 700, marginBottom: 4 }}>Sesi 1-on-1</div>
+            <div style={{ fontSize: 15, fontWeight: 600, color: theme.text, fontFamily: fonts.display }}>Status Pengajuan</div>
           </div>
-        </div>
-      )}
-
-      {/* Proposal session — peserta belum response */}
-      {isProposed && (
-        <div style={{ background: '#fff', border: `2px solid ${theme.gold}`, borderRadius: 3, marginBottom: 14, overflow: 'hidden' }}>
-          <div style={{ background: theme.goldLight + '25', padding: '12px 18px', borderBottom: `1px solid ${theme.gold}40`, display: 'flex', alignItems: 'center', gap: 10 }}>
-            <Calendar size={16} style={{ color: theme.goldDark }}/>
-            <div style={{ flex: 1 }}>
-              <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.18em', color: theme.goldDark, fontWeight: 700 }}>Tindakan Diperlukan</div>
-              <div style={{ fontSize: 13, fontWeight: 600, color: theme.text, marginTop: 2 }}>Mentor Mengajukan Jadwal Coaching</div>
-            </div>
-          </div>
-
-          <div style={{ padding: 22 }}>
-            {/* Schedule details grid */}
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, marginBottom: 16 }}>
-              <div>
-                <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.12em', color: theme.textMuted, fontWeight: 600, marginBottom: 4 }}>Tanggal</div>
-                <div style={{ fontFamily: fonts.display, fontSize: 16, fontWeight: 600, color: theme.text }}>{fmtTanggal(activeSession.tanggal)}</div>
-              </div>
-              <div>
-                <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.12em', color: theme.textMuted, fontWeight: 600, marginBottom: 4 }}>Waktu & Durasi</div>
-                <div style={{ fontFamily: fonts.display, fontSize: 16, fontWeight: 600, color: theme.text }}>{activeSession.waktu} WIB · {activeSession.durasi} menit</div>
-              </div>
-              <div style={{ gridColumn: 'span 2' }}>
-                <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.12em', color: theme.textMuted, fontWeight: 600, marginBottom: 4 }}>Lokasi</div>
-                <div style={{ fontSize: 12.5, color: theme.text, fontWeight: 500 }}>{activeSession.lokasi}</div>
-              </div>
-              <div style={{ gridColumn: 'span 2' }}>
-                <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.12em', color: theme.textMuted, fontWeight: 600, marginBottom: 4 }}>Topik Pembahasan</div>
-                <div style={{ fontSize: 12.5, color: theme.text, fontWeight: 500 }}>{activeSession.topik}</div>
-              </div>
-              {activeSession.notes && (
-                <div style={{ gridColumn: 'span 2', padding: 10, background: theme.bg, borderRadius: 2 }}>
-                  <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.12em', color: theme.textMuted, fontWeight: 600, marginBottom: 4 }}>Catatan dari Mentor</div>
-                  <div style={{ fontSize: 11.5, color: theme.text, lineHeight: 1.5, fontStyle: 'italic' }}>"{activeSession.notes}"</div>
-                </div>
-              )}
-            </div>
-
-            {/* Auto-create info */}
-            <div style={{ background: theme.infoBg, border: '1px solid #BFDBFE', padding: 10, borderRadius: 2, fontSize: 11, color: theme.info, display: 'flex', gap: 8, marginBottom: 14 }}>
-              <Info size={13} style={{ flexShrink: 0, marginTop: 1 }}/>
-              <div>Jika Anda menyetujui, sistem akan <strong>otomatis membuat Microsoft Teams meeting</strong> dan menambahkannya ke calendar Anda dan mentor.</div>
-            </div>
-
-            {/* Actions */}
-            {!showRejectForm ? (
-              <div style={{ display: 'flex', gap: 8, justifyContent: 'flex-end' }}>
-                <Button variant="ghost" onClick={() => setShowRejectForm(true)}>Tidak Bisa, Ajukan Reschedule</Button>
-                <Button variant="primary" icon={CheckCircle2} onClick={acceptSession}>Setujui Jadwal</Button>
-              </div>
-            ) : (
-              <div style={{ paddingTop: 14, borderTop: `1px solid ${theme.border}` }}>
-                <label style={{ display: 'block', fontSize: 11, fontWeight: 600, color: theme.text, marginBottom: 5 }}>Alasan / Usulan jadwal alternatif <span style={{ color: theme.danger }}>*</span></label>
-                <textarea value={rejectReason} onChange={e => setRejectReason(e.target.value)} rows={3}
-                  placeholder="Mis. Bentrok dengan rapat ALCO. Bisa di-reschedule ke tanggal X jam Y?"
-                  style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 10, border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', resize: 'none', boxSizing: 'border-box' }}/>
-                <div style={{ marginTop: 10, display: 'flex', justifyContent: 'flex-end', gap: 8 }}>
-                  <Button variant="ghost" onClick={() => { setShowRejectForm(false); setRejectReason(''); }}>Batal</Button>
-                  <Button variant="secondary" onClick={rejectSession}>Kirim ke Mentor</Button>
-                </div>
-              </div>
-            )}
-          </div>
-        </div>
-      )}
-
-      {/* Rejected — wait for new proposal */}
-      {isRejected && (
-        <div style={{ background: '#fff', border: `1px solid ${theme.warning}`, borderLeft: `4px solid ${theme.warning}`, borderRadius: 2, padding: 18, marginBottom: 14 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 8 }}>
-            <X size={16} style={{ color: theme.warning }}/>
-            <div style={{ fontSize: 12, fontWeight: 600, color: theme.text }}>Jadwal sebelumnya ditolak — menunggu mentor mengajukan ulang</div>
-          </div>
-          {activeSession.rejectReason && (
-            <div style={{ fontSize: 11, color: theme.textMuted, lineHeight: 1.5, marginTop: 4, fontStyle: 'italic' }}>
-              Alasan Anda: "{activeSession.rejectReason}"
-            </div>
+          {(!activeSession || sessionCompleted) && !showForm && (
+            <Button variant="primary" icon={Plus} onClick={() => setShowForm(true)}>Ajukan 1-on-1 Coaching</Button>
           )}
         </div>
-      )}
 
-      {/* === STEP 2: Calendar entry (accepted, sebelum/saat sesi) === */}
-      {isAccepted && (
-        <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderRadius: 2, marginBottom: 14, overflow: 'hidden' }}>
-          <div style={{ background: theme.success, color: '#fff', padding: '10px 18px', display: 'flex', alignItems: 'center', gap: 10 }}>
-            <CheckCircle2 size={15}/>
-            <div style={{ fontSize: 11, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.15em' }}>Jadwal Dikonfirmasi · Calendar Tersinkronisasi</div>
-            {!sessionDatePassed && daysUntil != null && (
-              <div style={{ marginLeft: 'auto', fontSize: 11, fontFamily: fonts.mono }}>
-                {daysUntil === 0 ? 'Hari ini' : daysUntil === 1 ? 'Besok' : `${daysUntil} hari lagi`}
-              </div>
-            )}
-          </div>
-          <div style={{ padding: 22 }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, marginBottom: 14 }}>
-              <div>
-                <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.12em', color: theme.textMuted, fontWeight: 600, marginBottom: 4 }}>Tanggal</div>
-                <div style={{ fontFamily: fonts.display, fontSize: 16, fontWeight: 600, color: theme.text }}>{fmtTanggal(activeSession.tanggal)}</div>
-              </div>
-              <div>
-                <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.12em', color: theme.textMuted, fontWeight: 600, marginBottom: 4 }}>Waktu</div>
-                <div style={{ fontFamily: fonts.display, fontSize: 16, fontWeight: 600, color: theme.text }}>{activeSession.waktu} WIB · {activeSession.durasi} menit</div>
-              </div>
-              <div style={{ gridColumn: 'span 2' }}>
-                <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.12em', color: theme.textMuted, fontWeight: 600, marginBottom: 4 }}>Lokasi</div>
-                <div style={{ fontSize: 12.5, color: theme.text, fontWeight: 500 }}>{activeSession.lokasi}</div>
-              </div>
-              <div style={{ gridColumn: 'span 2' }}>
-                <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.12em', color: theme.textMuted, fontWeight: 600, marginBottom: 4 }}>Topik</div>
-                <div style={{ fontSize: 12.5, color: theme.text, fontWeight: 500 }}>{activeSession.topik}</div>
-              </div>
-            </div>
-
-            {activeSession.teamsLink && (
-              <div style={{ paddingTop: 14, borderTop: `1px solid ${theme.border}` }}>
-                <a href={activeSession.teamsLink} target="_blank" rel="noopener noreferrer"
-                  style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '10px 16px', background: '#5059C9', color: '#fff', borderRadius: 2, textDecoration: 'none', fontSize: 12, fontWeight: 600, fontFamily: fonts.body }}>
-                  <PlayCircle size={14}/> Buka Microsoft Teams Meeting
-                </a>
-                <div style={{ fontSize: 10, color: theme.textMuted, marginTop: 6, fontFamily: fonts.mono, wordBreak: 'break-all' }}>{activeSession.teamsLink}</div>
-              </div>
-            )}
-
-            {!sessionDatePassed && (
-              <div style={{ marginTop: 14, padding: 10, background: theme.infoBg, border: '1px solid #BFDBFE', borderRadius: 2, fontSize: 11, color: theme.info, display: 'flex', gap: 8 }}>
-                <Info size={13} style={{ flexShrink: 0, marginTop: 1 }}/>
-                <div>Form survey peserta akan otomatis terbuka setelah sesi coaching berlangsung pada tanggal di atas.</div>
-              </div>
-            )}
-          </div>
-        </div>
-      )}
-
-      {/* === STEP 3: Survey form (after session passed) === */}
-      {surveyUnlocked && (
-        <>
-          {/* Status panel */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, marginBottom: 16 }}>
-            <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderLeft: `3px solid ${mentorDone ? theme.success : theme.warning}`, padding: 16, borderRadius: 2 }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
-                <div style={{ fontSize: 11, fontWeight: 600, color: theme.text }}>Evaluasi Mentor</div>
-                <Pill variant={mentorDone ? 'success' : 'warning'}>{mentorDone ? 'Selesai' : 'Menunggu'}</Pill>
-              </div>
-              <div style={{ fontSize: 11, color: theme.textMuted, lineHeight: 1.5 }}>
-                {mentorDone
-                  ? `${mentor?.user.split(',')[0]} sudah memberikan evaluasi. Lihat di bagian "Hasil Evaluasi Mentor" di bawah.`
-                  : `Menunggu mentor menginput hasil evaluasi sesi coaching.`}
-              </div>
-            </div>
-            <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderLeft: `3px solid ${surveyDone ? theme.success : theme.warning}`, padding: 16, borderRadius: 2 }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
-                <div style={{ fontSize: 11, fontWeight: 600, color: theme.text }}>Survey Peserta</div>
-                <Pill variant={surveyDone ? 'success' : 'warning'}>{surveyDone ? 'Selesai' : 'Wajib Diisi'}</Pill>
-              </div>
-              <div style={{ fontSize: 11, color: theme.textMuted, lineHeight: 1.5 }}>
-                {surveyDone ? 'Anda sudah submit survey. Terima kasih.' : 'Berikan feedback Anda terhadap mentor & kualitas sesi.'}
-              </div>
+        {/* Empty state */}
+        {!activeSession && !showForm && (
+          <div style={{ padding: 32, textAlign: 'center' }}>
+            <Calendar size={28} style={{ color: theme.textMuted, margin: '0 auto 10px' }}/>
+            <div style={{ fontSize: 12.5, fontWeight: 600, color: theme.text }}>Belum ada sesi 1-on-1 yang dijadwalkan</div>
+            <div style={{ fontSize: 11, color: theme.textMuted, marginTop: 6, lineHeight: 1.5, maxWidth: 440, margin: '6px auto 0' }}>
+              Klik tombol di atas untuk mengajukan sesi konsultasi langsung dengan mentor. Sesi ini opsional — manfaatkan jika Anda butuh diskusi langsung saat menyusun coaching plan.
             </div>
           </div>
+        )}
 
-          {/* Hasil evaluasi mentor */}
-          {mentorDone && (
-            <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderRadius: 2, padding: 18, marginBottom: 14 }}>
-              <div style={{ fontSize: 13, fontWeight: 600, color: theme.text, fontFamily: fonts.display, marginBottom: 10 }}>Hasil Evaluasi dari Mentor</div>
-              <div style={{ marginBottom: 10 }}>
-                <div style={{ fontSize: 10, color: theme.textSubtle, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 3 }}>Kekuatan</div>
-                <div style={{ fontSize: 12, color: theme.text, lineHeight: 1.5 }}>{coaching.mentorEvaluation.strengths}</div>
-              </div>
-              <div style={{ marginBottom: 10 }}>
-                <div style={{ fontSize: 10, color: theme.textSubtle, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 3 }}>Area Pengembangan</div>
-                <div style={{ fontSize: 12, color: theme.text, lineHeight: 1.5 }}>{coaching.mentorEvaluation.development}</div>
+        {/* Form */}
+        {showForm && (
+          <div style={{ background: theme.bg, borderRadius: 2, padding: 16 }}>
+            <div style={{ fontSize: 12, fontWeight: 600, color: theme.text, marginBottom: 10 }}>Ajukan Jadwal Sesi 1-on-1</div>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 10, marginBottom: 10 }}>
+              <div>
+                <label style={{ display: 'block', fontSize: 10.5, fontWeight: 600, marginBottom: 3 }}>Tanggal <span style={{ color: theme.danger }}>*</span></label>
+                <input type="date" value={draft.tanggal} min={today}
+                  onChange={e => setDraft({ ...draft, tanggal: e.target.value })}
+                  style={{ width: '100%', fontSize: 12, fontFamily: fonts.mono, padding: 9, border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', boxSizing: 'border-box' }}/>
               </div>
               <div>
-                <div style={{ fontSize: 10, color: theme.textSubtle, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 3 }}>Rekomendasi</div>
-                <div style={{ fontSize: 12, color: theme.text, lineHeight: 1.5 }}>{coaching.mentorEvaluation.recommendation}</div>
+                <label style={{ display: 'block', fontSize: 10.5, fontWeight: 600, marginBottom: 3 }}>Waktu <span style={{ color: theme.danger }}>*</span></label>
+                <input type="time" value={draft.waktu}
+                  onChange={e => setDraft({ ...draft, waktu: e.target.value })}
+                  style={{ width: '100%', fontSize: 12, fontFamily: fonts.mono, padding: 9, border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', boxSizing: 'border-box' }}/>
+              </div>
+              <div>
+                <label style={{ display: 'block', fontSize: 10.5, fontWeight: 600, marginBottom: 3 }}>Durasi</label>
+                <select value={draft.durasi} onChange={e => setDraft({ ...draft, durasi: e.target.value })}
+                  style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 9, border: `1px solid ${theme.border}`, borderRadius: 2, background: '#fff', outline: 'none', boxSizing: 'border-box' }}>
+                  {[30, 45, 60, 90].map(d => <option key={d} value={d}>{d} menit</option>)}
+                </select>
               </div>
             </div>
-          )}
-
-          {/* Survey peserta */}
-          <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderRadius: 2, padding: 22 }}>
-            <div style={{ fontSize: 13, fontWeight: 600, color: theme.text, fontFamily: fonts.display, marginBottom: 4 }}>Survey Hasil Sesi Coaching</div>
-            <div style={{ fontSize: 11, color: theme.textMuted, marginBottom: 18 }}>
-              Sesi pada {fmtTanggalShort(activeSession.tanggal)} sudah berlangsung. Berikan penilaian jujur — feedback Anda membantu peningkatan kualitas program.
+            <div style={{ marginBottom: 10 }}>
+              <label style={{ display: 'block', fontSize: 10.5, fontWeight: 600, marginBottom: 3 }}>Mode</label>
+              <select value={draft.lokasi} onChange={e => setDraft({ ...draft, lokasi: e.target.value })}
+                style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 9, border: `1px solid ${theme.border}`, borderRadius: 2, background: '#fff', outline: 'none', boxSizing: 'border-box' }}>
+                <option>Online</option>
+                <option>Offline</option>
+              </select>
             </div>
+            <div style={{ marginBottom: 10 }}>
+              <label style={{ display: 'block', fontSize: 10.5, fontWeight: 600, marginBottom: 3 }}>Topik Pembahasan <span style={{ color: theme.danger }}>*</span></label>
+              <input value={draft.topik} onChange={e => setDraft({ ...draft, topik: e.target.value })}
+                placeholder="Mis. Diskusi area pengembangan & rencana aksi"
+                style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 9, border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', boxSizing: 'border-box' }}/>
+            </div>
+            <div style={{ marginBottom: 12 }}>
+              <label style={{ display: 'block', fontSize: 10.5, fontWeight: 600, marginBottom: 3 }}>Catatan untuk Mentor (opsional)</label>
+              <textarea value={draft.catatan} onChange={e => setDraft({ ...draft, catatan: e.target.value })} rows={2}
+                placeholder="Mis. Mohon arahan terkait penentuan indikator keberhasilan"
+                style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 9, border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', resize: 'none', boxSizing: 'border-box' }}/>
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 8 }}>
+              <Button variant="ghost" onClick={() => setShowForm(false)}>Batal</Button>
+              <Button variant="primary" icon={Send} onClick={requestOneOnOne}>Kirim Permintaan</Button>
+            </div>
+          </div>
+        )}
 
-            {[
-              { key: 'effectiveness', label: 'Efektivitas Mentor', desc: 'Seberapa membantu mentor dalam memberikan insight & arahan?', value: effectiveness, set: setEffectiveness },
-              { key: 'quality', label: 'Kualitas Sesi Coaching', desc: 'Seberapa baik kualitas sesi 1-on-1 yang dilaksanakan?', value: quality, set: setQuality },
-            ].map(q => (
-              <div key={q.key} style={{ marginBottom: 22 }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 4 }}>
-                  <label style={{ fontSize: 12, fontWeight: 600 }}>{q.label}</label>
-                  <span style={{ fontFamily: fonts.display, fontSize: 24, fontWeight: 300, color: theme.navy }}>{q.value}<span style={{ fontSize: 11, color: theme.textSubtle }}>/10</span></span>
+        {/* Active session displays */}
+        {activeSession && !showForm && (
+          <>
+            {sessionByPeserta && (
+              <div style={{ background: theme.warningBg, border: `1px solid ${theme.warning}`, borderRadius: 2, padding: 14 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 8 }}>
+                  <Clock size={14} style={{ color: theme.warning }}/>
+                  <div style={{ fontSize: 11.5, fontWeight: 600, color: theme.text }}>Menunggu konfirmasi mentor</div>
+                  <div style={{ marginLeft: 'auto', fontSize: 10, color: theme.textMuted, fontFamily: fonts.mono }}>Diajukan {activeSession.proposedAt}</div>
                 </div>
-                <p style={{ fontSize: 11, color: theme.textMuted, margin: '0 0 10px' }}>{q.desc}</p>
-                <div style={{ display: 'flex', gap: 4 }}>
-                  {[1,2,3,4,5,6,7,8,9,10].map(n => (
-                    <button key={n} onClick={() => !surveyDone && q.set(n)} disabled={surveyDone}
-                      style={{
-                        flex: 1, height: 32, fontSize: 11, fontFamily: fonts.mono, fontWeight: 600,
-                        background: n <= q.value ? (n >= 8 ? theme.success : n >= 5 ? theme.gold : theme.warning) : '#F1F3F6',
-                        color: n <= q.value ? '#fff' : theme.textSubtle,
-                        border: 'none', borderRadius: 2, cursor: surveyDone ? 'default' : 'pointer',
-                      }}>{n}</button>
-                  ))}
+                <div style={{ fontSize: 11.5, color: theme.text, lineHeight: 1.5 }}>
+                  <div><strong>{fmtTanggal(activeSession.tanggal)}</strong> · {activeSession.waktu} WIB · {activeSession.durasi} menit</div>
+                  <div style={{ color: theme.textMuted, marginTop: 3 }}>{activeSession.lokasi}</div>
+                  <div style={{ color: theme.textMuted, marginTop: 3 }}>Topik: {activeSession.topik}</div>
+                  {activeSession.catatan && <div style={{ marginTop: 6, fontStyle: 'italic', color: theme.textMuted }}>"{activeSession.catatan}"</div>}
                 </div>
               </div>
-            ))}
-
-            <div style={{ marginBottom: 16 }}>
-              <label style={{ display: 'block', fontSize: 12, fontWeight: 600, marginBottom: 4 }}>Komentar</label>
-              <textarea value={comment} onChange={e => setComment(e.target.value)} rows={4} disabled={surveyDone}
-                placeholder="Bagikan pengalaman Anda dalam sesi ini..."
-                style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 10, border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', resize: 'none', boxSizing: 'border-box', background: surveyDone ? theme.bg : '#fff' }}/>
-            </div>
-
-            {!surveyDone && (
-              <div style={{ paddingTop: 14, borderTop: `1px solid ${theme.border}`, display: 'flex', justifyContent: 'flex-end' }}>
-                <Button variant="primary" icon={Send} onClick={submitSurvey}>Submit Survey</Button>
-              </div>
             )}
-          </div>
-        </>
-      )}
-    </div>
-  );
-}
 
-function PesertaQNA() {
-  const { qnaThreads, setQnaThreads, participants, pesertaPersonaId, toast, addAudit, pushNotif } = useApp();
-  const me = participants.find(p => p.id === pesertaPersonaId) || participants[0];
-
-  const [draft, setDraft] = useState({ subject: '', body: '' });
-  const [activeThreadId, setActiveThreadId] = useState(null);
-  const [reply, setReply] = useState('');
-
-  // Filter thread milik peserta ini
-  const myThreads = qnaThreads
-    .filter(t => t.pesertaId === me.id)
-    .sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));
-
-  const activeThread = myThreads.find(t => t.id === activeThreadId);
-
-  const submitNew = () => {
-    if (!draft.subject.trim() || !draft.body.trim()) { toast('Subject dan pertanyaan wajib diisi', 'warning'); return; }
-    const now = new Date();
-    const at = `${now.toISOString().slice(0,10)} ${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`;
-    const newThread = {
-      id: 'QT' + Date.now(),
-      pesertaId: me.id,
-      subject: draft.subject,
-      createdAt: at.slice(0, 10),
-      updatedAt: at.slice(0, 10),
-      status: 'pending',
-      adminUnread: true,
-      messages: [{ id: 'm' + Date.now(), from: 'peserta', author: me.nama, body: draft.body, at }],
-    };
-    setQnaThreads(prev => [newThread, ...prev]);
-    addAudit(me.nama, `Mengajukan QNA: ${draft.subject}`, null);
-    pushNotif('admin', { type: 'info', title: `QNA baru dari ${me.nama.split(' ').slice(0,2).join(' ')}`, desc: draft.subject });
-    toast('Pertanyaan terkirim ke Admin DSDM.', 'success');
-    setDraft({ subject: '', body: '' });
-    setActiveThreadId(newThread.id);
-  };
-
-  const sendReply = () => {
-    if (!reply.trim()) { toast('Tulis pesan terlebih dahulu', 'warning'); return; }
-    const now = new Date();
-    const at = `${now.toISOString().slice(0,10)} ${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`;
-    const newMsg = { id: 'm' + Date.now(), from: 'peserta', author: me.nama, body: reply, at };
-    setQnaThreads(prev => prev.map(t => t.id !== activeThread.id ? t : ({
-      ...t,
-      messages: [...t.messages, newMsg],
-      status: 'pending',
-      adminUnread: true,
-      updatedAt: at.slice(0,10),
-    })));
-    addAudit(me.nama, `Membalas QNA: ${activeThread.subject}`, null);
-    pushNotif('admin', { type: 'info', title: `Lanjutan QNA dari ${me.nama.split(' ').slice(0,2).join(' ')}`, desc: activeThread.subject });
-    toast('Pesan terkirim.', 'success');
-    setReply('');
-  };
-
-  const totalPending = myThreads.filter(t => t.status === 'pending').length;
-  const totalAnswered = myThreads.length - totalPending;
-
-  return (
-    <div>
-      <SectionHeader
-        eyebrow="Peserta · QNA"
-        title="QNA dengan Admin DSDM"
-        desc={`${myThreads.length} pertanyaan · ${totalAnswered} dijawab · ${totalPending} menunggu balasan`}
-      />
-
-      {/* New question composer */}
-      {!activeThread && (
-        <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderRadius: 2, padding: 18, marginBottom: 18 }}>
-          <div style={{ fontSize: 12, fontWeight: 600, marginBottom: 10, fontFamily: fonts.display }}>Pertanyaan Baru</div>
-          <input value={draft.subject} onChange={e => setDraft({ ...draft, subject: e.target.value })}
-            placeholder="Subject (mis. Jadwal sesi, Akomodasi, Materi)"
-            style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 10, border: `1px solid ${theme.border}`, borderRadius: 2, marginBottom: 10, outline: 'none', boxSizing: 'border-box' }}/>
-          <textarea value={draft.body} onChange={e => setDraft({ ...draft, body: e.target.value })} rows={4}
-            placeholder="Tulis pertanyaan Anda di sini..."
-            style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 10, border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', resize: 'none', boxSizing: 'border-box' }}/>
-          <div style={{ marginTop: 10, display: 'flex', justifyContent: 'flex-end' }}>
-            <Button variant="primary" icon={Send} onClick={submitNew}>Kirim ke Admin</Button>
-          </div>
-        </div>
-      )}
-
-      {/* Thread detail view */}
-      {activeThread && (
-        <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderRadius: 2, marginBottom: 18, overflow: 'hidden' }}>
-          {/* Back + subject */}
-          <div style={{ padding: '12px 18px', borderBottom: `1px solid ${theme.border}`, background: theme.bg, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-            <button onClick={() => setActiveThreadId(null)}
-              style={{ background: 'transparent', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 5, fontSize: 11, color: theme.textMuted, fontFamily: fonts.body, padding: 0 }}>
-              <ArrowLeft size={12}/> Kembali ke daftar
-            </button>
-            <Pill variant={activeThread.status === 'pending' ? 'warning' : 'success'}>
-              {activeThread.status === 'pending' ? 'Menunggu admin' : 'Dijawab'}
-            </Pill>
-          </div>
-          <div style={{ padding: '12px 18px', borderBottom: `1px solid ${theme.border}` }}>
-            <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.12em', color: theme.textMuted, fontWeight: 600, marginBottom: 3 }}>Subject</div>
-            <div style={{ fontSize: 14, fontWeight: 600, color: theme.text, fontFamily: fonts.display }}>{activeThread.subject}</div>
-          </div>
-
-          {/* Messages */}
-          <div style={{ padding: 20, background: '#FAFBFC', maxHeight: 420, overflowY: 'auto' }}>
-            {activeThread.messages.map(msg => {
-              const isMe = msg.from === 'peserta';
-              return (
-                <div key={msg.id} style={{ display: 'flex', justifyContent: isMe ? 'flex-end' : 'flex-start', marginBottom: 14 }}>
-                  <div style={{ maxWidth: '78%' }}>
-                    <div style={{ display: 'flex', alignItems: 'baseline', gap: 6, marginBottom: 3, justifyContent: isMe ? 'flex-end' : 'flex-start' }}>
-                      <span style={{ fontSize: 10.5, fontWeight: 600, color: isMe ? theme.text : theme.navy }}>
-                        {isMe ? 'Anda' : `${msg.author.split(',')[0]} · Admin`}
-                      </span>
-                      <span style={{ fontSize: 9.5, color: theme.textSubtle, fontFamily: fonts.mono }}>{msg.at}</span>
-                    </div>
-                    <div style={{
-                      padding: '10px 14px',
-                      background: isMe ? theme.gold : '#fff',
-                      color: isMe ? theme.navy : theme.text,
-                      border: isMe ? 'none' : `1px solid ${theme.border}`,
-                      borderRadius: isMe ? '12px 12px 2px 12px' : '12px 12px 12px 2px',
-                      fontSize: 12, lineHeight: 1.55, whiteSpace: 'pre-wrap',
-                      boxShadow: isMe ? 'none' : '0 1px 2px rgba(0,0,0,0.04)',
-                    }}>
-                      {msg.body}
-                    </div>
+            {sessionByMentor && (
+              <div style={{ background: '#fff', border: `2px solid ${theme.gold}`, borderRadius: 3, overflow: 'hidden' }}>
+                <div style={{ background: theme.goldLight + '25', padding: '10px 16px', borderBottom: `1px solid ${theme.gold}40`, display: 'flex', alignItems: 'center', gap: 8 }}>
+                  <Calendar size={14} style={{ color: theme.goldDark }}/>
+                  <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.18em', color: theme.goldDark, fontWeight: 700 }}>Tindakan Diperlukan</div>
+                  <div style={{ marginLeft: 'auto', fontSize: 11, fontWeight: 600, color: theme.text }}>
+                    {sessionIsMentorReschedule ? 'Mentor mengusulkan jadwal alternatif' : 'Mentor mengajukan sesi 1-on-1'}
                   </div>
                 </div>
-              );
-            })}
-          </div>
-
-          {/* Reply composer */}
-          <div style={{ borderTop: `1px solid ${theme.border}`, padding: 14, background: '#fff' }}>
-            <textarea value={reply} onChange={e => setReply(e.target.value)} rows={3}
-              placeholder={activeThread.status === 'answered' ? 'Lanjutkan diskusi...' : 'Tambah info atau klarifikasi...'}
-              onKeyDown={e => { if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') sendReply(); }}
-              style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 10, border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', resize: 'none', boxSizing: 'border-box', lineHeight: 1.5 }}/>
-            <div style={{ marginTop: 8, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <div style={{ fontSize: 10, color: theme.textMuted, fontStyle: 'italic' }}>
-                Cmd/Ctrl + Enter untuk kirim
+                <div style={{ padding: 16 }}>
+                  <div style={{ fontSize: 11.5, color: theme.text, lineHeight: 1.5, marginBottom: 10 }}>
+                    <div><strong>{fmtTanggal(activeSession.tanggal)}</strong> · {activeSession.waktu} WIB · {activeSession.durasi} menit</div>
+                    <div style={{ color: theme.textMuted, marginTop: 3 }}>{activeSession.lokasi}</div>
+                    <div style={{ color: theme.textMuted, marginTop: 3 }}>Topik: {activeSession.topik}</div>
+                    {activeSession.catatan && <div style={{ marginTop: 6, fontStyle: 'italic', color: theme.textMuted }}>Catatan mentor: "{activeSession.catatan}"</div>}
+                  </div>
+                  {activeSession.rescheduleReason && (
+                    <div style={{ padding: 10, background: theme.bg, borderRadius: 2, fontSize: 11, color: theme.textMuted, lineHeight: 1.5, fontStyle: 'italic', marginBottom: 12 }}>
+                      Alasan reschedule: "{activeSession.rescheduleReason}"
+                    </div>
+                  )}
+                  <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 8 }}>
+                    <Button variant="ghost" onClick={() => { setShowForm(true); setDraft({ tanggal: '', waktu: '14:00', durasi: 60, lokasi: 'Online', topik: activeSession.topik || '', catatan: '' }); }}>Ajukan Jadwal Lain</Button>
+                    <Button variant="primary" icon={CheckCircle2} onClick={acceptMentorReschedule}>Setujui Jadwal</Button>
+                  </div>
+                </div>
               </div>
-              <Button variant="primary" icon={Send} onClick={sendReply} disabled={!reply.trim()}>Kirim</Button>
-            </div>
-          </div>
-        </div>
-      )}
+            )}
 
-      {/* Thread list */}
-      {!activeThread && (
-        <>
-          <div style={{ fontSize: 10, textTransform: 'uppercase', letterSpacing: '0.15em', color: theme.textMuted, fontWeight: 600, marginBottom: 10 }}>
-            Riwayat Pertanyaan Anda ({myThreads.length})
+            {sessionScheduled && (
+              <div style={{ background: '#fff', border: `1px solid ${theme.success}`, borderRadius: 2, overflow: 'hidden' }}>
+                <div style={{ background: theme.success, color: '#fff', padding: '10px 16px', display: 'flex', alignItems: 'center', gap: 8 }}>
+                  <CheckCircle2 size={14}/>
+                  <div style={{ fontSize: 10.5, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.15em' }}>Sesi 1-on-1 Terjadwal</div>
+                </div>
+                <div style={{ padding: 16 }}>
+                  <div style={{ fontSize: 11.5, color: theme.text, lineHeight: 1.5, marginBottom: 12 }}>
+                    <div><strong>{fmtTanggal(activeSession.tanggal)}</strong> · {activeSession.waktu} WIB · {activeSession.durasi} menit</div>
+                    <div style={{ color: theme.textMuted, marginTop: 3 }}>{activeSession.lokasi}</div>
+                    <div style={{ color: theme.textMuted, marginTop: 3 }}>Topik: {activeSession.topik}</div>
+                  </div>
+                  {activeSession.teamsLink && (
+                    <a href={activeSession.teamsLink} target="_blank" rel="noopener noreferrer"
+                      style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '8px 14px', background: '#5059C9', color: '#fff', borderRadius: 2, textDecoration: 'none', fontSize: 11, fontWeight: 600, fontFamily: fonts.body }}>
+                      <PlayCircle size={13}/> Buka Teams Meeting
+                    </a>
+                  )}
+                </div>
+              </div>
+            )}
+
+            {sessionCompleted && (
+              <div style={{ background: theme.bg, border: `1px solid ${theme.border}`, borderRadius: 2, padding: 14, fontSize: 11.5, color: theme.text, display: 'flex', alignItems: 'center', gap: 10 }}>
+                <CheckCircle2 size={14} style={{ color: theme.success }}/>
+                <div>Sesi 1-on-1 telah selesai pada {fmtTanggalShort(activeSession.tanggal)}.</div>
+              </div>
+            )}
+          </>
+        )}
+
+        {/* History sesi sebelumnya (>1 session) */}
+        {sessions.length > 1 && (
+          <div style={{ marginTop: 18, paddingTop: 14, borderTop: `1px solid ${theme.border}` }}>
+            <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.12em', color: theme.textMuted, fontWeight: 700, marginBottom: 8 }}>Riwayat Sesi</div>
+            {sessions.slice(0, -1).reverse().map(s => (
+              <div key={s.id} style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '8px 0', borderBottom: `1px dashed ${theme.border}`, fontSize: 11, color: theme.textMuted }}>
+                <span style={{ fontFamily: fonts.mono }}>{fmtTanggalShort(s.tanggal)}</span>
+                <span>·</span>
+                <span style={{ flex: 1 }}>{s.topik}</span>
+                <Pill variant={s.status === 'completed' ? 'success' : 'default'} size="xs">{s.status}</Pill>
+              </div>
+            ))}
           </div>
-          {myThreads.length === 0 ? (
-            <div style={{ background: '#fff', border: `1px dashed ${theme.borderStrong}`, padding: 32, textAlign: 'center', borderRadius: 2, fontSize: 11.5, color: theme.textMuted }}>
-              <MessageSquare size={28} style={{ color: theme.borderStrong, margin: '0 auto 8px' }}/>
-              <div>Belum ada pertanyaan. Silakan ajukan pertanyaan baru di atas.</div>
-            </div>
-          ) : (
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-              {myThreads.map(t => {
-                const lastMsg = t.messages[t.messages.length - 1];
-                const lastFromAdmin = lastMsg?.from === 'admin';
-                const adminReplied = t.messages.some(m => m.from === 'admin');
-                return (
-                  <button key={t.id} onClick={() => setActiveThreadId(t.id)}
-                    style={{ background: '#fff', border: `1px solid ${theme.border}`, borderLeft: lastFromAdmin && t.status === 'answered' ? `3px solid ${theme.success}` : `3px solid ${theme.warning}`, borderRadius: 2, padding: 14, cursor: 'pointer', textAlign: 'left', fontFamily: fonts.body, transition: 'all 0.1s' }}
-                    onMouseEnter={e => { e.currentTarget.style.borderColor = theme.gold; e.currentTarget.style.borderLeftColor = theme.gold; }}
-                    onMouseLeave={e => { e.currentTarget.style.borderColor = theme.border; e.currentTarget.style.borderLeftColor = lastFromAdmin && t.status === 'answered' ? theme.success : theme.warning; }}
-                  >
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 6 }}>
-                      <div style={{ fontSize: 12, fontWeight: 600, color: theme.text }}>{t.subject}</div>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                        <span style={{ fontSize: 10, color: theme.textSubtle, fontFamily: fonts.mono }}>{t.updatedAt}</span>
-                        <Pill variant={t.status === 'answered' ? 'success' : 'warning'}>{t.status === 'answered' ? 'Dijawab' : 'Menunggu'}</Pill>
-                      </div>
-                    </div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 11, color: theme.textMuted, lineHeight: 1.5 }}>
-                      <span style={{ fontSize: 9.5, color: lastFromAdmin ? theme.success : theme.gold, fontWeight: 600, flexShrink: 0 }}>
-                        {lastFromAdmin ? '↙ Admin:' : '↗ Anda:'}
-                      </span>
-                      <span style={{ flex: 1, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{lastMsg?.body || ''}</span>
-                    </div>
-                    <div style={{ marginTop: 6, display: 'flex', gap: 8, alignItems: 'center', fontSize: 9.5, color: theme.textSubtle, fontFamily: fonts.mono }}>
-                      <span>{t.messages.length} pesan</span>
-                      <span>·</span>
-                      <span>dibuka {t.createdAt}</span>
-                      {!adminReplied && <>
-                        <span style={{ marginLeft: 'auto', color: theme.warning, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: 9 }}>Belum dibalas</span>
-                      </>}
-                    </div>
-                  </button>
-                );
-              })}
-            </div>
-          )}
-        </>
-      )}
+        )}
+      </div>
     </div>
   );
 }
+
 
 // =====================================================================
 // PESERTA: MONITORING (3 tab dengan progressive unlock)
@@ -5613,106 +6343,358 @@ function PesertaMonitoring() {
   );
 }
 
-// ----- Monitoring 1 form -----
+// ----- Helper: label kompak untuk plan item di dropdown / preview -----
+function planItemDropdownLabel(it) {
+  const a = areaLabel(it.area);
+  const suffix = it.area === 'lainnya' && it.areaLainnya ? ` · ${it.areaLainnya}` : '';
+  const hal = (it.halDilakukan || '').slice(0, 60);
+  return `${a}${suffix}${hal ? ` — ${hal}${it.halDilakukan?.length > 60 ? '…' : ''}` : ''}`;
+}
+
+// ----- Monitoring 1 form — list of tindak lanjut, link ke coaching plan items -----
 function Mon1Form({ me, setParticipants, toast, addAudit, pushNotif }) {
   const existing = me.stageData.monitoring1?.status === 'completed' ? me.stageData.monitoring1 : null;
-  const [form, setForm] = useState({
-    tindakLanjut: existing?.tindakLanjut || '',
-    kendala: existing?.kendala || '',
-    dukungan: existing?.dukungan || '',
-    pelatihan: existing?.pelatihan || '',
-    sertifikasi: existing?.sertifikasi || '',
-    kepanitiaan: existing?.kepanitiaan || '',
-    lainnya: existing?.lainnya || '',
+  const planItems = me.stageData.coaching?.plan?.items || [];
+
+  const blankItem = () => ({
+    id: 'M1I' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
+    coachingPlanItemId: planItems[0]?.id || '',
+    areaLabel: '',
+    tindakLanjut: '', kendala: '', dukungan: '',
   });
+
+  const [items, setItems] = useState([]);
 
   useEffect(() => {
     const e = me.stageData.monitoring1?.status === 'completed' ? me.stageData.monitoring1 : null;
-    setForm({
-      tindakLanjut: e?.tindakLanjut || '', kendala: e?.kendala || '', dukungan: e?.dukungan || '',
-      pelatihan: e?.pelatihan || '', sertifikasi: e?.sertifikasi || '',
-      kepanitiaan: e?.kepanitiaan || '', lainnya: e?.lainnya || '',
-    });
+    if (e?.items && e.items.length > 0) {
+      setItems(e.items.map(it => ({ ...it })));
+    } else {
+      setItems([blankItem()]);
+    }
   }, [me.id]);
 
+  const updateItem = (idx, field, value) => {
+    setItems(prev => prev.map((it, i) => i === idx ? { ...it, [field]: value } : it));
+  };
+  const removeItem = (idx) => {
+    if (items.length === 1) { toast('Minimal harus ada 1 tindak lanjut.', 'warning'); return; }
+    setItems(prev => prev.filter((_, i) => i !== idx));
+  };
+  const addItem = () => setItems(prev => [...prev, blankItem()]);
+
+  const isItemComplete = (it) =>
+    !!it.tindakLanjut?.trim() && !!it.kendala?.trim() && !!it.dukungan?.trim() &&
+    (it.coachingPlanItemId !== 'lainnya' || !!it.areaLabel?.trim());
+  const allComplete = items.length > 0 && items.every(isItemComplete);
+
+  const isReadOnly = !!existing;
   const submit = () => {
-    if (!form.tindakLanjut.trim() || !form.kendala.trim() || !form.dukungan.trim()) {
-      toast('Mohon lengkapi 3 pertanyaan utama (tindak lanjut, kendala, dukungan)', 'warning'); return;
-    }
+    if (!allComplete) { toast('Mohon lengkapi semua tindak lanjut.', 'warning'); return; }
     setParticipants(prev => prev.map(p => p.id !== me.id ? p : ({
       ...p, stage: Math.max(p.stage, 5),
       stageData: {
         ...p.stageData,
-        monitoring1: { status: 'completed', submittedAt: new Date().toISOString().slice(0,10), ...form },
+        monitoring1: { status: 'completed', submittedAt: new Date().toISOString().slice(0,10), items },
       }
     })));
-    addAudit(me.nama, 'Submit form Monitoring 1', null);
-    pushNotif('mentor', { type: 'info', title: `${me.nama} submit Monitoring 1`, desc: 'Update progress tindak lanjut development plan' });
+    addAudit(me.nama, `Submit Monitoring 1 (${items.length} tindak lanjut)`, null);
+    pushNotif('mentor', { type: 'info', title: `${me.nama} submit Monitoring 1`, desc: `${items.length} tindak lanjut dari coaching plan` });
     pushNotif('admin', { type: 'info', title: `${me.nama} masuk Tahap 5`, desc: 'Monitoring 1 selesai · lanjut Monitoring 2' });
     toast('Monitoring 1 tersimpan. Lanjut ke Monitoring 2.', 'success');
   };
 
-  const isReadOnly = !!existing;
+  const renderItems = isReadOnly ? (existing.items || []) : items;
 
   return (
     <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderLeft: `4px solid ${existing ? theme.success : theme.gold}`, borderRadius: 2, padding: 24 }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 18, paddingBottom: 14, borderBottom: `1px solid ${theme.border}` }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 14, paddingBottom: 12, borderBottom: `1px solid ${theme.border}` }}>
         <div>
           <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.18em', color: theme.gold, fontWeight: 700 }}>Tahap 04</div>
           <div style={{ fontSize: 17, fontWeight: 600, color: theme.text, fontFamily: fonts.display, marginTop: 2 }}>Monitoring 1 · Tindak Lanjut Awal</div>
-          <div style={{ fontSize: 11, color: theme.textMuted, marginTop: 3 }}>Update progress development plan setelah sesi coaching</div>
+          <div style={{ fontSize: 11, color: theme.textMuted, marginTop: 3 }}>Update progress tindak lanjut atas rencana pengembangan dari coaching plan yang disetujui mentor</div>
         </div>
         {existing && <Pill variant="success">Selesai · {existing.submittedAt}</Pill>}
       </div>
 
-      {/* Pertanyaan utama (3) */}
-      {[
-        { key: 'tindakLanjut', label: 'Tindak Lanjut yang Sudah Dilakukan', desc: 'Terkait tindak lanjut rencana pengembangan individu setelah sesi DIKSI, hal apa yang sudah Anda lakukan?', required: true, rows: 4 },
-        { key: 'kendala', label: 'Kendala yang Dihadapi', desc: 'Apa kendala yang dihadapi terkait tindak lanjut rencana pengembangan Bapak/Ibu?', required: true, rows: 3 },
-        { key: 'dukungan', label: 'Dukungan yang Dibutuhkan', desc: 'Dukungan dan support seperti apa yang dibutuhkan terkait tindak lanjut rencana pengembangan Bapak/Ibu?', required: true, rows: 3 },
-      ].map(f => (
-        <div key={f.key} style={{ marginBottom: 18 }}>
-          <label style={{ display: 'block', fontSize: 12, fontWeight: 600, color: theme.text, marginBottom: 3 }}>
-            {f.label} {f.required && <span style={{ color: theme.danger }}>*</span>}
-          </label>
-          <div style={{ fontSize: 11, color: theme.textMuted, lineHeight: 1.5, marginBottom: 8 }}>{f.desc}</div>
-          <textarea value={form[f.key]} onChange={e => setForm({ ...form, [f.key]: e.target.value })} rows={f.rows} disabled={isReadOnly}
-            style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 10, border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', resize: 'none', boxSizing: 'border-box', background: isReadOnly ? theme.bg : '#fff', lineHeight: 1.55 }}/>
-        </div>
-      ))}
-
-      {/* Tindak lanjut spesifik (4) */}
-      <div style={{ paddingTop: 14, borderTop: `1px solid ${theme.border}` }}>
-        <div style={{ fontSize: 10, textTransform: 'uppercase', letterSpacing: '0.15em', color: theme.textMuted, fontWeight: 600, marginBottom: 12 }}>Detail Tindak Lanjut</div>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
-          {[
-            { key: 'pelatihan', label: 'Pelatihan / IHT', placeholder: 'Mis. Strategic Decision-Making Workshop · Q2 2026' },
-            { key: 'sertifikasi', label: 'Sertifikasi', placeholder: 'Mis. CFA Level 3 · sedang persiapan' },
-            { key: 'kepanitiaan', label: 'Kepanitiaan', placeholder: 'Mis. Anggota Tim Penyusun Kebijakan...' },
-            { key: 'lainnya', label: 'Lainnya', placeholder: 'Aktivitas tindak lanjut lainnya' },
-          ].map(f => (
-            <div key={f.key}>
-              <label style={{ display: 'block', fontSize: 11, fontWeight: 600, marginBottom: 4 }}>{f.label}</label>
-              <textarea value={form[f.key]} onChange={e => setForm({ ...form, [f.key]: e.target.value })} rows={2} disabled={isReadOnly}
-                placeholder={f.placeholder}
-                style={{ width: '100%', fontSize: 11.5, fontFamily: fonts.body, padding: 10, border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', resize: 'none', boxSizing: 'border-box', background: isReadOnly ? theme.bg : '#fff', lineHeight: 1.5 }}/>
+      {/* Reference coaching plan items (compact, collapsible feel) */}
+      {planItems.length > 0 && (
+        <div style={{ background: theme.bg, border: `1px solid ${theme.border}`, borderRadius: 2, padding: 12, marginBottom: 14, fontSize: 11 }}>
+          <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.12em', color: theme.textMuted, fontWeight: 700, marginBottom: 6 }}>Referensi · Coaching Plan Anda ({planItems.length} item)</div>
+          {planItems.map((it, idx) => (
+            <div key={it.id} style={{ paddingTop: idx > 0 ? 4 : 0, color: theme.text, lineHeight: 1.5 }}>
+              <span style={{ fontFamily: fonts.mono, color: theme.textSubtle, fontSize: 10 }}>#{idx + 1}</span>{' '}
+              <strong>{areaLabel(it.area)}{it.area === 'lainnya' && it.areaLainnya ? ` · ${it.areaLainnya}` : ''}</strong>
+              <span style={{ color: theme.textMuted }}> — {(it.halDilakukan || '').slice(0, 100)}{(it.halDilakukan || '').length > 100 ? '…' : ''}</span>
             </div>
           ))}
         </div>
-      </div>
+      )}
+
+      {/* Items list */}
+      {renderItems.map((it, idx) => {
+        const linkedPlan = planItems.find(p => p.id === it.coachingPlanItemId);
+        return (
+          <div key={it.id} style={{ background: isReadOnly ? theme.bg : '#fff', border: `1px solid ${theme.border}`, borderRadius: 2, padding: 14, marginBottom: 12 }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 10, marginBottom: 10 }}>
+              <div style={{ fontSize: 10, color: theme.textMuted, fontFamily: fonts.mono }}>Tindak Lanjut #{idx + 1}</div>
+              {!isReadOnly && renderItems.length > 1 && (
+                <button onClick={() => removeItem(idx)}
+                  style={{ background: 'transparent', border: 'none', cursor: 'pointer', padding: 4, color: theme.danger, display: 'flex', alignItems: 'center', gap: 4, fontSize: 11 }}>
+                  <Trash2 size={12}/> Hapus
+                </button>
+              )}
+            </div>
+
+            {/* Coaching plan item reference */}
+            <div style={{ marginBottom: 10 }}>
+              <label style={{ display: 'block', fontSize: 11, fontWeight: 600, color: theme.text, marginBottom: 4 }}>Terkait Item Coaching Plan {!isReadOnly && <span style={{ color: theme.danger }}>*</span>}</label>
+              {isReadOnly ? (
+                <div style={{ fontSize: 12, color: theme.text, padding: '8px 12px', background: '#fff', border: `1px solid ${theme.border}`, borderRadius: 2 }}>
+                  {linkedPlan
+                    ? <>{areaLabel(linkedPlan.area)}{linkedPlan.area === 'lainnya' && linkedPlan.areaLainnya ? ` · ${linkedPlan.areaLainnya}` : ''} <span style={{ color: theme.textMuted }}>— {linkedPlan.halDilakukan?.slice(0, 80)}{linkedPlan.halDilakukan?.length > 80 ? '…' : ''}</span></>
+                    : <span style={{ color: theme.textMuted }}>{it.coachingPlanItemId === 'lainnya' ? `Lainnya · ${it.areaLabel || '-'}` : '[Item plan tidak ditemukan]'}</span>
+                  }
+                </div>
+              ) : (
+                <select value={it.coachingPlanItemId} onChange={e => updateItem(idx, 'coachingPlanItemId', e.target.value)}
+                  style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 9, border: `1px solid ${theme.border}`, borderRadius: 2, background: '#fff', outline: 'none', boxSizing: 'border-box' }}>
+                  {planItems.map(pi => <option key={pi.id} value={pi.id}>{planItemDropdownLabel(pi)}</option>)}
+                  <option value="lainnya">Lainnya (di luar coaching plan)</option>
+                </select>
+              )}
+            </div>
+
+            {it.coachingPlanItemId === 'lainnya' && (
+              <div style={{ marginBottom: 10 }}>
+                <label style={{ display: 'block', fontSize: 11, fontWeight: 600, color: theme.text, marginBottom: 4 }}>Sebutkan Kegiatan {!isReadOnly && <span style={{ color: theme.danger }}>*</span>}</label>
+                {isReadOnly ? (
+                  <div style={{ fontSize: 12, color: theme.text, padding: '8px 12px', background: '#fff', border: `1px solid ${theme.border}`, borderRadius: 2 }}>{it.areaLabel || '-'}</div>
+                ) : (
+                  <input value={it.areaLabel} onChange={e => updateItem(idx, 'areaLabel', e.target.value)}
+                    placeholder="Mis. Inisiatif spontan / cross-project"
+                    style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 9, border: `1px solid ${theme.border}`, borderRadius: 2, background: '#fff', outline: 'none', boxSizing: 'border-box' }}/>
+                )}
+              </div>
+            )}
+
+            {[
+              { key: 'tindakLanjut', label: 'Tindak Lanjut yang Sudah Dilakukan', desc: 'Apa konkretnya yang sudah Anda lakukan untuk merealisasikan item plan ini?', placeholder: 'Mis. Sudah ikut workshop X, deliver milestone Y, dst.' },
+              { key: 'kendala',       label: 'Kendala yang Dihadapi',               desc: 'Hambatan, blocker, atau tantangan dalam pelaksanaannya',                       placeholder: 'Mis. Beban operasional masih tinggi, dst.' },
+              { key: 'dukungan',       label: 'Dukungan yang Dibutuhkan',            desc: 'Bantuan / resource / approval yang diperlukan agar bisa progress lebih jauh',  placeholder: 'Mis. Akses ke data X, mentoring framework Y, dst.' },
+            ].map(f => (
+              <div key={f.key} style={{ marginBottom: 8 }}>
+                <label style={{ display: 'block', fontSize: 11, fontWeight: 600, color: theme.text, marginBottom: 3 }}>{f.label} {!isReadOnly && <span style={{ color: theme.danger }}>*</span>}</label>
+                <div style={{ fontSize: 10.5, color: theme.textMuted, marginBottom: 5 }}>{f.desc}</div>
+                {isReadOnly ? (
+                  <div style={{ fontSize: 12, color: theme.text, padding: '8px 12px', background: '#fff', border: `1px solid ${theme.border}`, borderRadius: 2, whiteSpace: 'pre-wrap', lineHeight: 1.55 }}>{it[f.key] || <span style={{ color: theme.textSubtle, fontStyle: 'italic' }}>—</span>}</div>
+                ) : (
+                  <textarea value={it[f.key]} onChange={e => updateItem(idx, f.key, e.target.value)} rows={2} placeholder={f.placeholder}
+                    style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 9, border: `1px solid ${theme.border}`, borderRadius: 2, background: '#fff', outline: 'none', resize: 'vertical', boxSizing: 'border-box', lineHeight: 1.5 }}/>
+                )}
+              </div>
+            ))}
+          </div>
+        );
+      })}
 
       {!isReadOnly && (
-        <div style={{ paddingTop: 16, marginTop: 16, borderTop: `1px solid ${theme.border}`, display: 'flex', justifyContent: 'flex-end' }}>
-          <Button variant="primary" icon={Send} onClick={submit}>Submit Monitoring 1</Button>
-        </div>
+        <>
+          <Button variant="ghost" icon={Plus} onClick={addItem} style={{ marginBottom: 14 }}>Tambah Tindak Lanjut</Button>
+          <div style={{ paddingTop: 14, borderTop: `1px solid ${theme.border}`, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <div style={{ fontSize: 11, color: theme.textMuted }}>{allComplete ? `${items.length} tindak lanjut lengkap · siap submit` : `${items.filter(isItemComplete).length} dari ${items.length} tindak lanjut lengkap`}</div>
+            <Button variant="primary" icon={Send} onClick={submit} disabled={!allComplete}>Submit Monitoring 1</Button>
+          </div>
+        </>
       )}
     </div>
   );
 }
 
-// ----- Monitoring 2 form -----
+// ----- Monitoring 2 form — tindak lanjut terusan untuk item plan yang belum dicover di Mon1 -----
 function Mon2Form({ me, setParticipants, toast, addAudit, pushNotif }) {
   const existing = me.stageData.monitoring2?.status === 'completed' ? me.stageData.monitoring2 : null;
+  const planItems = me.stageData.coaching?.plan?.items || [];
+  const mon1Items = me.stageData.monitoring1?.items || [];
+
+  // Items plan yang sudah/belum dicover di Mon1
+  const coveredInMon1Ids = new Set(mon1Items.map(i => i.coachingPlanItemId).filter(id => id && id !== 'lainnya'));
+  const remainingItems = planItems.filter(p => !coveredInMon1Ids.has(p.id));
+
+  const blankItem = (preferredPlanId) => ({
+    id: 'M2I' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
+    coachingPlanItemId: preferredPlanId || remainingItems[0]?.id || planItems[0]?.id || '',
+    areaLabel: '',
+    tindakLanjut: '', kendala: '', dukungan: '',
+  });
+
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    const e = me.stageData.monitoring2?.status === 'completed' ? me.stageData.monitoring2 : null;
+    if (e?.items && e.items.length > 0) {
+      setItems(e.items.map(it => ({ ...it })));
+    } else if (remainingItems.length > 0) {
+      // Pre-populate dengan items remaining sebagai starter
+      setItems(remainingItems.map(pi => ({
+        id: 'M2I' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6) + pi.id,
+        coachingPlanItemId: pi.id,
+        areaLabel: '',
+        tindakLanjut: '', kendala: '', dukungan: '',
+      })));
+    } else {
+      setItems([blankItem()]);
+    }
+  }, [me.id]);
+
+  const updateItem = (idx, field, value) => {
+    setItems(prev => prev.map((it, i) => i === idx ? { ...it, [field]: value } : it));
+  };
+  const removeItem = (idx) => {
+    if (items.length === 1) { toast('Minimal harus ada 1 tindak lanjut.', 'warning'); return; }
+    setItems(prev => prev.filter((_, i) => i !== idx));
+  };
+  const addItem = () => setItems(prev => [...prev, blankItem()]);
+
+  const isItemComplete = (it) =>
+    !!it.tindakLanjut?.trim() && !!it.kendala?.trim() && !!it.dukungan?.trim() &&
+    (it.coachingPlanItemId !== 'lainnya' || !!it.areaLabel?.trim());
+  const allComplete = items.length > 0 && items.every(isItemComplete);
+
+  const isReadOnly = !!existing;
+  const submit = () => {
+    if (!allComplete) { toast('Mohon lengkapi semua tindak lanjut.', 'warning'); return; }
+    setParticipants(prev => prev.map(p => p.id !== me.id ? p : ({
+      ...p, stage: Math.max(p.stage, 6),
+      stageData: {
+        ...p.stageData,
+        monitoring2: { status: 'completed', submittedAt: new Date().toISOString().slice(0,10), items },
+      }
+    })));
+    addAudit(me.nama, `Submit Monitoring 2 (${items.length} tindak lanjut terusan)`, null);
+    pushNotif('mentor', { type: 'info', title: `${me.nama} submit Monitoring 2`, desc: `${items.length} tindak lanjut terusan dari coaching plan` });
+    pushNotif('admin', { type: 'info', title: `${me.nama} masuk Tahap 6`, desc: 'Monitoring 2 selesai · lanjut Monitoring 3' });
+    toast('Monitoring 2 tersimpan. Lanjut ke Monitoring 3.', 'success');
+  };
+
+  const renderItems = isReadOnly ? (existing.items || []) : items;
+
+  return (
+    <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderLeft: `4px solid ${existing ? theme.success : theme.gold}`, borderRadius: 2, padding: 24 }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 14, paddingBottom: 12, borderBottom: `1px solid ${theme.border}` }}>
+        <div>
+          <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.18em', color: theme.gold, fontWeight: 700 }}>Tahap 05</div>
+          <div style={{ fontSize: 17, fontWeight: 600, color: theme.text, fontFamily: fonts.display, marginTop: 2 }}>Monitoring 2 · Tindak Lanjut Terusan</div>
+          <div style={{ fontSize: 11, color: theme.textMuted, marginTop: 3 }}>Update progress tindak lanjut atas item coaching plan yang belum dicover di Monitoring 1</div>
+        </div>
+        {existing && <Pill variant="success">Selesai · {existing.submittedAt}</Pill>}
+      </div>
+
+      {/* Status referensi coaching plan items */}
+      {planItems.length > 0 && (
+        <div style={{ background: theme.bg, border: `1px solid ${theme.border}`, borderRadius: 2, padding: 12, marginBottom: 14, fontSize: 11 }}>
+          <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.12em', color: theme.textMuted, fontWeight: 700, marginBottom: 6 }}>Status Coverage Coaching Plan</div>
+          {planItems.map((it, idx) => {
+            const isCovered = coveredInMon1Ids.has(it.id);
+            return (
+              <div key={it.id} style={{ paddingTop: idx > 0 ? 4 : 0, color: theme.text, lineHeight: 1.5, display: 'flex', alignItems: 'center', gap: 8 }}>
+                {isCovered ? <CheckCircle2 size={11} style={{ color: theme.success }}/> : <Clock size={11} style={{ color: theme.warning }}/>}
+                <span style={{ flex: 1 }}>
+                  <strong>{areaLabel(it.area)}{it.area === 'lainnya' && it.areaLainnya ? ` · ${it.areaLainnya}` : ''}</strong>
+                  <span style={{ color: theme.textMuted }}> — {(it.halDilakukan || '').slice(0, 80)}{(it.halDilakukan || '').length > 80 ? '…' : ''}</span>
+                </span>
+                <Pill variant={isCovered ? 'success' : 'warning'}>{isCovered ? 'Dicover Mon1' : 'Belum'}</Pill>
+              </div>
+            );
+          })}
+        </div>
+      )}
+
+      {/* Items list */}
+      {renderItems.map((it, idx) => {
+        const linkedPlan = planItems.find(p => p.id === it.coachingPlanItemId);
+        return (
+          <div key={it.id} style={{ background: isReadOnly ? theme.bg : '#fff', border: `1px solid ${theme.border}`, borderRadius: 2, padding: 14, marginBottom: 12 }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 10, marginBottom: 10 }}>
+              <div style={{ fontSize: 10, color: theme.textMuted, fontFamily: fonts.mono }}>Tindak Lanjut #{idx + 1}</div>
+              {!isReadOnly && renderItems.length > 1 && (
+                <button onClick={() => removeItem(idx)}
+                  style={{ background: 'transparent', border: 'none', cursor: 'pointer', padding: 4, color: theme.danger, display: 'flex', alignItems: 'center', gap: 4, fontSize: 11 }}>
+                  <Trash2 size={12}/> Hapus
+                </button>
+              )}
+            </div>
+
+            <div style={{ marginBottom: 10 }}>
+              <label style={{ display: 'block', fontSize: 11, fontWeight: 600, color: theme.text, marginBottom: 4 }}>Terkait Item Coaching Plan {!isReadOnly && <span style={{ color: theme.danger }}>*</span>}</label>
+              {isReadOnly ? (
+                <div style={{ fontSize: 12, color: theme.text, padding: '8px 12px', background: '#fff', border: `1px solid ${theme.border}`, borderRadius: 2 }}>
+                  {linkedPlan
+                    ? <>{areaLabel(linkedPlan.area)}{linkedPlan.area === 'lainnya' && linkedPlan.areaLainnya ? ` · ${linkedPlan.areaLainnya}` : ''} <span style={{ color: theme.textMuted }}>— {linkedPlan.halDilakukan?.slice(0, 80)}{linkedPlan.halDilakukan?.length > 80 ? '…' : ''}</span></>
+                    : <span style={{ color: theme.textMuted }}>{it.coachingPlanItemId === 'lainnya' ? `Lainnya · ${it.areaLabel || '-'}` : '[Item plan tidak ditemukan]'}</span>
+                  }
+                </div>
+              ) : (
+                <select value={it.coachingPlanItemId} onChange={e => updateItem(idx, 'coachingPlanItemId', e.target.value)}
+                  style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 9, border: `1px solid ${theme.border}`, borderRadius: 2, background: '#fff', outline: 'none', boxSizing: 'border-box' }}>
+                  {planItems.map(pi => {
+                    const covered = coveredInMon1Ids.has(pi.id);
+                    return <option key={pi.id} value={pi.id}>{covered ? '(sudah Mon1) ' : ''}{planItemDropdownLabel(pi)}</option>;
+                  })}
+                  <option value="lainnya">Lainnya (di luar coaching plan)</option>
+                </select>
+              )}
+            </div>
+
+            {it.coachingPlanItemId === 'lainnya' && (
+              <div style={{ marginBottom: 10 }}>
+                <label style={{ display: 'block', fontSize: 11, fontWeight: 600, color: theme.text, marginBottom: 4 }}>Sebutkan Kegiatan {!isReadOnly && <span style={{ color: theme.danger }}>*</span>}</label>
+                {isReadOnly ? (
+                  <div style={{ fontSize: 12, color: theme.text, padding: '8px 12px', background: '#fff', border: `1px solid ${theme.border}`, borderRadius: 2 }}>{it.areaLabel || '-'}</div>
+                ) : (
+                  <input value={it.areaLabel} onChange={e => updateItem(idx, 'areaLabel', e.target.value)}
+                    placeholder="Mis. Inisiatif spontan / cross-project"
+                    style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 9, border: `1px solid ${theme.border}`, borderRadius: 2, background: '#fff', outline: 'none', boxSizing: 'border-box' }}/>
+                )}
+              </div>
+            )}
+
+            {[
+              { key: 'tindakLanjut', label: 'Tindak Lanjut yang Sudah Dilakukan', desc: 'Apa konkretnya yang sudah Anda lakukan setelah Monitoring 1?', placeholder: 'Mis. Sudah ikut workshop X, deliver milestone Y, dst.' },
+              { key: 'kendala',       label: 'Kendala yang Dihadapi',               desc: 'Hambatan / blocker dalam tindak lanjut periode ini',                         placeholder: 'Mis. Beban operasional masih tinggi, dst.' },
+              { key: 'dukungan',       label: 'Dukungan yang Dibutuhkan',            desc: 'Bantuan / resource / approval yang diperlukan agar bisa progress lebih jauh', placeholder: 'Mis. Akses ke data X, mentoring framework Y, dst.' },
+            ].map(f => (
+              <div key={f.key} style={{ marginBottom: 8 }}>
+                <label style={{ display: 'block', fontSize: 11, fontWeight: 600, color: theme.text, marginBottom: 3 }}>{f.label} {!isReadOnly && <span style={{ color: theme.danger }}>*</span>}</label>
+                <div style={{ fontSize: 10.5, color: theme.textMuted, marginBottom: 5 }}>{f.desc}</div>
+                {isReadOnly ? (
+                  <div style={{ fontSize: 12, color: theme.text, padding: '8px 12px', background: '#fff', border: `1px solid ${theme.border}`, borderRadius: 2, whiteSpace: 'pre-wrap', lineHeight: 1.55 }}>{it[f.key] || <span style={{ color: theme.textSubtle, fontStyle: 'italic' }}>—</span>}</div>
+                ) : (
+                  <textarea value={it[f.key]} onChange={e => updateItem(idx, f.key, e.target.value)} rows={2} placeholder={f.placeholder}
+                    style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 9, border: `1px solid ${theme.border}`, borderRadius: 2, background: '#fff', outline: 'none', resize: 'vertical', boxSizing: 'border-box', lineHeight: 1.5 }}/>
+                )}
+              </div>
+            ))}
+          </div>
+        );
+      })}
+
+      {!isReadOnly && (
+        <>
+          <Button variant="ghost" icon={Plus} onClick={addItem} style={{ marginBottom: 14 }}>Tambah Tindak Lanjut</Button>
+          <div style={{ paddingTop: 14, borderTop: `1px solid ${theme.border}`, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <div style={{ fontSize: 11, color: theme.textMuted }}>{allComplete ? `${items.length} tindak lanjut lengkap · siap submit` : `${items.filter(isItemComplete).length} dari ${items.length} tindak lanjut lengkap`}</div>
+            <Button variant="primary" icon={Send} onClick={submit} disabled={!allComplete}>Submit Monitoring 2</Button>
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
+
+// ----- Monitoring 3 form — penilaian manfaat DIKSI (likert + yesno) -----
+function Mon3Form({ me, setParticipants, toast, addAudit, pushNotif }) {
+  const existing = me.stageData.monitoring3?.status === 'completed' ? me.stageData.monitoring3 : null;
   const [form, setForm] = useState({
     manfaat: existing?.manfaat || 8,
     bertumbuh: existing?.bertumbuh || 8,
@@ -5723,7 +6705,7 @@ function Mon2Form({ me, setParticipants, toast, addAudit, pushNotif }) {
   });
 
   useEffect(() => {
-    const e = me.stageData.monitoring2?.status === 'completed' ? me.stageData.monitoring2 : null;
+    const e = me.stageData.monitoring3?.status === 'completed' ? me.stageData.monitoring3 : null;
     setForm({
       manfaat: e?.manfaat || 8, bertumbuh: e?.bertumbuh || 8, rekomendasi: e?.rekomendasi || 8,
       saran: e?.saran || '', bersedia_fasilitator: e?.bersedia_fasilitator || '', bersedia_pembekalan: e?.bersedia_pembekalan || '',
@@ -5735,15 +6717,15 @@ function Mon2Form({ me, setParticipants, toast, addAudit, pushNotif }) {
       toast('Mohon lengkapi semua field', 'warning'); return;
     }
     setParticipants(prev => prev.map(p => p.id !== me.id ? p : ({
-      ...p, stage: Math.max(p.stage, 6),
+      ...p, stage: Math.max(p.stage, 7),
       stageData: {
         ...p.stageData,
-        monitoring2: { status: 'completed', submittedAt: new Date().toISOString().slice(0,10), ...form },
+        monitoring3: { status: 'completed', submittedAt: new Date().toISOString().slice(0,10), ...form },
       }
     })));
-    addAudit(me.nama, 'Submit form Monitoring 2', null);
-    pushNotif('admin', { type: 'info', title: `${me.nama} masuk Tahap 6`, desc: 'Monitoring 2 selesai · lanjut Monitoring 3' });
-    toast('Monitoring 2 tersimpan. Lanjut ke Monitoring 3.', 'success');
+    addAudit(me.nama, 'Submit Monitoring 3 · Penilaian Manfaat DIKSI', null);
+    pushNotif('admin', { type: 'success', title: `${me.nama} masuk Tahap 7 Evaluasi`, desc: 'Monitoring 3 selesai · siap evaluasi akhir' });
+    toast('Penilaian manfaat tersimpan. Lanjut ke Evaluasi akhir.', 'success');
   };
 
   const isReadOnly = !!existing;
@@ -5792,16 +6774,16 @@ function Mon2Form({ me, setParticipants, toast, addAudit, pushNotif }) {
     <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderLeft: `4px solid ${existing ? theme.success : theme.gold}`, borderRadius: 2, padding: 24 }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 18, paddingBottom: 14, borderBottom: `1px solid ${theme.border}` }}>
         <div>
-          <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.18em', color: theme.gold, fontWeight: 700 }}>Tahap 05</div>
-          <div style={{ fontSize: 17, fontWeight: 600, color: theme.text, fontFamily: fonts.display, marginTop: 2 }}>Monitoring 2 · Penilaian Pertengahan</div>
+          <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.18em', color: theme.gold, fontWeight: 700 }}>Tahap 06</div>
+          <div style={{ fontSize: 17, fontWeight: 600, color: theme.text, fontFamily: fonts.display, marginTop: 2 }}>Monitoring 3 · Penilaian Manfaat DIKSI</div>
           <div style={{ fontSize: 11, color: theme.textMuted, marginTop: 3 }}>Penilaian manfaat program & kesediaan kontribusi balik</div>
         </div>
         {existing && <Pill variant="success">Selesai · {existing.submittedAt}</Pill>}
       </div>
 
-      {likertField('manfaat', 'Manfaat DIKSI bagi Anda', 'Sejauh mana DIKSI memberikan manfaat bagi Bapak/Ibu?')}
-      {likertField('bertumbuh', 'Bertumbuh Menjadi Versi Terbaik', 'Sejauh mana DIKSI membantu Bapak/Ibu bertumbuh menjadi versi terbaik?')}
-      {likertField('rekomendasi', 'Rekomendasi DIKSI', 'Sejauh mana Bapak/Ibu merekomendasikan DIKSI untuk diikuti oleh pegawai lainnya?')}
+      {likertField('manfaat',    'Manfaat DIKSI bagi Anda',           'Sejauh mana DIKSI memberikan manfaat bagi Bapak/Ibu?')}
+      {likertField('bertumbuh',  'Bertumbuh Menjadi Versi Terbaik',   'Sejauh mana DIKSI membantu Bapak/Ibu bertumbuh menjadi versi terbaik?')}
+      {likertField('rekomendasi','Rekomendasi DIKSI',                  'Sejauh mana Bapak/Ibu merekomendasikan DIKSI untuk diikuti oleh pegawai lainnya?')}
 
       <div style={{ marginBottom: 18, paddingTop: 8 }}>
         <label style={{ display: 'block', fontSize: 12, fontWeight: 600, color: theme.text, marginBottom: 3 }}>Saran Proses Follow-up <span style={{ color: theme.danger }}>*</span></label>
@@ -5810,208 +6792,34 @@ function Mon2Form({ me, setParticipants, toast, addAudit, pushNotif }) {
           style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 10, border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', resize: 'none', boxSizing: 'border-box', background: isReadOnly ? theme.bg : '#fff', lineHeight: 1.55 }}/>
       </div>
 
-      {yesnoField('bersedia_fasilitator', 'Bersedia Menjadi Fasilitator?', 'Ke depan, apabila DIKSI dilaksanakan di masing-masing satuan kerja, apakah Anda bersedia menjadi Fasilitator (pemandu kegiatan Group Coaching) pada sesi DIKSI tersebut?')}
-      {yesnoField('bersedia_pembekalan', 'Bersedia Mengikuti Pembekalan Fasilitator?', 'Apakah Anda bersedia untuk mengikuti kegiatan Pembekalan Fasilitator DIKSI?')}
+      {yesnoField('bersedia_fasilitator', 'Bersedia Menjadi Fasilitator?',                  'Ke depan, apabila DIKSI dilaksanakan di masing-masing satuan kerja, apakah Anda bersedia menjadi Fasilitator (pemandu kegiatan Group Coaching) pada sesi DIKSI tersebut?')}
+      {yesnoField('bersedia_pembekalan',  'Bersedia Mengikuti Pembekalan Fasilitator?',     'Apakah Anda bersedia untuk mengikuti kegiatan Pembekalan Fasilitator DIKSI?')}
 
       {!isReadOnly && (
         <div style={{ paddingTop: 14, marginTop: 6, borderTop: `1px solid ${theme.border}`, display: 'flex', justifyContent: 'flex-end' }}>
-          <Button variant="primary" icon={Send} onClick={submit}>Submit Monitoring 2</Button>
+          <Button variant="primary" icon={Send} onClick={submit}>Submit Monitoring 3</Button>
         </div>
       )}
     </div>
   );
 }
 
-// ----- Monitoring 3 form (self reflection · kategorisasi kualitatif) -----
-function Mon3Form({ me, setParticipants, toast, addAudit, pushNotif }) {
-  const existing = me.stageData.monitoring3?.status === 'completed' ? me.stageData.monitoring3 : null;
-
-  const [form, setForm] = useState({
-    kategori_perubahan: existing?.kategori_perubahan || '',
-    elaborasi_perubahan: existing?.elaborasi_perubahan || existing?.refleksi_perubahan || '',
-    kategori_pencapaian: existing?.kategori_pencapaian || '',
-    elaborasi_pencapaian: existing?.elaborasi_pencapaian || existing?.refleksi_pencapaian || '',
-    kategori_pembelajaran: existing?.kategori_pembelajaran || '',
-    elaborasi_pembelajaran: existing?.elaborasi_pembelajaran || existing?.refleksi_pembelajaran || '',
-    kategori_kedepan: existing?.kategori_kedepan || '',
-    elaborasi_kedepan: existing?.elaborasi_kedepan || existing?.refleksi_kedepan || '',
-  });
-
-  useEffect(() => {
-    const e = me.stageData.monitoring3?.status === 'completed' ? me.stageData.monitoring3 : null;
-    setForm({
-      kategori_perubahan: e?.kategori_perubahan || '', elaborasi_perubahan: e?.elaborasi_perubahan || e?.refleksi_perubahan || '',
-      kategori_pencapaian: e?.kategori_pencapaian || '', elaborasi_pencapaian: e?.elaborasi_pencapaian || e?.refleksi_pencapaian || '',
-      kategori_pembelajaran: e?.kategori_pembelajaran || '', elaborasi_pembelajaran: e?.elaborasi_pembelajaran || e?.refleksi_pembelajaran || '',
-      kategori_kedepan: e?.kategori_kedepan || '', elaborasi_kedepan: e?.elaborasi_kedepan || e?.refleksi_kedepan || '',
-    });
-  }, [me.id]);
-
-  // Definisi kategori kualitatif per pertanyaan
-  const sections = [
-    {
-      kategoriKey: 'kategori_perubahan', elaborasiKey: 'elaborasi_perubahan',
-      label: 'Tingkat Perubahan dalam Diri',
-      desc: 'Setelah mengikuti DIKSI, sejauh mana Anda merasakan perubahan dalam cara berpikir, sikap, atau kapasitas diri?',
-      kategori: [
-        { value: 'transformatif', label: 'Transformatif',  hint: 'Perubahan mendasar dalam cara pikir & paradigma',  color: theme.success },
-        { value: 'signifikan',    label: 'Signifikan',     hint: 'Banyak aspek diri yang berkembang nyata',          color: theme.success },
-        { value: 'sedang',        label: 'Sedang',         hint: 'Beberapa aspek mengalami perubahan',                color: theme.gold },
-        { value: 'sedikit',       label: 'Sedikit',        hint: 'Perubahan minor pada aspek tertentu',               color: theme.warning },
-        { value: 'belum_terasa',  label: 'Belum Terasa',   hint: 'Belum merasakan perubahan signifikan',              color: theme.danger },
-      ],
-    },
-    {
-      kategoriKey: 'kategori_pencapaian', elaborasiKey: 'elaborasi_pencapaian',
-      label: 'Tingkat Pencapaian Tujuan Pengembangan',
-      desc: 'Sejauh mana tujuan/target development plan yang Anda susun saat coaching tercapai?',
-      kategori: [
-        { value: 'melampaui',     label: 'Melampaui Ekspektasi', hint: 'Pencapaian melebihi target awal',          color: theme.success },
-        { value: 'sesuai_target', label: 'Sesuai Target',         hint: 'Pencapaian sesuai dengan rencana',         color: theme.success },
-        { value: 'sebagian',      label: 'Sebagian Tercapai',     hint: 'Beberapa target tercapai, lainnya masih', color: theme.gold },
-        { value: 'berproses',     label: 'Masih Berproses',       hint: 'Target dalam tahap pengerjaan aktif',     color: theme.warning },
-        { value: 'belum_tercapai',label: 'Belum Tercapai',        hint: 'Target belum dapat direalisasikan',       color: theme.danger },
-      ],
-    },
-    {
-      kategoriKey: 'kategori_pembelajaran', elaborasiKey: 'elaborasi_pembelajaran',
-      label: 'Kualitas Pembelajaran yang Diperoleh',
-      desc: 'Bagaimana kualitas pembelajaran (insight, skill, mindset) yang Anda dapatkan dari proses coaching dan monitoring?',
-      kategori: [
-        { value: 'sangat_mendalam', label: 'Sangat Mendalam',    hint: 'Insight transformatif & shift mindset besar', color: theme.success },
-        { value: 'mendalam',        label: 'Mendalam',            hint: 'Pembelajaran kaya dan berkesan',              color: theme.success },
-        { value: 'standar',         label: 'Standar',             hint: 'Pembelajaran cukup, sesuai ekspektasi',       color: theme.gold },
-        { value: 'kurang_optimal',  label: 'Kurang Optimal',      hint: 'Pembelajaran terbatas atau tidak menempel',   color: theme.warning },
-      ],
-    },
-    {
-      kategoriKey: 'kategori_kedepan', elaborasiKey: 'elaborasi_kedepan',
-      label: 'Kejelasan Visi & Aspirasi ke Depan',
-      desc: 'Setelah program ini, seberapa jelas visi karir dan aspirasi Anda di Bank Indonesia?',
-      kategori: [
-        { value: 'sangat_jelas',  label: 'Sangat Jelas dengan Roadmap', hint: 'Visi jelas dengan langkah konkret 3-5 tahun', color: theme.success },
-        { value: 'cukup_jelas',   label: 'Cukup Jelas',                  hint: 'Arah sudah jelas, detail eksekusi berkembang', color: theme.success },
-        { value: 'eksploratif',   label: 'Masih Eksploratif',            hint: 'Sedang menjelajahi berbagai kemungkinan',      color: theme.gold },
-        { value: 'belum_terbentuk', label: 'Belum Terbentuk',            hint: 'Belum ada gambaran konkret',                   color: theme.warning },
-      ],
-    },
-  ];
-
-  const submit = () => {
-    // Required: semua 4 kategori harus dipilih
-    const missingCategory = sections.find(s => !form[s.kategoriKey]);
-    if (missingCategory) {
-      toast(`Mohon pilih kategori untuk "${missingCategory.label}"`, 'warning'); return;
-    }
-    // Elaborasi minimal 1 kalimat (10 chars) untuk tiap section — encouraged for richness
-    const missingElaborasi = sections.find(s => !form[s.elaborasiKey].trim() || form[s.elaborasiKey].trim().length < 10);
-    if (missingElaborasi) {
-      toast(`Mohon isi elaborasi untuk "${missingElaborasi.label}" (minimal 1 kalimat)`, 'warning'); return;
-    }
-    setParticipants(prev => prev.map(p => p.id !== me.id ? p : ({
-      ...p, stage: Math.max(p.stage, 7),
-      stageData: {
-        ...p.stageData,
-        monitoring3: { status: 'completed', submittedAt: new Date().toISOString().slice(0,10), ...form },
-      }
-    })));
-    addAudit(me.nama, 'Submit Self-Reflection (Monitoring 3)', null);
-    pushNotif('admin', { type: 'success', title: `${me.nama} masuk Tahap 7 Evaluasi`, desc: 'Self-reflection Monitoring 3 selesai' });
-    toast('Self-reflection tersimpan. Lanjut ke tahap akhir Evaluasi.', 'success');
-  };
-
-  const isReadOnly = !!existing;
-
-  return (
-    <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderLeft: `4px solid ${existing ? theme.success : theme.gold}`, borderRadius: 2, padding: 24 }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 18, paddingBottom: 14, borderBottom: `1px solid ${theme.border}` }}>
-        <div>
-          <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.18em', color: theme.gold, fontWeight: 700 }}>Tahap 06</div>
-          <div style={{ fontSize: 17, fontWeight: 600, color: theme.text, fontFamily: fonts.display, marginTop: 2 }}>Monitoring 3 · Self Reflection</div>
-          <div style={{ fontSize: 11, color: theme.textMuted, marginTop: 3 }}>Refleksi mendalam dengan kategorisasi kualitatif atas pengalaman Anda</div>
-        </div>
-        {existing && <Pill variant="success">Selesai · {existing.submittedAt}</Pill>}
-      </div>
-
-      <div style={{ background: theme.infoBg, border: '1px solid #BFDBFE', padding: 12, borderRadius: 2, fontSize: 11, color: theme.info, display: 'flex', gap: 8, marginBottom: 18, lineHeight: 1.5 }}>
-        <Info size={13} style={{ flexShrink: 0, marginTop: 1 }}/>
-        <div>Pilih kategori yang paling merepresentasikan refleksi Anda, lalu elaborasikan dengan narasi singkat. Tidak ada jawaban benar/salah — yang penting authentic.</div>
-      </div>
-
-      {sections.map((section, idx) => {
-        const selectedValue = form[section.kategoriKey];
-        const selectedKategori = section.kategori.find(k => k.value === selectedValue);
-        return (
-          <div key={section.kategoriKey} style={{ marginBottom: 24, paddingBottom: 24, borderBottom: idx < sections.length - 1 ? `1px solid ${theme.border}` : 'none' }}>
-            {/* Question header */}
-            <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, marginBottom: 4 }}>
-              <span style={{ fontFamily: fonts.mono, fontSize: 10, color: theme.textSubtle }}>0{idx + 1}</span>
-              <label style={{ fontSize: 13, fontWeight: 600, color: theme.text, fontFamily: fonts.display }}>{section.label} <span style={{ color: theme.danger }}>*</span></label>
-            </div>
-            <div style={{ fontSize: 11, color: theme.textMuted, lineHeight: 1.5, marginBottom: 12, paddingLeft: 22 }}>{section.desc}</div>
-
-            {/* Category chips */}
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 12, paddingLeft: 22 }}>
-              {section.kategori.map(opt => {
-                const isSelected = selectedValue === opt.value;
-                return (
-                  <button key={opt.value}
-                    onClick={() => !isReadOnly && setForm({ ...form, [section.kategoriKey]: opt.value })}
-                    disabled={isReadOnly}
-                    title={opt.hint}
-                    style={{
-                      padding: '10px 16px',
-                      background: isSelected ? opt.color : '#fff',
-                      color: isSelected ? '#fff' : theme.text,
-                      border: `1px solid ${isSelected ? opt.color : theme.border}`,
-                      borderRadius: 2,
-                      fontSize: 11.5, fontFamily: fonts.body, fontWeight: isSelected ? 600 : 500,
-                      cursor: isReadOnly ? 'default' : 'pointer',
-                      transition: 'all 0.12s',
-                      display: 'flex', alignItems: 'center', gap: 6,
-                    }}
-                    onMouseEnter={e => { if (!isReadOnly && !isSelected) e.currentTarget.style.borderColor = opt.color; }}
-                    onMouseLeave={e => { if (!isReadOnly && !isSelected) e.currentTarget.style.borderColor = theme.border; }}
-                  >
-                    {isSelected && <CheckCircle2 size={12}/>}
-                    {opt.label}
-                  </button>
-                );
-              })}
-            </div>
-
-            {/* Selected category hint */}
-            {selectedKategori && (
-              <div style={{ marginLeft: 22, marginBottom: 10, padding: 10, background: theme.bg, borderLeft: `3px solid ${selectedKategori.color}`, borderRadius: 2, fontSize: 10.5, color: theme.text, lineHeight: 1.5 }}>
-                <strong style={{ color: selectedKategori.color }}>{selectedKategori.label}</strong> — <span style={{ color: theme.textMuted }}>{selectedKategori.hint}</span>
-              </div>
-            )}
-
-            {/* Elaborasi */}
-            <div style={{ paddingLeft: 22 }}>
-              <label style={{ display: 'block', fontSize: 10.5, fontWeight: 600, color: theme.textMuted, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 6 }}>
-                Elaborasi <span style={{ color: theme.danger, textTransform: 'none', letterSpacing: 0 }}>*</span>
-              </label>
-              <textarea value={form[section.elaborasiKey]} onChange={e => setForm({ ...form, [section.elaborasiKey]: e.target.value })} rows={4} disabled={isReadOnly}
-                placeholder="Ceritakan lebih detail pengalaman dan perspektif Anda..."
-                style={{ width: '100%', fontSize: 12, fontFamily: fonts.body, padding: 12, border: `1px solid ${theme.border}`, borderRadius: 2, outline: 'none', resize: 'vertical', boxSizing: 'border-box', background: isReadOnly ? theme.bg : '#fff', lineHeight: 1.6 }}/>
-            </div>
-          </div>
-        );
-      })}
-
-      {!isReadOnly && (
-        <div style={{ paddingTop: 14, display: 'flex', justifyContent: 'flex-end' }}>
-          <Button variant="primary" icon={Send} onClick={submit}>Submit Self-Reflection</Button>
-        </div>
-      )}
-    </div>
-  );
-}
 
 // =====================================================================
-// PESERTA: EVALUASI — final program assessment
+// PESERTA: EVALUASI — peserta memberikan penilaian kepada mentor
 // =====================================================================
+
+// Dimensi penilaian peserta → mentor (likert 1-10)
+const EVAL_MENTOR_DIMENSIONS = [
+  { key: 'komitmen',           label: 'Komitmen',                    desc: 'Kehadiran tepat waktu di sesi, alokasi waktu mendampingi, follow-through commitment' },
+  { key: 'keaktifan',          label: 'Keaktifan',                    desc: 'Engagement aktif dalam memberi arahan, pertanyaan, dan feedback selama proses coaching' },
+  { key: 'penguasaanMateri',   label: 'Penguasaan Materi',            desc: 'Penguasaan substansi & konteks bidang kerja yang relevan dengan area pengembangan' },
+  { key: 'kemampuanCoaching',  label: 'Kemampuan Coaching',           desc: 'Kemampuan teknis coaching: powerful questions, active listening, fasilitasi self-discovery' },
+  { key: 'aksesibilitas',      label: 'Aksesibilitas & Responsif',    desc: 'Mudah dihubungi & responsif terhadap pertanyaan di luar sesi formal' },
+  { key: 'kontribusiInsight',  label: 'Kontribusi Insight',           desc: 'Insight, saran, dan referensi yang aplikatif untuk situasi kerja peserta' },
+  { key: 'empatiTrust',        label: 'Empati & Trust',               desc: 'Membangun rasa aman & trust untuk diskusi terbuka, termasuk topik sensitif' },
+];
+
 function PesertaEvaluasi() {
   const { participants, setParticipants, pesertaPersonaId, toast, addAudit, pushNotif } = useApp();
   const me = participants.find(p => p.id === pesertaPersonaId) || participants[0];
@@ -6019,26 +6827,26 @@ function PesertaEvaluasi() {
   const evaluasiUnlocked = me.stageData.monitoring3?.status === 'completed';
   const existing = me.stageData.evaluasi?.status === 'completed' ? me.stageData.evaluasi : null;
 
-  const [form, setForm] = useState({
-    skor_program: existing?.skor_program || 8,
-    skor_mentor: existing?.skor_mentor || 8,
-    kebermanfaatan: existing?.kebermanfaatan || 8,
-    feedback_program: existing?.feedback_program || '',
-    feedback_mentor: existing?.feedback_mentor || '',
-    rekomendasi_perbaikan: existing?.rekomendasi_perbaikan || '',
+  const emptyForm = () => ({
+    ...Object.fromEntries(EVAL_MENTOR_DIMENSIONS.map(d => [d.key, 8])),
+    kelebihanMentor: '', saranMentor: '',
   });
+  const fromExisting = (e) => ({
+    ...Object.fromEntries(EVAL_MENTOR_DIMENSIONS.map(d => [d.key, e?.[d.key] || 8])),
+    kelebihanMentor: e?.kelebihanMentor || '',
+    saranMentor: e?.saranMentor || '',
+  });
+
+  const [form, setForm] = useState(existing ? fromExisting(existing) : emptyForm());
 
   useEffect(() => {
     const e = me.stageData.evaluasi?.status === 'completed' ? me.stageData.evaluasi : null;
-    setForm({
-      skor_program: e?.skor_program || 8, skor_mentor: e?.skor_mentor || 8, kebermanfaatan: e?.kebermanfaatan || 8,
-      feedback_program: e?.feedback_program || '', feedback_mentor: e?.feedback_mentor || '', rekomendasi_perbaikan: e?.rekomendasi_perbaikan || '',
-    });
+    setForm(e ? fromExisting(e) : emptyForm());
   }, [me.id]);
 
   const submit = () => {
-    if (!form.feedback_program.trim() || !form.feedback_mentor.trim()) {
-      toast('Mohon isi feedback program dan mentor', 'warning'); return;
+    if (!form.kelebihanMentor.trim() || !form.saranMentor.trim()) {
+      toast('Mohon isi kelebihan & saran untuk mentor', 'warning'); return;
     }
     setParticipants(prev => prev.map(p => p.id !== me.id ? p : ({
       ...p, status: 'completed',
@@ -6047,21 +6855,22 @@ function PesertaEvaluasi() {
         evaluasi: { status: 'completed', submittedAt: new Date().toISOString().slice(0,10), ...form },
       }
     })));
-    addAudit(me.nama, 'Submit Evaluasi Akhir Program DIKSI', null);
-    pushNotif('admin', { type: 'success', title: `${me.nama} menyelesaikan program DIKSI`, desc: `Skor program: ${form.skor_program}/10 · skor mentor: ${form.skor_mentor}/10` });
-    pushNotif('mentor', { type: 'success', title: `${me.nama} memberikan evaluasi akhir`, desc: `Skor mentor: ${form.skor_mentor}/10` });
-    toast('Evaluasi akhir tersimpan. Selamat menyelesaikan program DIKSI!', 'success');
+    addAudit(me.nama, `Submit Evaluasi Mentor (${mentor?.user.split(',')[0] || ''})`, null);
+    const avg = (EVAL_MENTOR_DIMENSIONS.reduce((s, d) => s + (form[d.key] || 0), 0) / EVAL_MENTOR_DIMENSIONS.length).toFixed(1);
+    pushNotif('admin', { type: 'success', title: `${me.nama} menyelesaikan program DIKSI`, desc: `Skor rata-rata mentor: ${avg}/10` });
+    pushNotif('mentor', { type: 'success', title: `${me.nama} memberikan evaluasi mentor`, desc: `Skor rata-rata: ${avg}/10` });
+    toast('Evaluasi mentor tersimpan. Selamat menyelesaikan program DIKSI!', 'success');
   };
 
   if (!evaluasiUnlocked) {
     return (
       <div>
-        <SectionHeader eyebrow="Peserta · Tahap 07 · Evaluasi" title="Evaluasi Akhir Program" desc="3-Tier evaluation komprehensif setelah seluruh tahap monitoring selesai"/>
+        <SectionHeader eyebrow="Peserta · Tahap 07 · Evaluasi" title="Evaluasi Mentor" desc="Menilai performa mentor sebagai coach selama program"/>
         <div style={{ background: theme.bg, border: `1px dashed ${theme.borderStrong}`, padding: 32, textAlign: 'center', borderRadius: 2 }}>
           <Lock size={28} style={{ color: theme.textMuted, margin: '0 auto 10px' }}/>
           <div style={{ fontSize: 13, fontWeight: 600, color: theme.text }}>Evaluasi belum tersedia</div>
           <div style={{ fontSize: 11, color: theme.textMuted, marginTop: 6, lineHeight: 1.5, maxWidth: 380, marginLeft: 'auto', marginRight: 'auto' }}>
-            Tahap evaluasi akhir akan terbuka setelah <strong style={{ color: theme.text }}>Monitoring 3</strong> selesai.
+            Tahap evaluasi akan terbuka setelah <strong style={{ color: theme.text }}>Monitoring 3</strong> selesai.
           </div>
         </div>
       </div>
@@ -6069,19 +6878,20 @@ function PesertaEvaluasi() {
   }
 
   const isReadOnly = !!existing;
+  const avgScore = (EVAL_MENTOR_DIMENSIONS.reduce((s, d) => s + (form[d.key] || 0), 0) / EVAL_MENTOR_DIMENSIONS.length);
 
-  const likertField = (key, label, desc, color = theme.navy) => (
-    <div style={{ marginBottom: 22 }}>
+  const likertField = (key, label, desc) => (
+    <div style={{ marginBottom: 20 }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 4 }}>
         <label style={{ fontSize: 12, fontWeight: 600, color: theme.text }}>{label}</label>
-        <span style={{ fontFamily: fonts.display, fontSize: 24, fontWeight: 300, color }}>{form[key]}<span style={{ fontSize: 11, color: theme.textSubtle }}>/10</span></span>
+        <span style={{ fontFamily: fonts.display, fontSize: 22, fontWeight: 300, color: theme.navy }}>{form[key]}<span style={{ fontSize: 11, color: theme.textSubtle }}>/10</span></span>
       </div>
-      <p style={{ fontSize: 11, color: theme.textMuted, margin: '0 0 10px', lineHeight: 1.5 }}>{desc}</p>
+      <p style={{ fontSize: 11, color: theme.textMuted, margin: '0 0 8px', lineHeight: 1.5 }}>{desc}</p>
       <div style={{ display: 'flex', gap: 4 }}>
         {[1,2,3,4,5,6,7,8,9,10].map(n => (
           <button key={n} onClick={() => !isReadOnly && setForm({ ...form, [key]: n })} disabled={isReadOnly}
             style={{
-              flex: 1, height: 32, fontSize: 11, fontFamily: fonts.mono, fontWeight: 600,
+              flex: 1, height: 30, fontSize: 11, fontFamily: fonts.mono, fontWeight: 600,
               background: n <= form[key] ? (n >= 8 ? theme.success : n >= 5 ? theme.gold : theme.warning) : '#F1F3F6',
               color: n <= form[key] ? '#fff' : theme.textSubtle,
               border: 'none', borderRadius: 2, cursor: isReadOnly ? 'default' : 'pointer',
@@ -6095,41 +6905,55 @@ function PesertaEvaluasi() {
     <div>
       <SectionHeader
         eyebrow="Peserta · Tahap 07 · Evaluasi"
-        title="Evaluasi Akhir Program"
-        desc="Penilaian komprehensif terhadap program DIKSI dan mentor — feedback Anda menentukan kualitas program ke depan"
+        title="Evaluasi Mentor"
+        desc="Berikan penilaian kepada mentor Anda berdasarkan pengalaman sepanjang program — feedback Anda membantu pengembangan mentor & program ke depan"
       />
 
-      {/* Status banner */}
       {existing && (
         <div style={{ background: theme.successBg, border: `1px solid ${theme.success}`, padding: 14, borderRadius: 2, marginBottom: 16, display: 'flex', alignItems: 'center', gap: 10 }}>
           <CheckCircle2 size={18} style={{ color: theme.success }}/>
           <div>
             <div style={{ fontSize: 12, fontWeight: 600, color: theme.text }}>Selamat! Anda telah menyelesaikan seluruh program DIKSI</div>
-            <div style={{ fontSize: 11, color: theme.textMuted, marginTop: 2 }}>Evaluasi akhir disubmit pada {existing.submittedAt}</div>
+            <div style={{ fontSize: 11, color: theme.textMuted, marginTop: 2 }}>Evaluasi mentor disubmit pada {existing.submittedAt}</div>
+          </div>
+        </div>
+      )}
+
+      {/* Mentor card with avg score preview */}
+      {mentor && (
+        <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderLeft: `4px solid ${theme.gold}`, borderRadius: 2, padding: 16, marginBottom: 14, display: 'flex', alignItems: 'center', gap: 14 }}>
+          <div style={{ width: 50, height: 50, borderRadius: '50%', background: theme.navy, color: theme.gold, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 14, fontWeight: 700, fontFamily: fonts.display, flexShrink: 0 }}>
+            {mentor.user.split(' ').slice(0, 2).map(n => n[0]).join('').replace(/[^A-Z]/g, '').slice(0, 2)}
+          </div>
+          <div style={{ flex: 1 }}>
+            <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.15em', color: theme.gold, fontWeight: 700, marginBottom: 3 }}>Mentor yang Dievaluasi</div>
+            <div style={{ fontSize: 14, fontWeight: 600, color: theme.text, fontFamily: fonts.display }}>{mentor.user}</div>
+            <div style={{ fontSize: 11, color: theme.textMuted, marginTop: 1 }}>{mentor.jabatan} · {mentor.satker}</div>
+          </div>
+          <div style={{ textAlign: 'center' }}>
+            <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.12em', color: theme.textMuted, fontWeight: 600 }}>Skor Rata-rata</div>
+            <div style={{ fontFamily: fonts.display, fontSize: 28, fontWeight: 300, color: avgScore >= 8 ? theme.success : avgScore >= 5 ? theme.gold : theme.warning, lineHeight: 1.1 }}>
+              {avgScore.toFixed(1)}<span style={{ fontSize: 12, color: theme.textSubtle }}>/10</span>
+            </div>
           </div>
         </div>
       )}
 
       <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderLeft: `4px solid ${existing ? theme.success : theme.gold}`, borderRadius: 2, padding: 24 }}>
-        {/* Section: Skor */}
-        <div style={{ fontSize: 10, textTransform: 'uppercase', letterSpacing: '0.15em', color: theme.textMuted, fontWeight: 600, marginBottom: 14 }}>Penilaian (Skala 1-10)</div>
+        <div style={{ fontSize: 10, textTransform: 'uppercase', letterSpacing: '0.15em', color: theme.textMuted, fontWeight: 600, marginBottom: 14 }}>Dimensi Penilaian (Skala 1-10)</div>
 
-        {likertField('skor_program', 'Penilaian Keseluruhan Program DIKSI', 'Bagaimana Anda menilai program DIKSI secara keseluruhan? (kualitas, struktur, eksekusi)', theme.navy)}
-        {likertField('skor_mentor', `Penilaian Mentor (${mentor?.user.split(',')[0] || 'Mentor Anda'})`, `Bagaimana Anda menilai performa ${mentor?.user.split(',')[0] || 'mentor'} sebagai coach selama program?`, theme.gold)}
-        {likertField('kebermanfaatan', 'Kebermanfaatan Program', 'Sejauh mana program DIKSI memberikan dampak nyata pada karir dan pengembangan Anda?', theme.success)}
+        {EVAL_MENTOR_DIMENSIONS.map(d => likertField(d.key, d.label, d.desc))}
 
-        {/* Section: Feedback */}
         <div style={{ paddingTop: 14, marginTop: 8, borderTop: `1px solid ${theme.border}` }}>
           <div style={{ fontSize: 10, textTransform: 'uppercase', letterSpacing: '0.15em', color: theme.textMuted, fontWeight: 600, marginBottom: 14 }}>Feedback Tertulis</div>
 
           {[
-            { key: 'feedback_program', label: 'Feedback untuk Program DIKSI', desc: 'Apa yang paling Anda apresiasi dari program ini? Apa yang berkesan? (minimum 2 kalimat)', required: true, rows: 5 },
-            { key: 'feedback_mentor', label: `Feedback untuk Mentor (${mentor?.user.split(',')[0] || ''})`, desc: 'Bagaimana pengalaman Anda dengan mentor? Apa kualitas yang menonjol? Apa saran untuk mentor?', required: true, rows: 5 },
-            { key: 'rekomendasi_perbaikan', label: 'Rekomendasi Perbaikan Program', desc: 'Saran konkret untuk peningkatan kualitas DIKSI di masa depan (opsional namun sangat membantu)', required: false, rows: 4 },
+            { key: 'kelebihanMentor', label: `Kelebihan ${mentor?.user.split(',')[0] || 'Mentor'} sebagai Coach`, desc: 'Apa kualitas yang paling menonjol & berkesan dari mentor Anda selama program?', rows: 4 },
+            { key: 'saranMentor',     label: 'Saran untuk Mentor',                                                desc: 'Saran konkret apa yang bisa membantu mentor menjadi lebih efektif ke depan?',           rows: 4 },
           ].map(f => (
-            <div key={f.key} style={{ marginBottom: 18 }}>
+            <div key={f.key} style={{ marginBottom: 16 }}>
               <label style={{ display: 'block', fontSize: 12, fontWeight: 600, color: theme.text, marginBottom: 3 }}>
-                {f.label} {f.required && <span style={{ color: theme.danger }}>*</span>}
+                {f.label} <span style={{ color: theme.danger }}>*</span>
               </label>
               <div style={{ fontSize: 11, color: theme.textMuted, lineHeight: 1.5, marginBottom: 8 }}>{f.desc}</div>
               <textarea value={form[f.key]} onChange={e => setForm({ ...form, [f.key]: e.target.value })} rows={f.rows} disabled={isReadOnly}
@@ -6140,7 +6964,7 @@ function PesertaEvaluasi() {
 
         {!isReadOnly && (
           <div style={{ paddingTop: 14, borderTop: `1px solid ${theme.border}`, display: 'flex', justifyContent: 'flex-end' }}>
-            <Button variant="primary" icon={Send} onClick={submit}>Submit Evaluasi Akhir</Button>
+            <Button variant="primary" icon={Send} onClick={submit}>Submit Evaluasi Mentor</Button>
           </div>
         )}
       </div>
@@ -6148,250 +6972,6 @@ function PesertaEvaluasi() {
   );
 }
 
-// =====================================================================
-// PESERTA: WIKI / MODUL — list modul published + detail viewer
-// =====================================================================
-function PesertaWiki() {
-  // Stub modul untuk demo — di production akan share state dengan AdminWiki
-  const [modul] = useState([
-    { id: 'W001', judul: 'Pengantar Program DIKSI Coaching',     kategori: 'Pengantar',   tahap: 1, ringkasan: 'Overview lengkap program, tujuan, dan timeline 7 tahap.', isi: '# Pengantar Program DIKSI Coaching\n\nProgram DIKSI (Development of Internal Coaches & Senior Influencers) adalah inisiatif strategis Bank Indonesia untuk mengembangkan kapasitas leadership talenta KPP melalui pendekatan coaching terstruktur.\n\n## Tujuan Program\n\n- Meningkatkan kapasitas decision-making berbasis data dan strategic thinking\n- Membangun jejaring lintas satker antara peserta dan mentor senior\n- Menyiapkan talenta KPP untuk peran kepemimpinan ke depan\n\n## Timeline 7 Tahap\n\n1. **Registrasi** — konfirmasi peserta & check-in\n2. **Sosialisasi** — pretest & posttest\n3. **Coaching** — 1-on-1 dengan mentor (atasan)\n4. **Monitoring 1, 2, 3** — review progress berkala\n5. **Evaluasi** — assessment komprehensif\n\nSelamat mengikuti program!', visibility: 'all',     updatedAt: '2026-01-10', author: 'Dr. Ratna Kusumaningrum', readCount: 6, status: 'published' },
-    { id: 'W002', judul: 'Panduan Check-in dan Registrasi',       kategori: 'Panduan',    tahap: 1, ringkasan: 'Cara melakukan check-in saat kegiatan dimulai.',           isi: '# Panduan Check-in\n\nCheck-in dilakukan saat kegiatan sosialisasi dimulai pada hari H.\n\n## Langkah-langkah\n\n1. Buka aplikasi pada hari kegiatan\n2. Masuk ke menu **Check-in & Registrasi**\n3. Pastikan Anda hadir di lokasi (Auditorium A)\n4. Klik tombol **Check-in Sekarang**\n\nSetelah check-in berhasil, Anda otomatis lanjut ke Tahap 02 Sosialisasi.', visibility: 'all',     updatedAt: '2026-01-12', author: 'Dr. Ratna Kusumaningrum', readCount: 5, status: 'published' },
-    { id: 'W003', judul: 'Materi Sosialisasi DIKSI 2026',          kategori: 'Materi',     tahap: 2, ringkasan: 'Slide deck sosialisasi yang dipresentasikan saat kickoff.', isi: '# Materi Sosialisasi DIKSI 2026\n\nMateri ini adalah ringkasan slide deck yang dipresentasikan oleh tim DSDM pada saat kickoff.\n\n## Outline\n\n- Filosofi coaching di Bank Indonesia\n- Peran mentor (atasan langsung) dalam program\n- Komitmen waktu peserta (rata-rata 4-5 jam/bulan)\n- Etika & kerahasiaan dalam sesi coaching\n- Metrik keberhasilan program\n\n## Quick Tips\n\n- Hadiri semua sesi tanpa kecuali\n- Jujur saat self-assessment\n- Manfaatkan sesi 1-on-1 untuk hal yang substantif', visibility: 'peserta', updatedAt: '2026-01-15', author: 'Dr. Ratna Kusumaningrum', readCount: 5, status: 'published' },
-    { id: 'W005', judul: 'Persiapan Sesi 1-on-1 Coaching',          kategori: 'Panduan',    tahap: 3, ringkasan: 'Tips & template persiapan sesi coaching antara mentor dan mentee.', isi: '# Persiapan Sesi 1-on-1 Coaching\n\n## Sebelum Sesi\n\n- Refleksikan progress 2 minggu terakhir\n- Identifikasi 2-3 challenge spesifik yang ingin dibahas\n- Siapkan pertanyaan terbuka untuk mentor\n\n## Saat Sesi\n\n- Hadir tepat waktu dan dalam kondisi fokus\n- Aktif mendengar dan klarifikasi jika belum jelas\n- Catat insight & action items\n\n## Setelah Sesi\n\n- Submit survey peserta di aplikasi\n- Eksekusi action items yang sudah disepakati\n- Komunikasikan progress di sesi berikutnya', visibility: 'all', updatedAt: '2026-02-01', author: 'Dr. Ratna Kusumaningrum', readCount: 4, status: 'published' },
-  ]);
-
-  const [search, setSearch] = useState('');
-  const [filterKategori, setFilterKategori] = useState('all');
-  const [activeId, setActiveId] = useState(null);
-
-  // Hanya tampilkan yang published & visibility all atau peserta
-  const visible = modul.filter(m => m.status === 'published' && (m.visibility === 'all' || m.visibility === 'peserta'));
-  const kategoriList = [...new Set(visible.map(m => m.kategori))];
-
-  const filtered = visible.filter(m => {
-    if (filterKategori !== 'all' && m.kategori !== filterKategori) return false;
-    if (search && !m.judul.toLowerCase().includes(search.toLowerCase()) && !m.ringkasan.toLowerCase().includes(search.toLowerCase())) return false;
-    return true;
-  });
-
-  const active = visible.find(m => m.id === activeId);
-
-  // Detail viewer
-  if (active) {
-    return (
-      <div>
-        <SectionHeader
-          eyebrow={`Peserta · Wiki · ${active.kategori}`}
-          title={active.judul}
-          desc={`Tahap 0${active.tahap} · update ${active.updatedAt} · ${active.readCount} reads`}
-        />
-        <div style={{ marginBottom: 14 }}>
-          <button onClick={() => setActiveId(null)}
-            style={{ background: 'transparent', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 5, fontSize: 11, color: theme.textMuted, fontFamily: fonts.body, padding: 0 }}>
-            <ArrowLeft size={12}/> Kembali ke daftar modul
-          </button>
-        </div>
-        <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderRadius: 2, padding: 32, fontFamily: fonts.body }}>
-          <div style={{ fontSize: 12.5, color: theme.text, lineHeight: 1.75, whiteSpace: 'pre-wrap' }}>
-            {active.isi.split('\n').map((line, i) => {
-              if (line.startsWith('# ')) return <div key={i} style={{ fontFamily: fonts.display, fontSize: 22, fontWeight: 600, color: theme.text, margin: '20px 0 10px', letterSpacing: '-0.01em' }}>{line.slice(2)}</div>;
-              if (line.startsWith('## ')) return <div key={i} style={{ fontFamily: fonts.display, fontSize: 16, fontWeight: 600, color: theme.text, margin: '18px 0 8px' }}>{line.slice(3)}</div>;
-              if (line.startsWith('- ')) return <div key={i} style={{ paddingLeft: 18, margin: '4px 0', position: 'relative' }}><span style={{ position: 'absolute', left: 4, color: theme.gold }}>•</span>{line.slice(2)}</div>;
-              if (line.match(/^\d+\. /)) return <div key={i} style={{ paddingLeft: 18, margin: '4px 0' }}>{line}</div>;
-              if (line.trim() === '') return <div key={i} style={{ height: 8 }}/>;
-              // Inline bold support
-              const parts = line.split(/(\*\*[^*]+\*\*)/g);
-              return <div key={i} style={{ margin: '4px 0' }}>{parts.map((p, j) => p.startsWith('**') && p.endsWith('**') ? <strong key={j}>{p.slice(2, -2)}</strong> : <span key={j}>{p}</span>)}</div>;
-            })}
-          </div>
-          <div style={{ marginTop: 22, paddingTop: 14, borderTop: `1px solid ${theme.border}`, display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: 10, color: theme.textMuted }}>
-            <div>Author: <strong style={{ color: theme.text }}>{active.author}</strong></div>
-            <div style={{ fontFamily: fonts.mono }}>{active.updatedAt}</div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  // List view
-  return (
-    <div>
-      <SectionHeader
-        eyebrow="Peserta · Wiki"
-        title="Wiki / Modul Konseling"
-        desc={`${visible.length} modul tersedia · materi referensi yang dipublish oleh Admin DSDM`}
-      />
-
-      {/* Filter */}
-      <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderRadius: 2, padding: '10px 14px', marginBottom: 12, display: 'flex', gap: 12, alignItems: 'center', flexWrap: 'wrap' }}>
-        <div style={{ flex: 1, minWidth: 200, display: 'flex', alignItems: 'center', gap: 8, padding: '6px 10px', background: theme.bg, borderRadius: 2 }}>
-          <Search size={13} style={{ color: theme.textSubtle }}/>
-          <input value={search} onChange={e => setSearch(e.target.value)} placeholder="Cari modul..."
-            style={{ flex: 1, border: 'none', outline: 'none', background: 'transparent', fontSize: 12, fontFamily: fonts.body, color: theme.text }}/>
-        </div>
-        <select value={filterKategori} onChange={e => setFilterKategori(e.target.value)}
-          style={{ fontSize: 11, fontFamily: fonts.body, padding: '6px 10px', border: `1px solid ${theme.border}`, borderRadius: 2, background: '#fff', color: theme.text, cursor: 'pointer', outline: 'none' }}>
-          <option value="all">Semua kategori</option>
-          {kategoriList.map(k => <option key={k} value={k}>{k}</option>)}
-        </select>
-      </div>
-
-      {/* Modul cards */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: 12 }}>
-        {filtered.length === 0 && (
-          <div style={{ gridColumn: '1 / -1', background: '#fff', border: `1px dashed ${theme.borderStrong}`, padding: 32, textAlign: 'center', borderRadius: 2, fontSize: 11, color: theme.textMuted }}>
-            Tidak ada modul sesuai filter.
-          </div>
-        )}
-        {filtered.map(m => (
-          <button key={m.id} onClick={() => setActiveId(m.id)}
-            style={{
-              background: '#fff', border: `1px solid ${theme.border}`, borderRadius: 2, padding: 16,
-              cursor: 'pointer', textAlign: 'left', fontFamily: fonts.body, transition: 'all 0.15s',
-            }}
-            onMouseEnter={e => { e.currentTarget.style.borderColor = theme.gold; e.currentTarget.style.boxShadow = '0 4px 12px rgba(10,37,64,0.06)'; e.currentTarget.style.transform = 'translateY(-2px)'; }}
-            onMouseLeave={e => { e.currentTarget.style.borderColor = theme.border; e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.transform = 'translateY(0)'; }}
-          >
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 10 }}>
-              <Pill variant="info" size="xs">{m.kategori}</Pill>
-              <span style={{ fontSize: 9, color: theme.textMuted, fontFamily: fonts.mono, textTransform: 'uppercase', letterSpacing: '0.1em' }}>Tahap 0{m.tahap}</span>
-            </div>
-            <div style={{ fontSize: 13, fontWeight: 600, color: theme.text, fontFamily: fonts.display, marginBottom: 6, lineHeight: 1.35 }}>{m.judul}</div>
-            <div style={{ fontSize: 11, color: theme.textMuted, lineHeight: 1.5, marginBottom: 12 }}>{m.ringkasan}</div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 4, fontSize: 10, color: theme.gold, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.12em' }}>
-              Baca selengkapnya <ArrowRight size={11}/>
-            </div>
-          </button>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-// =====================================================================
-// MENTOR: WIKI / MODUL — read-only dengan akses materi mentor + all
-// =====================================================================
-function MentorWiki() {
-  const [modul] = useState([
-    { id: 'W001', judul: 'Pengantar Program DIKSI Coaching', kategori: 'Pengantar', tahap: 1, ringkasan: 'Overview lengkap program, tujuan, dan timeline 7 tahap.',
-      isi: '# Pengantar Program DIKSI Coaching\n\nProgram DIKSI adalah inisiatif strategis Bank Indonesia untuk mengembangkan kapasitas leadership talenta KPP melalui pendekatan coaching terstruktur.\n\n## Peran Mentor\n\nSebagai mentor, Anda adalah atasan langsung peserta yang bertanggung jawab untuk:\n\n- Mendampingi peserta dalam sesi 1-on-1 coaching\n- Memberikan strengths, area pengembangan, dan rekomendasi\n- Mengontrol akses pretest/posttest setelah sesi sosialisasi\n- Mendukung peserta dalam tahap monitoring (1, 2, 3)\n\n## Komitmen Waktu Mentor\n\nRata-rata 2-3 jam/bulan untuk sesi coaching dan administrasi.\n\nTerima kasih atas kontribusinya dalam pengembangan talenta BI!',
-      visibility: 'all', updatedAt: '2026-01-10', author: 'Dr. Ratna Kusumaningrum', readCount: 6, status: 'published' },
-    { id: 'W005', judul: 'Persiapan Sesi 1-on-1 Coaching', kategori: 'Panduan', tahap: 3, ringkasan: 'Tips & template persiapan sesi coaching antara mentor dan mentee.',
-      isi: '# Persiapan Sesi 1-on-1 Coaching (untuk Mentor)\n\n## Sebelum Sesi\n\n- Review profile peserta: latar belakang, satker, tahun SMD\n- Cek skor pretest/posttest sebagai baseline\n- Siapkan 3-5 powerful questions yang relevan\n- Allocate slot 60 menit tanpa interupsi\n\n## Saat Sesi\n\n- Bangun rapport di 5 menit pertama\n- Gunakan GROW model: Goal · Reality · Options · Way Forward\n- Lebih banyak bertanya daripada memberi nasihat (rasio 80:20)\n- Catat insight kunci untuk evaluasi\n\n## Setelah Sesi\n\n- Submit evaluasi mentor: Strengths · Area Pengembangan · Rekomendasi\n- Lihat survey peserta untuk feedback ke diri sendiri\n- Buka akses posttest sosialisasi (kalau belum)',
-      visibility: 'all', updatedAt: '2026-02-01', author: 'Dr. Ratna Kusumaningrum', readCount: 4, status: 'published' },
-    { id: 'W006', judul: 'Template Evaluasi Mentor', kategori: 'Template', tahap: 3, ringkasan: 'Format strengths, area pengembangan, rekomendasi tindak lanjut.',
-      isi: '# Template Evaluasi Mentor\n\n## Format Standar\n\nGunakan struktur 3 bagian berikut saat menulis evaluasi peserta:\n\n## 1. Kekuatan (Strengths)\n\nIdentifikasi 2-3 kekuatan utama yang Anda observasi:\n\n- **Apa yang menonjol?** (kapasitas, sikap, hasil kerja)\n- **Bukti spesifik** dari pengamatan Anda\n- **Bagaimana ini bermanfaat** untuk role saat ini & ke depan\n\n## 2. Area Pengembangan\n\nIdentifikasi 2-3 area development yang prioritas:\n\n- **Apa yang perlu dikembangkan?**\n- **Mengapa ini penting** untuk pertumbuhan peserta\n- **Konteks atau gap spesifik** yang teramati\n\n## 3. Rekomendasi\n\nBerikan 2-4 actionable recommendations:\n\n- Tindak lanjut konkret 30/60/90 hari\n- Resource atau exposure yang disarankan (training, sertifikasi, kepanitiaan)\n- Mentoring lanjutan atau peer-learning\n\n## Tips Penulisan\n\n- Spesifik & evidence-based\n- Hindari generalisasi (\"good performance\")\n- Forward-looking & action-oriented\n- Empathetic tone',
-      visibility: 'mentor', updatedAt: '2026-02-03', author: 'Dr. Ratna Kusumaningrum', readCount: 2, status: 'published' },
-    { id: 'W007', judul: 'Coaching Skills untuk Mentor', kategori: 'Materi', tahap: 3, ringkasan: 'Modul mentor: GROW model, active listening, powerful questions.',
-      isi: '# Coaching Skills untuk Mentor DIKSI\n\n## GROW Model\n\nFramework klasik untuk struktur sesi coaching:\n\n- **G**oal — Apa tujuan peserta dari sesi ini?\n- **R**eality — Bagaimana situasi saat ini?\n- **O**ptions — Apa opsi yang bisa dipertimbangkan?\n- **W**ay Forward — Apa langkah konkret berikutnya?\n\n## Active Listening\n\n3 level mendengar:\n\n1. **Internal** — fokus pada respons sendiri (hindari)\n2. **Focused** — fokus penuh pada lawan bicara\n3. **Global** — observe konteks, nada, body language, energi\n\nTarget Level 2-3 saat coaching.\n\n## Powerful Questions\n\nKarakteristik powerful question:\n\n- Open-ended (\"apa\", \"bagaimana\", bukan \"apakah\")\n- Forward-looking & solution-focused\n- Memunculkan refleksi & insight\n\nContoh:\n\n- \"Apa hal terbaik yang bisa terjadi jika ini berhasil?\"\n- \"Sumber daya apa yang sudah Anda punya untuk mencapai ini?\"\n- \"Jika tidak ada batasan, langkah apa yang akan Anda ambil?\"\n\n## Hal yang Perlu Dihindari\n\n- Memberi solusi langsung (peserta harus self-discover)\n- Judgment atau evaluative comments saat sesi berjalan\n- Membandingkan dengan pengalaman pribadi terlalu banyak',
-      visibility: 'mentor', updatedAt: '2026-02-05', author: 'Dr. Ratna Kusumaningrum', readCount: 8, status: 'published' },
-  ]);
-
-  const [search, setSearch] = useState('');
-  const [filterKategori, setFilterKategori] = useState('all');
-  const [activeId, setActiveId] = useState(null);
-
-  // Tampilkan yang published & visibility all atau mentor
-  const visible = modul.filter(m => m.status === 'published' && (m.visibility === 'all' || m.visibility === 'mentor'));
-  const kategoriList = [...new Set(visible.map(m => m.kategori))];
-
-  const filtered = visible.filter(m => {
-    if (filterKategori !== 'all' && m.kategori !== filterKategori) return false;
-    if (search && !m.judul.toLowerCase().includes(search.toLowerCase()) && !m.ringkasan.toLowerCase().includes(search.toLowerCase())) return false;
-    return true;
-  });
-
-  const active = visible.find(m => m.id === activeId);
-
-  if (active) {
-    return (
-      <div>
-        <SectionHeader
-          eyebrow={`Mentor · Wiki · ${active.kategori}`}
-          title={active.judul}
-          desc={`Tahap 0${active.tahap} · update ${active.updatedAt} · ${active.readCount} reads`}
-        />
-        <div style={{ marginBottom: 14 }}>
-          <button onClick={() => setActiveId(null)}
-            style={{ background: 'transparent', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 5, fontSize: 11, color: theme.textMuted, fontFamily: fonts.body, padding: 0 }}>
-            <ArrowLeft size={12}/> Kembali ke daftar modul
-          </button>
-        </div>
-        <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderRadius: 2, padding: 32, fontFamily: fonts.body }}>
-          <div style={{ fontSize: 12.5, color: theme.text, lineHeight: 1.75 }}>
-            {active.isi.split('\n').map((line, i) => {
-              if (line.startsWith('# ')) return <div key={i} style={{ fontFamily: fonts.display, fontSize: 22, fontWeight: 600, color: theme.text, margin: '20px 0 10px', letterSpacing: '-0.01em' }}>{line.slice(2)}</div>;
-              if (line.startsWith('## ')) return <div key={i} style={{ fontFamily: fonts.display, fontSize: 16, fontWeight: 600, color: theme.text, margin: '18px 0 8px' }}>{line.slice(3)}</div>;
-              if (line.startsWith('- ')) return <div key={i} style={{ paddingLeft: 18, margin: '4px 0', position: 'relative' }}><span style={{ position: 'absolute', left: 4, color: theme.gold }}>•</span>{line.slice(2)}</div>;
-              if (line.match(/^\d+\. /)) return <div key={i} style={{ paddingLeft: 18, margin: '4px 0' }}>{line}</div>;
-              if (line.trim() === '') return <div key={i} style={{ height: 8 }}/>;
-              const parts = line.split(/(\*\*[^*]+\*\*)/g);
-              return <div key={i} style={{ margin: '4px 0' }}>{parts.map((p, j) => p.startsWith('**') && p.endsWith('**') ? <strong key={j}>{p.slice(2, -2)}</strong> : <span key={j}>{p}</span>)}</div>;
-            })}
-          </div>
-          <div style={{ marginTop: 22, paddingTop: 14, borderTop: `1px solid ${theme.border}`, display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: 10, color: theme.textMuted }}>
-            <div>Author: <strong style={{ color: theme.text }}>{active.author}</strong></div>
-            <div style={{ fontFamily: fonts.mono }}>{active.updatedAt}</div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  return (
-    <div>
-      <SectionHeader
-        eyebrow="Mentor · Wiki"
-        title="Wiki / Modul Mentor"
-        desc={`${visible.length} modul tersedia · materi referensi mentor termasuk template evaluasi & coaching skills`}
-      />
-
-      <div style={{ background: '#fff', border: `1px solid ${theme.border}`, borderRadius: 2, padding: '10px 14px', marginBottom: 12, display: 'flex', gap: 12, alignItems: 'center', flexWrap: 'wrap' }}>
-        <div style={{ flex: 1, minWidth: 200, display: 'flex', alignItems: 'center', gap: 8, padding: '6px 10px', background: theme.bg, borderRadius: 2 }}>
-          <Search size={13} style={{ color: theme.textSubtle }}/>
-          <input value={search} onChange={e => setSearch(e.target.value)} placeholder="Cari modul..."
-            style={{ flex: 1, border: 'none', outline: 'none', background: 'transparent', fontSize: 12, fontFamily: fonts.body, color: theme.text }}/>
-        </div>
-        <select value={filterKategori} onChange={e => setFilterKategori(e.target.value)}
-          style={{ fontSize: 11, fontFamily: fonts.body, padding: '6px 10px', border: `1px solid ${theme.border}`, borderRadius: 2, background: '#fff', color: theme.text, cursor: 'pointer', outline: 'none' }}>
-          <option value="all">Semua kategori</option>
-          {kategoriList.map(k => <option key={k} value={k}>{k}</option>)}
-        </select>
-      </div>
-
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: 12 }}>
-        {filtered.length === 0 && (
-          <div style={{ gridColumn: '1 / -1', background: '#fff', border: `1px dashed ${theme.borderStrong}`, padding: 32, textAlign: 'center', borderRadius: 2, fontSize: 11, color: theme.textMuted }}>
-            Tidak ada modul sesuai filter.
-          </div>
-        )}
-        {filtered.map(m => {
-          const isMentorOnly = m.visibility === 'mentor';
-          return (
-            <button key={m.id} onClick={() => setActiveId(m.id)}
-              style={{ background: '#fff', border: `1px solid ${theme.border}`, borderRadius: 2, padding: 16, cursor: 'pointer', textAlign: 'left', fontFamily: fonts.body, transition: 'all 0.15s' }}
-              onMouseEnter={e => { e.currentTarget.style.borderColor = theme.gold; e.currentTarget.style.boxShadow = '0 4px 12px rgba(10,37,64,0.06)'; e.currentTarget.style.transform = 'translateY(-2px)'; }}
-              onMouseLeave={e => { e.currentTarget.style.borderColor = theme.border; e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.transform = 'translateY(0)'; }}
-            >
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 10 }}>
-                <div style={{ display: 'flex', gap: 5, alignItems: 'center' }}>
-                  <Pill variant="info" size="xs">{m.kategori}</Pill>
-                  {isMentorOnly && <Pill variant="gold" size="xs">Mentor Only</Pill>}
-                </div>
-                <span style={{ fontSize: 9, color: theme.textMuted, fontFamily: fonts.mono, textTransform: 'uppercase', letterSpacing: '0.1em' }}>Tahap 0{m.tahap}</span>
-              </div>
-              <div style={{ fontSize: 13, fontWeight: 600, color: theme.text, fontFamily: fonts.display, marginBottom: 6, lineHeight: 1.35 }}>{m.judul}</div>
-              <div style={{ fontSize: 11, color: theme.textMuted, lineHeight: 1.5, marginBottom: 12 }}>{m.ringkasan}</div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 4, fontSize: 10, color: theme.gold, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.12em' }}>
-                Baca selengkapnya <ArrowRight size={11}/>
-              </div>
-            </button>
-          );
-        })}
-      </div>
-    </div>
-  );
-}
 
 // =====================================================================
 // BOARD VIEW
@@ -6691,29 +7271,27 @@ function AppShell() {
   const render = () => {
     if (role === 'admin') {
       if (activeMenu === 'dashboard')  return <AdminDashboard/>;
+      if (activeMenu === 'karyawan')   return <AdminKaryawan/>;
       if (activeMenu === 'batches')    return <AdminBatches/>;
       if (activeMenu === 'peserta')    return <AdminPeserta/>;
       if (activeMenu === 'mentorList') return <AdminMentorList/>;
       if (activeMenu === 'tahapan')    return <AdminTahapan/>;
-      if (activeMenu === 'wiki')       return <AdminWiki/>;
-      if (activeMenu === 'qna')        return <AdminQNA/>;
       return <Placeholder title={MENUS.admin.find(m => m.id === activeMenu)?.label || 'Modul'} desc="Modul akan dibangun pada Turn berikutnya"/>;
     }
     if (role === 'mentor') {
       if (activeMenu === 'dashboard') return <MentorDashboard/>;
       if (activeMenu === 'mentees')   return <MyPesertaHub/>;
-      if (activeMenu === 'wiki')      return <MentorWiki/>;
+      if (activeMenu === 'oneOnOne')  return <MentorOneOnOne/>;
       return <Placeholder title={MENUS.mentor.find(m => m.id === activeMenu)?.label || 'Modul'} desc="Modul mentor lanjutan"/>;
     }
     if (role === 'peserta') {
       if (activeMenu === 'dashboard')   return <PesertaJourney/>;
       if (activeMenu === 'registrasi')  return <PesertaRegistrasi/>;
       if (activeMenu === 'sosialisasi') return <PesertaSosialisasi/>;
-      if (activeMenu === 'coaching')    return <PesertaCoaching/>;
+      if (activeMenu === 'coachingPlan') return <PesertaCoachingPlan/>;
+      if (activeMenu === 'oneOnOne')     return <PesertaOneOnOne/>;
       if (activeMenu === 'monitoring')  return <PesertaMonitoring/>;
       if (activeMenu === 'evaluasi')    return <PesertaEvaluasi/>;
-      if (activeMenu === 'wiki')        return <PesertaWiki/>;
-      if (activeMenu === 'qna')         return <PesertaQNA/>;
       return <Placeholder title={MENUS.peserta.find(m => m.id === activeMenu)?.label} desc="Modul peserta lanjutan"/>;
     }
     if (role === 'board') {
